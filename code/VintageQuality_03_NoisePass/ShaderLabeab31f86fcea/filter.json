@@ -1,0 +1,21 @@
+{
+  "filters": {
+    "ShaderLabeab31f86fcea": {
+      "version": "v1.0.0",
+      "enableKgpu": false,
+      "displayName": "ShaderLabeab31f86fcea",
+      "matchName": "KFM ShaderLab ShaderLabeab31f86fcea",
+      "fileName": "ShaderLabeab31f86fcea/ShaderLabeab31f86fcea",
+      "className": "ShaderLabeab31f86fcea",
+      "params": {
+        "Progress": {
+          "value": 0.0,
+          "min": 0.0,
+          "max": 1.0,
+          "type": "float",
+          "displayName": "Progress"
+        }
+      }
+    }
+  }
+}

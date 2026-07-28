@@ -1,0 +1,119 @@
+{
+    "filters": {
+        "BezierWarp": {
+            "version": "v1.0.0",
+            "owner": "liuming10@kuaishou.com",
+            "enableKgpu": false,
+            "score": 0,
+            "displayName": "BezierWarp",
+            "matchName": "KFM KSkr BezierWarp",
+            "fileName": "bezierWarp/bezierWarp",
+            "className": "BezierWarp",
+            "params": {
+                "TopLeftVtx": {
+                    "value": [
+                        0.0,
+                        0.0
+                    ],
+                    "type": "twoD",
+                    "displayName": "TopLeftVtx"
+                },
+                "TopLeftTan": {
+                    "value": [
+                        33.333,
+                        0.0
+                    ],
+                    "type": "twoD",
+                    "displayName": "TopLeftTan"
+                },
+                "TopRightTan": {
+                    "value": [
+                        66.667,
+                        0.0
+                    ],
+                    "type": "twoD",
+                    "displayName": "TopRightTan"
+                },
+                "RightTopVtx": {
+                    "value": [
+                        100.0,
+                        0.0
+                    ],
+                    "type": "twoD",
+                    "displayName": "RightTopVtx"
+                },
+                "RightTopTan": {
+                    "value": [
+                        100.0,
+                        33.333
+                    ],
+                    "type": "twoD",
+                    "displayName": "RightTopTan"
+                },
+                "RightDownTan": {
+                    "value": [
+                        100.0,
+                        66.667
+                    ],
+                    "type": "twoD",
+                    "displayName": "RightDownTan"
+                },
+                "DownRightVtx": {
+                    "value": [
+                        100.0,
+                        100.0
+                    ],
+                    "type": "twoD",
+                    "displayName": "DownRightVtx"
+                },
+                "DownRightTan": {
+                    "value": [
+                        66.667,
+                        100.0
+                    ],
+                    "type": "twoD",
+                    "displayName": "DownRightTan"
+                },
+                "DownLeftTan": {
+                    "value": [
+                        33.333,
+                        100.0
+                    ],
+                    "type": "twoD",
+                    "displayName": "DownLeftTan"
+                },
+                "LeftDownVtx": {
+                    "value": [
+                        0.0,
+                        100.0
+                    ],
+                    "type": "twoD",
+                    "displayName": "LeftDownVtx"
+                },
+                "LeftDownTan": {
+                    "value": [
+                        0.0,
+                        66.667
+                    ],
+                    "type": "twoD",
+                    "displayName": "LeftDownTan"
+                },
+                "LeftTopTan": {
+                    "value": [
+                        0.0,
+                        33.333
+                    ],
+                    "type": "twoD",
+                    "displayName": "LeftTopTan"
+                },
+                "type": {
+                  "type": "comboBox",
+                  "displayName": "type",
+                  "value": "1x1 | 3x4 | 4x3 | 9x16 | 16x9",
+                  "min": 1,
+                  "max": 5
+                }
+            }
+        }
+    }
+}

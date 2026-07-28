@@ -1,0 +1,21 @@
+{
+  "filters": {
+    "ShaderLabSimpleHorizontalFlip": {
+      "version": "v1.0.0",
+      "enableKgpu": false,
+      "displayName": "ShaderLabSimpleHorizontalFlip",
+      "matchName": "KFM ShaderLab ShaderLabSimpleHorizontalFlip",
+      "fileName": "ShaderLabSimpleHorizontalFlip/ShaderLabSimpleHorizontalFlip",
+      "className": "ShaderLabSimpleHorizontalFlip",
+      "params": {
+        "Progress": {
+          "value": 0.0,
+          "min": 0.0,
+          "max": 1.0,
+          "type": "float",
+          "displayName": "Progress"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "filters": {
+    "Sketch": {
+      "displayName": "Sketch",
+      "version": "v1.1.1",
+      "enableKgpu": false,
+      "matchName": "KFM KSkr Sketch",
+      "fileName": "sketch/sketch",
+      "className": "Sketch",
+      "params": {
+        "intensity": {
+          "displayName": "intensity",
+          "value": 0.0,
+          "min": -1.0,
+          "max": 1.0
+        },
+        "samplerStepMultiplier": {
+          "displayName": "samplerStepMultiplier",
+          "value": 1.0,
+          "min": 1.0,
+          "max": 10.0
+        }
+      }
+    }
+  }
+}

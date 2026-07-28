@@ -1,0 +1,51 @@
+{
+    "filters": {
+        "HexagonalBokeh": {
+            "version": "v1.0.0",
+            "owner": "liuming10@kuaishou.com",
+            "enableKgpu": false,
+            "score": 0,
+            "displayName": "HexagonalBokeh",
+            "matchName": "KFM KSkr HexagonalBokeh",
+            "fileName": "HexagonalBokeh/hexagonalBokeh",
+            "className": "HexagonalBokeh",
+            "params": {
+                "spotSize": {
+                    "value": 0.52,
+                    "min": 0.0,
+                    "max": 1.0,
+                    "type": "float",
+                    "displayName": "spotSize"
+                },
+                "spotIntensity": {
+                    "value": 0.72,
+                    "min": 0.0,
+                    "max": 1.0,
+                    "type": "float",
+                    "displayName": "spotIntensity"
+                },
+                "speed": {
+                    "value": 0.33,
+                    "min": 0.0,
+                    "max": 1.0,
+                    "type": "float",
+                    "displayName": "speed"
+                },
+                "progress": {
+                    "value": 0.0,
+                    "min": 0.0,
+                    "max": 1.0,
+                    "type": "float",
+                    "displayName": "progress"
+                },
+                "reverseBokeh": {
+                    "value": 0.33,
+                    "min": 0.0,
+                    "max": 1.0,
+                    "type": "float",
+                    "displayName": "reverseBokeh"
+                }
+            }
+        }
+    }
+}

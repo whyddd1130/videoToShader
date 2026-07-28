@@ -1,0 +1,23 @@
+{
+    "filters": {
+        "MosaicColor1": {
+            "version": "v1.0.0",
+            "owner": "yanxin@kuaishou.com",
+            "enableKgpu": false,
+            "score": 0,
+            "displayName": "MosaicColor1",
+            "matchName": "KFM KSkr MosaicColor1",
+            "fileName": "MosaicColor1/MosaicColor1",
+            "className": "MosaicColor1",
+            "params": {
+                "intensity": {
+                    "value": 1.0,
+                    "min": 0.0,
+                    "max": 1.0,
+                    "type": "float",
+                    "displayName": "intensity"
+                }
+            }
+        }
+    }
+}

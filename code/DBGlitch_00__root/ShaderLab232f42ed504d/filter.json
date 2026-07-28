@@ -1,0 +1,21 @@
+{
+  "filters": {
+    "ShaderLab232f42ed504d": {
+      "version": "v1.0.0",
+      "enableKgpu": false,
+      "displayName": "ShaderLab232f42ed504d",
+      "matchName": "KFM ShaderLab ShaderLab232f42ed504d",
+      "fileName": "ShaderLab232f42ed504d/ShaderLab232f42ed504d",
+      "className": "ShaderLab232f42ed504d",
+      "params": {
+        "Progress": {
+          "value": 0.0,
+          "min": 0.0,
+          "max": 1.0,
+          "type": "float",
+          "displayName": "Progress"
+        }
+      }
+    }
+  }
+}

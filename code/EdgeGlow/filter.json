@@ -1,0 +1,36 @@
+{
+  "filters": {
+    "EdgeGlow": {
+      "displayName": "EdgeGlow",
+      "version": "v1.1.1",
+      "enableKgpu": false,
+      "matchName": "KFM KSkr EdgeGlow",
+      "fileName": "edgeGlow/edgeGlow",
+      "className": "EdgeGlow",
+      "params": {
+        "GlowCenter": {
+            "value": [
+                50.0, 
+                50.0
+            ], 
+            "type": "twoD", 
+            "displayName": "GlowCenter"
+        },
+        "GlowIntensity": {
+            "value": 50.0, 
+            "min": 20.0, 
+            "max": 100.0, 
+            "type": "float", 
+            "displayName": "GlowIntensity"
+        },
+        "GlowDensity": {
+            "value": 60.0, 
+            "min": 0.0, 
+            "max": 100.0, 
+            "type": "float", 
+            "displayName": "GlowDensity"
+        }
+      }
+    }
+  }
+}

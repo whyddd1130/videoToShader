@@ -1,0 +1,21 @@
+{
+  "filters": {
+    "ShaderLab7f546e059deb": {
+      "version": "v1.0.0",
+      "enableKgpu": false,
+      "displayName": "ShaderLab7f546e059deb",
+      "matchName": "KFM ShaderLab ShaderLab7f546e059deb",
+      "fileName": "ShaderLab7f546e059deb/ShaderLab7f546e059deb",
+      "className": "ShaderLab7f546e059deb",
+      "params": {
+        "Progress": {
+          "value": 0.0,
+          "min": 0.0,
+          "max": 1.0,
+          "type": "float",
+          "displayName": "Progress"
+        }
+      }
+    }
+  }
+}

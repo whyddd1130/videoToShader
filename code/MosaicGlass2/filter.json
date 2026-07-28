@@ -1,0 +1,23 @@
+{
+    "filters": {
+        "MosaicGlass2": {
+            "version": "v1.0.0",
+            "owner": "yanxin@kuaishou.com",
+            "enableKgpu": false,
+            "score": 0,
+            "displayName": "MosaicGlass2",
+            "matchName": "KFM KSkr MosaicGlass2",
+            "fileName": "MosaicGlass2/MosaicGlass2",
+            "className": "MosaicGlass2",
+            "params": {
+                "intensity": {
+                    "value": 1.0,
+                    "min": 0.0,
+                    "max": 1.0,
+                    "type": "float",
+                    "displayName": "intensity"
+                }
+            }
+        }
+    }
+}

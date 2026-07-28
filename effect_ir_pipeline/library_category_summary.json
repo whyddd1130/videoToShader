@@ -1,0 +1,31 @@
+{
+  "total": 87,
+  "primary_bucket_counts": {
+    "blur_bokeh": 7,
+    "color_tone": 14,
+    "edge_outline": 4,
+    "geometry_warp": 28,
+    "light_glow_flash": 3,
+    "pixel_style": 3,
+    "transform_transition": 28
+  },
+  "bucket_membership_counts": {
+    "blur_bokeh": 21,
+    "color_tone": 32,
+    "edge_outline": 9,
+    "geometry_warp": 38,
+    "light_glow_flash": 8,
+    "mask_composite": 15,
+    "pixel_style": 7,
+    "transform_transition": 47
+  },
+  "atomicity_counts": {
+    "atomic": 73,
+    "composite": 14
+  },
+  "source_quality_counts": {
+    "good": 73,
+    "mixed": 14
+  },
+  "excluded_from_default_retrieval": []
+}

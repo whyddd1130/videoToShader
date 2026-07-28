@@ -1,0 +1,38 @@
+{
+  "filters": {
+    "CCLens": {
+      "displayName": "CCLens",
+      "version": "v1.1.1",
+      "enableKgpu": false,
+      "matchName": "KFM KSkr CCLens",
+      "fileName": "cclens/cclens",
+      "className": "CCLens",
+      "params": {
+        "CenterX": {
+          "displayName": "CenterX",
+          "value": 0.5,
+          "min": -2.0,
+          "max": 2.0
+        },
+        "CenterY": {
+          "displayName": "CenterY",
+          "value": 0.5,
+          "min": -2.0,
+          "max": 2.0
+        },
+        "Size": {
+          "displayName": "Size",
+          "value": 50.0,
+          "min": 0.0,
+          "max": 100.0
+        },
+        "Convergence": {
+          "displayName": "Convergence",
+          "value": 0.0,
+          "min": -100.0,
+          "max": 100.0
+        }
+      }
+    }
+  }
+}

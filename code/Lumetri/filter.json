@@ -1,0 +1,56 @@
+{
+    "filters": {
+        "Lumetri": {
+            "version": "v1.0.0", 
+            "enableKgpu": false, 
+            "displayName": "Lumetri", 
+            "matchName": "KFM KSkr Lumetri", 
+            "fileName": "Lumetri/Lumetri", 
+            "className": "Lumetri", 
+            "params": {
+                "exposure": {
+                    "value": 0.0, 
+                    "min": -5.0, 
+                    "max": 5.0, 
+                    "type": "float", 
+                    "displayName": "exposure"
+                }, 
+                "contrast": {
+                    "value": 0.0, 
+                    "min": -100.0, 
+                    "max": 100.0, 
+                    "type": "float", 
+                    "displayName": "contrast"
+                }, 
+                "highlight": {
+                    "value": 0.0, 
+                    "min": -100.0, 
+                    "max": 100.0, 
+                    "type": "float", 
+                    "displayName": "highlight"
+                }, 
+                "shadow": {
+                    "value": 0.0, 
+                    "min": -100.0, 
+                    "max": 100.0, 
+                    "type": "float", 
+                    "displayName": "shadow"
+                }, 
+                "white": {
+                    "value": 0.0, 
+                    "min": -100.0, 
+                    "max": 100.0, 
+                    "type": "float", 
+                    "displayName": "white"
+                }, 
+                "black": {
+                    "value": 0.0, 
+                    "min": -100.0, 
+                    "max": 100.0, 
+                    "type": "float", 
+                    "displayName": "black"
+                }
+            }
+        }
+    }
+}

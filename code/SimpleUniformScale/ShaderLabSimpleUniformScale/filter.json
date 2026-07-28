@@ -1,0 +1,21 @@
+{
+  "filters": {
+    "ShaderLabSimpleUniformScale": {
+      "version": "v1.0.0",
+      "enableKgpu": false,
+      "displayName": "ShaderLabSimpleUniformScale",
+      "matchName": "KFM ShaderLab ShaderLabSimpleUniformScale",
+      "fileName": "ShaderLabSimpleUniformScale/ShaderLabSimpleUniformScale",
+      "className": "ShaderLabSimpleUniformScale",
+      "params": {
+        "Progress": {
+          "value": 0.0,
+          "min": 0.0,
+          "max": 1.0,
+          "type": "float",
+          "displayName": "Progress"
+        }
+      }
+    }
+  }
+}

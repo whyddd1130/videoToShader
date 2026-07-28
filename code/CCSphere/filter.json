@@ -1,0 +1,73 @@
+{
+  "filters": {
+    "CCSphere": {
+      "displayName": "CCSphere",
+      "version": "v1.1.1",
+      "enableKgpu": false,
+      "matchName": "KFM KSkr CCSphere",
+      "fileName": "ccsphere/ccsphere",
+      "className": "CCSphere",
+      "params": {
+        "pitch": {
+          "displayName": "pitch",
+          "value": 0.0,
+          "min": 0.0,
+          "max": 1000.0,
+          "step": 1.0
+        },
+        "yaw": {
+          "displayName": "yaw",
+          "value": 0.0,
+          "min": 0.0,
+          "max": 1000.0,
+          "step": 1.0
+        },
+        "roll": {
+          "displayName": "roll",
+          "value": 0.0,
+          "min": 0.0,
+          "max": 1000.0,
+          "step": 1.0
+        },
+        "radius": {
+          "displayName": "radius",
+          "value": 200.0,
+          "min": 0.0,
+          "max": 800.0,
+          "step": 10.0
+        },
+        "Light intensity": {
+          "displayName": "lightIntensity",
+          "value": 100.0,
+          "min": 0.0,
+          "max": 1000.0,
+          "step": 1.0
+        },
+        "Light Height": {
+          "displayName": "lightHeight",
+          "value": 40.0,
+          "min": -100.0,
+          "max": 100.0,
+          "step": 1.0
+        },
+        "Light Direction": {
+          "displayName": "lightDirection",
+          "value": -85.0,
+          "min": -360.0,
+          "max": 360.0,
+          "step": 1.0
+        },
+        "light Color": {
+          "displayName": "lightColor",
+          "type": "color",
+          "value": "#FFFFFF" 
+        },
+        "ambient Color": {
+          "displayName": "ambientColor",
+          "type": "color",
+          "value": "#000000" 
+        }
+      }
+    }
+  }
+}

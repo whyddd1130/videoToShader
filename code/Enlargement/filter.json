@@ -1,0 +1,68 @@
+{
+  "filters": {
+    "Enlargement": {
+      "displayName": "Enlargement",
+      "version": "v1.1.1",
+      "enableKgpu": false,
+      "matchName": "KFM KSkr Enlargement",
+      "fileName": "enlargement/enlargement",
+      "className": "Enlargement",
+      "params": {
+        "shape": {
+          "displayName": "Shape",
+          "type": "comboBox",
+          "value": "circle | square",
+          "min": "1",
+          "max": "2"
+        },
+        "center1": {
+          "displayName": "center",
+          "type": "twoD",
+          "value": [
+            0.0,
+            0.0
+          ]
+        },
+        "ratio1": {
+          "displayName": "Magnification",
+          "value": 100.0,
+          "min": 100.0,
+          "max": 500.0
+        },
+        "link": {
+          "displayName": "Link",
+          "type": "comboBox",
+          "value": "None | Size",
+          "min": "1",
+          "max": "2"
+        },
+        "size": {
+          "displayName": "Size",
+          "value": 100.0,
+          "min": 100.0,
+          "max": 500.0
+        },
+        "feather": {
+          "displayName": "Feather",
+          "value": 0.0,
+          "min": 0.0,
+          "max": 100.0
+        },
+        "alpha1": {
+          "displayName": "Alpha",
+          "value": 0.0,
+          "min": 0.0,
+          "max": 1.0,
+          "step": 0.01
+        },
+        "blendMode": {
+          "displayName": "BlendMode",
+          "type": "comboBox",
+          "value": "None | Normal | Add | Multiply | Screen | Overlay | SoftLight | HardLight | ColorDodge | ColorBurn | Draken | Lighten | Difference | Exclude | Hue | Saturation | Color | Luminosity",
+          "min": "1",
+          "max": "18"
+        }
+      }
+    }
+  }
+}

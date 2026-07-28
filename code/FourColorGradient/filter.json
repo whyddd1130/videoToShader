@@ -1,0 +1,89 @@
+{
+    "filters": {
+        "FourColorGradient": {
+            "version": "v1.0.0",
+            "owner": "liuming10@kuaishou.com",
+            "enableKgpu": false,
+            "score": 0,
+            "displayName": "FourColorGradient",
+            "matchName": "KFM KSkr FourColorGradient",
+            "fileName": "FourColorGradient/FourColorGradient",
+            "className": "FourColorGradient",
+            "params": {
+                "PointOne": {
+                    "value": [
+                        100.0,
+                        100.0
+                    ],
+                    "type": "twoD",
+                    "displayName": "PointOne"
+                },
+                "ColorOne": {
+                    "value": "#FFFF00",
+                    "type": "color",
+                    "displayName": "ColorOne"
+                },
+                "PointTwo": {
+                    "value": [
+                        1000.0,
+                        100.0
+                    ],
+                    "type": "twoD",
+                    "displayName": "PointTwo"
+                },
+                "ColorTwo": {
+                    "value": "#00FF00",
+                    "type": "color",
+                    "displayName": "ColorTwo"
+                },
+                "PointThree": {
+                    "value": [
+                        100.0,
+                        1000.0
+                    ],
+                    "type": "twoD",
+                    "displayName": "PointThree"
+                },
+                "ColorThree": {
+                    "value": "#FF00FF",
+                    "type": "color",
+                    "displayName": "ColorThree"
+                },
+                "PointFour": {
+                    "value": [
+                        1000.0,
+                        1000.0
+                    ],
+                    "type": "twoD",
+                    "displayName": "PointFour"
+                },
+                "ColorFour": {
+                    "value": "#0000FF",
+                    "type": "color",
+                    "displayName": "ColorFour"
+                },
+                "Blend": {
+                    "value": 100.0,
+                    "min": 0.0,
+                    "max": 1000.0,
+                    "type": "float",
+                    "displayName": "Blend"
+                },
+                "Opacity": {
+                    "value": 100.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "Opacity"
+                },
+                "BlendMode": {
+                  "type": "comboBox",
+                  "displayName": "BlendMode",
+                  "value": "None | Normal | Add | Multiply | Screen | OverLay | SoftLight | HardLight | ColorDodge | ColorBurn | Darken | Lighten | Difference | Exclude | Hue | Saturation | Color | Luminosity",
+                  "min": 1,
+                  "max": 18
+                }
+            }
+        }
+    }
+}

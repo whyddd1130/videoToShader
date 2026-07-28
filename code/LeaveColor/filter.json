@@ -1,0 +1,90 @@
+{
+    "filters": {
+        "LeaveColor": {
+            "version": "v1.0.0",
+            "owner": "liuming10@kuaishou.com",
+            "enableKgpu": false,
+            "score": 0,
+            "displayName": "LeaveColor",
+            "matchName": "KFM KSkr LeaveColor",
+            "fileName": "leaveColor/leaveColor",
+            "className": "LeaveColor",
+            "params": {
+                "AmountToDecolor": {
+                    "value": 0.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "AmountToDecolor"
+                },
+                "ColorOneToLeave": {
+                    "value": "#FF0000",
+                    "type": "color",
+                    "displayName": "ColorOneToLeave"
+                },
+                "ToleranceOne": {
+                    "value": 0.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "ToleranceOne"
+                },
+                "EdgeSoftnessOne": {
+                    "value": 0.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "EdgeSoftnessOne"
+                },
+                "ColorTwoToLeave": {
+                    "value": "#75F92F",
+                    "type": "color",
+                    "displayName": "ColorTwoToLeave"
+                },
+                "ToleranceTwo": {
+                    "value": 0.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "ToleranceTwo"
+                },
+                "ColorThreeToLeave": {
+                    "value": "#3000DA",
+                    "type": "color",
+                    "displayName": "ColorThreeToLeave"
+                },
+                "ToleranceThree": {
+                    "value": 0.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "ToleranceThree"
+                },
+                "ColorFourToLeave": {
+                    "value": "#48C8B3",
+                    "type": "color",
+                    "displayName": "ColorFourToLeave"
+                },
+                "ToleranceFour": {
+                    "value": 0.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "ToleranceFour"
+                },
+                "ColorFiveToLeave": {
+                    "value": "#BC20E3",
+                    "type": "color",
+                    "displayName": "ColorFiveToLeave"
+                },
+                "ToleranceFive": {
+                    "value": 0.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "ToleranceFive"
+                }
+            }
+        }
+    }
+}

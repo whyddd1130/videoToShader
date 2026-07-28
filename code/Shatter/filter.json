@@ -1,0 +1,30 @@
+{
+    "filters": {
+        "Shatter": {
+            "version": "v1.0.0",
+            "owner": "liuming10@kuaishou.com",
+            "enableKgpu": false,
+            "score": 0,
+            "displayName": "Shatter",
+            "matchName": "KFM KSkr Shatter",
+            "fileName": "shatter/shatter",
+            "className": "Shatter",
+            "params": {
+                "Repetitions": {
+                    "value": 20,
+                    "min": 2,
+                    "max": 100,
+                    "type": "int",
+                    "displayName": "Repetitions"
+                },
+                "ShatterFrame": {
+                    "value": 0.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "ShatterFrame"
+                }
+            }
+        }
+    }
+}

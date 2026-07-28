@@ -1,0 +1,51 @@
+{
+    "filters": {
+        "CCPageTurn2": {
+            "version": "v1.0.0", 
+            "enableKgpu": false, 
+            "score": 1, 
+            "displayName": "CCPageTurn2", 
+            "matchName": "KFM KSkr CCPageTurn2", 
+            "fileName": "CCPageTurn2/CCPageTurn2", 
+            "className": "CCPageTurn2", 
+            "params": {
+                "FoldPosition": {
+                    "value": [
+                        0.0, 
+                        0.0
+                    ], 
+                    "type": "twoD", 
+                    "displayName": "FoldPosition"
+                }, 
+                "CornerControls": {
+                    "value": 1, 
+                    "min": 1, 
+                    "max": 4, 
+                    "type": "int", 
+                    "displayName": "CornerControls"
+                }, 
+                "FoldRadius": {
+                    "value": 0.02, 
+                    "min": 0.0, 
+                    "max": 0.2, 
+                    "type": "float", 
+                    "displayName": "FoldRadius"
+                }, 
+                "LightDirection": {
+                    "value": 0.35, 
+                    "min": 0.0, 
+                    "max": 1.0, 
+                    "type": "float", 
+                    "displayName": "LightDirection"
+                }, 
+                "BackOpacity": {
+                    "value": 0.85, 
+                    "min": 0.0, 
+                    "max": 1.0, 
+                    "type": "float", 
+                    "displayName": "BackOpacity"
+                }
+            }
+        }
+    }
+}

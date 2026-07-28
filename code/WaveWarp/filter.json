@@ -1,0 +1,61 @@
+{
+    "filters": {
+        "WaveWarp": {
+            "version": "v1.0.0",
+            "owner": "liuzhenyang@kuaishou.com",
+            "enableKgpu": false,
+            "score": 0,
+            "displayName": "WaveWarp",
+            "matchName": "KFM KSkr WaveWarp",
+            "fileName": "WaveWarp/WaveWarp",
+            "className": "WaveWarp",
+            "params": {
+                "WaveType": {
+                    "value": "sin | square | triangle | sawtooth | circle | semicircle | uncircle | noise | smoothnoise",
+                    "type": "comboBox",
+                    "displayName": "WaveType"
+                },
+                "WaveHeight": {
+                    "value": 0.0,
+                    "min": -500.0,
+                    "max": 500.0,
+                    "type": "float",
+                    "displayName": "WaveHeight"
+                },
+                "WaveWidth": {
+                    "value": 0.0,
+                    "min": -500.0,
+                    "max": 500.0,
+                    "type": "float",
+                    "displayName": "WaveWidth"
+                },
+                "Direction": {
+                    "value": 0.0,
+                    "min": 0.0,
+                    "max": 360.0,
+                    "type": "float",
+                    "displayName": "Direction"
+                },
+                "WaveSpeed": {
+                    "value": 0.0,
+                    "min": -20.0,
+                    "max": 20.0,
+                    "type": "float",
+                    "displayName": "WaveSpeed"
+                },
+                "Pinning": {
+                    "value": "None | AllEdges | centering | leftedge | topedge | rightedge | bottomedge | horizontaledge | verticaledge",
+                    "type": "comboBox",
+                    "displayName": "Pinning"
+                },
+                "Phase": {
+                    "value": 0.0,
+                    "min": 0.0,
+                    "max": 360.0,
+                    "type": "float",
+                    "displayName": "Phase"
+                }
+            }
+        }
+    }
+}

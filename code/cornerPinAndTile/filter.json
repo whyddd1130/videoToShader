@@ -1,0 +1,89 @@
+{
+  "filters": {
+    "cornerPinAndTile": {
+      "displayName": "cornerPinAndTile",
+      "version": "v1.1.1",
+      "enableKgpu": false,
+      "matchName": "KFM KSkr cornerPinAndTile",
+      "fileName": "cornerPinAndTile/cornerPinAndTile",
+      "className": "cornerPinAndTile",
+      "params": {
+        "flip": {
+          "displayName": "needMirror",
+          "value": 0,
+          "min": 0,
+          "max": 1,
+          "type": "int"
+        },
+        "V3": {
+          "displayName": "bottomLeft",
+          "type": "twoD",
+          "value": [
+            0.0,
+            100.0
+          ],
+          "min": [
+            0.0,
+            0.0
+          ],
+          "max": [
+            100.0,
+            100.0
+          ],
+          "step": 0.01
+        },
+        "V2": {
+          "displayName": "bottomRight",
+          "type": "twoD",
+          "value": [
+            100.0,
+            100.0
+          ],
+          "min": [
+            0.0,
+            0.0
+          ],
+          "max": [
+            100.0,
+            100.0
+          ],
+          "step": 0.01
+        },
+        "V0": {
+          "displayName": "topLeft",
+          "type": "twoD",
+          "value": [
+            0.0,
+            0.0
+          ],
+          "min": [
+            0.0,
+            0.0
+          ],
+          "max": [
+            100.0,
+            100.0
+          ],
+          "step": 0.01
+        },
+        "V1": {
+          "displayName": "topRight",
+          "type": "twoD",
+          "value": [
+            100.0,
+            0.0
+          ],
+          "min": [
+            0.0,
+            0.0
+          ],
+          "max": [
+            100.0,
+            100.0
+          ],
+          "step": 0.01
+        }
+      }
+    }
+  }
+}

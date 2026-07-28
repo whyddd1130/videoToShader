@@ -1,0 +1,58 @@
+{
+    "filters": {
+        "Bulge": {
+            "version": "v1.0.0", 
+            "enableKgpu": false, 
+            "score": 1, 
+            "displayName": "Bulge", 
+            "matchName": "KFM KSkr Bulge", 
+            "fileName": "bulge/bulge",
+            "className": "Bulge", 
+            "params": {
+                "HorizontalRadius": {
+                    "value": 250.0, 
+                    "min": 0.0, 
+                    "max": 1000.0, 
+                    "type": "float", 
+                    "displayName": "HorizontalRadius"
+                }, 
+                "VerticalRadius": {
+                    "value": 250.0, 
+                    "min": 0.0, 
+                    "max": 1000.0, 
+                    "type": "float", 
+                    "displayName": "VerticalRadius"
+                }, 
+                "Center": {
+                    "value": [
+                        300.0, 
+                        300.0
+                    ], 
+                    "type": "twoD", 
+                    "displayName": "Center"
+                }, 
+                "Height": {
+                    "value": 1.0, 
+                    "min": -4.0, 
+                    "max": 4.0, 
+                    "type": "float", 
+                    "displayName": "Height"
+                }, 
+                "TaperRadius": {
+                    "value": 0.0, 
+                    "min": 0.0, 
+                    "max": 1000.0, 
+                    "type": "float", 
+                    "displayName": "TaperRadius"
+                }, 
+                "Pinning": {
+                    "value": 0, 
+                    "min": 0, 
+                    "max": 1, 
+                    "type": "int", 
+                    "displayName": "Pinning"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "filters": {
+        "ColorBalanceHLS": {
+            "version": "v1.0.0",
+            "owner": "liuming10@kuaishou.com",
+            "enableKgpu": false,
+            "score": 0,
+            "displayName": "ColorBalanceHLS",
+            "matchName": "KFM KSkr ColorBalanceHLS",
+            "fileName": "ColorBalanceHLS/colorBalanceHLS",
+            "className": "ColorBalanceHLS",
+            "params": {
+                "Hue": {
+                    "value": 0.0,
+                    "min": -180.0,
+                    "max": 180.0,
+                    "type": "float",
+                    "displayName": "Hue"
+                },
+                "Lightness": {
+                    "value": 0.0,
+                    "min": -100.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "Lightness"
+                },
+                "Saturation": {
+                    "value": 0.0,
+                    "min": -100.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "Saturation"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "filters": {
+        "SurfaceBlur": {
+            "version": "v1.0.0",
+            "owner": "liuming10@kuaishou.com",
+            "enableKgpu": false,
+            "score": 0,
+            "displayName": "SurfaceBlur",
+            "matchName": "KFM KSkr SurfaceBlur",
+            "fileName": "SurfaceBlur/SurfaceBlur",
+            "className": "SurfaceBlur",
+            "params": {
+                "BlurSize": {
+                    "value": 50.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "BlurSize"
+                },
+                "BlurIntensity": {
+                    "value": 50.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "BlurIntensity"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+  "filters": {
+    "LensDistortion2": {
+      "displayName": "LensDistortion2",
+      "version": "v1.1.1",
+      "enableKgpu": false,
+      "matchName": "KFM KSkr LensDistortion2",
+      "fileName": "lensdistortion2/lensdistortion2",
+      "className": "LensDistortion2",
+      "params": {
+        "fov": {
+          "displayName": "FOV",
+          "value": 0.0,
+          "min": -180.0,
+          "max": 180.0,
+          "step": 0.1
+        },
+        "center": {
+          "displayName": "center",
+          "type": "twoD",
+          "value": [
+            0.0,
+            0.0
+          ],
+          "sizeScalingMode": "x,y",
+          "cpMode": "position"
+        },
+        "fovDir": {
+          "displayName": "FOV Direction",
+          "type": "comboBox",
+          "value": "horizontal | vertical | diagonal",
+          "min": "1",
+          "max": "3"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+    "filters": {
+        "MosaicHexagon": {
+            "version": "v1.0.0",
+            "owner": "yanxin@kuaishou.com",
+            "enableKgpu": false,
+            "score": 0,
+            "displayName": "MosaicHexagon",
+            "matchName": "KFM KSkr MosaicHexagon",
+            "fileName": "MosaicHexagon/MosaicHexagon",
+            "className": "MosaicHexagon",
+            "params": {
+                "intensity": {
+                    "value": 1.0,
+                    "min": 0.0,
+                    "max": 1.0,
+                    "type": "float",
+                    "displayName": "intensity"
+                }
+            }
+        }
+    }
+}

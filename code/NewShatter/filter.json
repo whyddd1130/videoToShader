@@ -1,0 +1,79 @@
+{
+    "filters": {
+        "NewShatter": {
+            "version": "v1.0.0",
+            "owner": "liuming10@kuaishou.com",
+            "enableKgpu": false,
+            "score": 0,
+            "displayName": "NewShatter",
+            "matchName": "KFM KSkr NewShatter",
+            "fileName": "newShatter/newShatter",
+            "className": "NewShatter",
+            "params": {
+                "Repetitions": {
+                    "value": 12,
+                    "min": 0,
+                    "max": 1000,
+                    "type": "int",
+                    "displayName": "Repetitions"
+                },
+                "ControShatter": {
+                    "value": 0.0,
+                    "min": 0.0,
+                    "max": 300.0,
+                    "type": "float",
+                    "displayName": "ControShatter"
+                },
+                "RotationX": {
+                    "value": 0.0,
+                    "min": 0.0,
+                    "max": 1000.0,
+                    "type": "float",
+                    "displayName": "RotationX"
+                },
+                "RotationY": {
+                    "value": 0.0,
+                    "min": 0.0,
+                    "max": 1000.0,
+                    "type": "float",
+                    "displayName": "RotationY"
+                },
+                "RotationZ": {
+                    "value": 0.0,
+                    "min": 0.0,
+                    "max": 1000.0,
+                    "type": "float",
+                    "displayName": "RotationZ"
+                },
+                "PositionX": {
+                    "value": 0.0,
+                    "min": -5000.0,
+                    "max": 5000.0,
+                    "type": "float",
+                    "displayName": "PositionX"
+                },
+                "PositionY": {
+                    "value": 0.0,
+                    "min": -5000.0,
+                    "max": 5000.0,
+                    "type": "float",
+                    "displayName": "PositionY"
+                },
+                "PositionZ": {
+                    "value": 0.0,
+                    "min": -20.0,
+                    "max": 20.0,
+                    "type": "float",
+                    "displayName": "PositionZ"
+                },
+                "Pattern": {
+                  "displayName": "Pattern",
+                  "value": 1,
+                  "min": 1,
+                  "max": 2,
+                  "type": "int"
+                }
+            }
+        }
+    }
+}

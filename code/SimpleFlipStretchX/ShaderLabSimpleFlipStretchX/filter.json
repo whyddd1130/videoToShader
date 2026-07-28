@@ -1,0 +1,21 @@
+{
+  "filters": {
+    "ShaderLabSimpleFlipStretchX": {
+      "version": "v1.0.0",
+      "enableKgpu": false,
+      "displayName": "ShaderLabSimpleFlipStretchX",
+      "matchName": "KFM ShaderLab ShaderLabSimpleFlipStretchX",
+      "fileName": "ShaderLabSimpleFlipStretchX/ShaderLabSimpleFlipStretchX",
+      "className": "ShaderLabSimpleFlipStretchX",
+      "params": {
+        "Progress": {
+          "value": 0.0,
+          "min": 0.0,
+          "max": 1.0,
+          "type": "float",
+          "displayName": "Progress"
+        }
+      }
+    }
+  }
+}

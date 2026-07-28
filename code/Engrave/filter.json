@@ -1,0 +1,20 @@
+{
+  "filters": {
+    "Engrave": {
+      "displayName": "Engrave",
+      "version": "v1.1.1",
+      "enableKgpu": false,
+      "matchName": "KFM KSkr Engrave",
+      "fileName": "engrave/engrave",
+      "className": "Engrave",
+      "params": {
+        "EngraveStrength": {
+          "displayName": "Strength",
+          "value": -2.0,
+          "min": -10.0,
+          "max": 10.0
+        }
+      }
+    }
+  }
+}

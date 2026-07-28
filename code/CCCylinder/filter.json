@@ -1,0 +1,74 @@
+{
+    "filters": {
+        "CCCylinder": {
+            "version": "v1.0.0",
+            "enableKgpu": false,
+            "score": 1,
+            "displayName": "CCCylinder",
+            "matchName": "KFM KSkr CCCylinder",
+            "fileName": "ccCylinder/ccCylinder",
+            "className": "CCCylinder",
+            "params": {
+                "Radius": {
+                    "value": 100.0,
+                    "min": 0.0,
+                    "max": 300.0,
+                    "type": "float",
+                    "displayName": "Radius"
+                },
+                "PositionX": {
+                    "value": 0.0,
+                    "min": -2000.0,
+                    "max": 2000.0,
+                    "type": "float",
+                    "displayName": "PositionX"
+                },
+                "PositionY": {
+                    "value": 0.0,
+                    "min": -2000.0,
+                    "max": 2000.0,
+                    "type": "float",
+                    "displayName": "PositionY"
+                },
+                "PositionZ": {
+                    "value": 500.0,
+                    "min": -2000.0,
+                    "max": 2000.0,
+                    "type": "float",
+                    "displayName": "PositionZ"
+                },
+                "RotationX": {
+                    "value": 0.0,
+                    "min": -10.0,
+                    "max": 10.0,
+                    "type": "float",
+                    "displayName": "RotationX"
+                },
+                "RotationY": {
+                    "value": 0.0,
+                    "min": -10.0,
+                    "max": 10.0,
+                    "type": "float",
+                    "displayName": "RotationY"
+                },
+                "RotationZ": {
+                    "value": 0.0,
+                    "min": -10.0,
+                    "max": 10.0,
+                    "type": "float",
+                    "displayName": "RotationZ"
+                },
+                "RenderOrder": {
+                    "value": "XYZ | XZY | YXZ | YZX | ZXY | ZYX",
+                    "type": "comboBox",
+                    "displayName": "RenderOrder"
+                },
+                "Render": {
+                    "value": "Full | Outside | Inside",
+                    "type": "comboBox",
+                    "displayName": "Render"
+                }
+            }
+        }
+    }
+}

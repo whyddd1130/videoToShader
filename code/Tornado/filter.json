@@ -1,0 +1,26 @@
+{
+  "filters": {
+    "Tornado": {
+      "displayName": "Tornado",
+      "version": "v1.1.1",
+      "enableKgpu": false,
+      "matchName": "KFM KSkr Tornado",
+      "fileName": "tornado/tornado",
+      "className": "Tornado",
+      "params": {
+        "curvature": {
+          "displayName": "curvature",
+          "value": 0.5,
+          "min": 0.0,
+          "max": 20.0
+        },
+        "InhaleStrength": {
+          "displayName": "Strength",
+          "value": 0.2,
+          "min": 0.0,
+          "max": 10.0
+        }
+      }
+    }
+  }
+}

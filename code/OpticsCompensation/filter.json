@@ -1,0 +1,42 @@
+{
+    "filters": {
+        "OpticsCompensation": {
+            "version": "v1.0.0",
+            "enableKgpu": false,
+            "score": 1,
+            "displayName": "OpticsCompensation",
+            "matchName": "KFM KSkr OpticsCompensation",
+            "fileName": "opticsCompensation/opticsCompensation",
+            "className": "OpticsCompensation",
+            "params": {
+                "Fov": {
+                    "value": 0.0,
+                    "min": 0.0,
+                    "max": 180.0,
+                    "type": "float",
+                    "displayName": "Fov"
+                },
+                "ReverseLens": {
+                    "value": "No | Yes",
+                    "type": "comboBox",
+                    "displayName": "ReverseLens"
+                },
+                "FovOrientation": {
+                    "value": "Horizontal | Vertical | Diagonal",
+                    "type": "comboBox",
+                    "displayName": "FovOrientation"
+                },
+                "ViewCenter": {
+                    "value": [
+                        0.0,
+                        0.0
+                    ],
+                    "type": "twoD",
+                    "displayName": "ViewCenter",
+                    "sizeScalingMode": "x,y",
+                    "cpMode": "position"
+                }
+            }
+        }
+    }
+}

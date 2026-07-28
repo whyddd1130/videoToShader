@@ -1,0 +1,21 @@
+{
+  "filters": {
+    "ShaderLabSimpleDirectionalStretchX": {
+      "version": "v1.0.0",
+      "enableKgpu": false,
+      "displayName": "ShaderLabSimpleDirectionalStretchX",
+      "matchName": "KFM ShaderLab ShaderLabSimpleDirectionalStretchX",
+      "fileName": "ShaderLabSimpleDirectionalStretchX/ShaderLabSimpleDirectionalStretchX",
+      "className": "ShaderLabSimpleDirectionalStretchX",
+      "params": {
+        "Progress": {
+          "value": 0.0,
+          "min": 0.0,
+          "max": 1.0,
+          "type": "float",
+          "displayName": "Progress"
+        }
+      }
+    }
+  }
+}

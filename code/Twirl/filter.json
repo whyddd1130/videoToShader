@@ -1,0 +1,45 @@
+{
+    "filters": {
+        "Twirl": {
+            "version": "v1.0.0",
+            "owner": "liuming10@kuaishou.com",
+            "enableKgpu": false,
+            "score": 0,
+            "displayName": "Twirl",
+            "matchName": "KFM KSkr Twirl",
+            "fileName": "twirl/twirl",
+            "className": "Twirl",
+            "params": {
+                "twirlAngle": {
+                    "value": 0.0,
+                    "min": -1000.0,
+                    "max": 1000.0,
+                    "type": "float",
+                    "displayName": "twirlAngle"
+                },
+                "twirlRadius": {
+                    "value": 30.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "twirlRadius"
+                },
+                "twirlCenter": {
+                    "value": [
+                        0.0,
+                        0.0
+                    ],
+                    "type": "twoD",
+                    "displayName": "twirlCenter"
+                },
+                "twirlTile": {
+                    "value": 0,
+                    "min": 0,
+                    "max": 1,
+                    "type": "int",
+                    "displayName": "twirlTile"
+                }
+            }
+        }
+    }
+}

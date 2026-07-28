@@ -1,0 +1,42 @@
+{
+    "filters": {
+        "ShiftChannels": {
+            "version": "v1.0.0",
+            "enableKgpu": false,
+            "score": 1,
+            "displayName": "ShiftChannels",
+            "matchName": "KFM KSkr ShiftChannels",
+            "fileName": "ShiftChannels/ShiftChannels",
+            "className": "ShiftChannels",
+            "params": {
+                "Channel_A": {
+                    "value": "A | R | G | B | Lumi | Hue | Bri | Sat | 1 | 0", 
+                    "type": "comboBox",
+                    "displayName": "Channel_A"
+                },
+                "Channel_R": {
+                    "value": "A | R | G | B | Lumi | Hue | Bri | Sat | 1 | 0", 
+                    "type": "comboBox",
+                    "displayName": "Channel_R"
+                },
+                "Channel_G": {
+                    "value": "A | R | G | B | Lumi | Hue | Bri | Sat | 1 | 0", 
+                    "type": "comboBox",
+                    "displayName": "Channel_G"
+                },
+                "Channel_B": {
+                    "value": "A | R | G | B | Lumi | Hue | Bri | Sat | 1 | 0", 
+                    "type": "comboBox",
+                    "displayName": "Channel_B"
+                },
+                "HasPreAlpha": {
+                    "value": "Yes | No",
+                    "type": "comboBox",
+                    "displayName": "HasPreAlpha",
+                    "min":"1",
+                    "max":"2"
+                }
+            }
+        }
+    }
+}

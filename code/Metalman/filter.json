@@ -1,0 +1,27 @@
+{
+    "filters": {
+        "Metalman": {
+            "version": "v1.0.0",
+            "enableKgpu": false,
+            "score": 1,
+            "displayName": "Metalman",
+            "matchName": "KFM KSkr Metalman",
+            "fileName": "Metalman/Metalman",
+            "className": "Metalman",
+            "params": {
+                "MetalColor": {
+                    "value": "#ffffff",
+                    "type": "color",
+                    "displayName": "MetalColor"
+                },
+                "MetalFlow": {
+                    "value": 0.0,
+                    "min": 0.0,
+                    "max": 1.0,
+                    "type": "float",
+                    "displayName": "MetalFlow"
+                }
+            }
+        }
+    }
+}

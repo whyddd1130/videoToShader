@@ -1,0 +1,26 @@
+{
+  "filters": {
+    "EmbossNew": {
+      "displayName": "EmbossNew",
+      "version": "v1.1.1",
+      "enableKgpu": false,
+      "matchName": "KFM KSkr EmbossNew",
+      "fileName": "embossnew/embossnew",
+      "className": "EmbossNew",
+      "params": {
+        "Boundary": {
+          "displayName": "Boundary",
+          "value": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "Strength": {
+          "displayName": "Strength",
+          "value": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.venv/
+.env
+env.sh
+__pycache__/
+*.pyc
+videos/
+*.DS_Store
+effect_ir_pipeline/20*/
+effect_ir_pipeline/backups/

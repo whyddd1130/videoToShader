@@ -1,0 +1,27 @@
+{
+  "filters": {
+    "Bowknot": {
+      "displayName": "Bowknot",
+      "version": "v1.1.1",
+      "enableKgpu": false,
+      "matchName": "KFM KSkr Bowknot",
+      "fileName": "bowknot/bowknot",
+      "className": "Bowknot",
+      "params": {
+        "angle": {
+          "displayName": "angle",
+          "value": 0.0,
+          "min": 0.0,
+          "max": 360.0
+        },
+        "direction": {
+          "displayName": "direction",
+          "type": "comboBox",
+          "value": "Back | Front",
+          "min": "1",
+          "max": "2"
+        }
+      }
+    }
+  }
+}

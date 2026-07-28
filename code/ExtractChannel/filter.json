@@ -1,0 +1,20 @@
+{
+    "filters": {
+        "ExtractChannel": {
+            "version": "v1.0.0", 
+            "enableKgpu": false, 
+            "score": 1, 
+            "displayName": "ExtractChannel", 
+            "matchName": "KFM KSkr ExtractChannel", 
+            "fileName": "ExtractChannel/ExtractChannel", 
+            "className": "ExtractChannel", 
+            "params": {
+                "Channel": {
+                    "value": "R | G | B | A", 
+                    "type": "comboBox", 
+                    "displayName": "Channel"
+                }
+            }
+        }
+    }
+}

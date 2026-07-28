@@ -1,0 +1,57 @@
+{
+    "filters": {
+        "CCLightSweep": {
+            "version": "v1.0.0",
+            "owner": "liuming10@kuaishou.com",
+            "enableKgpu": false,
+            "score": 0,
+            "displayName": "CCLightSweep",
+            "matchName": "KFM KSkr CCLightSweep",
+            "fileName": "CCLightSweep/CCLightSweep",
+            "className": "CCLightSweep",
+            "params": {
+                "Center": {
+                    "value": [
+                        50.0,
+                        50.0
+                    ],
+                    "type": "twoD",
+                    "displayName": "Center"
+                },
+                "Direction": {
+                    "value": 45.0,
+                    "min": -720.0,
+                    "max": 720.0,
+                    "type": "float",
+                    "displayName": "Direction"
+                },
+                "Width": {
+                    "value": 20.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "Width"
+                },
+                "SweepIntensity": {
+                    "value": 25.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "SweepIntensity"
+                },
+                "LightColor": {
+                    "value": "#ffffff",
+                    "type": "color",
+                    "displayName": "LightColor"
+                },
+                "LightReception": {
+                    "value": "Normal | Add | Cutout | Screen | Multiply",
+                    "type": "comboBox",
+                    "displayName": "LightReception",
+                    "min": 1,
+                    "max": 5
+                }
+            }
+        }
+    }
+}

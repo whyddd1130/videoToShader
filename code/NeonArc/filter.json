@@ -1,0 +1,77 @@
+{
+  "filters": {
+    "NeonArc": {
+      "version": "v1.0.0",
+      "enableKgpu": false,
+      "displayName": "NeonArc",
+      "matchName": "KFM KSkr NeonArc",
+      "fileName": "NeonArc/NeonArc",
+      "className": "NeonArc",
+      "params": {
+        "ArcIntensity": {
+          "value": 70.0,
+          "min": 0.0,
+          "max": 100.0,
+          "type": "float",
+          "displayName": "ArcIntensity"
+        },
+        "ArcFrequency": {
+          "value": 50.0,
+          "min": 1.0,
+          "max": 100.0,
+          "type": "float",
+          "displayName": "ArcFrequency"
+        },
+        "ArcSpeed": {
+          "value": 50.0,
+          "min": 0.0,
+          "max": 100.0,
+          "type": "float",
+          "displayName": "ArcSpeed"
+        },
+        "EdgeThreshold": {
+          "value": 30.0,
+          "min": 0.0,
+          "max": 100.0,
+          "type": "float",
+          "displayName": "EdgeThreshold"
+        },
+        "ArcColorHue": {
+          "value": 200.0,
+          "min": 0.0,
+          "max": 360.0,
+          "type": "float",
+          "displayName": "ArcColorHue"
+        },
+        "ColorSaturation": {
+          "value": 80.0,
+          "min": 0.0,
+          "max": 100.0,
+          "type": "float",
+          "displayName": "ColorSaturation"
+        },
+        "FlickerIntensity": {
+          "value": 70.0,
+          "min": 0.0,
+          "max": 100.0,
+          "type": "float",
+          "displayName": "FlickerIntensity"
+        },
+        "GlitchStrength": {
+          "value": 30.0,
+          "min": 0.0,
+          "max": 100.0,
+          "type": "float",
+          "displayName": "GlitchStrength"
+        },
+        "Thickness": {
+          "value": 40.0,
+          "min": 1.0,
+          "max": 100.0,
+          "type": "float",
+          "displayName": "Thickness"
+        }
+      }
+    }
+  }
+}

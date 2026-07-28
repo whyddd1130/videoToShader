@@ -1,0 +1,28 @@
+{
+    "filters": {
+        "motionBlur": {
+            "version": "v1.0.0", 
+            "enableKgpu": false, 
+            "displayName": "motionBlur", 
+            "matchName": "KFM KSkr motionBlur", 
+            "fileName": "motionBlur/motionBlur", 
+            "className": "MotionBlur", 
+            "params": {
+                "speed": {
+                    "type": "float",
+                    "displayName":"speed",
+                    "value": 0.7,
+                    "min": 0.0,
+                    "max": 2.0
+                },
+                "samples": {
+                    "type": "int",
+                    "displayName":"samples",
+                    "value": 20,
+                    "min": 1,
+                    "max": 50
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "filters": {
+        "SplashScreen": {
+            "version": "v1.0.0",
+            "owner": "liuming10@kuaishou.com",
+            "enableKgpu": false,
+            "score": 0,
+            "displayName": "SplashScreen",
+            "matchName": "KFM KSkr SplashScreen",
+            "fileName": "SplashScreen/SplashScreen",
+            "className": "SplashScreen",
+            "params": {
+                "SplashRate": {
+                    "value": 2.0,
+                    "min": 2.0,
+                    "max": 10.0,
+                    "type": "float",
+                    "displayName": "SplashRate"
+                },
+                "SplashColor": {
+                    "value": "Black | White | Yellow",
+                    "type": "comboBox",
+                    "displayName": "SplashColor"
+                }
+            }
+        }
+    }
+}

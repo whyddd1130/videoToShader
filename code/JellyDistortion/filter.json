@@ -1,0 +1,30 @@
+{
+    "filters": {
+        "JellyDistortion": {
+            "version": "v1.0.0",
+            "owner": "liuming10@kuaishou.com",
+            "enableKgpu": false,
+            "score": 0,
+            "displayName": "JellyDistortion",
+            "matchName": "KFM KSkr JellyDistortion",
+            "fileName": "JellyDistortion/JellyDistortion",
+            "className": "JellyDistortion",
+            "params": {
+                "Speed": {
+                    "value": 60.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "Speed"
+                },
+                "Progress": {
+                    "value": 0.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "Progress"
+                }
+            }
+        }
+    }
+}

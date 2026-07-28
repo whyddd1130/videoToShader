@@ -1,0 +1,109 @@
+{
+  "filters": {
+    "fractalnoise": {
+      "displayName": "FractalNoise",
+      "version": "v1.1.1",
+      "enableKgpu": false,
+      "matchName": "KFM KSkr FractalNoise",
+      "fileName": "fractalNoise/fractalNoise",
+      "className": "FractalNoise",
+      "on": false,
+      "params": {
+        "fractalType": {
+          "displayName": "FractalType",
+          "type": "comboBox",
+          "value": "basic|turbulentSmooth|turbulentBasic|turbulentSharp",
+          "min": "1",
+          "max": "4"
+        },
+        "noiseType": {
+          "displayName": "noiseType",
+          "type": "comboBox",
+          "value": "block|linear|softLinear|spline",
+          "min": "1",
+          "max": "4"
+        },
+        "contrast": {
+          "displayName": "contrast",
+          "value": 1.0,
+          "min": -10,
+          "max": 10,
+          "step": 0.01,
+          "randRange": "low"
+        },
+        "brightness": {
+          "displayName": "brightness",
+          "value": 0.0,
+          "min": -1,
+          "max": 1,
+          "step": 0.01,
+          "randRange": "low"
+        },
+        "evolution": {
+          "displayName": "evolution",
+          "value": 0.0,
+          "min": 0.0,
+          "max": 720.0,
+          "step": 0.01,
+          "randRange": "low"
+        },
+        "scaleUnify": {
+          "displayName": "scaleUnify",
+          "value": 1,
+          "min": 1,
+          "max": 2,
+          "type": "int"
+        },
+        "scale": {
+          "displayName": "scale",
+          "value": 0.0,
+          "min": -20.0,
+          "max": 100.0,
+          "step": 0.01,
+          "randRange": "low"
+        },
+        "XscaleX": {
+          "displayName": "scaleX",
+          "value": 0.0,
+          "min": -20.0,
+          "max": 100.0,
+          "step": 0.01,
+          "randRange": "low"
+        },
+        "YscaleY": {
+          "displayName": "scaleY",
+          "value": 0.0,
+          "min": -20.0,
+          "max": 100.0,
+          "step": 0.01,
+          "randRange": "low"
+        },
+        "offsetTurbulence": {
+          "displayName": "offsetTurbulence",
+          "value": [
+            0.0,
+            0.0
+          ],
+          "min": [
+            -1000.0,
+            -1000.0
+          ],
+          "max": [
+            1000.0,
+            1000.0
+          ],
+          "step": 0.01,
+          "type": "twoD"
+        },
+        "complexity": {
+          "displayName": "complexity",
+          "value": 6.0,
+          "min": 1.0,
+          "max": 10.0,
+          "step": 0.01,
+          "randRange": "low"
+        }
+      }
+    }
+  }
+}

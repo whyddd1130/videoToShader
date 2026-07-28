@@ -1,0 +1,42 @@
+{
+  "filters": {
+    "Mercury": {
+      "displayName": "Mercury",
+      "version": "v1.1.1",
+      "enableKgpu": false,
+      "matchName": "KFM KSkr Mercury",
+      "fileName": "mercury/mercury",
+      "className": "Mercury",
+      "params": {
+        "dir": {
+          "displayName": "direction",
+          "value": 1.57,
+          "min": 0,
+          "max": 6.28,
+          "step": 0.01
+        },
+        "speed": {
+          "displayName": "moveSpeed",
+          "value": 0.15,
+          "min": 0,
+          "max": 0.5,
+          "step": 0.01
+        },
+        "densityMin": {
+          "displayName": "densityMin",
+          "value": 1.5,
+          "min": 1.2,
+          "max": 3.0,
+          "step": 0.1
+        },
+        "densityMax": {
+          "displayName": "densityMax",
+          "value": 2.5,
+          "min": 1.2,
+          "max": 3.0,
+          "step": 0.1
+        }
+      }
+    }
+  }
+}

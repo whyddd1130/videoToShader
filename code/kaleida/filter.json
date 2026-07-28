@@ -1,0 +1,21 @@
+{
+  "filters": {
+    "kaleida": {
+      "displayName": "Kaleida",
+      "version": "v1.1.1",
+      "enableKgpu": false,
+      "matchName": "CC Kaleida",
+      "fileName": "CCkaleida/CCkaleida",
+      "className": "CCKaleida",
+      "params": {
+        "center": {
+          "type": "twoD"
+        },
+        "size": {},
+        "mirror": {},
+        "rotate": {},
+        "centerFloat": {}
+      }
+    }
+  }
+}

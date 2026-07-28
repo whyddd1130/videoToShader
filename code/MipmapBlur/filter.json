@@ -1,0 +1,28 @@
+{
+  "filters": {
+    "MipmapBlur": {
+      "version": "v1.0.0",
+      "enableKgpu": false,
+      "displayName": "MipmapBlur",
+      "matchName": "KFM KSkr MipmapBlur",
+      "fileName": "MipmapBlur/MipmapBlur",
+      "className": "MipmapBlur",
+      "params": {
+        "blurRadius": {
+          "value": 3.0,
+          "min": 0.0,
+          "max": 10.0,
+          "type": "float",
+          "displayName": "BlurRadius"
+        },
+        "blendAmount": {
+          "value": 100.0,
+          "min": 0.0,
+          "max": 100.0,
+          "type": "float",
+          "displayName": "Blend"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "filters": {
+    "ShaderLabSimpleFlipSmearX": {
+      "version": "v1.0.0",
+      "enableKgpu": false,
+      "displayName": "ShaderLabSimpleFlipSmearX",
+      "matchName": "KFM ShaderLab ShaderLabSimpleFlipSmearX",
+      "fileName": "ShaderLabSimpleFlipSmearX/ShaderLabSimpleFlipSmearX",
+      "className": "ShaderLabSimpleFlipSmearX",
+      "params": {
+        "Progress": {
+          "value": 0.0,
+          "min": 0.0,
+          "max": 1.0,
+          "type": "float",
+          "displayName": "Progress"
+        }
+      }
+    }
+  }
+}

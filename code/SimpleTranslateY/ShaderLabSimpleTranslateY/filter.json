@@ -1,0 +1,21 @@
+{
+  "filters": {
+    "ShaderLabSimpleTranslateY": {
+      "version": "v1.0.0",
+      "enableKgpu": false,
+      "displayName": "ShaderLabSimpleTranslateY",
+      "matchName": "KFM ShaderLab ShaderLabSimpleTranslateY",
+      "fileName": "ShaderLabSimpleTranslateY/ShaderLabSimpleTranslateY",
+      "className": "ShaderLabSimpleTranslateY",
+      "params": {
+        "Progress": {
+          "value": 0.0,
+          "min": 0.0,
+          "max": 1.0,
+          "type": "float",
+          "displayName": "Progress"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "filters": {
+    "ShaderLabSimpleDirectionalSmearX": {
+      "version": "v1.0.0",
+      "enableKgpu": false,
+      "displayName": "ShaderLabSimpleDirectionalSmearX",
+      "matchName": "KFM ShaderLab ShaderLabSimpleDirectionalSmearX",
+      "fileName": "ShaderLabSimpleDirectionalSmearX/ShaderLabSimpleDirectionalSmearX",
+      "className": "ShaderLabSimpleDirectionalSmearX",
+      "params": {
+        "Progress": {
+          "value": 0.0,
+          "min": 0.0,
+          "max": 1.0,
+          "type": "float",
+          "displayName": "Progress"
+        }
+      }
+    }
+  }
+}

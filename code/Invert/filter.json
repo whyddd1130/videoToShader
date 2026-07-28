@@ -1,0 +1,26 @@
+{
+    "filters": {
+        "Invert": {
+            "version": "v1.0.0", 
+            "enableKgpu": false, 
+            "displayName": "Invert", 
+            "matchName": "KFM KSkr Invert", 
+            "fileName": "Invert/Invert", 
+            "className": "Invert", 
+            "params": {
+                "Channel": {
+                    "value": "RGB | Red | Green | Blue | Hue | Lightness | Saturation", 
+                    "type": "comboBox", 
+                    "displayName": "Channel"
+                }, 
+                "Blend With Original": {
+                    "value": 0.0, 
+                    "min": 0.0, 
+                    "max": 1.0, 
+                    "type": "float", 
+                    "displayName": "Blend With Original"
+                }
+            }
+        }
+    }
+}
