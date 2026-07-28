@@ -7,3 +7,4 @@ videos/
 *.DS_Store
 effect_ir_pipeline/20*/
 effect_ir_pipeline/backups/
+effect_ir_pipeline/effect_ir/backups/
