@@ -48,10 +48,19 @@ def _generate_http_json(messages: list[dict[str, Any]], *, model: str, temperatu
         "model": model,
         "messages": _normalize_messages(messages),
     }
+    max_tokens = os.environ.get("EFFECT_IR_LLM_MAX_TOKENS", "").strip()
+    if max_tokens:
+        try:
+            payload["max_tokens"] = max(1, int(max_tokens))
+        except ValueError as exc:
+            raise ValueError("EFFECT_IR_LLM_MAX_TOKENS must be a positive integer") from exc
     if temperature not in (None, 0, 0.0, 1, 1.0):
         payload["temperature"] = temperature
     if os.environ.get("EFFECT_IR_LLM_JSON_MODE", "0") == "1":
         payload["response_format"] = {"type": "json_object"}
+    stream = os.environ.get("EFFECT_IR_LLM_STREAM", "0").strip().lower() in {"1", "true", "yes"}
+    if stream:
+        payload["stream"] = True
     data = json.dumps(payload).encode("utf-8")
     req = request.Request(
         endpoint,
@@ -59,6 +68,7 @@ def _generate_http_json(messages: list[dict[str, Any]], *, model: str, temperatu
         headers={
             "Content-Type": "application/json",
             "Authorization": f"Bearer {api_key}",
+            "Accept": "text/event-stream" if stream else "application/json",
         },
         method="POST",
     )
@@ -69,6 +79,8 @@ def _generate_http_json(messages: list[dict[str, Any]], *, model: str, temperatu
     for attempt in range(1, retries + 1):
         try:
             with request.urlopen(req, timeout=timeout) as resp:
+                if stream:
+                    return _extract_streaming_text(resp)
                 body = json.loads(resp.read().decode("utf-8"))
             return _extract_text(body)
         except error.HTTPError as exc:
@@ -82,6 +94,50 @@ def _generate_http_json(messages: list[dict[str, Any]], *, model: str, temperatu
             time.sleep(base_sleep * attempt)
     assert last_error is not None
     raise last_error
+
+
+def _extract_streaming_text(response: Any) -> str:
+    """Collect OpenAI-compatible SSE deltas, retaining only final answer content.
+
+    Reasoning deltas are intentionally not fed back into the shader loop. They do
+    keep the HTTP stream active, which is useful for providers that otherwise
+    reset a long non-streaming visual-reasoning request before final content.
+    """
+    content_parts: list[str] = []
+    event_count = 0
+    reasoning_char_count = 0
+    for raw_line in response:
+        line = raw_line.decode("utf-8", errors="replace").strip()
+        if not line.startswith("data:"):
+            continue
+        event_data = line[5:].strip()
+        if not event_data or event_data == "[DONE]":
+            continue
+        try:
+            event = json.loads(event_data)
+        except json.JSONDecodeError:
+            continue
+        event_count += 1
+        choices = event.get("choices") or []
+        if not choices:
+            continue
+        delta = choices[0].get("delta") or {}
+        content = delta.get("content", "")
+        if isinstance(content, list):
+            content = "".join(str(part.get("text", "")) for part in content if isinstance(part, dict))
+        if content:
+            content_parts.append(str(content))
+        reasoning = delta.get("reasoning_content", delta.get("reasoning", ""))
+        if isinstance(reasoning, list):
+            reasoning = "".join(str(part.get("text", "")) for part in reasoning if isinstance(part, dict))
+        reasoning_char_count += len(str(reasoning or ""))
+    text = "".join(content_parts).strip()
+    if text:
+        return text
+    raise ValueError(
+        "Streaming model returned no final content "
+        f"(events={event_count}, reasoning_chars={reasoning_char_count})"
+    )
 
 
 def _extract_text(body: dict[str, Any]) -> str:
