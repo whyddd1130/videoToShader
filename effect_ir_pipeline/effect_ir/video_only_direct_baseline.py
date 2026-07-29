@@ -8,7 +8,6 @@ import os
 from pathlib import Path
 
 import cv2
-import numpy as np
 
 from .closed_loop_shader_iter import (
     ensure_shader_precision_preamble,
@@ -36,18 +35,6 @@ def _first_frame_proxy(video_path: Path, output_path: Path) -> Path:
     return output_path
 
 
-def _orientation_probe(output_path: Path, size: int = 512) -> Path:
-    """Create an asymmetric top/bottom image for visual coordinate calibration."""
-    image = np.zeros((size, size, 3), dtype=np.uint8)
-    image[: size // 2, :] = (30, 45, 230)   # visual top: red
-    image[size // 2 :, :] = (220, 175, 25)  # visual bottom: blue/yellow
-    cv2.line(image, (0, size // 2), (size - 1, size // 2), (255, 255, 255), 8)
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-    if not cv2.imwrite(str(output_path), cv2.cvtColor(image, cv2.COLOR_RGB2BGR)):
-        raise RuntimeError(f"Cannot save orientation probe: {output_path}")
-    return output_path
-
-
 def main() -> None:
     parser = argparse.ArgumentParser(description="One-shot video-only direct shader baseline.")
     parser.add_argument("video_path", type=Path)
@@ -62,11 +49,6 @@ def main() -> None:
     parser.add_argument("--shader-lab-token", default=os.environ.get("SHADER_LAB_TOKEN", ""))
     parser.add_argument("--shader-lab-timeout", type=float, default=float(os.environ.get("SHADER_LAB_TIMEOUT", "900")))
     parser.add_argument("--shader-lab-poll-interval", type=float, default=1.6)
-    parser.add_argument(
-        "--orientation-calibration",
-        action="store_true",
-        help="Opt in to an additional visual direction-calibration pass after the one-shot baseline.",
-    )
     args = parser.parse_args()
     if args.frame_count <= 0:
         raise ValueError("frame-count must be positive")
@@ -117,50 +99,6 @@ def main() -> None:
     valid, reason = validate_rendered_video(rendered)
     if not valid:
         raise RuntimeError(reason)
-    calibration: dict[str, object] = {"enabled": bool(args.orientation_calibration), "applied": False}
-    if args.orientation_calibration:
-        probe = _orientation_probe(args.work_dir / "orientation_probe.png")
-        probe_video = args.work_dir / "orientation_probe_rendered.mp4"
-        run_shader_lab_render(
-            base_url=args.shader_lab_url, token=args.shader_lab_token,
-            vertex_shader=vertex, fragment_shader=fragment, input_image=probe,
-            output_video=probe_video, timeout=args.shader_lab_timeout, poll_interval=args.shader_lab_poll_interval,
-        )
-        target_sheet, _ = build_target_contact_sheet_data_url(target_video, image_size=args.image_size, frame_count=args.frame_count)
-        current_sheet, _ = build_target_contact_sheet_data_url(rendered, image_size=args.image_size, frame_count=args.frame_count)
-        probe_sheet, _ = build_target_contact_sheet_data_url(probe_video, image_size=args.image_size, frame_count=args.frame_count)
-        check_prompt = (
-            "Compare TARGET with CURRENT only for vertical direction: where the effect starts, moves, and leaves black/empty space from visual top to bottom. "
-            "PROBE shows how the CURRENT shader maps a red visual top and blue visual bottom. "
-            "If vertical direction is correct, answer only KEEP. Otherwise edit CURRENT_SHADER below, changing only the coordinate sign, vertical offset direction, "
-            "or black-side mask needed to match TARGET. Do not redesign the effect or change its colors, timing, or horizontal behavior. "
-            "Output exactly two fenced ```glsl blocks (vertex then fragment) and nothing else.\n\n"
-            f"CURRENT_SHADER:\n{shader}"
-        )
-        check = generate_messages([{"role": "user", "content": [
-            {"type": "text", "text": check_prompt},
-            {"type": "image_url", "image_url": {"url": target_sheet}},
-            {"type": "image_url", "image_url": {"url": current_sheet}},
-            {"type": "image_url", "image_url": {"url": probe_sheet}},
-        ]}], model=args.model, temperature=args.temperature)
-        calibration.update({"probe_image": str(probe), "probe_video": str(probe_video), "decision": check})
-        if check.strip().upper() != "KEEP":
-            try:
-                corrected = ensure_shader_precision_preamble(check)
-                valid, reason = validate_shader_text(corrected)
-                if not valid:
-                    raise ValueError(reason)
-                source_path.write_text(corrected, encoding="utf-8")
-                vertex, fragment = write_shader_files(corrected, args.work_dir, 1)
-                run_shader_lab_render(
-                    base_url=args.shader_lab_url, token=args.shader_lab_token,
-                    vertex_shader=vertex, fragment_shader=fragment, input_image=render_input,
-                    output_video=rendered, timeout=args.shader_lab_timeout, poll_interval=args.shader_lab_poll_interval,
-                )
-                shader = corrected
-                calibration["applied"] = True
-            except Exception as exc:
-                calibration["correction_error"] = str(exc)
     result = {
         "baseline": "video_only_direct_shader",
         "model_input": "target_video_samples_only",
@@ -170,7 +108,6 @@ def main() -> None:
         "shader_source_markdown": str(source_path),
         "rendered_video": str(rendered),
         "shader_lab_job": job,
-        "orientation_calibration": calibration,
     }
     result_path = args.work_dir / "video_only_direct_baseline_result.json"
     result_path.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
