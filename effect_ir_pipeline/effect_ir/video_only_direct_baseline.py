@@ -62,8 +62,11 @@ def main() -> None:
     parser.add_argument("--shader-lab-token", default=os.environ.get("SHADER_LAB_TOKEN", ""))
     parser.add_argument("--shader-lab-timeout", type=float, default=float(os.environ.get("SHADER_LAB_TIMEOUT", "900")))
     parser.add_argument("--shader-lab-poll-interval", type=float, default=1.6)
-    parser.add_argument("--no-orientation-calibration", action="store_false", dest="orientation_calibration", help="Disable the visual top/bottom calibration step.")
-    parser.set_defaults(orientation_calibration=True)
+    parser.add_argument(
+        "--orientation-calibration",
+        action="store_true",
+        help="Opt in to an additional visual direction-calibration pass after the one-shot baseline.",
+    )
     args = parser.parse_args()
     if args.frame_count <= 0:
         raise ValueError("frame-count must be positive")
