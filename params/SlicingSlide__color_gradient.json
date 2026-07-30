@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "sample_id": "SlicingSlide__color_gradient",
+  "effect_name": "SlicingSlide",
+  "display_name": "SlicingSlide",
+  "match_name": "KFM KSkr SlicingSlide",
+  "source_dir": "doc/examples/kskr-plugin/script/slicingSlide",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/SlicingSlide",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/SlicingSlide__color_gradient",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/SlicingSlide__color_gradient/SlicingSlide__color_gradient.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/SlicingSlide__color_gradient/SlicingSlide__color_gradient.json",
+  "input": {
+    "variant": "color_gradient",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/color_gradient.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "GroupOffset",
+  "params": [
+    {
+      "index": 1,
+      "key": "GroupOffset",
+      "display_name": "GroupOffset",
+      "config_name": "GroupOffset",
+      "match_name": "KFM KSkr SlicingSlide-0001",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": -1.0,
+      "source_max": 1.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            -1.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "SamplerRadius",
+      "display_name": "SamplerRadius",
+      "config_name": "SamplerRadius",
+      "match_name": "KFM KSkr SlicingSlide-0002",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 20.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            10.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            20.0
+          ]
+        }
+      ]
+    }
+  ]
+}

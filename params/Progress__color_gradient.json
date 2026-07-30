@@ -1,0 +1,278 @@
+{
+  "schema_version": 1,
+  "sample_id": "Progress__color_gradient",
+  "effect_name": "Progress",
+  "display_name": "Progress",
+  "match_name": "KFM KSkr Progress",
+  "source_dir": "doc/examples/kskr-plugin/script/Progress",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/Progress",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/Progress__color_gradient",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/Progress__color_gradient/Progress__color_gradient.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/Progress__color_gradient/Progress__color_gradient.json",
+  "input": {
+    "variant": "color_gradient",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/color_gradient.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "innerRadius",
+  "params": [
+    {
+      "index": 1,
+      "key": "RenderType",
+      "display_name": "RenderType",
+      "config_name": "RenderType",
+      "match_name": "KFM KSkr Progress-0001",
+      "type": "comboBox",
+      "source_default": "Circle | Horizontal",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "Duration",
+      "display_name": "Duration",
+      "config_name": "Duration",
+      "match_name": "KFM KSkr Progress-0002",
+      "type": "float",
+      "source_default": 300.0,
+      "source_min": 0.0,
+      "source_max": 900.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            450.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            900.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "ShowLayer",
+      "display_name": "ShowLayer",
+      "config_name": "ShowLayer",
+      "match_name": "KFM KSkr Progress-0003",
+      "type": "layer",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "SliderLayer",
+      "display_name": "SliderLayer",
+      "config_name": "SliderLayer",
+      "match_name": "KFM KSkr Progress-0004",
+      "type": "layer",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "key": "SliderSize",
+      "display_name": "sliderSize",
+      "config_name": "sliderSize",
+      "match_name": "KFM KSkr Progress-0005",
+      "type": "twoD",
+      "source_default": [
+        10.0,
+        10.0
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            10.0,
+            10.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "key": "innerRadius",
+      "display_name": "innerRadius",
+      "config_name": "innerRadius",
+      "match_name": "KFM KSkr Progress-0006",
+      "type": "float",
+      "source_default": 23.0,
+      "source_min": 0.0,
+      "source_max": 300.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            150.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            300.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "key": "OuterRadius",
+      "display_name": "OuterRadius",
+      "config_name": "OuterRadius",
+      "match_name": "KFM KSkr Progress-0007",
+      "type": "float",
+      "source_default": 25.0,
+      "source_min": 0.0,
+      "source_max": 300.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            150.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            300.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "key": "BgColor",
+      "display_name": "BgColor",
+      "config_name": "BgColor",
+      "match_name": "KFM KSkr Progress-0008",
+      "type": "color",
+      "source_default": "#EE0000",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.9333333333333333,
+            0.0,
+            0.0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "key": "ProgressColor",
+      "display_name": "ProgressColor",
+      "config_name": "ProgressColor",
+      "match_name": "KFM KSkr Progress-0009",
+      "type": "color",
+      "source_default": "#FFFFFF",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0,
+            1.0,
+            1.0,
+            1
+          ]
+        }
+      ]
+    }
+  ]
+}

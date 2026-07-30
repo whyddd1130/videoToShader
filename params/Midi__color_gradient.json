@@ -1,0 +1,338 @@
+{
+  "schema_version": 1,
+  "sample_id": "Midi__color_gradient",
+  "effect_name": "Midi",
+  "display_name": "Midi",
+  "match_name": "KFM KSkr Midi",
+  "source_dir": "doc/examples/kskr-plugin/script/Midi",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/Midi",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/Midi__color_gradient",
+  "video_path": "",
+  "render_json": "",
+  "input": {
+    "variant": "color_gradient",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/color_gradient.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "midiHeight",
+  "params": [
+    {
+      "index": 1,
+      "key": "resourcePath",
+      "display_name": "resourcePath",
+      "config_name": "resourcePath",
+      "match_name": "KFM KSkr Midi-0001",
+      "type": "path",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "midiHeight",
+      "display_name": "midiHeight",
+      "config_name": "midiHeight",
+      "match_name": "KFM KSkr Midi-0002",
+      "type": "float",
+      "source_default": 200.0,
+      "source_min": 100.0,
+      "source_max": 1920.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            100.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            1010.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1920.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "midiCenter",
+      "display_name": "midiCenter",
+      "config_name": "midiCenter",
+      "match_name": "KFM KSkr Midi-0003",
+      "type": "float",
+      "source_default": 100.0,
+      "source_min": 0.0,
+      "source_max": 1920.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            960.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1920.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "midiPadding",
+      "display_name": "midiPadding",
+      "config_name": "midiPadding",
+      "match_name": "KFM KSkr Midi-0004",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": 0.0,
+      "source_max": 960.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            480.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            960.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "key": "triggerMode",
+      "display_name": "triggerMode",
+      "config_name": "triggerMode",
+      "match_name": "KFM KSkr Midi-0005",
+      "type": "int",
+      "source_default": 0,
+      "source_min": 0,
+      "source_max": 1,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "key": "triggerPictureCount",
+      "display_name": "triggerPictureCount",
+      "config_name": "triggerPictureCount",
+      "match_name": "KFM KSkr Midi-0006",
+      "type": "int",
+      "source_default": 1,
+      "source_min": 1,
+      "source_max": 100,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            100.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "key": "triggerBackgroundCount",
+      "display_name": "triggerBackgroundCount",
+      "config_name": "triggerBackgroundCount",
+      "match_name": "KFM KSkr Midi-0007",
+      "type": "int",
+      "source_default": 1,
+      "source_min": 1,
+      "source_max": 100,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            100.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "key": "triggerPositionX",
+      "display_name": "triggerPositionX",
+      "config_name": "triggerPositionX",
+      "match_name": "KFM KSkr Midi-0008",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 1920.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            960.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1920.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "key": "triggerPositionY",
+      "display_name": "triggerPositionY",
+      "config_name": "triggerPositionY",
+      "match_name": "KFM KSkr Midi-0009",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 1920.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            960.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1920.0
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "sample_id": "Chord__cross_lines",
+  "effect_name": "Chord",
+  "display_name": "Chord",
+  "match_name": "KFM KSkr Chord",
+  "source_dir": "doc/examples/kskr-plugin/script/Chord",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/Chord",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/Chord__cross_lines",
+  "video_path": "",
+  "render_json": "",
+  "input": {
+    "variant": "cross_lines",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/cross_lines.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "center",
+  "params": [
+    {
+      "index": 1,
+      "key": "path",
+      "display_name": "path",
+      "config_name": "path",
+      "match_name": "KFM KSkr Chord-0001",
+      "type": "path",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "center",
+      "display_name": "center",
+      "config_name": "center",
+      "match_name": "KFM KSkr Chord-0002",
+      "type": "float",
+      "source_default": 480.0,
+      "source_min": 0.0,
+      "source_max": 960.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            480.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            960.0
+          ]
+        }
+      ]
+    }
+  ]
+}

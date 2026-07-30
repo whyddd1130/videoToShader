@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "sample_id": "EdgeGlow__rg_split",
+  "effect_name": "EdgeGlow",
+  "display_name": "EdgeGlow",
+  "match_name": "KFM KSkr EdgeGlow",
+  "source_dir": "doc/examples/kskr-plugin/script/edgeGlow",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/EdgeGlow",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/EdgeGlow__rg_split",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/EdgeGlow__rg_split/EdgeGlow__rg_split.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/EdgeGlow__rg_split/EdgeGlow__rg_split.json",
+  "input": {
+    "variant": "rg_split",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/rg_split.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "GlowIntensity",
+  "params": [
+    {
+      "index": 1,
+      "key": "GlowCenter",
+      "display_name": "GlowCenter",
+      "config_name": "GlowCenter",
+      "match_name": "KFM KSkr EdgeGlow-0001",
+      "type": "twoD",
+      "source_default": [
+        50.0,
+        50.0
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            540.0,
+            540.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "GlowIntensity",
+      "display_name": "GlowIntensity",
+      "config_name": "GlowIntensity",
+      "match_name": "KFM KSkr EdgeGlow-0002",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": 20.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            20.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            60.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "GlowDensity",
+      "display_name": "GlowDensity",
+      "config_name": "GlowDensity",
+      "match_name": "KFM KSkr EdgeGlow-0003",
+      "type": "float",
+      "source_default": 60.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    }
+  ]
+}

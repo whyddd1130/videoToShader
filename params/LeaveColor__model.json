@@ -1,0 +1,405 @@
+{
+  "schema_version": 1,
+  "sample_id": "LeaveColor__model",
+  "effect_name": "LeaveColor",
+  "display_name": "LeaveColor",
+  "match_name": "KFM KSkr LeaveColor",
+  "source_dir": "doc/examples/kskr-plugin/script/leaveColor",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/LeaveColor",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/LeaveColor__model",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/LeaveColor__model/LeaveColor__model.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/LeaveColor__model/LeaveColor__model.json",
+  "input": {
+    "variant": "model",
+    "image_path": ""
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "AmountToDecolor",
+  "params": [
+    {
+      "index": 1,
+      "key": "AmountToDecolor",
+      "display_name": "AmountToDecolor",
+      "config_name": "AmountToDecolor",
+      "match_name": "KFM KSkr LeaveColor-0001",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "ColorOneToLeave",
+      "display_name": "ColorOneToLeave",
+      "config_name": "ColorOneToLeave",
+      "match_name": "KFM KSkr LeaveColor-0002",
+      "type": "color",
+      "source_default": "#FF0000",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0,
+            0.0,
+            0.0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "ToleranceOne",
+      "display_name": "ToleranceOne",
+      "config_name": "ToleranceOne",
+      "match_name": "KFM KSkr LeaveColor-0003",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "EdgeSoftnessOne",
+      "display_name": "EdgeSoftnessOne",
+      "config_name": "EdgeSoftnessOne",
+      "match_name": "KFM KSkr LeaveColor-0004",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "key": "ColorTwoToLeave",
+      "display_name": "ColorTwoToLeave",
+      "config_name": "ColorTwoToLeave",
+      "match_name": "KFM KSkr LeaveColor-0005",
+      "type": "color",
+      "source_default": "#75F92F",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.4588235294117647,
+            0.9764705882352941,
+            0.1843137254901961,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "key": "ToleranceTwo",
+      "display_name": "ToleranceTwo",
+      "config_name": "ToleranceTwo",
+      "match_name": "KFM KSkr LeaveColor-0006",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "key": "ColorThreeToLeave",
+      "display_name": "ColorThreeToLeave",
+      "config_name": "ColorThreeToLeave",
+      "match_name": "KFM KSkr LeaveColor-0007",
+      "type": "color",
+      "source_default": "#3000DA",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.18823529411764706,
+            0.0,
+            0.8549019607843137,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "key": "ToleranceThree",
+      "display_name": "ToleranceThree",
+      "config_name": "ToleranceThree",
+      "match_name": "KFM KSkr LeaveColor-0008",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "key": "ColorFourToLeave",
+      "display_name": "ColorFourToLeave",
+      "config_name": "ColorFourToLeave",
+      "match_name": "KFM KSkr LeaveColor-0009",
+      "type": "color",
+      "source_default": "#48C8B3",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.2823529411764706,
+            0.7843137254901961,
+            0.7019607843137254,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "key": "ToleranceFour",
+      "display_name": "ToleranceFour",
+      "config_name": "ToleranceFour",
+      "match_name": "KFM KSkr LeaveColor-0010",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "key": "ColorFiveToLeave",
+      "display_name": "ColorFiveToLeave",
+      "config_name": "ColorFiveToLeave",
+      "match_name": "KFM KSkr LeaveColor-0011",
+      "type": "color",
+      "source_default": "#BC20E3",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.7372549019607844,
+            0.12549019607843137,
+            0.8901960784313725,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "key": "ToleranceFive",
+      "display_name": "ToleranceFive",
+      "config_name": "ToleranceFive",
+      "match_name": "KFM KSkr LeaveColor-0012",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    }
+  ]
+}

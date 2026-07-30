@@ -1,0 +1,114 @@
+{
+  "sample_id": "DBSnowGlitch_00__root__ring_mask",
+  "source_platform": "jianying_reverse",
+  "category": "noise_glitch",
+  "level": "L1_pure_image_shader",
+  "class_label": "snow_block_glitch",
+  "source": {
+    "effect_name": "DBSnowGlitch",
+    "spec": "/home/wangxin/research/DigitalTwin/output/DBSnowGlitch/replication_spec.json",
+    "pass_index": 0,
+    "pass_id": "L0__root_pass0",
+    "module": "_root",
+    "shader_file": "pass0.frag",
+    "inputs": [
+      "input"
+    ]
+  },
+  "input": {
+    "variant": "ring_mask",
+    "image_path": "datasets/effect_training/jianying_single_pass/input_images/ring_mask.png"
+  },
+  "video": {
+    "fps": 25,
+    "duration_ms": 5000,
+    "width": 1080,
+    "height": 1080,
+    "total_frames": 125,
+    "path": "datasets/effect_training/jianying_single_pass/videos/DBSnowGlitch_00__root__ring_mask/shader_lab.mp4"
+  },
+  "params": [
+    {
+      "key": "uProgress",
+      "type": "float",
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "key": "uTime",
+      "type": "float",
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            2.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            5.0
+          ]
+        }
+      ]
+    }
+  ],
+  "uniform_patches": {
+    "timer": "uTime",
+    "shakeIntensity": "(0.02 + 0.45 * uProgress)",
+    "xnoiseIntensity": "(0.02 + 0.85 * uProgress)",
+    "blockIntensity": "(0.02 + 0.90 * uProgress)",
+    "rgbIntensity": "(0.02 + 0.70 * uProgress)",
+    "whiteIntensity": "(0.00 + 0.60 * uProgress)",
+    "light": "(0.00 + 0.70 * uProgress)",
+    "baseTexWidth": "1080.0",
+    "baseTexHeight": "1080.0",
+    "interval": "0.12"
+  },
+  "sampler_mapping": {
+    "primary_sampler": "inputImageTexture",
+    "runtime_sampler": "inputImageTexture"
+  },
+  "diagnostics": {
+    "first_frame": "output/_shader_lab/40e7ae857a5e/diagnostics/frame_first.png",
+    "last_frame": "output/_shader_lab/40e7ae857a5e/diagnostics/frame_last.png",
+    "first_mean_rgb": 0.0,
+    "last_mean_rgb": 11.41,
+    "first_last_diff_mean": 11.41,
+    "warnings": []
+  }
+}

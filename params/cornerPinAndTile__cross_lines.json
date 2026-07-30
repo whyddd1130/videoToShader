@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "sample_id": "cornerPinAndTile__cross_lines",
+  "effect_name": "cornerPinAndTile",
+  "display_name": "cornerPinAndTile",
+  "match_name": "KFM KSkr cornerPinAndTile",
+  "source_dir": "doc/examples/kskr-plugin/script/cornerPinAndTile",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/cornerPinAndTile",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/cornerPinAndTile__cross_lines",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/cornerPinAndTile__cross_lines/cornerPinAndTile__cross_lines.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/cornerPinAndTile__cross_lines/cornerPinAndTile__cross_lines.json",
+  "input": {
+    "variant": "cross_lines",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/cross_lines.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "flip",
+  "params": [
+    {
+      "index": 1,
+      "key": "flip",
+      "display_name": "needMirror",
+      "config_name": "needMirror",
+      "match_name": "KFM KSkr cornerPinAndTile-0001",
+      "type": "int",
+      "source_default": 0,
+      "source_min": 0,
+      "source_max": 1,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "V3",
+      "display_name": "bottomLeft",
+      "config_name": "bottomLeft",
+      "match_name": "KFM KSkr cornerPinAndTile-0002",
+      "type": "twoD",
+      "source_default": [
+        0.0,
+        100.0
+      ],
+      "source_min": [
+        0.0,
+        0.0
+      ],
+      "source_max": [
+        100.0,
+        100.0
+      ],
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0,
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "V2",
+      "display_name": "bottomRight",
+      "config_name": "bottomRight",
+      "match_name": "KFM KSkr cornerPinAndTile-0003",
+      "type": "twoD",
+      "source_default": [
+        100.0,
+        100.0
+      ],
+      "source_min": [
+        0.0,
+        0.0
+      ],
+      "source_max": [
+        100.0,
+        100.0
+      ],
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            100.0,
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "V0",
+      "display_name": "topLeft",
+      "config_name": "topLeft",
+      "match_name": "KFM KSkr cornerPinAndTile-0004",
+      "type": "twoD",
+      "source_default": [
+        0.0,
+        0.0
+      ],
+      "source_min": [
+        0.0,
+        0.0
+      ],
+      "source_max": [
+        100.0,
+        100.0
+      ],
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "key": "V1",
+      "display_name": "topRight",
+      "config_name": "topRight",
+      "match_name": "KFM KSkr cornerPinAndTile-0005",
+      "type": "twoD",
+      "source_default": [
+        100.0,
+        0.0
+      ],
+      "source_min": [
+        0.0,
+        0.0
+      ],
+      "source_max": [
+        100.0,
+        100.0
+      ],
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            100.0,
+            0.0
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "sample_id": "HexagonalBokeh__ring_mask",
+  "effect_name": "HexagonalBokeh",
+  "display_name": "HexagonalBokeh",
+  "match_name": "KFM KSkr HexagonalBokeh",
+  "source_dir": "doc/examples/kskr-plugin/script/HexagonalBokeh",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/HexagonalBokeh",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/HexagonalBokeh__ring_mask",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/HexagonalBokeh__ring_mask/HexagonalBokeh__ring_mask.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/HexagonalBokeh__ring_mask/HexagonalBokeh__ring_mask.json",
+  "input": {
+    "variant": "ring_mask",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/ring_mask.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "spotSize",
+  "params": [
+    {
+      "index": 1,
+      "key": "spotSize",
+      "display_name": "spotSize",
+      "config_name": "spotSize",
+      "match_name": "KFM KSkr HexagonalBokeh-0001",
+      "type": "float",
+      "source_default": 0.52,
+      "source_min": 0.0,
+      "source_max": 1.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "spotIntensity",
+      "display_name": "spotIntensity",
+      "config_name": "spotIntensity",
+      "match_name": "KFM KSkr HexagonalBokeh-0002",
+      "type": "float",
+      "source_default": 0.72,
+      "source_min": 0.0,
+      "source_max": 1.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "speed",
+      "display_name": "speed",
+      "config_name": "speed",
+      "match_name": "KFM KSkr HexagonalBokeh-0003",
+      "type": "float",
+      "source_default": 0.33,
+      "source_min": 0.0,
+      "source_max": 1.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "progress",
+      "display_name": "progress",
+      "config_name": "progress",
+      "match_name": "KFM KSkr HexagonalBokeh-0004",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 1.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "key": "reverseBokeh",
+      "display_name": "reverseBokeh",
+      "config_name": "reverseBokeh",
+      "match_name": "KFM KSkr HexagonalBokeh-0005",
+      "type": "float",
+      "source_default": 0.33,
+      "source_min": 0.0,
+      "source_max": 1.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "sample_id": "Inhalation__ring_mask",
+  "effect_name": "Inhalation",
+  "display_name": "Inhalation",
+  "match_name": "KFM KSkr Inhalation",
+  "source_dir": "doc/examples/kskr-plugin/script/inhalation",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/Inhalation",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/Inhalation__ring_mask",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/Inhalation__ring_mask/Inhalation__ring_mask.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/Inhalation__ring_mask/Inhalation__ring_mask.json",
+  "input": {
+    "variant": "ring_mask",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/ring_mask.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "InhaleStrength",
+  "params": [
+    {
+      "index": 1,
+      "key": "center",
+      "display_name": "center",
+      "config_name": "center",
+      "match_name": "KFM KSkr Inhalation-0001",
+      "type": "twoD",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            540.0,
+            540.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "InhaleStrength",
+      "display_name": "Strength",
+      "config_name": "Strength",
+      "match_name": "KFM KSkr Inhalation-0002",
+      "type": "unknown",
+      "source_default": 0.0,
+      "source_min": -5.0,
+      "source_max": 5.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            -5.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            5.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "wrap",
+      "display_name": "wrap",
+      "config_name": "wrap",
+      "match_name": "KFM KSkr Inhalation-0003",
+      "type": "int",
+      "source_default": 1,
+      "source_min": 1,
+      "source_max": 3,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            3.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            3.0
+          ]
+        }
+      ]
+    }
+  ]
+}

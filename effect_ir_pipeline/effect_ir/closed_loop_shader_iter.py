@@ -18,7 +18,8 @@ from .library_retrieval import build_reference_sources_block, select_top_referen
 from .manifest import resolve_repo_path
 from .model_client import generate_text
 from .schema_ir import build_structured_ir_summary, normalize_structured_ir, parse_structured_ir_response
-from .shader_builder import build_initial_edit_plan_from_ir, build_shader_from_edit_plan, extract_feedback_edit_plan, merge_edit_plan_delta
+from .shader_builder import build_initial_edit_plan_from_ir, build_shader_from_edit_plan, extract_feedback_edit_plan, inspect_execution_contract, merge_edit_plan_delta
+from .video_only_input import estimate_proxy_input_from_video
 from .visual_observation import build_visual_observation_data, sample_frame_indices_for_video, sample_video_frames
 
 PRIMITIVE_EDIT_VOCABULARY = {
@@ -62,6 +63,31 @@ PRIMITIVE_EDIT_VOCABULARY = {
 GEOMETRY_EDIT_PRIMITIVES = set(PRIMITIVE_EDIT_VOCABULARY["geometry"]) - {"identity"}
 
 
+def _adapt_library_fragment_for_platform(effect_name: str, fragment: str) -> str:
+    """Map known library-only animation uniforms to Shader Lab's public API.
+
+    The render service drives only ``uProgress`` and ``uTime``.  JellyDistortion
+    instead receives two uniforms from its Lua runtime, so its otherwise valid
+    fragment shader becomes a static identity render on the service.  The Lua
+    keyframes describe a -25°→0° rotation while the rotation axis advances
+    through 980° over the normalized effect progress; express that directly.
+    """
+    if effect_name != "JellyDistortion" or "uniform float u_rotation;" not in fragment:
+        return fragment
+    fragment = fragment.replace("uniform float u_rotation;", "uniform float uProgress;\nuniform float uTime;")
+    fragment = fragment.replace("uniform float u_rotationAxis;", "")
+    marker = "void main()\n{"
+    runtime_mapping = (
+        "void main()\n{\n"
+        "    float rotationPhase = clamp((uProgress - 0.0714) / 0.9286, 0.0, 1.0);\n"
+        "    float u_rotation = radians(mix(-25.0, 0.0, rotationPhase));\n"
+        "    float u_rotationAxis = radians(980.0 * uProgress - 0.01);"
+    )
+    if marker not in fragment:
+        raise RuntimeError("JellyDistortion fragment has no main function to adapt")
+    return fragment.replace(marker, runtime_mapping, 1)
+
+
 def persist_stage_artifact(work_dir: Path, *, stage: str, iteration: int | None, payload: dict[str, Any]) -> Path:
     """Persist one pipeline-stage contract independently of the final report."""
     stage_dir = work_dir / "stages"
@@ -73,7 +99,13 @@ def persist_stage_artifact(work_dir: Path, *, stage: str, iteration: int | None,
 
 
 def load_top1_shader_text(reference: dict[str, Any], *, repo_root: Path) -> str:
-    """Return the library Top-1 shader as the first rendered candidate."""
+    """Return the shader pair that the library effect actually initializes.
+
+    Some Lua effects declare a no-op ``fs`` before their real fragment shader
+    (for example ``geometry_fs``) and select the latter in
+    ``initWithShaderStrings``.  Reading the first declaration silently renders
+    an unchanged input, so prefer the pair referenced by that call.
+    """
     code_dir_value = reference.get("code_dir")
     code_dir = Path(str(code_dir_value)) if code_dir_value else repo_root / "code" / str(reference["effect_name"])
     if not code_dir.is_absolute():
@@ -85,10 +117,25 @@ def load_top1_shader_text(reference: dict[str, Any], *, repo_root: Path) -> str:
         return f"```glsl\n{vertex.read_text(encoding='utf-8')}\n```\n\n```glsl\n{fragment.read_text(encoding='utf-8')}\n```\n"
     for lua_path in sorted(code_dir.rglob("*.lua")):
         source = lua_path.read_text(encoding="utf-8", errors="replace")
-        vs = re.search(r"local\s+vs\s*=\s*\[\[(.*?)\]\]", source, re.DOTALL)
-        fs = re.search(r"local\s+fs\s*=\s*\[\[(.*?)\]\]", source, re.DOTALL)
-        if vs and fs:
-            return f"```glsl\n{vs.group(1).strip()}\n```\n\n```glsl\n{fs.group(1).strip()}\n```\n"
+        shader_blocks = {
+            name: body.strip()
+            for name, body in re.findall(r"local\s+(\w+)\s*=\s*\[\[(.*?)\]\]", source, re.DOTALL)
+        }
+        initialized_pair = re.search(
+            r"initWithShaderStrings\s*\(\s*(\w+)\s*,\s*(\w+)\s*\)", source
+        )
+        if initialized_pair:
+            vertex_name, fragment_name = initialized_pair.groups()
+            vertex_source = shader_blocks.get(vertex_name)
+            fragment_source = shader_blocks.get(fragment_name)
+            if vertex_source and fragment_source:
+                fragment_source = _adapt_library_fragment_for_platform(str(reference.get("effect_name", "")), fragment_source)
+                return f"```glsl\n{vertex_source}\n```\n\n```glsl\n{fragment_source}\n```\n"
+        vertex_source = shader_blocks.get("vs")
+        fragment_source = shader_blocks.get("fs")
+        if vertex_source and fragment_source:
+            fragment_source = _adapt_library_fragment_for_platform(str(reference.get("effect_name", "")), fragment_source)
+            return f"```glsl\n{vertex_source}\n```\n\n```glsl\n{fragment_source}\n```\n"
     raise RuntimeError(f"Top-1 reference has no readable vertex/fragment shader: {code_dir}")
 
 
@@ -127,13 +174,14 @@ def generate_video_ir(
     temperature: float,
     sample_fps: float,
     image_size: int,
+    input_variant: str | None = None,
 ) -> dict[str, Any]:
     resolved = resolve_repo_path(repo_root, str(video_path))
     frame_indices = sample_frame_indices_for_video(resolved, sample_fps=sample_fps)
     sample = {
         "sample_id": sample_id,
         "effect_name": "unknown",
-        "input_variant": "provided_image_and_video" if input_image else "video_only_first_frame_fallback",
+        "input_variant": input_variant or ("provided_image_and_video" if input_image else "video_only_first_frame_fallback"),
         "video_path": str(video_path),
     }
     if input_image is not None:
@@ -149,6 +197,7 @@ def generate_video_ir(
     structured_ir = apply_observation_guardrails_to_ir(parse_ir(response), observation_data)
     return {
         "input_image_path": None if input_image is None else str(input_image),
+        "input_variant": sample["input_variant"],
         "video_path": str(video_path),
         "resolved_video_path": str(resolved),
         "frame_indices": frame_indices,
@@ -1012,35 +1061,17 @@ def build_llm_visual_feedback_content(
         "selected_primitives": [
             {
                 "name": "one primitive from primitive_vocabulary",
-                "role": "primary / secondary / correction",
                 "params": {
-                    "from": "number/bool/list if known, otherwise null",
-                    "to": "number/bool/list if known, otherwise null",
-                    "center": [0.5, 0.5],
                     "axis": "x/y/radial/none",
                     "strength": "weak/medium/strong",
                 },
                 "temporal": "one curve from primitive_vocabulary.temporal_curves",
-                "evidence": "plain visual evidence from the target/candidate frames, not jargon",
-                "confidence": 0.0,
             }
         ],
-        "rejected_primitives": [
-            {
-                "name": "primitive name",
-                "reason": "why evidence does not support it",
-            }
-        ],
-        "implementation_notes": [
-            "short GLSL-level notes tied to the visible change, not long terminology"
-        ],
+        "rejected_primitives": ["primitive names to remove from the previous plan"],
         "temporal_controller": {
             "mode": "continuous_monotonic / cyclic / impulse / freeform",
-            "driver": "shared for continuous_monotonic, otherwise model_defined",
-            "shared_progress_curve": "linear / ease_in / ease_out / ease_in_out / early_progressive",
-            "onset": "early / middle / late / immediate",
-            "trend": "plain description of the complete visible process",
-            "evidence": "video evidence for this temporal form"
+            "curve": "linear / ease_in / ease_out / ease_in_out / early_progressive"
         },
     }
     required_change_instruction = (
@@ -1060,7 +1091,7 @@ def build_llm_visual_feedback_content(
         "重点描述：变化何时开始、强度如何随进度变化、元素是连续移动还是跳变、边缘硬/软；并判断目标是完整替换原图采样，还是应保留原图作为全局/局部底图。\n"
         "最多写 2 个关键过程差异、3 条修改建议。建议必须说这个动态过程要怎么改，避免让 shader 拟合单帧形象。\n"
         "不要使用固定峰值、阶段、after 或 handoff 模板。连续增强/减弱过程使用 temporal_controller.mode=continuous_monotonic，并让全部相关操作共享同一个连续进度；周期、瞬时或其他非单调过程只描述完整可见规律，由代码模型直接实现。\n"
-        "primitive_edit_plan 可只写本轮增量；未提及的上一轮操作会保留。若要删除旧操作，必须把它放入 rejected_primitives。\n"
+        "primitive_edit_plan 只写操作、参数、时间曲线和删除列表；可只写本轮增量，未提及的上一轮操作会保留。若要删除旧操作，必须把名称放入 rejected_primitives。\n"
         "若目标是局部硬边碎片/条带跳切，必须组合选择 band_mask、discrete_region_switch、segmented_x_displacement；不要把它笼统写成 pixelation。\n"
         "评分只给整体人类观感 overall+reason，不打分项：0-20 完全不像；21-40 第一眼不像；41-60 同类但关键错；61-80 接近；81-100 很像。\n"
         "这是为下一轮服务的审查，不是最终选 best。若目标的空间形变、翻转、位移、运动节奏或局部作用区域尚未复现，把对应维度列入 blocking_dimensions；此时不要用任何次级外观变化替代缺失的核心过程。\n"
@@ -1151,41 +1182,42 @@ def _normalize_primitive_edit_plan(parsed: dict[str, Any], *, allow_geometry: bo
         parsed["primitive_edit_plan"] = {
             "selected_primitives": [],
             "rejected_primitives": [],
-            "implementation_notes": ["No structured primitive_edit_plan was returned; use optimization_plan conservatively."],
+            "temporal_controller": {"mode": "continuous_monotonic", "curve": "ease_in_out"},
         }
         return parsed
 
     selected = plan.get("selected_primitives", [])
     rejected = plan.get("rejected_primitives", [])
-    notes = plan.get("implementation_notes", [])
     if not isinstance(selected, list):
         selected = []
     if not isinstance(rejected, list):
         rejected = []
-    if not isinstance(notes, list):
-        notes = [str(notes)]
 
     allowed_names = set(PRIMITIVE_EDIT_VOCABULARY["geometry"]) | set(PRIMITIVE_EDIT_VOCABULARY["appearance"])
     normalized_selected = []
-    normalized_rejected = list(rejected)
+    normalized_rejected: list[dict[str, str]] = []
+    for item in rejected:
+        name = str(item.get("name", "")) if isinstance(item, dict) else str(item)
+        if name.strip():
+            normalized_rejected.append({"name": name.strip()})
     for item in selected[:3]:
         if not isinstance(item, dict):
             continue
         name = str(item.get("name", "")).strip()
         if name not in allowed_names:
-            normalized_rejected.append({"name": name or "unknown", "reason": "not in primitive_vocabulary"})
+            normalized_rejected.append({"name": name or "unknown"})
             continue
         if not allow_geometry and name in GEOMETRY_EDIT_PRIMITIVES:
-            normalized_rejected.append({"name": name, "reason": "target evidence does not support geometry edits"})
+            normalized_rejected.append({"name": name})
             continue
-        normalized = dict(item)
-        normalized["name"] = name
-        if normalized.get("temporal") not in PRIMITIVE_EDIT_VOCABULARY["temporal_curves"]:
+        params = item.get("params") if isinstance(item.get("params"), dict) else {}
+        normalized = {
+            "name": name,
+            "params": {key: params[key] for key in ("axis", "strength", "from", "to", "center") if key in params},
+            "temporal": item.get("temporal", "linear"),
+        }
+        if normalized["temporal"] not in PRIMITIVE_EDIT_VOCABULARY["temporal_curves"]:
             normalized["temporal"] = "linear"
-        try:
-            normalized["confidence"] = max(0.0, min(1.0, float(normalized.get("confidence", 0.0))))
-        except (TypeError, ValueError):
-            normalized["confidence"] = 0.0
         normalized_selected.append(normalized)
 
     raw_controller = plan.get("temporal_controller")
@@ -1195,16 +1227,12 @@ def _normalize_primitive_edit_plan(parsed: dict[str, Any], *, allow_geometry: bo
     if mode not in allowed_modes:
         mode = "freeform"
     allowed_curves = {"linear", "ease_in", "ease_out", "ease_in_out", "early_progressive"}
-    shared_curve = str(raw_controller.get("shared_progress_curve", "ease_in_out")).strip().lower()
+    shared_curve = str(raw_controller.get("curve", raw_controller.get("shared_progress_curve", "ease_in_out"))).strip().lower()
     if shared_curve not in allowed_curves:
         shared_curve = "ease_in_out"
     temporal_controller = {
         "mode": mode,
-        "driver": "shared" if mode == "continuous_monotonic" else "model_defined",
-        "shared_progress_curve": shared_curve,
-        "onset": str(raw_controller.get("onset", "unspecified")),
-        "trend": str(raw_controller.get("trend", "")),
-        "evidence": str(raw_controller.get("evidence", "")),
+        "curve": shared_curve,
     }
     if mode == "continuous_monotonic":
         for primitive in normalized_selected:
@@ -1219,7 +1247,6 @@ def _normalize_primitive_edit_plan(parsed: dict[str, Any], *, allow_geometry: bo
     parsed["primitive_edit_plan"] = {
         "selected_primitives": normalized_selected,
         "rejected_primitives": normalized_rejected,
-        "implementation_notes": notes,
         "temporal_controller": temporal_controller,
     }
     return parsed
@@ -1410,7 +1437,12 @@ def _feedback_for_result(feedback: dict[str, Any] | None) -> dict[str, Any] | No
 def main() -> None:
     parser = argparse.ArgumentParser(description="Five-round video-to-shader closed loop.")
     parser.add_argument("video_path", type=Path)
-    parser.add_argument("--input-image", type=Path, required=True, help="Original image paired with the target video.")
+    parser.add_argument("--input-image", type=Path, help="Original image paired with the target video.")
+    parser.add_argument(
+        "--video-only",
+        action="store_true",
+        help="Blind mode: estimate a proxy input image from the target video before entering the normal closed loop.",
+    )
     parser.add_argument("--repo-root", type=Path, default=Path("."))
     parser.add_argument("--library-structured", type=Path, default=Path("effect_ir_pipeline/library_structured_ir_llm.jsonl"))
     parser.add_argument("--work-dir", type=Path, default=Path("effect_ir_pipeline/reports/closed_loop_run"))
@@ -1431,18 +1463,55 @@ def main() -> None:
         type=Path,
         help="Continue from the final accepted iteration stored in an earlier closed_loop_result.json.",
     )
+    parser.add_argument(
+        "--initial-shader-source",
+        type=Path,
+        help="Use this two-block shader source as iteration 1 instead of the retrieved Top-1 shader.",
+    )
+    parser.add_argument(
+        "--initial-rendered-video",
+        type=Path,
+        help="Use this already-rendered candidate video for iteration 1; requires --initial-shader-source.",
+    )
     args = parser.parse_args()
 
     if args.max_iters <= 0 or args.max_generation_attempts <= 0:
         raise ValueError("max-iters and max-generation-attempts must be positive.")
 
+    if args.video_only and args.input_image is not None:
+        raise ValueError("Use either --input-image or --video-only, not both.")
+    if not args.video_only and args.input_image is None:
+        raise ValueError("--input-image is required unless --video-only is used.")
+    if args.video_only and args.resume_result is not None:
+        raise ValueError("--video-only resume is not supported yet; reuse the saved estimated_input.png as --input-image instead.")
+    if (args.initial_shader_source is None) != (args.initial_rendered_video is None):
+        raise ValueError("--initial-shader-source and --initial-rendered-video must be provided together.")
+    if args.resume_result is not None and args.initial_shader_source is not None:
+        raise ValueError("Use either --resume-result or an initial baseline candidate, not both.")
+
     repo_root = args.repo_root.resolve()
     work_dir = args.work_dir
     work_dir.mkdir(parents=True, exist_ok=True)
-    input_image = resolve_repo_path(repo_root, str(args.input_image))
-    if not input_image.exists():
-        raise FileNotFoundError(f"Input image does not exist: {input_image}")
     target_video = resolve_repo_path(repo_root, str(args.video_path))
+    if not target_video.exists():
+        raise FileNotFoundError(f"Target video does not exist: {target_video}")
+    video_only_proxy: dict[str, Any] | None = None
+    if args.video_only:
+        print("[0] estimate proxy input from target video", flush=True)
+        video_only_proxy = estimate_proxy_input_from_video(
+            target_video,
+            output_dir=work_dir / "video_only_input",
+        )
+        input_image = Path(str(video_only_proxy["proxy_image_path"])).resolve()
+        print(
+            f"[0] proxy frame={video_only_proxy['selected_frame_index']} confidence={video_only_proxy['proxy_confidence']}",
+            flush=True,
+        )
+    else:
+        input_image = resolve_repo_path(repo_root, str(args.input_image))
+        if not input_image.exists():
+            raise FileNotFoundError(f"Input image does not exist: {input_image}")
+    input_variant = "estimated_proxy_image_and_video" if video_only_proxy is not None else "provided_image_and_video"
     iterations: list[dict[str, Any]] = []
     failures: list[dict[str, Any]] = []
     current_shader: str | None = None
@@ -1454,6 +1523,25 @@ def main() -> None:
     latest_review_path: Path | None = None
     iteration_offset = 0
     resume_metadata: dict[str, Any] | None = None
+    initial_candidate: dict[str, str] | None = None
+    initial_shader: str | None = None
+    initial_rendered_video: Path | None = None
+    if args.initial_shader_source is not None:
+        initial_shader_path = resolve_repo_path(repo_root, str(args.initial_shader_source))
+        initial_rendered_video = resolve_repo_path(repo_root, str(args.initial_rendered_video))
+        if not initial_shader_path.exists() or not initial_rendered_video.exists():
+            raise FileNotFoundError("Initial baseline shader source or rendered video does not exist.")
+        initial_shader = initial_shader_path.read_text(encoding="utf-8")
+        valid, reason = validate_shader_text(initial_shader)
+        if not valid:
+            raise ValueError(f"Initial baseline shader is invalid: {reason}")
+        valid, reason = validate_rendered_video(initial_rendered_video)
+        if not valid:
+            raise ValueError(f"Initial baseline rendered video is invalid: {reason}")
+        initial_candidate = {
+            "shader_source": str(initial_shader_path),
+            "rendered_video": str(initial_rendered_video),
+        }
 
     if args.resume_result is not None:
         resume_path = resolve_repo_path(repo_root, str(args.resume_result))
@@ -1506,6 +1594,7 @@ def main() -> None:
             temperature=args.temperature,
             sample_fps=args.sample_fps,
             image_size=args.image_size,
+            input_variant=input_variant,
         )
         target_ir = target_ir_generation["structured_ir"]
         if video_starts_black(target_video):
@@ -1544,6 +1633,8 @@ def main() -> None:
             payload={
                 "input_video": str(target_video),
                 "input_image": str(input_image),
+                "input_mode": input_variant,
+                "video_only_proxy": video_only_proxy,
                 "target_ir_generation": target_ir_generation,
                 "selected_reference": selected_reference,
                 "excluded_effect_names": sorted(excluded_names),
@@ -1579,7 +1670,16 @@ def main() -> None:
         retry_shader = current_shader
         active_feedback = previous_feedback
         for attempt in range(1, args.max_generation_attempts + 1):
-            if iteration == 1 and current_shader is None:
+            use_initial_candidate = iteration == 1 and current_shader is None and initial_shader is not None
+            if use_initial_candidate:
+                print(f"[3.{iteration}] use provided initial candidate", flush=True)
+                shader_text = ensure_shader_precision_preamble(initial_shader)
+                shader_record = {
+                    "backend": "provided_initial_candidate",
+                    "initial_candidate": initial_candidate,
+                    "normalized_edit_plan": plan,
+                }
+            elif iteration == 1 and current_shader is None:
                 print(f"[3.{iteration}] use selected_top1 shader directly", flush=True)
                 shader_text = ensure_shader_precision_preamble(load_top1_shader_text(selected_reference, repo_root=repo_root))
                 shader_record = {"backend": "direct_top1", "selected_reference": selected_reference, "normalized_edit_plan": plan}
@@ -1611,23 +1711,57 @@ def main() -> None:
                 failures.append({"iteration": iteration, "attempt": attempt, "stage": "shader_validation", "reason": last_failure})
                 continue
             effective_plan = shader_record.get("normalized_edit_plan") if isinstance(shader_record.get("normalized_edit_plan"), dict) else plan
+            execution_contract = effective_plan.get("execution_contract", []) if isinstance(effective_plan, dict) else []
+            contract_check = inspect_execution_contract(
+                shader_text,
+                execution_contract if isinstance(execution_contract, list) else [],
+                # A retry must differ from the rejected candidate. The first
+                # attempt is compared with the last accepted shader.
+                baseline_shader=retry_shader if last_failure else current_shader,
+            )
+            if not contract_check.get("passed", True):
+                last_failure = (
+                    "execution contract missing in shader source: "
+                    f"{json.dumps(contract_check.get('items', []), ensure_ascii=False)}"
+                )
+                retry_shader = shader_text
+                failures.append({
+                    "iteration": iteration,
+                    "attempt": attempt,
+                    "stage": "execution_contract",
+                    "reason": last_failure,
+                    "execution_contract": contract_check,
+                })
+                persist_stage_artifact(
+                    work_dir,
+                    stage="execution_contract",
+                    iteration=iteration,
+                    payload={"attempt": attempt, "contract": execution_contract, "check": contract_check},
+                )
+                print(f"[3.{iteration}] execution contract missing; regenerate before render", flush=True)
+                continue
 
             shader_source_path = work_dir / f"iter_{iteration:02d}_shader_source.md"
             shader_source_path.write_text(shader_text, encoding="utf-8")
             vertex_path, fragment_path = write_shader_files(shader_text, work_dir, iteration)
             rendered_video = work_dir / f"iter_{iteration:02d}_rendered.mp4"
-            print(f"[4.{iteration}] render", flush=True)
             try:
-                render_job = run_shader_lab_render(
-                    base_url=args.shader_lab_url,
-                    token=args.shader_lab_token,
-                    vertex_shader=vertex_path,
-                    fragment_shader=fragment_path,
-                    input_image=input_image,
-                    output_video=rendered_video,
-                    timeout=args.shader_lab_timeout,
-                    poll_interval=args.shader_lab_poll_interval,
-                )
+                if use_initial_candidate:
+                    rendered_video = initial_rendered_video
+                    render_job = {"backend": "provided_initial_candidate", "source_video": str(initial_rendered_video)}
+                    print(f"[4.{iteration}] reuse provided rendered video", flush=True)
+                else:
+                    print(f"[4.{iteration}] render", flush=True)
+                    render_job = run_shader_lab_render(
+                        base_url=args.shader_lab_url,
+                        token=args.shader_lab_token,
+                        vertex_shader=vertex_path,
+                        fragment_shader=fragment_path,
+                        input_image=input_image,
+                        output_video=rendered_video,
+                        timeout=args.shader_lab_timeout,
+                        poll_interval=args.shader_lab_poll_interval,
+                    )
                 valid, reason = validate_rendered_video(rendered_video)
                 if not valid:
                     raise RuntimeError(reason)
@@ -1650,6 +1784,7 @@ def main() -> None:
                     "attempt": attempt,
                     "shader_builder": shader_record,
                     "effective_plan": effective_plan,
+                    "execution_contract": contract_check,
                     "vertex_shader": str(vertex_path),
                     "fragment_shader": str(fragment_path),
                     "rendered_video": str(rendered_video),
@@ -1667,6 +1802,7 @@ def main() -> None:
                 temperature=args.temperature,
                 sample_fps=args.sample_fps,
                 image_size=args.image_size,
+                input_variant=input_variant,
             )["structured_ir"]
             feedback = generate_llm_visual_feedback(
                 target_video=args.video_path,
@@ -1810,10 +1946,13 @@ def main() -> None:
     result = {
         "video_path": str(args.video_path),
         "input_image_path": str(input_image),
+        "input_mode": input_variant,
+        "video_only_proxy": video_only_proxy,
         "shader_builder_backend": "code_model",
         "code_model": args.code_model or args.request_model,
         "selected_reference": selected_reference,
         "resume_from": resume_metadata,
+        "initial_candidate": initial_candidate,
         "library_ablation": {"excluded_effect_names": sorted(excluded_names)},
         "target_ir_generation": target_ir_generation,
         "iterations": iterations,

@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "sample_id": "RightAlpha__gray_ramp",
+  "effect_name": "RightAlpha",
+  "display_name": "RightAlpha",
+  "match_name": "KFM KSkr RightAlpha",
+  "source_dir": "doc/examples/kskr-plugin/script/rightAlpha",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/RightAlpha",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/RightAlpha__gray_ramp",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/RightAlpha__gray_ramp/RightAlpha__gray_ramp.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/RightAlpha__gray_ramp/RightAlpha__gray_ramp.json",
+  "input": {
+    "variant": "gray_ramp",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/gray_ramp.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "",
+  "params": [
+    {
+      "index": 1,
+      "key": "channel",
+      "display_name": "channel",
+      "config_name": "channel",
+      "match_name": "KFM KSkr RightAlpha-0001",
+      "type": "comboBox",
+      "source_default": "no | r | g | b",
+      "source_min": "1",
+      "source_max": "4",
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "restoreType",
+      "display_name": "restoreType",
+      "config_name": "restoreType",
+      "match_name": "KFM KSkr RightAlpha-0002",
+      "type": "comboBox",
+      "source_default": "default | scaleToRight | eraseRight",
+      "source_min": "1",
+      "source_max": "3",
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    }
+  ]
+}

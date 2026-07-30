@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "sample_id": "MagnifyHead__ring_mask",
+  "effect_name": "MagnifyHead",
+  "display_name": "MagnifyHead",
+  "match_name": "KFM KSkr MagnifyHead",
+  "source_dir": "doc/examples/kskr-plugin/script/MagnifyHead",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/MagnifyHead",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/MagnifyHead__ring_mask",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/MagnifyHead__ring_mask/MagnifyHead__ring_mask.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/MagnifyHead__ring_mask/MagnifyHead__ring_mask.json",
+  "input": {
+    "variant": "ring_mask",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/ring_mask.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "Intensity",
+  "params": [
+    {
+      "index": 1,
+      "key": "Mode",
+      "display_name": "Mode",
+      "config_name": "Mode",
+      "match_name": "KFM KSkr MagnifyHead-0001",
+      "type": "comboBox",
+      "source_default": "AE | MVCreator",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "AEModelID",
+      "display_name": "AE test Model",
+      "config_name": "AE test Model",
+      "match_name": "KFM KSkr MagnifyHead-0002",
+      "type": "comboBox",
+      "source_default": "Model 1|Model 2|Model 3|Model 4|Model 5|Model 6|Model 7|Model 8|Model 9",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "ModelImageID",
+      "display_name": "MVCreator ImageID",
+      "config_name": "MVCreator ImageID",
+      "match_name": "KFM KSkr MagnifyHead-0003",
+      "type": "int",
+      "source_default": 0,
+      "source_min": 0,
+      "source_max": 99,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            99.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            99.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "Range",
+      "display_name": "Range",
+      "config_name": "Range",
+      "match_name": "KFM KSkr MagnifyHead-0004",
+      "type": "int",
+      "source_default": 20,
+      "source_min": 0,
+      "source_max": 100,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            100.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "key": "Intensity",
+      "display_name": "Intensity",
+      "config_name": "Intensity",
+      "match_name": "KFM KSkr MagnifyHead-0005",
+      "type": "int",
+      "source_default": 20,
+      "source_min": 0,
+      "source_max": 100,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            100.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "key": "progress",
+      "display_name": "progress",
+      "config_name": "progress",
+      "match_name": "KFM KSkr MagnifyHead-0006",
+      "type": "unknown",
+      "source_default": 0,
+      "source_min": 0,
+      "source_max": 100,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,362 @@
+{
+  "schema_version": 1,
+  "sample_id": "BezierWarp__rg_split",
+  "effect_name": "BezierWarp",
+  "display_name": "BezierWarp",
+  "match_name": "KFM KSkr BezierWarp",
+  "source_dir": "doc/examples/kskr-plugin/script/BezierWarp",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/BezierWarp",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/BezierWarp__rg_split",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/BezierWarp__rg_split/BezierWarp__rg_split.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/BezierWarp__rg_split/BezierWarp__rg_split.json",
+  "input": {
+    "variant": "rg_split",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/rg_split.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "",
+  "params": [
+    {
+      "index": 1,
+      "key": "TopLeftVtx",
+      "display_name": "TopLeftVtx",
+      "config_name": "TopLeftVtx",
+      "match_name": "KFM KSkr BezierWarp-0001",
+      "type": "twoD",
+      "source_default": [
+        0.0,
+        0.0
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "TopLeftTan",
+      "display_name": "TopLeftTan",
+      "config_name": "TopLeftTan",
+      "match_name": "KFM KSkr BezierWarp-0002",
+      "type": "twoD",
+      "source_default": [
+        33.333,
+        0.0
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            33.333,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "TopRightTan",
+      "display_name": "TopRightTan",
+      "config_name": "TopRightTan",
+      "match_name": "KFM KSkr BezierWarp-0003",
+      "type": "twoD",
+      "source_default": [
+        66.667,
+        0.0
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            66.667,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "RightTopVtx",
+      "display_name": "RightTopVtx",
+      "config_name": "RightTopVtx",
+      "match_name": "KFM KSkr BezierWarp-0004",
+      "type": "twoD",
+      "source_default": [
+        100.0,
+        0.0
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            100.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "key": "RightTopTan",
+      "display_name": "RightTopTan",
+      "config_name": "RightTopTan",
+      "match_name": "KFM KSkr BezierWarp-0005",
+      "type": "twoD",
+      "source_default": [
+        100.0,
+        33.333
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            100.0,
+            33.333
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "key": "RightDownTan",
+      "display_name": "RightDownTan",
+      "config_name": "RightDownTan",
+      "match_name": "KFM KSkr BezierWarp-0006",
+      "type": "twoD",
+      "source_default": [
+        100.0,
+        66.667
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            100.0,
+            66.667
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "key": "DownRightVtx",
+      "display_name": "DownRightVtx",
+      "config_name": "DownRightVtx",
+      "match_name": "KFM KSkr BezierWarp-0007",
+      "type": "twoD",
+      "source_default": [
+        100.0,
+        100.0
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            100.0,
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "key": "DownRightTan",
+      "display_name": "DownRightTan",
+      "config_name": "DownRightTan",
+      "match_name": "KFM KSkr BezierWarp-0008",
+      "type": "twoD",
+      "source_default": [
+        66.667,
+        100.0
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            66.667,
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "key": "DownLeftTan",
+      "display_name": "DownLeftTan",
+      "config_name": "DownLeftTan",
+      "match_name": "KFM KSkr BezierWarp-0009",
+      "type": "twoD",
+      "source_default": [
+        33.333,
+        100.0
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            33.333,
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "key": "LeftDownVtx",
+      "display_name": "LeftDownVtx",
+      "config_name": "LeftDownVtx",
+      "match_name": "KFM KSkr BezierWarp-0010",
+      "type": "twoD",
+      "source_default": [
+        0.0,
+        100.0
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0,
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "key": "LeftDownTan",
+      "display_name": "LeftDownTan",
+      "config_name": "LeftDownTan",
+      "match_name": "KFM KSkr BezierWarp-0011",
+      "type": "twoD",
+      "source_default": [
+        0.0,
+        66.667
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0,
+            66.667
+          ]
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "key": "LeftTopTan",
+      "display_name": "LeftTopTan",
+      "config_name": "LeftTopTan",
+      "match_name": "KFM KSkr BezierWarp-0012",
+      "type": "twoD",
+      "source_default": [
+        0.0,
+        33.333
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0,
+            33.333
+          ]
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "key": "type",
+      "display_name": "type",
+      "config_name": "type",
+      "match_name": "KFM KSkr BezierWarp-0013",
+      "type": "comboBox",
+      "source_default": "1x1 | 3x4 | 4x3 | 9x16 | 16x9",
+      "source_min": 1,
+      "source_max": 5,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    }
+  ]
+}

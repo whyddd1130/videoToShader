@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "sample_id": "Twirl__gray_ramp",
+  "effect_name": "Twirl",
+  "display_name": "Twirl",
+  "match_name": "KFM KSkr Twirl",
+  "source_dir": "doc/examples/kskr-plugin/script/Twirl",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/Twirl",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/Twirl__gray_ramp",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/Twirl__gray_ramp/Twirl__gray_ramp.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/Twirl__gray_ramp/Twirl__gray_ramp.json",
+  "input": {
+    "variant": "gray_ramp",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/gray_ramp.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "twirlAngle",
+  "params": [
+    {
+      "index": 1,
+      "key": "twirlAngle",
+      "display_name": "twirlAngle",
+      "config_name": "twirlAngle",
+      "match_name": "KFM KSkr Twirl-0001",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": -1000.0,
+      "source_max": 1000.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            -1000.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1000.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "twirlRadius",
+      "display_name": "twirlRadius",
+      "config_name": "twirlRadius",
+      "match_name": "KFM KSkr Twirl-0002",
+      "type": "float",
+      "source_default": 30.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "twirlCenter",
+      "display_name": "twirlCenter",
+      "config_name": "twirlCenter",
+      "match_name": "KFM KSkr Twirl-0003",
+      "type": "twoD",
+      "source_default": [
+        0.0,
+        0.0
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            540.0,
+            540.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "twirlTile",
+      "display_name": "twirlTile",
+      "config_name": "twirlTile",
+      "match_name": "KFM KSkr Twirl-0004",
+      "type": "int",
+      "source_default": 0,
+      "source_min": 0,
+      "source_max": 1,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    }
+  ]
+}

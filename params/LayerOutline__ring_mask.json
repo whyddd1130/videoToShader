@@ -1,0 +1,291 @@
+{
+  "schema_version": 1,
+  "sample_id": "LayerOutline__ring_mask",
+  "effect_name": "LayerOutline",
+  "display_name": "LayerOutline",
+  "match_name": "KFM KSkr LayerOutline",
+  "source_dir": "doc/examples/kskr-plugin/script/LayerOutline",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/LayerOutline",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/LayerOutline__ring_mask",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/LayerOutline__ring_mask/LayerOutline__ring_mask.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/LayerOutline__ring_mask/LayerOutline__ring_mask.json",
+  "input": {
+    "variant": "ring_mask",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/ring_mask.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "FlowSpeed",
+  "params": [
+    {
+      "index": 1,
+      "key": "BorderWidth",
+      "display_name": "BorderWidth",
+      "config_name": "BorderWidth",
+      "match_name": "KFM KSkr LayerOutline-0001",
+      "type": "float",
+      "source_default": 0.5,
+      "source_min": 0.0,
+      "source_max": 0.99,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.495
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            0.99
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "BorderLength",
+      "display_name": "BorderLength",
+      "config_name": "BorderLength",
+      "match_name": "KFM KSkr LayerOutline-0002",
+      "type": "float",
+      "source_default": 0.5,
+      "source_min": 0.0,
+      "source_max": 1.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "BorderColor",
+      "display_name": "BorderColor",
+      "config_name": "BorderColor",
+      "match_name": "KFM KSkr LayerOutline-0003",
+      "type": "color",
+      "source_default": "#FFFFFF",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0,
+            1.0,
+            1.0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "FlowSpeed",
+      "display_name": "FlowSpeed",
+      "config_name": "FlowSpeed",
+      "match_name": "KFM KSkr LayerOutline-0004",
+      "type": "float",
+      "source_default": 50,
+      "source_min": 0.0,
+      "source_max": 100,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "key": "OffsetTime",
+      "display_name": "OffsetTime",
+      "config_name": "OffsetTime",
+      "match_name": "KFM KSkr LayerOutline-0005",
+      "type": "float",
+      "source_default": 0.5,
+      "source_min": 0.0,
+      "source_max": 10,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            5.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            10.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "key": "SequenceLayer",
+      "display_name": "SequenceLayer",
+      "config_name": "SequenceLayer",
+      "match_name": "KFM KSkr LayerOutline-0006",
+      "type": "layer",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "key": "SequenceWidth",
+      "display_name": "SequenceWidth",
+      "config_name": "SequenceWidth",
+      "match_name": "KFM KSkr LayerOutline-0007",
+      "type": "float",
+      "source_default": 300,
+      "source_min": 0.0,
+      "source_max": 500,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            250.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            500.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "key": "SequenceHeight",
+      "display_name": "SequenceHeight",
+      "config_name": "SequenceHeight",
+      "match_name": "KFM KSkr LayerOutline-0008",
+      "type": "float",
+      "source_default": 300,
+      "source_min": 0.0,
+      "source_max": 500,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            250.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            500.0
+          ]
+        }
+      ]
+    }
+  ]
+}

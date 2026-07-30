@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "sample_id": "BrightFlash__color_gradient",
+  "effect_name": "BrightFlash",
+  "display_name": "BrightFlash",
+  "match_name": "KFM KSkr BrightFlash",
+  "source_dir": "doc/examples/kskr-plugin/script/brightFlash",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/BrightFlash",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/BrightFlash__color_gradient",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/BrightFlash__color_gradient/BrightFlash__color_gradient.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/BrightFlash__color_gradient/BrightFlash__color_gradient.json",
+  "input": {
+    "variant": "color_gradient",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/color_gradient.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "intensity",
+  "params": [
+    {
+      "index": 1,
+      "key": "intensity",
+      "display_name": "intensity",
+      "config_name": "intensity",
+      "match_name": "KFM KSkr BrightFlash-0001",
+      "type": "unknown",
+      "source_default": 1.0,
+      "source_min": 0.0,
+      "source_max": 1.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "blendMode",
+      "display_name": "blendMode",
+      "config_name": "blendMode",
+      "match_name": "KFM KSkr BrightFlash-0002",
+      "type": "comboBox",
+      "source_default": "Normal | Linear Light | Screen | Soft Light | LinearBurn | Hard Light | OverLay",
+      "source_min": 1,
+      "source_max": 7,
+      "animated": false,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "blendTexture",
+      "display_name": "select resource layer",
+      "config_name": "select resource layer",
+      "match_name": "KFM KSkr BrightFlash-0003",
+      "type": "layer",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    }
+  ]
+}

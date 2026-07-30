@@ -1,0 +1,424 @@
+{
+  "schema_version": 1,
+  "sample_id": "BasicBlocks__gray_ramp",
+  "effect_name": "BasicBlocks",
+  "display_name": "BasicBlocks",
+  "match_name": "KFM KSkr BasicBlocks",
+  "source_dir": "doc/examples/kskr-plugin/script/basicBlocks",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/BasicBlocks",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/BasicBlocks__gray_ramp",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/BasicBlocks__gray_ramp/BasicBlocks__gray_ramp.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/BasicBlocks__gray_ramp/BasicBlocks__gray_ramp.json",
+  "input": {
+    "variant": "gray_ramp",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/gray_ramp.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "blendMode",
+  "params": [
+    {
+      "index": 1,
+      "key": "numBlocks",
+      "display_name": "numBlocks",
+      "config_name": "numBlocks",
+      "match_name": "KFM KSkr BasicBlocks-0001",
+      "type": "int",
+      "source_default": 50,
+      "source_min": 1,
+      "source_max": 1000,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            1000.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1000.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "maxHorOffset",
+      "display_name": "maxHorOffset",
+      "config_name": "maxHorOffset",
+      "match_name": "KFM KSkr BasicBlocks-0002",
+      "type": "unknown",
+      "source_default": 300.0,
+      "source_min": -1000.0,
+      "source_max": 1000.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            -1000.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1000.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "maxVerOffset",
+      "display_name": "maxVerOffset",
+      "config_name": "maxVerOffset",
+      "match_name": "KFM KSkr BasicBlocks-0003",
+      "type": "unknown",
+      "source_default": 0.0,
+      "source_min": -1000.0,
+      "source_max": 1000.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            -1000.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1000.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "posRandomSeed",
+      "display_name": "posRandomSeed",
+      "config_name": "posRandomSeed",
+      "match_name": "KFM KSkr BasicBlocks-0004",
+      "type": "unknown",
+      "source_default": 1.0,
+      "source_min": 1.0,
+      "source_max": 1000.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            500.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1000.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "key": "minWidth",
+      "display_name": "minWidth",
+      "config_name": "minWidth",
+      "match_name": "KFM KSkr BasicBlocks-0005",
+      "type": "unknown",
+      "source_default": 50.0,
+      "source_min": 1.0,
+      "source_max": 1000.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            500.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1000.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "key": "widthRandomRange",
+      "display_name": "widthRandomRange",
+      "config_name": "widthRandomRange",
+      "match_name": "KFM KSkr BasicBlocks-0006",
+      "type": "unknown",
+      "source_default": 300.0,
+      "source_min": 0.0,
+      "source_max": 1000.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            500.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1000.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "key": "widthRandomSeed",
+      "display_name": "widthRandomSeed",
+      "config_name": "widthRandomSeed",
+      "match_name": "KFM KSkr BasicBlocks-0007",
+      "type": "unknown",
+      "source_default": 1.0,
+      "source_min": 1.0,
+      "source_max": 1000.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            500.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1000.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "key": "minHeight",
+      "display_name": "minHeight",
+      "config_name": "minHeight",
+      "match_name": "KFM KSkr BasicBlocks-0008",
+      "type": "unknown",
+      "source_default": 25.0,
+      "source_min": 1.0,
+      "source_max": 1000.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            500.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1000.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "key": "heightRandomRange",
+      "display_name": "heightRandomRange",
+      "config_name": "heightRandomRange",
+      "match_name": "KFM KSkr BasicBlocks-0009",
+      "type": "unknown",
+      "source_default": 25.0,
+      "source_min": 1.0,
+      "source_max": 1000.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            500.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1000.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "key": "heightRandomSeed",
+      "display_name": "heightRandomSeed",
+      "config_name": "heightRandomSeed",
+      "match_name": "KFM KSkr BasicBlocks-0010",
+      "type": "unknown",
+      "source_default": 1.0,
+      "source_min": 1.0,
+      "source_max": 1000.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            500.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1000.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "key": "blendMode",
+      "display_name": "blendMode",
+      "config_name": "blendMode",
+      "match_name": "KFM KSkr BasicBlocks-0011",
+      "type": "int",
+      "source_default": 1,
+      "source_min": 1,
+      "source_max": 5,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            5.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            5.0
+          ]
+        }
+      ]
+    }
+  ]
+}

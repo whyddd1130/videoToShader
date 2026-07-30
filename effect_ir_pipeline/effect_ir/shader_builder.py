@@ -101,7 +101,7 @@ def merge_edit_plan_delta(previous: dict[str, Any] | None, delta: dict[str, Any]
     merged = {**previous, **delta}
     merged["selected_primitives"] = list(merged_by_name.values())
     merged["rejected_primitives"] = rejected
-    merged["implementation_notes"] = delta.get("implementation_notes", previous.get("implementation_notes", []))
+    merged.pop("implementation_notes", None)
     merged.pop("process_stages", None)
     merged.pop("handoff_constraints", None)
     merged["source"] = "merged_previous_state_plus_review_delta"
@@ -123,17 +123,12 @@ def _normalize_temporal_controller(
         curve = "ease_in_out"
     return {
         "mode": mode,
-        "driver": "shared" if mode == "continuous_monotonic" else str(raw.get("driver", "model_defined")),
-        "shared_progress_curve": curve,
-        "onset": str(raw.get("onset", "unspecified")),
-        "trend": str(raw.get("trend", "continuously_increasing" if mode == "continuous_monotonic" else "observed_process")),
-        "evidence": str(raw.get("evidence", "")),
+        "curve": curve,
     }
 
 
 def build_initial_edit_plan_from_ir(target_ir: dict[str, Any]) -> dict[str, Any]:
     selected: list[dict[str, Any]] = []
-    notes: list[str] = []
     rejected: list[dict[str, str]] = []
     text = _flatten_text(target_ir)
     geometry_ops = {str(item).lower() for item in target_ir.get("geometry_ops", []) or []}
@@ -143,7 +138,6 @@ def build_initial_edit_plan_from_ir(target_ir: dict[str, Any]) -> dict[str, Any]
 
     if "pixelation_mosaic" in appearance_ops or _has_any(text, ["pixel", "mosaic", "马赛克", "像素", "grid"]):
         selected.append(_primitive("pixelation", "primary", "none", "medium", temporal, "target_ir indicates pixel/block/mosaic appearance"))
-        notes.append("Use floor(uv * gridSize) / gridSize style UV quantization for pixelation.")
 
     if _has_any(text, ["horizontal", "x-axis", "x axis", "水平"]) and _has_any(text, ["jitter", "flicker", "抖动", "glitch"]):
         selected.append(_primitive("translate", "secondary", "x", "medium", temporal, "target_ir indicates horizontal jitter/displacement"))
@@ -178,7 +172,6 @@ def build_initial_edit_plan_from_ir(target_ir: dict[str, Any]) -> dict[str, Any]
     return {
         "selected_primitives": selected[:4],
         "rejected_primitives": rejected,
-        "implementation_notes": notes,
         "compositing_mode": _infer_compositing_mode(selected, target_ir=target_ir),
         "background_policy": _infer_background_policy(target_ir=target_ir),
         "source": "initial_target_ir",
@@ -390,7 +383,7 @@ def normalize_edit_plan(edit_plan: dict[str, Any], *, target_ir: dict[str, Any],
         target_ir=target_ir,
     )
     if temporal_controller["mode"] == "continuous_monotonic":
-        shared_curve = temporal_controller["shared_progress_curve"]
+        shared_curve = temporal_controller["curve"]
         for primitive in normalized_selected:
             params = primitive.get("params") if isinstance(primitive.get("params"), dict) else {}
             primitive["params"] = {
@@ -458,6 +451,7 @@ def normalize_edit_plan(edit_plan: dict[str, Any], *, target_ir: dict[str, Any],
         compositing_mode = "replace_source"
         notes.insert(0, "BACKGROUND: start from black and/or keep transformed-region exterior black; never initialize finalRgb from source.rgb.")
 
+    execution_contract = build_required_change_execution_contract(priority["required_changes"])
     return {
         "selected_primitives": normalized_selected[:5],
         "freeform_primitives": [
@@ -470,8 +464,118 @@ def normalize_edit_plan(edit_plan: dict[str, Any], *, target_ir: dict[str, Any],
         "compositing_mode": compositing_mode,
         "background_policy": background_policy,
         "optimization_priority": priority,
+        "execution_contract": execution_contract,
         "_builder_notes": builder_notes,
     }
+
+
+def build_required_change_execution_contract(required_changes: list[dict[str, Any]]) -> list[dict[str, str]]:
+    """Translate visible must-change items into broad GLSL implementation obligations."""
+    contract: list[dict[str, str]] = []
+    for item in required_changes:
+        if not isinstance(item, dict):
+            continue
+        item_id = str(item.get("id", "")).strip()
+        change = str(item.get("change", "")).strip()
+        if not item_id or not change:
+            continue
+        text = change.lower()
+        axis = ""
+        axis_mentions = [
+            (text.find(word), "x") for word in ("horizontal", "x-axis", "x axis", "横向", "水平方向", "水平") if text.find(word) >= 0
+        ] + [
+            (text.find(word), "y") for word in ("vertical", "y-axis", "y axis", "纵向", "垂直") if text.find(word) >= 0
+        ]
+        if axis_mentions:
+            axis = min(axis_mentions, key=lambda item: item[0])[1]
+        late = any(word in text for word in ("later", "late", "after midpoint", "second half", "后半", "中点后", "后段", "末段"))
+        temporal = any(word in text for word in ("progress", "recover", "recovery", "transition", "渐变", "恢复", "前半", "后半", "中点", "过程", "随进度"))
+        if axis:
+            obligation = f"mutate sampleUv.{axis} with visible displacement"
+            if late:
+                obligation += " controlled by later uProgress"
+            elif temporal:
+                obligation += " controlled by uProgress"
+            kind = "uv_axis_motion"
+        elif temporal:
+            obligation = "change a uProgress-driven envelope that controls visible effect strength"
+            kind = "progress_envelope"
+        else:
+            obligation = "change a visible sampling or colour operation, not comments or unused constants"
+            kind = "visible_output_change"
+        contract.append({"id": item_id, "change": change, "kind": kind, "axis": axis or "none", "obligation": obligation})
+    return contract
+
+
+def inspect_execution_contract(shader_text: str, contract: list[dict[str, Any]], *, baseline_shader: str | None) -> dict[str, Any]:
+    """Verify that the new source materially changes the required operation family.
+
+    This is a source-structure check, not a visual score or a text-pattern
+    validator. The visual reviewer remains authoritative after rendering.
+    """
+    if not contract:
+        return {"passed": True, "items": []}
+
+    def fragment_lines(text: str | None) -> list[str]:
+        if not text:
+            return []
+        blocks = re.findall(r"```(?:glsl)?\s*(.*?)```", text, flags=re.DOTALL | re.IGNORECASE)
+        fragment = blocks[-1] if len(blocks) >= 2 else text
+        return [" ".join(line.split()) for line in fragment.splitlines() if line.strip() and not line.lstrip().startswith("//")]
+
+    current_lines = fragment_lines(shader_text)
+    baseline_lines = fragment_lines(baseline_shader)
+    baseline_set = set(baseline_lines)
+    uses_progress = any("uProgress" in line for line in current_lines)
+    items: list[dict[str, Any]] = []
+    for requirement in contract:
+        axis = str(requirement.get("axis", "none"))
+        if axis in {"x", "y"}:
+            # Hand-written shaders use different coordinate variable names.
+            # Recognise their semantic role rather than requiring the builder's
+            # preferred ``sampleUv`` spelling.
+            targets = tuple(f"{root}.{axis}" for root in ("sampleUv", "uv", "warpUv", "coord", "distortedUv"))
+            current_ops = [line for line in current_lines if any(target in line for target in targets) and any(op in line for op in ("+=", "-=", "="))]
+            baseline_ops = [line for line in baseline_lines if any(target in line for target in targets) and any(op in line for op in ("+=", "-=", "="))]
+            changed = bool(set(current_ops) - set(baseline_ops)) if baseline_shader else bool(current_ops)
+            needs_progress = "uProgress" in str(requirement.get("obligation", ""))
+            passed = bool(current_ops) and changed and (uses_progress if needs_progress else True)
+            evidence = current_ops[:3]
+        elif requirement.get("kind") == "progress_envelope":
+            # Shaders commonly bind uProgress once (``float q = ...``) and
+            # then use q in the actual UV/colour envelope. Track that alias so
+            # a real formula change is not rejected merely because the binding
+            # line itself stays unchanged.
+            aliases = {"uProgress"}
+            # Follow a small dependency chain: uProgress -> q -> envelope.
+            # This is semantic data-flow, not a spelling-specific check.
+            for _ in range(4):
+                added = False
+                for line in current_lines:
+                    if "=" not in line or not any(alias in line for alias in aliases):
+                        continue
+                    left = line.split("=", 1)[0].replace("+", " ").replace("-", " ").strip().split()
+                    if left:
+                        name = left[-1].rstrip(";")
+                        if name and name not in aliases:
+                            aliases.add(name)
+                            added = True
+                if not added:
+                    break
+            progress_lines = [
+                line for line in current_lines
+                if any(alias in line for alias in aliases)
+                and any(token in line for token in ("sampleUv", "uv", "mix(", "texture2D", "rgb", "color", "effect", "amount_"))
+            ]
+            changed = bool(set(progress_lines) - baseline_set) if baseline_shader else bool(progress_lines)
+            passed = bool(progress_lines) and changed
+            evidence = progress_lines[:3]
+        else:
+            changed_lines = [line for line in current_lines if line not in baseline_set]
+            passed = bool(changed_lines) if baseline_shader else bool(current_lines)
+            evidence = changed_lines[:3]
+        items.append({"id": str(requirement.get("id", "")), "status": "implemented_in_source" if passed else "missing_in_source", "obligation": str(requirement.get("obligation", "")), "source_evidence": evidence})
+    return {"passed": all(item["status"] == "implemented_in_source" for item in items), "items": items}
 
 
 def build_programmatic_shader(edit_plan: dict[str, Any], *, target_ir: dict[str, Any], candidate_ir: dict[str, Any] | None) -> str:
@@ -748,18 +852,22 @@ def _compact_plan_for_code(value: dict[str, Any]) -> dict[str, Any]:
             continue
         selected.append({
             key: item[key]
-            for key in ("name", "role", "axis", "strength", "temporal", "params")
+            for key in ("name", "temporal", "params")
             if key in item and item[key] not in (None, "", [], {})
         })
+    priority = value.get("optimization_priority") if isinstance(value.get("optimization_priority"), dict) else {}
+    background = value.get("background_policy") if isinstance(value.get("background_policy"), dict) else {}
     return {
         "selected_primitives": selected,
-        "freeform_primitives": value.get("freeform_primitives", []),
-        "rejected_primitives": value.get("rejected_primitives", []),
-        "implementation_notes": value.get("implementation_notes", [])[:8],
-        "temporal_controller": value.get("temporal_controller"),
+        "remove_primitives": [
+            _primitive_name(item) for item in value.get("rejected_primitives", []) if _primitive_name(item)
+        ],
+        "temporal": value.get("temporal_controller"),
         "compositing_mode": value.get("compositing_mode"),
-        "background_policy": value.get("background_policy"),
-        "optimization_priority": value.get("optimization_priority"),
+        "background": {key: background[key] for key in ("initial_canvas", "outside_effect_region") if key in background},
+        "required_changes": priority.get("required_changes", []),
+        "frozen_constraints": priority.get("frozen_constraints", []),
+        "execution_contract": value.get("execution_contract", []),
     }
 
 
@@ -777,7 +885,7 @@ def build_code_model_prompt(
     previous_failure: str | None,
 ) -> str:
     plan_context = _compact_plan_for_code(normalized_plan)
-    freeform = plan_context.get("freeform_primitives", [])
+    freeform = [item for item in normalized_plan.get("freeform_primitives", []) if isinstance(item, dict)]
     freeform_instruction = (
         "以下 freeform_primitives 没有程序化模板，必须由你主动写出 GLSL 实现；"
         "它们不是可忽略的标签。为每项写清楚对应的 mask、离散/连续时间逻辑与 UV/采样操作，"
@@ -799,6 +907,7 @@ def build_code_model_prompt(
         f"{retry_instruction}"
         "optimization_priority 是强制约束：geometry_motion 改 UV；temporal_process 按 temporal_controller 落实完整过程；effect_region 落实区域；appearance 落实曝光/颜色操作。\n"
         "逐项落实 optimization_priority.required_changes；每项只有一个可见目标。frozen_constraints 是已正确且禁止回退的行为，修改其他参数时必须保持。\n"
+        "execution_contract 是本轮不可跳过的源码落实清单。对每项必须改写相应的 UV 采样轴或 uProgress 包络；仅改注释、无输出关联的常量、颜色微调，均视为未执行。\n"
         "若 required_change_check.items 中某项为 partial，只完成其 remaining_change；不得再次执行已经 implemented 的方向反转或其他已冻结变化。\n"
         "continuous_monotonic 模式必须只定义一个公共连续进度 q，所有相关操作从 q 派生；禁止按采样点建立 if/阈值分段或各自重启缓动。\n"
         "cyclic、impulse、freeform 模式直接依据视频过程描述实现，不使用固定峰值、阶段或 handoff 模板。逐项实现 selected_primitives；rejected_primitives 绝不能出现在代码中。\n"

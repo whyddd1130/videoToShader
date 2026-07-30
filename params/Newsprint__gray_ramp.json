@@ -1,0 +1,316 @@
+{
+  "schema_version": 1,
+  "sample_id": "Newsprint__gray_ramp",
+  "effect_name": "Newsprint",
+  "display_name": "Newsprint",
+  "match_name": "KFM KSkr Newsprint",
+  "source_dir": "doc/examples/kskr-plugin/script/newsprint",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/Newsprint",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/Newsprint__gray_ramp",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/Newsprint__gray_ramp/Newsprint__gray_ramp.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/Newsprint__gray_ramp/Newsprint__gray_ramp.json",
+  "input": {
+    "variant": "gray_ramp",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/gray_ramp.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "ColorModel",
+  "params": [
+    {
+      "index": 1,
+      "key": "ColorModel",
+      "display_name": "ColorModel",
+      "config_name": "ColorModel",
+      "match_name": "KFM KSkr Newsprint-0001",
+      "type": "int",
+      "source_default": 1,
+      "source_min": 1,
+      "source_max": 2,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            2.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            2.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "Pattern",
+      "display_name": "Pattern",
+      "config_name": "Pattern",
+      "match_name": "KFM KSkr Newsprint-0002",
+      "type": "int",
+      "source_default": 1,
+      "source_min": 1,
+      "source_max": 3,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            3.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            3.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "Period",
+      "display_name": "Period",
+      "config_name": "Period",
+      "match_name": "KFM KSkr Newsprint-0003",
+      "type": "unknown",
+      "source_default": 12.0,
+      "source_min": 0.0,
+      "source_max": 50.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            25.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            50.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "Angle",
+      "display_name": "Angle",
+      "config_name": "Angle",
+      "match_name": "KFM KSkr Newsprint-0004",
+      "type": "unknown",
+      "source_default": 75.0,
+      "source_min": -180.0,
+      "source_max": 180.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            -180.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            180.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "key": "AntiAlias",
+      "display_name": "AntiAlias",
+      "config_name": "AntiAlias",
+      "match_name": "KFM KSkr Newsprint-0005",
+      "type": "int",
+      "source_default": 16,
+      "source_min": 1,
+      "source_max": 128,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            128.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            128.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "key": "Turbulence",
+      "display_name": "Turbulence",
+      "config_name": "Turbulence",
+      "match_name": "KFM KSkr Newsprint-0006",
+      "type": "unknown",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 1.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "key": "Blocksize",
+      "display_name": "Blocksize",
+      "config_name": "Blocksize",
+      "match_name": "KFM KSkr Newsprint-0007",
+      "type": "unknown",
+      "source_default": -1.0,
+      "source_min": -1.0,
+      "source_max": 64.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            -1.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            31.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            64.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "key": "AngleBoost",
+      "display_name": "AngleBoost",
+      "config_name": "AngleBoost",
+      "match_name": "KFM KSkr Newsprint-0008",
+      "type": "unknown",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 4.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            2.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            4.0
+          ]
+        }
+      ]
+    }
+  ]
+}

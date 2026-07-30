@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "sample_id": "CCPageTurn__rg_split",
+  "effect_name": "CCPageTurn",
+  "display_name": "CCPageTurn",
+  "match_name": "KFM KSkr CCPageTurn",
+  "source_dir": "doc/examples/kskr-plugin/script/ccpageturn",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/CCPageTurn",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/CCPageTurn__rg_split",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/CCPageTurn__rg_split/CCPageTurn__rg_split.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/CCPageTurn__rg_split/CCPageTurn__rg_split.json",
+  "input": {
+    "variant": "rg_split",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/rg_split.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "CornerControls",
+  "params": [
+    {
+      "index": 1,
+      "key": "FoldPosition",
+      "display_name": "FoldPosition",
+      "config_name": "FoldPosition",
+      "match_name": "KFM KSkr CCPageTurn-0001",
+      "type": "twoD",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            540.0,
+            540.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "CornerControls",
+      "display_name": "CornerControls",
+      "config_name": "CornerControls",
+      "match_name": "KFM KSkr CCPageTurn-0002",
+      "type": "int",
+      "source_default": 1,
+      "source_min": 1,
+      "source_max": 4,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            4.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            4.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "FoldRadius",
+      "display_name": "FoldRadius",
+      "config_name": "FoldRadius",
+      "match_name": "KFM KSkr CCPageTurn-0003",
+      "type": "unknown",
+      "source_default": 0.02,
+      "source_min": 0.0,
+      "source_max": 0.2,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.1
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            0.2
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "LightDirection",
+      "display_name": "LightDirection",
+      "config_name": "LightDirection",
+      "match_name": "KFM KSkr CCPageTurn-0004",
+      "type": "unknown",
+      "source_default": 0.35,
+      "source_min": 0.0,
+      "source_max": 1.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "key": "BackOpacity",
+      "display_name": "BackOpacity",
+      "config_name": "BackOpacity",
+      "match_name": "KFM KSkr CCPageTurn-0005",
+      "type": "unknown",
+      "source_default": 0.85,
+      "source_min": 0.0,
+      "source_max": 1.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    }
+  ]
+}

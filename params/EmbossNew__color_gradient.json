@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "sample_id": "EmbossNew__color_gradient",
+  "effect_name": "EmbossNew",
+  "display_name": "EmbossNew",
+  "match_name": "KFM KSkr EmbossNew",
+  "source_dir": "doc/examples/kskr-plugin/script/embossnew",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/EmbossNew",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/EmbossNew__color_gradient",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/EmbossNew__color_gradient/EmbossNew__color_gradient.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/EmbossNew__color_gradient/EmbossNew__color_gradient.json",
+  "input": {
+    "variant": "color_gradient",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/color_gradient.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "Boundary",
+  "params": [
+    {
+      "index": 1,
+      "key": "Boundary",
+      "display_name": "Boundary",
+      "config_name": "Boundary",
+      "match_name": "KFM KSkr EmbossNew-0001",
+      "type": "unknown",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 1.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "Strength",
+      "display_name": "Strength",
+      "config_name": "Strength",
+      "match_name": "KFM KSkr EmbossNew-0002",
+      "type": "unknown",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 1.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    }
+  ]
+}

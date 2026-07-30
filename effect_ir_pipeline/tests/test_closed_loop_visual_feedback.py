@@ -16,11 +16,17 @@ from effect_ir_pipeline.effect_ir.closed_loop_shader_iter import (
     reconcile_atomic_change_state,
     extract_glsl_blocks,
     infer_library_target_effect_name,
+    load_top1_shader_text,
     validate_rendered_video,
     validate_shader_text,
     build_llm_visual_feedback_content,
 )
-from effect_ir_pipeline.effect_ir.shader_builder import merge_edit_plan_delta, normalize_edit_plan
+from effect_ir_pipeline.effect_ir.shader_builder import (
+    build_required_change_execution_contract,
+    inspect_execution_contract,
+    merge_edit_plan_delta,
+    normalize_edit_plan,
+)
 
 
 def _write_video(path: Path, frames: list[np.ndarray], *, fps: float = 12.0) -> None:
@@ -48,6 +54,29 @@ def _frames(amount: int = 0) -> list[np.ndarray]:
 
 
 class ClosedLoopVisualFeedbackTest(unittest.TestCase):
+    def test_library_loader_uses_lua_initialized_shader_pair(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            code_dir = root / "code" / "Example"
+            code_dir.mkdir(parents=True)
+            (code_dir / "Example.lua").write_text(
+                """
+local vs = [[vertex-active]]
+local fs = [[fragment-noop]]
+local geometry_fs = [[fragment-active]]
+function Example:init()
+    self.program:initWithShaderStrings(vs, geometry_fs)
+end
+""",
+                encoding="utf-8",
+            )
+            shader = load_top1_shader_text(
+                {"effect_name": "Example", "code_dir": "code/Example"}, repo_root=root
+            )
+        self.assertIn("vertex-active", shader)
+        self.assertIn("fragment-active", shader)
+        self.assertNotIn("fragment-noop", shader)
+
     def test_visual_feedback_rejects_missing_overall_score(self) -> None:
         parsed = _normalize_feedback_score(
             {
@@ -389,6 +418,45 @@ void main() {
         )
         self.assertNotIn("process_stages", merged)
         self.assertNotIn("handoff_constraints", merged)
+
+    def test_execution_contract_requires_a_changed_progress_driven_uv_axis(self) -> None:
+        contract = build_required_change_execution_contract([
+            {"id": "late_horizontal_bias", "change": "中点后逐渐把位移方向偏向横向"},
+        ])
+        baseline = """```glsl
+attribute vec2 position; varying vec2 textureCoord; void main(){ gl_Position=vec4(position,0.,1.); }
+```
+```glsl
+uniform float uProgress; varying vec2 textureCoord; void main(){ vec2 sampleUv=textureCoord; sampleUv.y += 0.1*uProgress; gl_FragColor=vec4(sampleUv,0.,1.); }
+```"""
+        unchanged = inspect_execution_contract(baseline, contract, baseline_shader=baseline)
+        self.assertFalse(unchanged["passed"])
+        revised = baseline.replace(
+            "sampleUv.y += 0.1*uProgress;",
+            "sampleUv.y += 0.1*uProgress; sampleUv.x += 0.18*uProgress;",
+        )
+        implemented = inspect_execution_contract(revised, contract, baseline_shader=baseline)
+        self.assertTrue(implemented["passed"])
+
+    def test_execution_contract_follows_progress_alias_into_output_formula(self) -> None:
+        contract = build_required_change_execution_contract([
+            {"id": "continuity", "change": "让画面随进度连续恢复"},
+        ])
+        baseline = """```glsl
+void main(){}
+```
+```glsl
+uniform float uProgress; void main(){ float q=clamp(uProgress,0.,1.); vec2 uv=vec2(q); gl_FragColor=vec4(uv,0.,1.); }
+```"""
+        revised = baseline.replace("vec2 uv=vec2(q);", "vec2 uv=vec2(q*q);")
+        check = inspect_execution_contract(revised, contract, baseline_shader=baseline)
+        self.assertTrue(check["passed"])
+
+    def test_execution_contract_uses_primary_axis_when_change_mentions_both_axes(self) -> None:
+        contract = build_required_change_execution_contract([
+            {"id": "vertical", "change": "单独提高纵向位移贡献，使其与横向位移共同参与形变"},
+        ])
+        self.assertEqual(contract[0]["axis"], "y")
 
     def test_guardrail_blocks_geometry_family_when_target_ir_has_no_geometry(self) -> None:
         parsed = {

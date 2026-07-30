@@ -1,0 +1,352 @@
+{
+  "schema_version": 1,
+  "sample_id": "NeonArc__model",
+  "effect_name": "NeonArc",
+  "display_name": "NeonArc",
+  "match_name": "KFM KSkr NeonArc",
+  "source_dir": "archive/experiments/NeonArc",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/NeonArc",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/NeonArc__model",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/NeonArc__model/NeonArc__model.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/NeonArc__model/NeonArc__model.json",
+  "input": {
+    "variant": "model",
+    "image_path": ""
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "ArcIntensity",
+  "params": [
+    {
+      "index": 1,
+      "key": "ArcIntensity",
+      "display_name": "ArcIntensity",
+      "config_name": "ArcIntensity",
+      "match_name": "KFM KSkr NeonArc-0001",
+      "type": "float",
+      "source_default": 70.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "ArcFrequency",
+      "display_name": "ArcFrequency",
+      "config_name": "ArcFrequency",
+      "match_name": "KFM KSkr NeonArc-0002",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": 1.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "ArcSpeed",
+      "display_name": "ArcSpeed",
+      "config_name": "ArcSpeed",
+      "match_name": "KFM KSkr NeonArc-0003",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "EdgeThreshold",
+      "display_name": "EdgeThreshold",
+      "config_name": "EdgeThreshold",
+      "match_name": "KFM KSkr NeonArc-0004",
+      "type": "float",
+      "source_default": 30.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "key": "ArcColorHue",
+      "display_name": "ArcColorHue",
+      "config_name": "ArcColorHue",
+      "match_name": "KFM KSkr NeonArc-0005",
+      "type": "float",
+      "source_default": 200.0,
+      "source_min": 0.0,
+      "source_max": 360.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            180.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            360.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "key": "ColorSaturation",
+      "display_name": "ColorSaturation",
+      "config_name": "ColorSaturation",
+      "match_name": "KFM KSkr NeonArc-0006",
+      "type": "float",
+      "source_default": 80.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "key": "FlickerIntensity",
+      "display_name": "FlickerIntensity",
+      "config_name": "FlickerIntensity",
+      "match_name": "KFM KSkr NeonArc-0007",
+      "type": "float",
+      "source_default": 70.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "key": "GlitchStrength",
+      "display_name": "GlitchStrength",
+      "config_name": "GlitchStrength",
+      "match_name": "KFM KSkr NeonArc-0008",
+      "type": "float",
+      "source_default": 30.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "key": "Thickness",
+      "display_name": "Thickness",
+      "config_name": "Thickness",
+      "match_name": "KFM KSkr NeonArc-0009",
+      "type": "float",
+      "source_default": 40.0,
+      "source_min": 1.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    }
+  ]
+}

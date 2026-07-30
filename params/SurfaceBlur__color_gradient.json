@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "sample_id": "SurfaceBlur__color_gradient",
+  "effect_name": "SurfaceBlur",
+  "display_name": "SurfaceBlur",
+  "match_name": "KFM KSkr SurfaceBlur",
+  "source_dir": "doc/examples/kskr-plugin/script/SurfaceBlur",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/SurfaceBlur",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/SurfaceBlur__color_gradient",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/SurfaceBlur__color_gradient/SurfaceBlur__color_gradient.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/SurfaceBlur__color_gradient/SurfaceBlur__color_gradient.json",
+  "input": {
+    "variant": "color_gradient",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/color_gradient.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "BlurSize",
+  "params": [
+    {
+      "index": 1,
+      "key": "BlurSize",
+      "display_name": "BlurSize",
+      "config_name": "BlurSize",
+      "match_name": "KFM KSkr SurfaceBlur-0001",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "BlurIntensity",
+      "display_name": "BlurIntensity",
+      "config_name": "BlurIntensity",
+      "match_name": "KFM KSkr SurfaceBlur-0002",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    }
+  ]
+}

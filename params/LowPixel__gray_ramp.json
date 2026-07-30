@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "sample_id": "LowPixel__gray_ramp",
+  "effect_name": "LowPixel",
+  "display_name": "LowPixel",
+  "match_name": "KFM KSkr LowPixel",
+  "source_dir": "doc/examples/kskr-plugin/script/LowPixel",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/LowPixel",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/LowPixel__gray_ramp",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/LowPixel__gray_ramp/LowPixel__gray_ramp.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/LowPixel__gray_ramp/LowPixel__gray_ramp.json",
+  "input": {
+    "variant": "gray_ramp",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/gray_ramp.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "NoiseAmount",
+  "params": [
+    {
+      "index": 1,
+      "key": "LowPixel",
+      "display_name": "LowPixel",
+      "config_name": "LowPixel",
+      "match_name": "KFM KSkr LowPixel-0001",
+      "type": "float",
+      "source_default": 1.0,
+      "source_min": 0.0,
+      "source_max": 1.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "Saturation",
+      "display_name": "Saturation",
+      "config_name": "Saturation",
+      "match_name": "KFM KSkr LowPixel-0002",
+      "type": "float",
+      "source_default": 1.0,
+      "source_min": 0.0,
+      "source_max": 1.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "NoiseAmount",
+      "display_name": "NoiseAmount",
+      "config_name": "NoiseAmount",
+      "match_name": "KFM KSkr LowPixel-0003",
+      "type": "float",
+      "source_default": 0.4,
+      "source_min": 0.0,
+      "source_max": 1.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "NoiseMovement",
+      "display_name": "NoiseMovement",
+      "config_name": "NoiseMovement",
+      "match_name": "KFM KSkr LowPixel-0004",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 1.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    }
+  ]
+}

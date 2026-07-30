@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "sample_id": "CCLens__model",
+  "effect_name": "CCLens",
+  "display_name": "CCLens",
+  "match_name": "KFM KSkr CCLens",
+  "source_dir": "doc/examples/kskr-plugin/script/cclens",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/CCLens",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/CCLens__model",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/CCLens__model/CCLens__model.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/CCLens__model/CCLens__model.json",
+  "input": {
+    "variant": "model",
+    "image_path": ""
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "CenterX",
+  "params": [
+    {
+      "index": 1,
+      "key": "CenterX",
+      "display_name": "CenterX",
+      "config_name": "CenterX",
+      "match_name": "KFM KSkr CCLens-0001",
+      "type": "unknown",
+      "source_default": 0.5,
+      "source_min": -2.0,
+      "source_max": 2.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            -2.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            2.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "CenterY",
+      "display_name": "CenterY",
+      "config_name": "CenterY",
+      "match_name": "KFM KSkr CCLens-0002",
+      "type": "unknown",
+      "source_default": 0.5,
+      "source_min": -2.0,
+      "source_max": 2.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            -2.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            2.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "Size",
+      "display_name": "Size",
+      "config_name": "Size",
+      "match_name": "KFM KSkr CCLens-0003",
+      "type": "unknown",
+      "source_default": 50.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "Convergence",
+      "display_name": "Convergence",
+      "config_name": "Convergence",
+      "match_name": "KFM KSkr CCLens-0004",
+      "type": "unknown",
+      "source_default": 0.0,
+      "source_min": -100.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            -100.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    }
+  ]
+}

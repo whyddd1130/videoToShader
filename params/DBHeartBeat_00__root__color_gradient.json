@@ -1,0 +1,107 @@
+{
+  "sample_id": "DBHeartBeat_00__root__color_gradient",
+  "source_platform": "jianying_reverse",
+  "category": "blur_motion",
+  "level": "L1_pure_image_shader",
+  "class_label": "heartbeat_zoom_blur",
+  "source": {
+    "effect_name": "DBHeartBeat",
+    "spec": "/home/wangxin/research/DigitalTwin/output/DBHeartBeat/replication_spec.json",
+    "pass_index": 0,
+    "pass_id": "L0__root_entity",
+    "module": "_root",
+    "shader_file": "fshader.frag",
+    "inputs": [
+      "input"
+    ]
+  },
+  "input": {
+    "variant": "color_gradient",
+    "image_path": "datasets/effect_training/jianying_single_pass/input_images/color_gradient.png"
+  },
+  "video": {
+    "fps": 25,
+    "duration_ms": 5000,
+    "width": 1080,
+    "height": 1080,
+    "total_frames": 125,
+    "path": "datasets/effect_training/jianying_single_pass/videos/DBHeartBeat_00__root__color_gradient/shader_lab.mp4"
+  },
+  "params": [
+    {
+      "key": "uProgress",
+      "type": "float",
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "key": "uTime",
+      "type": "float",
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            2.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            5.0
+          ]
+        }
+      ]
+    }
+  ],
+  "uniform_patches": {
+    "timer": "uTime",
+    "blurSize": "(1.0 + 34.0 * uProgress)",
+    "fRadius": "(1.0 + 24.0 * uProgress)"
+  },
+  "sampler_mapping": {
+    "primary_sampler": "inputImageTexture",
+    "runtime_sampler": "inputImageTexture"
+  },
+  "diagnostics": {
+    "first_frame": "output/_shader_lab/538e5b7202c1/diagnostics/frame_first.png",
+    "last_frame": "output/_shader_lab/538e5b7202c1/diagnostics/frame_last.png",
+    "first_mean_rgb": 84.18,
+    "last_mean_rgb": 90.508,
+    "first_last_diff_mean": 6.421,
+    "warnings": []
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "sample_id": "HeadMatting__rg_split",
+  "effect_name": "HeadMatting",
+  "display_name": "HeadMatting",
+  "match_name": "KFM KSkr HeadMatting",
+  "source_dir": "doc/examples/kskr-plugin/script/HeadMatting",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/HeadMatting",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/HeadMatting__rg_split",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/HeadMatting__rg_split/HeadMatting__rg_split.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/HeadMatting__rg_split/HeadMatting__rg_split.json",
+  "input": {
+    "variant": "rg_split",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/rg_split.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "index",
+  "params": [
+    {
+      "index": 1,
+      "key": "leftPoint",
+      "display_name": "leftPoint",
+      "config_name": "leftPoint",
+      "match_name": "KFM KSkr HeadMatting-0001",
+      "type": "twoD",
+      "source_default": [
+        0.0,
+        0.0
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            540.0,
+            540.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "rightPoint",
+      "display_name": "rightPoint",
+      "config_name": "rightPoint",
+      "match_name": "KFM KSkr HeadMatting-0002",
+      "type": "twoD",
+      "source_default": [
+        0.0,
+        0.0
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            540.0,
+            540.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "index",
+      "display_name": "index",
+      "config_name": "index",
+      "match_name": "KFM KSkr HeadMatting-0003",
+      "type": "int",
+      "source_default": 0,
+      "source_min": 0,
+      "source_max": 20,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            20.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            20.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "Tile",
+      "display_name": "Tile",
+      "config_name": "Tile",
+      "match_name": "KFM KSkr HeadMatting-0004",
+      "type": "comboBox",
+      "source_default": "no | yes",
+      "source_min": "0",
+      "source_max": "1",
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "sample_id": "VintageQuality_00_MosaicHorzPass__gray_ramp",
+  "source_platform": "jianying_reverse",
+  "category": "pixel_mosaic",
+  "level": "L1_pure_image_shader",
+  "class_label": "horizontal_mosaic_blur",
+  "source": {
+    "effect_name": "VintageQuality",
+    "spec": "/home/wangxin/research/DigitalTwin/output/VintageQuality/replication_spec.json",
+    "pass_index": 0,
+    "pass_id": "MosaicHorzPass",
+    "module": "MosaicHorzPass",
+    "shader_file": "effects/LumiMosaic/xshader/shaderLib/shaderGLES/2368db2729691da64024e11f04dc142f.frag",
+    "inputs": []
+  },
+  "input": {
+    "variant": "gray_ramp",
+    "image_path": "datasets/effect_training/jianying_single_pass/input_images/gray_ramp.png"
+  },
+  "video": {
+    "fps": 25,
+    "duration_ms": 5000,
+    "width": 1080,
+    "height": 1080,
+    "total_frames": 125,
+    "path": "datasets/effect_training/jianying_single_pass/videos/VintageQuality_00_MosaicHorzPass__gray_ramp/shader_lab.mp4"
+  },
+  "params": [
+    {
+      "key": "uProgress",
+      "type": "float",
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "key": "uTime",
+      "type": "float",
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            2.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            5.0
+          ]
+        }
+      ]
+    }
+  ],
+  "uniform_patches": {
+    "u_ScreenParams": "#define u_ScreenParams vec4(1080.0, 1080.0, 1.0/1080.0, 1.0/1080.0)",
+    "u_horz": "int(8.0 + 112.0 * uProgress)",
+    "u_vert": "int(8.0 + 112.0 * uProgress)"
+  },
+  "sampler_mapping": {
+    "primary_sampler": "u_inputTexture",
+    "runtime_sampler": "inputImageTexture"
+  },
+  "diagnostics": {
+    "first_frame": "output/_shader_lab/0ce2b2818527/diagnostics/frame_first.png",
+    "last_frame": "output/_shader_lab/0ce2b2818527/diagnostics/frame_last.png",
+    "first_mean_rgb": 132.0,
+    "last_mean_rgb": 131.299,
+    "first_last_diff_mean": 102.551,
+    "warnings": []
+  }
+}

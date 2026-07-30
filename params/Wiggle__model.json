@@ -1,0 +1,310 @@
+{
+  "schema_version": 1,
+  "sample_id": "Wiggle__model",
+  "effect_name": "Wiggle",
+  "display_name": "Wiggle",
+  "match_name": "KFM KSkr Wiggle",
+  "source_dir": "doc/examples/kskr-plugin/script/Wiggle",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/Wiggle",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/Wiggle__model",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/Wiggle__model/Wiggle__model.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/Wiggle__model/Wiggle__model.json",
+  "input": {
+    "variant": "model",
+    "image_path": ""
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "shiftFrequency",
+  "params": [
+    {
+      "index": 1,
+      "key": "shiftFrequency",
+      "display_name": "shiftFrequency",
+      "config_name": "shiftFrequency",
+      "match_name": "KFM KSkr Wiggle-0001",
+      "type": "int",
+      "source_default": 2,
+      "source_min": 0,
+      "source_max": 50,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            50.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "shiftAmplitude",
+      "display_name": "shiftAmplitude",
+      "config_name": "shiftAmplitude",
+      "match_name": "KFM KSkr Wiggle-0002",
+      "type": "int",
+      "source_default": 100,
+      "source_min": 0,
+      "source_max": 5000,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            5000.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            5000.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "shiftDirection",
+      "display_name": "shiftDirection",
+      "config_name": "shiftDirection",
+      "match_name": "KFM KSkr Wiggle-0003",
+      "type": "comboBox",
+      "source_default": "No | X | Y | XY",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "scaleFrequency",
+      "display_name": "scaleFrequency",
+      "config_name": "scaleFrequency",
+      "match_name": "KFM KSkr Wiggle-0004",
+      "type": "int",
+      "source_default": 2,
+      "source_min": 0,
+      "source_max": 50,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            50.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "key": "scaleAmplitude",
+      "display_name": "scaleAmplitude",
+      "config_name": "scaleAmplitude",
+      "match_name": "KFM KSkr Wiggle-0005",
+      "type": "int",
+      "source_default": 50,
+      "source_min": 0,
+      "source_max": 100,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            100.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "key": "scale",
+      "display_name": "scale",
+      "config_name": "scale",
+      "match_name": "KFM KSkr Wiggle-0006",
+      "type": "comboBox",
+      "source_default": "No | Yes",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "key": "rotateFrequency",
+      "display_name": "rotateFrequency",
+      "config_name": "rotateFrequency",
+      "match_name": "KFM KSkr Wiggle-0007",
+      "type": "int",
+      "source_default": 2,
+      "source_min": 0,
+      "source_max": 50,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            50.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "key": "rotateAmplitude",
+      "display_name": "rotateAmplitude",
+      "config_name": "rotateAmplitude",
+      "match_name": "KFM KSkr Wiggle-0008",
+      "type": "int",
+      "source_default": 30,
+      "source_min": 0,
+      "source_max": 180,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            180.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            180.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "key": "rotate",
+      "display_name": "rotate",
+      "config_name": "rotate",
+      "match_name": "KFM KSkr Wiggle-0009",
+      "type": "comboBox",
+      "source_default": "No | Yes",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    }
+  ]
+}

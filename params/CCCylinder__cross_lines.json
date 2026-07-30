@@ -1,0 +1,324 @@
+{
+  "schema_version": 1,
+  "sample_id": "CCCylinder__cross_lines",
+  "effect_name": "CCCylinder",
+  "display_name": "CCCylinder",
+  "match_name": "KFM KSkr CCCylinder",
+  "source_dir": "doc/examples/kskr-plugin/script/CCCylinder",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/CCCylinder",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/CCCylinder__cross_lines",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/CCCylinder__cross_lines/CCCylinder__cross_lines.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/CCCylinder__cross_lines/CCCylinder__cross_lines.json",
+  "input": {
+    "variant": "cross_lines",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/cross_lines.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "Radius",
+  "params": [
+    {
+      "index": 1,
+      "key": "Radius",
+      "display_name": "Radius",
+      "config_name": "Radius",
+      "match_name": "KFM KSkr CCCylinder-0001",
+      "type": "float",
+      "source_default": 100.0,
+      "source_min": 0.0,
+      "source_max": 300.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            150.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            300.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "PositionX",
+      "display_name": "PositionX",
+      "config_name": "PositionX",
+      "match_name": "KFM KSkr CCCylinder-0002",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": -2000.0,
+      "source_max": 2000.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            -2000.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            2000.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "PositionY",
+      "display_name": "PositionY",
+      "config_name": "PositionY",
+      "match_name": "KFM KSkr CCCylinder-0003",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": -2000.0,
+      "source_max": 2000.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            -2000.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            2000.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "PositionZ",
+      "display_name": "PositionZ",
+      "config_name": "PositionZ",
+      "match_name": "KFM KSkr CCCylinder-0004",
+      "type": "float",
+      "source_default": 500.0,
+      "source_min": -2000.0,
+      "source_max": 2000.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            -2000.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            2000.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "key": "RotationX",
+      "display_name": "RotationX",
+      "config_name": "RotationX",
+      "match_name": "KFM KSkr CCCylinder-0005",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": -10.0,
+      "source_max": 10.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            -10.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            10.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "key": "RotationY",
+      "display_name": "RotationY",
+      "config_name": "RotationY",
+      "match_name": "KFM KSkr CCCylinder-0006",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": -10.0,
+      "source_max": 10.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            -10.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            10.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "key": "RotationZ",
+      "display_name": "RotationZ",
+      "config_name": "RotationZ",
+      "match_name": "KFM KSkr CCCylinder-0007",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": -10.0,
+      "source_max": 10.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            -10.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            10.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "key": "RenderOrder",
+      "display_name": "RenderOrder",
+      "config_name": "RenderOrder",
+      "match_name": "KFM KSkr CCCylinder-0008",
+      "type": "comboBox",
+      "source_default": "XYZ | XZY | YXZ | YZX | ZXY | ZYX",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "key": "Render",
+      "display_name": "Render",
+      "config_name": "Render",
+      "match_name": "KFM KSkr CCCylinder-0009",
+      "type": "comboBox",
+      "source_default": "Full | Outside | Inside",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    }
+  ]
+}

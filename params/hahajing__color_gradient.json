@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "sample_id": "hahajing__color_gradient",
+  "effect_name": "hahajing",
+  "display_name": "Hahajing",
+  "match_name": "KFM KSkr Hahajing",
+  "source_dir": "doc/examples/kskr-plugin/script/hahajing",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/hahajing",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/hahajing__color_gradient",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/hahajing__color_gradient/hahajing__color_gradient.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/hahajing__color_gradient/hahajing__color_gradient.json",
+  "input": {
+    "variant": "color_gradient",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/color_gradient.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "curvature",
+  "params": [
+    {
+      "index": 1,
+      "key": "curvature",
+      "display_name": "Curvature",
+      "config_name": "Curvature",
+      "match_name": "KFM KSkr Hahajing-0001",
+      "type": "unknown",
+      "source_default": 0.0,
+      "source_min": -1.0,
+      "source_max": 1.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            -1.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "needJoint",
+      "display_name": "needJoint",
+      "config_name": "needJoint",
+      "match_name": "KFM KSkr Hahajing-0002",
+      "type": "comboBox",
+      "source_default": "true | false",
+      "source_min": 1,
+      "source_max": 2,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    }
+  ]
+}

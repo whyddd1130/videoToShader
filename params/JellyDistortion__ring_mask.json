@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "sample_id": "JellyDistortion__ring_mask",
+  "effect_name": "JellyDistortion",
+  "display_name": "JellyDistortion",
+  "match_name": "KFM KSkr JellyDistortion",
+  "source_dir": "doc/examples/kskr-plugin/script/JellyDistortion",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/JellyDistortion",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/JellyDistortion__ring_mask",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/JellyDistortion__ring_mask/JellyDistortion__ring_mask.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/JellyDistortion__ring_mask/JellyDistortion__ring_mask.json",
+  "input": {
+    "variant": "ring_mask",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/ring_mask.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "Speed",
+  "params": [
+    {
+      "index": 1,
+      "key": "Speed",
+      "display_name": "Speed",
+      "config_name": "Speed",
+      "match_name": "KFM KSkr JellyDistortion-0001",
+      "type": "float",
+      "source_default": 60.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "Progress",
+      "display_name": "Progress",
+      "config_name": "Progress",
+      "match_name": "KFM KSkr JellyDistortion-0002",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    }
+  ]
+}

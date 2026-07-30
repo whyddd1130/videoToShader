@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "sample_id": "edgeStretch__rg_split",
+  "effect_name": "edgeStretch",
+  "display_name": "EdgeStretch",
+  "match_name": "KFM KSkr EdgeStretch",
+  "source_dir": "doc/examples/kskr-plugin/script/edgeStretch",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/edgeStretch",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/edgeStretch__rg_split",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/edgeStretch__rg_split/edgeStretch__rg_split.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/edgeStretch__rg_split/edgeStretch__rg_split.json",
+  "input": {
+    "variant": "rg_split",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/rg_split.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "stretchSize",
+  "params": [
+    {
+      "index": 1,
+      "key": "stretchSize",
+      "display_name": "StretchSize",
+      "config_name": "StretchSize",
+      "match_name": "KFM KSkr EdgeStretch-0001",
+      "type": "unknown",
+      "source_default": 1.0,
+      "source_min": 1.0,
+      "source_max": 5.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            3.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            5.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "stretchDirection",
+      "display_name": "StretchDirection",
+      "config_name": "StretchDirection",
+      "match_name": "KFM KSkr EdgeStretch-0002",
+      "type": "comboBox",
+      "source_default": "top|bottom|left|right",
+      "source_min": "1",
+      "source_max": "4",
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "exponential",
+      "display_name": "exponential",
+      "config_name": "exponential",
+      "match_name": "KFM KSkr EdgeStretch-0003",
+      "type": "unknown",
+      "source_default": 1.0,
+      "source_min": 1.0,
+      "source_max": 2.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            1.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            2.0
+          ]
+        }
+      ]
+    }
+  ]
+}

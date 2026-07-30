@@ -1,0 +1,528 @@
+{
+  "schema_version": 1,
+  "sample_id": "RandomImage__gray_ramp",
+  "effect_name": "RandomImage",
+  "display_name": "RandomImage",
+  "match_name": "KFM KSkr RandomImage",
+  "source_dir": "doc/examples/kskr-plugin/script/RandomImage",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/RandomImage",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/RandomImage__gray_ramp",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/RandomImage__gray_ramp/RandomImage__gray_ramp.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/RandomImage__gray_ramp/RandomImage__gray_ramp.json",
+  "input": {
+    "variant": "gray_ramp",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/gray_ramp.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "ImageCount",
+  "params": [
+    {
+      "index": 1,
+      "key": "ImageCount",
+      "display_name": "ImageCount",
+      "config_name": "ImageCount",
+      "match_name": "KFM KSkr RandomImage-0001",
+      "type": "int",
+      "source_default": 10,
+      "source_min": 1,
+      "source_max": 10,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            10.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            10.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "ShowCount",
+      "display_name": "ShowCount",
+      "config_name": "ShowCount",
+      "match_name": "KFM KSkr RandomImage-0002",
+      "type": "int",
+      "source_default": 3,
+      "source_min": 1,
+      "source_max": 8,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            8.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            8.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "Image1",
+      "display_name": "Image1",
+      "config_name": "Image1",
+      "match_name": "KFM KSkr RandomImage-0003",
+      "type": "layer",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "Image2",
+      "display_name": "Image2",
+      "config_name": "Image2",
+      "match_name": "KFM KSkr RandomImage-0004",
+      "type": "layer",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "key": "Image3",
+      "display_name": "Image3",
+      "config_name": "Image3",
+      "match_name": "KFM KSkr RandomImage-0005",
+      "type": "layer",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "key": "Image4",
+      "display_name": "Image4",
+      "config_name": "Image4",
+      "match_name": "KFM KSkr RandomImage-0006",
+      "type": "layer",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "key": "Image5",
+      "display_name": "Image5",
+      "config_name": "Image5",
+      "match_name": "KFM KSkr RandomImage-0007",
+      "type": "layer",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "key": "Image6",
+      "display_name": "Image6",
+      "config_name": "Image6",
+      "match_name": "KFM KSkr RandomImage-0008",
+      "type": "layer",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "key": "Image7",
+      "display_name": "Image7",
+      "config_name": "Image7",
+      "match_name": "KFM KSkr RandomImage-0009",
+      "type": "layer",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "key": "Image8",
+      "display_name": "Image8",
+      "config_name": "Image8",
+      "match_name": "KFM KSkr RandomImage-0010",
+      "type": "layer",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "key": "Image9",
+      "display_name": "Image9",
+      "config_name": "Image9",
+      "match_name": "KFM KSkr RandomImage-0011",
+      "type": "layer",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "key": "Image10",
+      "display_name": "Image10",
+      "config_name": "Image10",
+      "match_name": "KFM KSkr RandomImage-0012",
+      "type": "layer",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "key": "Position1",
+      "display_name": "Position1",
+      "config_name": "Position1",
+      "match_name": "KFM KSkr RandomImage-0013",
+      "type": "twoD",
+      "source_default": [
+        0.0,
+        0.0
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            540.0,
+            540.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "key": "Position2",
+      "display_name": "Position2",
+      "config_name": "Position2",
+      "match_name": "KFM KSkr RandomImage-0014",
+      "type": "twoD",
+      "source_default": [
+        0.0,
+        0.0
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            540.0,
+            540.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "key": "Position3",
+      "display_name": "Position3",
+      "config_name": "Position3",
+      "match_name": "KFM KSkr RandomImage-0015",
+      "type": "twoD",
+      "source_default": [
+        0.0,
+        0.0
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            540.0,
+            540.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "key": "Position4",
+      "display_name": "Position4",
+      "config_name": "Position4",
+      "match_name": "KFM KSkr RandomImage-0016",
+      "type": "twoD",
+      "source_default": [
+        0.0,
+        0.0
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            540.0,
+            540.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "key": "Position5",
+      "display_name": "Position5",
+      "config_name": "Position5",
+      "match_name": "KFM KSkr RandomImage-0017",
+      "type": "twoD",
+      "source_default": [
+        0.0,
+        0.0
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            540.0,
+            540.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "key": "Position6",
+      "display_name": "Position6",
+      "config_name": "Position6",
+      "match_name": "KFM KSkr RandomImage-0018",
+      "type": "twoD",
+      "source_default": [
+        0.0,
+        0.0
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            540.0,
+            540.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "key": "Position7",
+      "display_name": "Position7",
+      "config_name": "Position7",
+      "match_name": "KFM KSkr RandomImage-0019",
+      "type": "twoD",
+      "source_default": [
+        0.0,
+        0.0
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            540.0,
+            540.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "key": "Position8",
+      "display_name": "Position8",
+      "config_name": "Position8",
+      "match_name": "KFM KSkr RandomImage-0020",
+      "type": "twoD",
+      "source_default": [
+        0.0,
+        0.0
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            540.0,
+            540.0
+          ]
+        }
+      ]
+    }
+  ]
+}

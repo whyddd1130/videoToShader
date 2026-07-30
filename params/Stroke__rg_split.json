@@ -1,0 +1,374 @@
+{
+  "schema_version": 1,
+  "sample_id": "Stroke__rg_split",
+  "effect_name": "Stroke",
+  "display_name": "Stroke",
+  "match_name": "KFM KSkr Stroke",
+  "source_dir": "doc/examples/kskr-plugin/script/Stroke",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/Stroke",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/Stroke__rg_split",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/Stroke__rg_split/Stroke__rg_split.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/Stroke__rg_split/Stroke__rg_split.json",
+  "input": {
+    "variant": "rg_split",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/rg_split.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "blurIntensity",
+  "params": [
+    {
+      "index": 1,
+      "key": "up_color",
+      "display_name": "color1",
+      "config_name": "color1",
+      "match_name": "KFM KSkr Stroke-0001",
+      "type": "color",
+      "source_default": "#8a5a82",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.5411764705882353,
+            0.35294117647058826,
+            0.5098039215686274,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "down_color",
+      "display_name": "color2",
+      "config_name": "color2",
+      "match_name": "KFM KSkr Stroke-0002",
+      "type": "color",
+      "source_default": "#6ac730",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.41568627450980394,
+            0.7803921568627451,
+            0.18823529411764706,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "blurIntensity",
+      "display_name": "range",
+      "config_name": "range",
+      "match_name": "KFM KSkr Stroke-0003",
+      "type": "float",
+      "source_default": 0.1,
+      "source_min": 0.0,
+      "source_max": 1.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "lightIntensity",
+      "display_name": "lightIntensity",
+      "config_name": "lightIntensity",
+      "match_name": "KFM KSkr Stroke-0004",
+      "type": "float",
+      "source_default": 0.5,
+      "source_min": 0.0,
+      "source_max": 1.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "key": "edgeWidth",
+      "display_name": "edgeWidth",
+      "config_name": "edgeWidth",
+      "match_name": "KFM KSkr Stroke-0005",
+      "type": "float",
+      "source_default": 2.94,
+      "source_min": 0.0,
+      "source_max": 10.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            5.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            10.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "key": "speed",
+      "display_name": "speed",
+      "config_name": "speed",
+      "match_name": "KFM KSkr Stroke-0006",
+      "type": "float",
+      "source_default": 1,
+      "source_min": 0.0,
+      "source_max": 5.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            2.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            5.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "key": "edgrRender",
+      "display_name": "edgrRender",
+      "config_name": "edgrRender",
+      "match_name": "KFM KSkr Stroke-0007",
+      "type": "comboBox",
+      "source_default": "true | false",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "key": "startAngle",
+      "display_name": "startAngle",
+      "config_name": "startAngle",
+      "match_name": "KFM KSkr Stroke-0008",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 2.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            2.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "key": "length",
+      "display_name": "length",
+      "config_name": "length",
+      "match_name": "KFM KSkr Stroke-0009",
+      "type": "float",
+      "source_default": 0.1,
+      "source_min": 0.0,
+      "source_max": 1.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "key": "gradient",
+      "display_name": "gradient",
+      "config_name": "gradient",
+      "match_name": "KFM KSkr Stroke-0010",
+      "type": "float",
+      "source_default": 0.1,
+      "source_min": 0.0,
+      "source_max": 1.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "key": "direction",
+      "display_name": "direction",
+      "config_name": "direction",
+      "match_name": "KFM KSkr Stroke-0011",
+      "type": "comboBox",
+      "source_default": "left | right",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    }
+  ]
+}

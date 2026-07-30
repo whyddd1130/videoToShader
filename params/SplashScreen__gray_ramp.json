@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "sample_id": "SplashScreen__gray_ramp",
+  "effect_name": "SplashScreen",
+  "display_name": "SplashScreen",
+  "match_name": "KFM KSkr SplashScreen",
+  "source_dir": "doc/examples/kskr-plugin/script/SplashScreen",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/SplashScreen",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/SplashScreen__gray_ramp",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/SplashScreen__gray_ramp/SplashScreen__gray_ramp.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/SplashScreen__gray_ramp/SplashScreen__gray_ramp.json",
+  "input": {
+    "variant": "gray_ramp",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/gray_ramp.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "SplashRate",
+  "params": [
+    {
+      "index": 1,
+      "key": "SplashRate",
+      "display_name": "SplashRate",
+      "config_name": "SplashRate",
+      "match_name": "KFM KSkr SplashScreen-0001",
+      "type": "float",
+      "source_default": 2.0,
+      "source_min": 2.0,
+      "source_max": 10.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            2.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            6.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            10.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "SplashColor",
+      "display_name": "SplashColor",
+      "config_name": "SplashColor",
+      "match_name": "KFM KSkr SplashScreen-0002",
+      "type": "comboBox",
+      "source_default": "Black | White | Yellow",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    }
+  ]
+}

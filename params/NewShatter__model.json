@@ -1,0 +1,352 @@
+{
+  "schema_version": 1,
+  "sample_id": "NewShatter__model",
+  "effect_name": "NewShatter",
+  "display_name": "NewShatter",
+  "match_name": "KFM KSkr NewShatter",
+  "source_dir": "doc/examples/kskr-plugin/script/newShatter",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/NewShatter",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/NewShatter__model",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/NewShatter__model/NewShatter__model.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/NewShatter__model/NewShatter__model.json",
+  "input": {
+    "variant": "model",
+    "image_path": ""
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "Repetitions",
+  "params": [
+    {
+      "index": 1,
+      "key": "Repetitions",
+      "display_name": "Repetitions",
+      "config_name": "Repetitions",
+      "match_name": "KFM KSkr NewShatter-0001",
+      "type": "int",
+      "source_default": 12,
+      "source_min": 0,
+      "source_max": 1000,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            1000.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1000.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "ControShatter",
+      "display_name": "ControShatter",
+      "config_name": "ControShatter",
+      "match_name": "KFM KSkr NewShatter-0002",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 300.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            150.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            300.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "RotationX",
+      "display_name": "RotationX",
+      "config_name": "RotationX",
+      "match_name": "KFM KSkr NewShatter-0003",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 1000.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            500.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1000.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "RotationY",
+      "display_name": "RotationY",
+      "config_name": "RotationY",
+      "match_name": "KFM KSkr NewShatter-0004",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 1000.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            500.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1000.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "key": "RotationZ",
+      "display_name": "RotationZ",
+      "config_name": "RotationZ",
+      "match_name": "KFM KSkr NewShatter-0005",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 1000.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            500.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1000.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "key": "PositionX",
+      "display_name": "PositionX",
+      "config_name": "PositionX",
+      "match_name": "KFM KSkr NewShatter-0006",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": -5000.0,
+      "source_max": 5000.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            -5000.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            5000.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "key": "PositionY",
+      "display_name": "PositionY",
+      "config_name": "PositionY",
+      "match_name": "KFM KSkr NewShatter-0007",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": -5000.0,
+      "source_max": 5000.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            -5000.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            5000.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "key": "PositionZ",
+      "display_name": "PositionZ",
+      "config_name": "PositionZ",
+      "match_name": "KFM KSkr NewShatter-0008",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": -20.0,
+      "source_max": 20.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            -20.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            20.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "key": "Pattern",
+      "display_name": "Pattern",
+      "config_name": "Pattern",
+      "match_name": "KFM KSkr NewShatter-0009",
+      "type": "int",
+      "source_default": 1,
+      "source_min": 1,
+      "source_max": 2,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            2.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            2.0
+          ]
+        }
+      ]
+    }
+  ]
+}

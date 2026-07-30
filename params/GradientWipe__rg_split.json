@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "sample_id": "GradientWipe__rg_split",
+  "effect_name": "GradientWipe",
+  "display_name": "GradientWipe",
+  "match_name": "KFM KSkr GradientWipe",
+  "source_dir": "doc/examples/kskr-plugin/script/gradientWipe",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/GradientWipe",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/GradientWipe__rg_split",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/GradientWipe__rg_split/GradientWipe__rg_split.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/GradientWipe__rg_split/GradientWipe__rg_split.json",
+  "input": {
+    "variant": "rg_split",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/rg_split.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "TransitionCompletion",
+  "params": [
+    {
+      "index": 1,
+      "key": "GradientLayer",
+      "display_name": "GradientLayer",
+      "config_name": "GradientLayer",
+      "match_name": "KFM KSkr GradientWipe-0001",
+      "type": "layer",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "TransitionCompletion",
+      "display_name": "TransitionCompletion",
+      "config_name": "TransitionCompletion",
+      "match_name": "KFM KSkr GradientWipe-0002",
+      "type": "unknown",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "TransitionSoftness",
+      "display_name": "TransitionSoftness",
+      "config_name": "TransitionSoftness",
+      "match_name": "KFM KSkr GradientWipe-0003",
+      "type": "unknown",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "InvertGradient",
+      "display_name": "InvertGradient",
+      "config_name": "InvertGradient",
+      "match_name": "KFM KSkr GradientWipe-0004",
+      "type": "comboBox",
+      "source_default": "NO|YES",
+      "source_min": "1",
+      "source_max": "2",
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    }
+  ]
+}

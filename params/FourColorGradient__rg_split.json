@@ -1,0 +1,326 @@
+{
+  "schema_version": 1,
+  "sample_id": "FourColorGradient__rg_split",
+  "effect_name": "FourColorGradient",
+  "display_name": "FourColorGradient",
+  "match_name": "KFM KSkr FourColorGradient",
+  "source_dir": "doc/examples/kskr-plugin/script/FourColorGradient",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/FourColorGradient",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/FourColorGradient__rg_split",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/FourColorGradient__rg_split/FourColorGradient__rg_split.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/FourColorGradient__rg_split/FourColorGradient__rg_split.json",
+  "input": {
+    "variant": "rg_split",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/rg_split.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "Blend",
+  "params": [
+    {
+      "index": 1,
+      "key": "PointOne",
+      "display_name": "PointOne",
+      "config_name": "PointOne",
+      "match_name": "KFM KSkr FourColorGradient-0001",
+      "type": "twoD",
+      "source_default": [
+        100.0,
+        100.0
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            540.0,
+            540.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "ColorOne",
+      "display_name": "ColorOne",
+      "config_name": "ColorOne",
+      "match_name": "KFM KSkr FourColorGradient-0002",
+      "type": "color",
+      "source_default": "#FFFF00",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0,
+            1.0,
+            0.0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "PointTwo",
+      "display_name": "PointTwo",
+      "config_name": "PointTwo",
+      "match_name": "KFM KSkr FourColorGradient-0003",
+      "type": "twoD",
+      "source_default": [
+        1000.0,
+        100.0
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            540.0,
+            540.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "ColorTwo",
+      "display_name": "ColorTwo",
+      "config_name": "ColorTwo",
+      "match_name": "KFM KSkr FourColorGradient-0004",
+      "type": "color",
+      "source_default": "#00FF00",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0,
+            1.0,
+            0.0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "key": "PointThree",
+      "display_name": "PointThree",
+      "config_name": "PointThree",
+      "match_name": "KFM KSkr FourColorGradient-0005",
+      "type": "twoD",
+      "source_default": [
+        100.0,
+        1000.0
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            540.0,
+            540.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "key": "ColorThree",
+      "display_name": "ColorThree",
+      "config_name": "ColorThree",
+      "match_name": "KFM KSkr FourColorGradient-0006",
+      "type": "color",
+      "source_default": "#FF00FF",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0,
+            0.0,
+            1.0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "key": "PointFour",
+      "display_name": "PointFour",
+      "config_name": "PointFour",
+      "match_name": "KFM KSkr FourColorGradient-0007",
+      "type": "twoD",
+      "source_default": [
+        1000.0,
+        1000.0
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            540.0,
+            540.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "key": "ColorFour",
+      "display_name": "ColorFour",
+      "config_name": "ColorFour",
+      "match_name": "KFM KSkr FourColorGradient-0008",
+      "type": "color",
+      "source_default": "#0000FF",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0,
+            0.0,
+            1.0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "key": "Blend",
+      "display_name": "Blend",
+      "config_name": "Blend",
+      "match_name": "KFM KSkr FourColorGradient-0009",
+      "type": "float",
+      "source_default": 100.0,
+      "source_min": 0.0,
+      "source_max": 1000.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            500.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1000.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "key": "Opacity",
+      "display_name": "Opacity",
+      "config_name": "Opacity",
+      "match_name": "KFM KSkr FourColorGradient-0010",
+      "type": "float",
+      "source_default": 100.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "key": "BlendMode",
+      "display_name": "BlendMode",
+      "config_name": "BlendMode",
+      "match_name": "KFM KSkr FourColorGradient-0011",
+      "type": "comboBox",
+      "source_default": "None | Normal | Add | Multiply | Screen | OverLay | SoftLight | HardLight | ColorDodge | ColorBurn | Darken | Lighten | Difference | Exclude | Hue | Saturation | Color | Luminosity",
+      "source_min": 1,
+      "source_max": 18,
+      "animated": false,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,264 @@
+{
+  "schema_version": 1,
+  "sample_id": "Enlargement__ring_mask",
+  "effect_name": "Enlargement",
+  "display_name": "Enlargement",
+  "match_name": "KFM KSkr Enlargement",
+  "source_dir": "doc/examples/kskr-plugin/script/enlargement",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/Enlargement",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/Enlargement__ring_mask",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/Enlargement__ring_mask/Enlargement__ring_mask.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/Enlargement__ring_mask/Enlargement__ring_mask.json",
+  "input": {
+    "variant": "ring_mask",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/ring_mask.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "ratio1",
+  "params": [
+    {
+      "index": 1,
+      "key": "shape",
+      "display_name": "Shape",
+      "config_name": "Shape",
+      "match_name": "KFM KSkr Enlargement-0001",
+      "type": "comboBox",
+      "source_default": "circle | square",
+      "source_min": "1",
+      "source_max": "2",
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "center1",
+      "display_name": "center",
+      "config_name": "center",
+      "match_name": "KFM KSkr Enlargement-0002",
+      "type": "twoD",
+      "source_default": [
+        0.0,
+        0.0
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            540.0,
+            540.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "ratio1",
+      "display_name": "Magnification",
+      "config_name": "Magnification",
+      "match_name": "KFM KSkr Enlargement-0003",
+      "type": "unknown",
+      "source_default": 100.0,
+      "source_min": 100.0,
+      "source_max": 500.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            100.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            300.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            500.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "link",
+      "display_name": "Link",
+      "config_name": "Link",
+      "match_name": "KFM KSkr Enlargement-0004",
+      "type": "comboBox",
+      "source_default": "None | Size",
+      "source_min": "1",
+      "source_max": "2",
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "key": "size",
+      "display_name": "Size",
+      "config_name": "Size",
+      "match_name": "KFM KSkr Enlargement-0005",
+      "type": "unknown",
+      "source_default": 100.0,
+      "source_min": 100.0,
+      "source_max": 500.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            100.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            300.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            500.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "key": "feather",
+      "display_name": "Feather",
+      "config_name": "Feather",
+      "match_name": "KFM KSkr Enlargement-0006",
+      "type": "unknown",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "key": "alpha1",
+      "display_name": "Alpha",
+      "config_name": "Alpha",
+      "match_name": "KFM KSkr Enlargement-0007",
+      "type": "unknown",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 1.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "key": "blendMode",
+      "display_name": "BlendMode",
+      "config_name": "BlendMode",
+      "match_name": "KFM KSkr Enlargement-0008",
+      "type": "comboBox",
+      "source_default": "None | Normal | Add | Multiply | Screen | Overlay | SoftLight | HardLight | ColorDodge | ColorBurn | Draken | Lighten | Difference | Exclude | Hue | Saturation | Color | Luminosity",
+      "source_min": "1",
+      "source_max": "18",
+      "animated": false,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    }
+  ]
+}

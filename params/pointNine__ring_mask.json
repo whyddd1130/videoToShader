@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "sample_id": "pointNine__ring_mask",
+  "effect_name": "pointNine",
+  "display_name": "pointNine",
+  "match_name": "KFM KSkr pointNine",
+  "source_dir": "doc/examples/kskr-plugin/script/pointNine",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/pointNine",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/pointNine__ring_mask",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/pointNine__ring_mask/pointNine__ring_mask.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/pointNine__ring_mask/pointNine__ring_mask.json",
+  "input": {
+    "variant": "ring_mask",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/ring_mask.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "leftSpacing",
+  "params": [
+    {
+      "index": 1,
+      "key": "leftSpacing",
+      "display_name": "leftSpacing",
+      "config_name": "leftSpacing",
+      "match_name": "KFM KSkr pointNine-0001",
+      "type": "float",
+      "source_default": 5.0,
+      "source_min": 0.0,
+      "source_max": 300.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            150.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            300.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "rightSpacing",
+      "display_name": "rightSpacing",
+      "config_name": "rightSpacing",
+      "match_name": "KFM KSkr pointNine-0002",
+      "type": "float",
+      "source_default": 5.0,
+      "source_min": 0.0,
+      "source_max": 300.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            150.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            300.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "topSpacing",
+      "display_name": "topSpacing",
+      "config_name": "topSpacing",
+      "match_name": "KFM KSkr pointNine-0003",
+      "type": "float",
+      "source_default": 5.0,
+      "source_min": 0.0,
+      "source_max": 300.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            150.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            300.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "bottomSpacing",
+      "display_name": "bottomSpacing",
+      "config_name": "bottomSpacing",
+      "match_name": "KFM KSkr pointNine-0004",
+      "type": "float",
+      "source_default": 5.0,
+      "source_min": 0.0,
+      "source_max": 300.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            150.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            300.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "key": "texture",
+      "display_name": "textureLayer",
+      "config_name": "textureLayer",
+      "match_name": "KFM KSkr pointNine-0005",
+      "type": "layer",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    }
+  ]
+}

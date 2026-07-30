@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "sample_id": "Guoqing2021__gray_ramp",
+  "effect_name": "Guoqing2021",
+  "display_name": "Guoqing2021",
+  "match_name": "KFM KSkr Guoqing2021",
+  "source_dir": "doc/examples/kskr-plugin/script/Guoqing2021",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/Guoqing2021",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/Guoqing2021__gray_ramp",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/Guoqing2021__gray_ramp/Guoqing2021__gray_ramp.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/Guoqing2021__gray_ramp/Guoqing2021__gray_ramp.json",
+  "input": {
+    "variant": "gray_ramp",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/gray_ramp.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "frame",
+  "params": [
+    {
+      "index": 1,
+      "key": "frame",
+      "display_name": "frame",
+      "config_name": "frame",
+      "match_name": "KFM KSkr Guoqing2021-0001",
+      "type": "int",
+      "source_default": 0,
+      "source_min": 0,
+      "source_max": 600,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            600.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            600.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "ratio",
+      "display_name": "ratio",
+      "config_name": "ratio",
+      "match_name": "KFM KSkr Guoqing2021-0002",
+      "type": "float",
+      "source_default": 1.0,
+      "source_min": 0.0,
+      "source_max": 5.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            2.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            5.0
+          ]
+        }
+      ]
+    }
+  ]
+}

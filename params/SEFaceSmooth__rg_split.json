@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "sample_id": "SEFaceSmooth__rg_split",
+  "effect_name": "SEFaceSmooth",
+  "display_name": "KSkr SEFaceSmooth",
+  "match_name": "KFM KSkr SEFaceSmooth",
+  "source_dir": "doc/examples/kskr-plugin/script/facesmooth2",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/SEFaceSmooth",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/SEFaceSmooth__rg_split",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/SEFaceSmooth__rg_split/SEFaceSmooth__rg_split.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/SEFaceSmooth__rg_split/SEFaceSmooth__rg_split.json",
+  "input": {
+    "variant": "rg_split",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/rg_split.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "from",
+  "params": [
+    {
+      "index": 1,
+      "key": "from",
+      "display_name": "from",
+      "config_name": "from",
+      "match_name": "KFM KSkr SEFaceSmooth-0001",
+      "type": "int",
+      "source_default": 0,
+      "source_min": 0,
+      "source_max": 20,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            20.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            20.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "to",
+      "display_name": "to",
+      "config_name": "to",
+      "match_name": "KFM KSkr SEFaceSmooth-0002",
+      "type": "int",
+      "source_default": 0,
+      "source_min": 0,
+      "source_max": 20,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            20.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            20.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "progress",
+      "display_name": "progress",
+      "config_name": "progress",
+      "match_name": "KFM KSkr SEFaceSmooth-0003",
+      "type": "unknown",
+      "source_default": 0,
+      "source_min": 0,
+      "source_max": 100,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "overrideFromLayer",
+      "display_name": "override from layer",
+      "config_name": "override from layer",
+      "match_name": "KFM KSkr SEFaceSmooth-0004",
+      "type": "layer",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "key": "flipFromLayer",
+      "display_name": "flipFromLayer",
+      "config_name": "flipFromLayer",
+      "match_name": "KFM KSkr SEFaceSmooth-0005",
+      "type": "comboBox",
+      "source_default": "no | yesToY",
+      "source_min": "1",
+      "source_max": "2",
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "key": "overrideToLayer",
+      "display_name": "override to layer",
+      "config_name": "override to layer",
+      "match_name": "KFM KSkr SEFaceSmooth-0006",
+      "type": "layer",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "key": "flipToLayer",
+      "display_name": "flipToLayer",
+      "config_name": "flipToLayer",
+      "match_name": "KFM KSkr SEFaceSmooth-0007",
+      "type": "comboBox",
+      "source_default": "no | yesToY",
+      "source_min": "1",
+      "source_max": "2",
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    }
+  ]
+}

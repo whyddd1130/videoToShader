@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "sample_id": "Nothing__cross_lines",
+  "effect_name": "Nothing",
+  "display_name": "Nothing",
+  "match_name": "KFM KSkr Nothing",
+  "source_dir": "doc/examples/kskr-plugin/script/nothing",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/Nothing",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/Nothing__cross_lines",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/Nothing__cross_lines/Nothing__cross_lines.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/Nothing__cross_lines/Nothing__cross_lines.json",
+  "input": {
+    "variant": "cross_lines",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/cross_lines.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "",
+  "params": [
+    {
+      "index": 1,
+      "key": "center",
+      "display_name": "center",
+      "config_name": "center",
+      "match_name": "KFM KSkr Nothing-0001",
+      "type": "twoD",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            540.0,
+            540.0
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,379 @@
+{
+  "schema_version": 1,
+  "sample_id": "AsciiArtStyle__gray_ramp",
+  "effect_name": "AsciiArtStyle",
+  "display_name": "AsciiArtStyle",
+  "match_name": "KFM KSkr AsciiArtStyle",
+  "source_dir": "doc/examples/kskr-plugin/script/asciiArtStyle",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/AsciiArtStyle",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/AsciiArtStyle__gray_ramp",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/AsciiArtStyle__gray_ramp/AsciiArtStyle__gray_ramp.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/AsciiArtStyle__gray_ramp/AsciiArtStyle__gray_ramp.json",
+  "input": {
+    "variant": "gray_ramp",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/gray_ramp.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "MosaicSize",
+  "params": [
+    {
+      "index": 1,
+      "key": "Pattern",
+      "display_name": "Pattern",
+      "config_name": "Pattern",
+      "match_name": "KFM KSkr AsciiArtStyle-0001",
+      "type": "comboBox",
+      "source_default": "Mosaic | Ascii | Mosaic And Ascii",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "MosaicShape",
+      "display_name": "MosaicShape",
+      "config_name": "MosaicShape",
+      "match_name": "KFM KSkr AsciiArtStyle-0002",
+      "type": "comboBox",
+      "source_default": "Square | Circle | Triangle | Diamon | Hexagon",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "MosaicStagger",
+      "display_name": "MosaicStagger",
+      "config_name": "MosaicStagger",
+      "match_name": "KFM KSkr AsciiArtStyle-0003",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 1.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "MosaicSize",
+      "display_name": "MosaicSize",
+      "config_name": "MosaicSize",
+      "match_name": "KFM KSkr AsciiArtStyle-0004",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": 1.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "key": "MosaicGapColor",
+      "display_name": "MosaicGapColor",
+      "config_name": "MosaicGapColor",
+      "match_name": "KFM KSkr AsciiArtStyle-0005",
+      "type": "color",
+      "source_default": "#ffffff",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0,
+            1.0,
+            1.0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "key": "AsciiImage",
+      "display_name": "AsciiImage",
+      "config_name": "AsciiImage",
+      "match_name": "KFM KSkr AsciiArtStyle-0006",
+      "type": "layer",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "key": "HorizontalNum",
+      "display_name": "HorizontalNum",
+      "config_name": "HorizontalNum",
+      "match_name": "KFM KSkr AsciiArtStyle-0007",
+      "type": "int",
+      "source_default": 2,
+      "source_min": 1,
+      "source_max": 4,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            4.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            4.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "key": "VerticalNum",
+      "display_name": "VerticalNum",
+      "config_name": "VerticalNum",
+      "match_name": "KFM KSkr AsciiArtStyle-0008",
+      "type": "int",
+      "source_default": 4,
+      "source_min": 1,
+      "source_max": 4,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            4.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            4.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "key": "MappingChannel",
+      "display_name": "MappingChannel",
+      "config_name": "MappingChannel",
+      "match_name": "KFM KSkr AsciiArtStyle-0009",
+      "type": "comboBox",
+      "source_default": "R | G | B | Grey",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "key": "BlendMode",
+      "display_name": "BlendMode",
+      "config_name": "BlendMode",
+      "match_name": "KFM KSkr AsciiArtStyle-0010",
+      "type": "comboBox",
+      "source_default": "Darken | Multiply | Lighten | Screen | Add | Overly | Luminosity",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "key": "Opacity",
+      "display_name": "Opacity",
+      "config_name": "Opacity",
+      "match_name": "KFM KSkr AsciiArtStyle-0011",
+      "type": "float",
+      "source_default": 100.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "key": "ColorLevel",
+      "display_name": "ColorLevel",
+      "config_name": "ColorLevel",
+      "match_name": "KFM KSkr AsciiArtStyle-0012",
+      "type": "int",
+      "source_default": 188,
+      "source_min": 1,
+      "source_max": 255,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            255.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            255.0
+          ]
+        }
+      ]
+    }
+  ]
+}

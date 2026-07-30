@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "sample_id": "kaleida__gray_ramp",
+  "effect_name": "kaleida",
+  "display_name": "Kaleida",
+  "match_name": "CC Kaleida",
+  "source_dir": "doc/examples/kskr-plugin/script/CCkaleida",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/kaleida",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/kaleida__gray_ramp",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/kaleida__gray_ramp/kaleida__gray_ramp.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/kaleida__gray_ramp/kaleida__gray_ramp.json",
+  "input": {
+    "variant": "gray_ramp",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/gray_ramp.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "size",
+  "params": [
+    {
+      "index": 1,
+      "key": "center",
+      "display_name": "center",
+      "config_name": "center",
+      "match_name": "CC Kaleida-0001",
+      "type": "twoD",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            540.0,
+            540.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "size",
+      "display_name": "size",
+      "config_name": "size",
+      "match_name": "CC Kaleida-0002",
+      "type": "unknown",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "mirror",
+      "display_name": "mirror",
+      "config_name": "mirror",
+      "match_name": "CC Kaleida-0003",
+      "type": "unknown",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "rotate",
+      "display_name": "rotate",
+      "config_name": "rotate",
+      "match_name": "CC Kaleida-0004",
+      "type": "unknown",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "key": "centerFloat",
+      "display_name": "centerFloat",
+      "config_name": "centerFloat",
+      "match_name": "CC Kaleida-0005",
+      "type": "unknown",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    }
+  ]
+}

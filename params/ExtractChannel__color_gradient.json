@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "sample_id": "ExtractChannel__color_gradient",
+  "effect_name": "ExtractChannel",
+  "display_name": "ExtractChannel",
+  "match_name": "KFM KSkr ExtractChannel",
+  "source_dir": "doc/examples/kskr-plugin/script/ExtractChannel",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/ExtractChannel",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/ExtractChannel__color_gradient",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/ExtractChannel__color_gradient/ExtractChannel__color_gradient.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/ExtractChannel__color_gradient/ExtractChannel__color_gradient.json",
+  "input": {
+    "variant": "color_gradient",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/color_gradient.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "",
+  "params": [
+    {
+      "index": 1,
+      "key": "Channel",
+      "display_name": "Channel",
+      "config_name": "Channel",
+      "match_name": "KFM KSkr ExtractChannel-0001",
+      "type": "comboBox",
+      "source_default": "R | G | B | A",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    }
+  ]
+}

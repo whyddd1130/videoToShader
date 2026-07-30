@@ -1,0 +1,231 @@
+{"kind":"deck","id":"pr/irutmg","name":"Deck"}
+{"kind":"layout","layoutId":"0cb0bf48-1fcd-483e-a59e-8bf6c79725f7","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"402826aa-a74c-4280-a7bc-79b294f5d4ec","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/uz97bo","slide":1,"title":"Shader 转场推理项目进度","textShapes":9}
+{"kind":"shape","id":"sh/2x4n25on","slide":1,"bbox":[0,0,24,720]}
+{"kind":"textbox","id":"sh/pkvmdk7e","slide":1,"text":"Shader 转场推理项目进度","textPreview":"Shader 转场推理项目进度","textChars":15,"textLines":1,"bbox":[62,104,920,70]}
+{"kind":"textbox","id":"sh/ozm54f6t","slide":1,"text":"输入原图与特效视频，逆向生成可读、可复用的 Shader 源码","textPreview":"输入原图与特效视频，逆向生成可读、可复用的 Shader 源码","textChars":31,"textLines":1,"bbox":[66,204,820,38]}
+{"kind":"shape","id":"sh/bmdofup4","slide":1,"bbox":[66,295,515,4]}
+{"kind":"shape","id":"sh/al4n6poz","slide":1,"bbox":[66,344,118,28]}
+{"kind":"textbox","id":"sh/xof6hk7a","slide":1,"text":"中期汇报","textPreview":"中期汇报","textChars":4,"textLines":1,"bbox":[78,350,96,17]}
+{"kind":"shape","id":"sh/cn658z6p","slide":1,"bbox":[198,344,134,28]}
+{"kind":"textbox","id":"sh/rqt43qp0","slide":1,"text":"单图特效方向","textPreview":"单图特效方向","textChars":6,"textLines":1,"bbox":[210,350,110,17]}
+{"kind":"textbox","id":"sh/qpknul8f","slide":1,"text":"核心问题","textPreview":"核心问题","textChars":4,"textLines":1,"bbox":[66,454,160,22]}
+{"kind":"textbox","id":"sh/8r2dsnqt","slide":1,"text":"如何从“视频中的动态变化”\n翻译出“可执行的 shader 过程”？","textPreview":"如何从“视频中的动态变化” | 翻译出“可执行的 shader 过程”？","textChars":34,"textLines":2,"bbox":[66,492,700,88]}
+{"kind":"shape","id":"sh/tsbu1sre","slide":1,"bbox":[946,88,252,540]}
+{"kind":"textbox","id":"sh/6pkbqd83","slide":1,"text":"本次汇报","textPreview":"本次汇报","textChars":4,"textLines":1,"bbox":[972,120,170,22]}
+{"kind":"textbox","id":"sh/7qtczi9o","slide":1,"text":"1. 项目背景\n2. 检索 + 迭代方案\n3. Bowknot 实验\n4. 关键问题\n5. 已开展探索\n6. 后续方向","textPreview":"1. 项目背景 | 2. 检索 + 迭代方案 | 3. Bowknot 实验 | 4. 关键问题 | 5. 已开展探索 | 6. 后续方向","textChars":59,"textLines":6,"bbox":[972,174,184,218]}
+{"kind":"shape","id":"sh/gf2dw7q5","slide":1,"bbox":[972,430,170,2]}
+{"kind":"textbox","id":"sh/hgvu5srq","slide":1,"text":"视频素材\n已放置于\noutputs/中期汇报","textPreview":"视频素材 | 已放置于 | outputs/中期汇报","textChars":22,"textLines":3,"bbox":[972,462,174,100]}
+{"kind":"notes","id":"nt/uz97bo","slide":1,"text":""}
+{"kind":"slide","id":"sl/0mjohv","slide":2,"title":"项目背景","textShapes":11}
+{"kind":"textbox","id":"sh/cba18na1","slide":2,"text":"项目背景","textPreview":"项目背景","textChars":4,"textLines":1,"bbox":[48,31,560,22]}
+{"kind":"textbox","id":"sh/ba1kzitg","slide":2,"text":"目标：从特效视频逆向推理可读的 Shader 源码","textPreview":"目标：从特效视频逆向推理可读的 Shader 源码","textChars":25,"textLines":1,"bbox":[48,67,1100,62]}
+{"kind":"shape","id":"sh/qpsj6dsv","slide":2,"bbox":[48,139,1184,2]}
+{"kind":"textbox","id":"sh/poj2x8bq","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1182,32,50,20]}
+{"kind":"textbox","id":"sh/onq143a5","slide":2,"text":"快影需要持续扩充可编辑、可复用的转场与单图特效。此项目探索把“输入图 + 渲染视频”翻译回对应的 shader 过程。","textPreview":"快影需要持续扩充可编辑、可复用的转场与单图特效。此项目探索把“输入图 + 渲染视频”翻译回对应的 shader 过程。","textChars":59,"textLines":1,"bbox":[48,168,690,56]}
+{"kind":"shape","id":"sh/2l8j2tsz","slide":2,"bbox":[824,492,316,24]}
+{"kind":"textbox","id":"sh/9k329sbu","slide":2,"text":"▶  视频 · Bowknot__model.mp4","textPreview":"▶  视频 · Bowknot__model.mp4","textChars":26,"textLines":1,"bbox":[832,497,300,14]}
+{"kind":"textbox","id":"sh/8julg7a9","slide":2,"text":"输入","textPreview":"输入","textChars":2,"textLines":1,"bbox":[48,314,120,28]}
+{"kind":"textbox","id":"sh/al4behsz","slide":2,"text":"原始图片 + 特效渲染视频","textPreview":"原始图片 + 特效渲染视频","textChars":13,"textLines":1,"bbox":[48,354,412,34]}
+{"kind":"textbox","id":"sh/bmdc7mtk","slide":2,"text":"输出","textPreview":"输出","textChars":2,"textLines":1,"bbox":[48,438,120,28]}
+{"kind":"textbox","id":"sh/wnmtgra5","slide":2,"text":"可读、可运行的 shader 源码","textPreview":"可读、可运行的 shader 源码","textChars":17,"textLines":1,"bbox":[48,478,412,34]}
+{"kind":"shape","id":"sh/xovu9wbq","slide":2,"bbox":[48,560,632,2]}
+{"kind":"textbox","id":"sh/mhkbahs3","slide":2,"text":"价值：可用于特效复用、二次调参、效果优化，以及后续的特效知识库建设。","textPreview":"价值：可用于特效复用、二次调参、效果优化，以及后续的特效知识库建设。","textChars":34,"textLines":1,"bbox":[48,590,650,40]}
+{"kind":"textbox","id":"sh/nitc32to","slide":2,"text":"Shader 转场推理 · 中期汇报","textPreview":"Shader 转场推理 · 中期汇报","textChars":18,"textLines":1,"bbox":[48,680,640,16]}
+{"kind":"image","id":"im/q1wbep8z","slide":2,"name":"","geometry":"rect","alt":"Bowknot 模特输入原视频封面帧","bbox":[824,176,316,316]}
+{"kind":"notes","id":"nt/0mjohv","slide":2,"text":""}
+{"kind":"slide","id":"sl/bczewj","slide":3,"title":"总体方案","textShapes":20}
+{"kind":"textbox","id":"sh/vm94b29c","slide":3,"text":"总体方案","textPreview":"总体方案","textChars":4,"textLines":1,"bbox":[48,31,560,22]}
+{"kind":"textbox","id":"sh/wni54nax","slide":3,"text":"先检索确定方向，再通过闭环迭代逐步逼近目标效果","textPreview":"先检索确定方向，再通过闭环迭代逐步逼近目标效果","textChars":23,"textLines":1,"bbox":[48,67,1100,62]}
+{"kind":"shape","id":"sh/hormdsr2","slide":3,"bbox":[48,139,1184,2]}
+{"kind":"textbox","id":"sh/mhgnydsf","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1182,32,50,20]}
+{"kind":"shape","id":"sh/7ip47it0","slide":3,"bbox":[48,236,256,232]}
+{"kind":"textbox","id":"sh/8jy50nal","slide":3,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[66,258,50,22]}
+{"kind":"textbox","id":"sh/9krm9sr6","slide":3,"text":"知识库","textPreview":"知识库","textChars":3,"textLines":1,"bbox":[66,304,190,32]}
+{"kind":"textbox","id":"sh/ytgnudsj","slide":3,"text":"常见单 pass shader\n源码 + 渲染效果","textPreview":"常见单 pass shader | 源码 + 渲染效果","textChars":25,"textLines":2,"bbox":[66,366,195,58]}
+{"kind":"textbox","id":"sh/zep43it4","slide":3,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[303,332,30,28]}
+{"kind":"shape","id":"sh/nat83qlo","slide":3,"bbox":[336,236,256,232]}
+{"kind":"textbox","id":"sh/m9k7ulk3","slide":3,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[354,258,50,22]}
+{"kind":"textbox","id":"sh/9wbq503e","slide":3,"text":"统一 IR","textPreview":"统一 IR","textChars":5,"textLines":1,"bbox":[354,304,190,32]}
+{"kind":"textbox","id":"sh/ob2pwv29","slide":3,"text":"LLM 将代码与视频\n转为同格式中间表示","textPreview":"LLM 将代码与视频 | 转为同格式中间表示","textChars":20,"textLines":2,"bbox":[354,366,195,58]}
+{"kind":"textbox","id":"sh/byd87qlk","slide":3,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[591,332,30,28]}
+{"kind":"shape","id":"sh/axkrylkz","slide":3,"bbox":[624,236,256,232]}
+{"kind":"textbox","id":"sh/x0vq903q","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[642,258,50,22]}
+{"kind":"textbox","id":"sh/wzm90v25","slide":3,"text":"相似检索","textPreview":"相似检索","textChars":4,"textLines":1,"bbox":[642,304,190,32]}
+{"kind":"textbox","id":"sh/r298v6lg","slide":3,"text":"target IR 对比 library IR\n选择 TOP1 参考","textPreview":"target IR 对比 library IR | 选择 TOP1 参考","textChars":34,"textLines":2,"bbox":[642,366,195,58]}
+{"kind":"textbox","id":"sh/q107m14v","slide":3,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[879,332,30,28]}
+{"kind":"shape","id":"sh/ux8bu94j","slide":3,"bbox":[912,236,256,232]}
+{"kind":"textbox","id":"sh/fyhs3e54","slide":3,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[930,258,50,22]}
+{"kind":"textbox","id":"sh/gzqtwjm9","slide":3,"text":"迭代优化","textPreview":"迭代优化","textChars":4,"textLines":1,"bbox":[930,304,190,32]}
+{"kind":"textbox","id":"sh/h0zu5onu","slide":3,"text":"生成 → 渲染 → 审查\n重复改写 shader","textPreview":"生成 → 渲染 → 审查 | 重复改写 shader","textChars":24,"textLines":2,"bbox":[930,366,195,58]}
+{"kind":"shape","id":"sh/6tobqp47","slide":3,"bbox":[48,542,1136,2]}
+{"kind":"textbox","id":"sh/7uxszu5s","slide":3,"text":"关键点：IR 描述“特效让原图发生了什么变化”，而非只描述画面内容；这样库侧代码与查询侧视频才具备可比较的共同语言。","textPreview":"关键点：IR 描述“特效让原图发生了什么变化”，而非只描述画面内容；这样库侧代码与查询侧视频才具备可比较的共同语言。","textChars":58,"textLines":1,"bbox":[48,572,1080,46]}
+{"kind":"textbox","id":"sh/8v6tszmd","slide":3,"text":"Shader 转场推理 · 中期汇报","textPreview":"Shader 转场推理 · 中期汇报","textChars":18,"textLines":1,"bbox":[48,680,640,16]}
+{"kind":"notes","id":"nt/bczewj","slide":3,"text":""}
+{"kind":"slide","id":"sl/7k2het","slide":4,"title":"检索阶段","textShapes":11}
+{"kind":"textbox","id":"sh/9cjet8ra","slide":4,"text":"检索阶段","textPreview":"检索阶段","textChars":4,"textLines":1,"bbox":[48,31,560,22]}
+{"kind":"textbox","id":"sh/m98fidsz","slide":4,"text":"用统一 IR 建立“代码世界”与“视频世界”之间的桥梁","textPreview":"用统一 IR 建立“代码世界”与“视频世界”之间的桥梁","textChars":27,"textLines":1,"bbox":[48,67,1100,62]}
+{"kind":"shape","id":"sh/7ahwri9k","slide":4,"bbox":[48,139,1184,2]}
+{"kind":"textbox","id":"sh/k7qxg3at","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1182,32,50,20]}
+{"kind":"shape","id":"sh/l8zep8re","slide":4,"bbox":[48,202,350,340]}
+{"kind":"textbox","id":"sh/y58fetsn","slide":4,"text":"库侧","textPreview":"库侧","textChars":2,"textLines":1,"bbox":[72,230,120,24]}
+{"kind":"textbox","id":"sh/z6hwny98","slide":4,"text":"已知 shader 源码\n↓\nLLM 生成 library_IR\n↓\n记录 visual primitive、\n作用区域、时序与外观变化","textPreview":"已知 shader 源码 | ↓ | LLM 生成 library_IR | ↓ | 记录 visual primitive、 | 作用区域、时序与外观变化","textChars":68,"textLines":6,"bbox":[72,280,260,200]}
+{"kind":"shape","id":"sh/c36xc3ax","slide":4,"bbox":[466,202,350,340]}
+{"kind":"textbox","id":"sh/x4zelori","slide":4,"text":"查询侧","textPreview":"查询侧","textChars":3,"textLines":1,"bbox":[490,230,120,24]}
+{"kind":"textbox","id":"sh/d87u90fu","slide":4,"text":"原图 + 特效视频\n↓\nLLM 生成 target_IR\n↓\n描述视频相对原图的\n变化过程","textPreview":"原图 + 特效视频 | ↓ | LLM 生成 target_IR | ↓ | 描述视频相对原图的 | 变化过程","textChars":45,"textLines":6,"bbox":[490,280,260,200]}
+{"kind":"shape","id":"sh/cnyd0fy9","slide":4,"bbox":[884,202,300,340]}
+{"kind":"textbox","id":"sh/bmpc7axo","slide":4,"text":"输出","textPreview":"输出","textChars":2,"textLines":1,"bbox":[908,230,120,24]}
+{"kind":"textbox","id":"sh/qlwby5g3","slide":4,"text":"计算 IR 相似性\n↓\nTOP1 参考 shader\n↓\n作为第一版源码\n与后续编辑的语义锚点","textPreview":"计算 IR 相似性 | ↓ | TOP1 参考 shader | ↓ | 作为第一版源码 | 与后续编辑的语义锚点","textChars":47,"textLines":6,"bbox":[908,280,220,190]}
+{"kind":"textbox","id":"sh/pknu50zi","slide":4,"text":"当前认识：当目标与库侧特效足够相近时，翻译质量会显著提升，因此知识库的覆盖广度与原子性是长期基础设施。","textPreview":"当前认识：当目标与库侧特效足够相近时，翻译质量会显著提升，因此知识库的覆盖广度与原子性是长期基础设施。","textChars":51,"textLines":1,"bbox":[48,592,1100,44]}
+{"kind":"textbox","id":"sh/ojetwvyx","slide":4,"text":"Shader 转场推理 · 中期汇报","textPreview":"Shader 转场推理 · 中期汇报","textChars":18,"textLines":1,"bbox":[48,680,640,16]}
+{"kind":"notes","id":"nt/7k2het","slide":4,"text":""}
+{"kind":"slide","id":"sl/xm2e5v","slide":5,"title":"迭代阶段","textShapes":13}
+{"kind":"textbox","id":"sh/lwjat8zm","slide":5,"text":"迭代阶段","textPreview":"迭代阶段","textChars":4,"textLines":1,"bbox":[48,31,560,22]}
+{"kind":"textbox","id":"sh/ytsridgv","slide":5,"text":"更稳定的方式是：视觉模型制定计划，代码模型负责落实代码","textPreview":"更稳定的方式是：视觉模型制定计划，代码模型负责落实代码","textChars":27,"textLines":1,"bbox":[48,67,1100,62]}
+{"kind":"shape","id":"sh/zu1srihg","slide":5,"bbox":[48,139,1184,2]}
+{"kind":"textbox","id":"sh/8zutonyx","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1182,32,50,20]}
+{"kind":"shape","id":"sh/903axszi","slide":5,"bbox":[48,210,510,314]}
+{"kind":"textbox","id":"sh/mxsbmdgr","slide":5,"text":"方式 A：图像与代码由同一模型处理","textPreview":"方式 A：图像与代码由同一模型处理","textChars":17,"textLines":1,"bbox":[74,238,420,30]}
+{"kind":"shape","id":"sh/ny1svihc","slide":5,"bbox":[74,310,8,8]}
+{"kind":"textbox","id":"sh/o3q9cjyt","slide":5,"text":"图像识别后直接生成下一轮 shader","textPreview":"图像识别后直接生成下一轮 shader","textChars":19,"textLines":1,"bbox":[94,302,370,48]}
+{"kind":"shape","id":"sh/p4zaloze","slide":5,"bbox":[74,374,8,8]}
+{"kind":"textbox","id":"sh/l4vido7a","slide":5,"text":"优点：链路短；修改自由度高","textPreview":"优点：链路短；修改自由度高","textChars":13,"textLines":1,"bbox":[94,366,370,48]}
+{"kind":"shape","id":"sh/03mhkj6p","slide":5,"bbox":[74,438,8,8]}
+{"kind":"textbox","id":"sh/zid0bep4","slide":5,"text":"问题：上下文长、响应不稳、格式错误与黑屏风险高","textPreview":"问题：上下文长、响应不稳、格式错误与黑屏风险高","textChars":23,"textLines":1,"bbox":[94,430,380,48]}
+{"kind":"shape","id":"sh/yh4zi9oj","slide":5,"bbox":[622,210,562,314]}
+{"kind":"textbox","id":"sh/98fiho76","slide":5,"text":"方式 B：分离型迭代（当前采用）","textPreview":"方式 B：分离型迭代（当前采用）","textChars":16,"textLines":1,"bbox":[648,238,440,30]}
+{"kind":"shape","id":"sh/876hoj6l","slide":5,"bbox":[648,310,8,8]}
+{"kind":"textbox","id":"sh/n6d0fepg","slide":5,"text":"多模态模型：比较原视频与候选视频，输出 edit plan","textPreview":"多模态模型：比较原视频与候选视频，输出 edit plan","textChars":29,"textLines":1,"bbox":[668,302,440,48]}
+{"kind":"shape","id":"sh/m54zm9ov","slide":5,"bbox":[648,374,8,8]}
+{"kind":"textbox","id":"sh/xcfil87i","slide":5,"text":"代码模型：依据 edit plan 与上一轮源码生成下一版","textPreview":"代码模型：依据 edit plan 与上一轮源码生成下一版","textChars":29,"textLines":1,"bbox":[668,366,440,48]}
+{"kind":"shape","id":"sh/wb6hs36x","slide":5,"bbox":[648,438,8,8]}
+{"kind":"textbox","id":"sh/gryt4bi5","slide":5,"text":"结果：格式更稳定，优化方向也更可审查","textPreview":"结果：格式更稳定，优化方向也更可审查","textChars":18,"textLines":1,"bbox":[668,430,440,48]}
+{"kind":"shape","id":"sh/1s7adwzq","slide":5,"bbox":[48,578,1136,2]}
+{"kind":"textbox","id":"sh/epgb210f","slide":5,"text":"当前采用 GPT5.6sol + 分离型迭代生成：每轮都保留视频、审查意见和源码，便于定位“观察对不对”还是“代码有没有落实”。","textPreview":"当前采用 GPT5.6sol + 分离型迭代生成：每轮都保留视频、审查意见和源码，便于定位“观察对不对”还是“代码有没有落实”。","textChars":64,"textLines":1,"bbox":[48,608,1120,38]}
+{"kind":"textbox","id":"sh/fqpsb6hk","slide":5,"text":"Shader 转场推理 · 中期汇报","textPreview":"Shader 转场推理 · 中期汇报","textChars":18,"textLines":1,"bbox":[48,680,640,16]}
+{"kind":"notes","id":"nt/xm2e5v","slide":5,"text":""}
+{"kind":"slide","id":"sl/gmgbi1","slide":6,"title":"问题一：动态过程","textShapes":10}
+{"kind":"textbox","id":"sh/fu5cruto","slide":6,"text":"问题一：动态过程","textPreview":"问题一：动态过程","textChars":8,"textLines":1,"bbox":[48,31,560,22]}
+{"kind":"textbox","id":"sh/0ved0za9","slide":6,"text":"关键帧足够像，不代表整个过程足够像","textPreview":"关键帧足够像，不代表整个过程足够像","textChars":17,"textLines":1,"bbox":[48,67,1100,62]}
+{"kind":"shape","id":"sh/1wnut4bu","slide":6,"bbox":[48,139,1184,2]}
+{"kind":"textbox","id":"sh/2xgv29sz","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1182,32,50,20]}
+{"kind":"textbox","id":"sh/nypcvetk","slide":6,"text":"目前每秒抽取两帧交给模型。模型容易优先拟合“这一帧长什么样”，却忽略人眼更敏感的周期、方向和过渡节奏。","textPreview":"目前每秒抽取两帧交给模型。模型容易优先拟合“这一帧长什么样”，却忽略人眼更敏感的周期、方向和过渡节奏。","textChars":51,"textLines":1,"bbox":[48,166,1080,48]}
+{"kind":"shape","id":"sh/algv69sb","slide":6,"bbox":[48,608,360,24]}
+{"kind":"textbox","id":"sh/bmpczetw","slide":6,"text":"▶  视频 · 原视频：Bowknot__model.mp4","textPreview":"▶  视频 · 原视频：Bowknot__model.mp4","textChars":30,"textLines":1,"bbox":[56,613,344,14]}
+{"kind":"shape","id":"sh/zm1kjulg","slide":6,"bbox":[474,608,360,24]}
+{"kind":"textbox","id":"sh/yls3apkv","slide":6,"text":"▶  视频 · 翻译最佳：Bowknot_model_best.mp4","textPreview":"▶  视频 · 翻译最佳：Bowknot_model_best.mp4","textChars":35,"textLines":1,"bbox":[482,613,344,14]}
+{"kind":"shape","id":"sh/lojml43m","slide":6,"bbox":[900,248,278,360]}
+{"kind":"textbox","id":"sh/knalcz21","slide":6,"text":"观察","textPreview":"观察","textChars":2,"textLines":1,"bbox":[924,274,120,24]}
+{"kind":"textbox","id":"sh/byhkfulk","slide":6,"text":"目标：具有明显的周期过程\n\n迭代：可能只在若干采样点接近\n\n局限：关键帧对齐无法保证两帧之间的运动合理","textPreview":"目标：具有明显的周期过程 |  | 迭代：可能只在若干采样点接近 |  | 局限：关键帧对齐无法保证两帧之间的运动合理","textChars":51,"textLines":5,"bbox":[924,324,222,190]}
+{"kind":"textbox","id":"sh/ax836p4z","slide":6,"text":"需要把“过程约束”显式交给下一轮优化。","textPreview":"需要把“过程约束”显式交给下一轮优化。","textChars":19,"textLines":1,"bbox":[924,548,222,44]}
+{"kind":"textbox","id":"sh/xkj2hk3a","slide":6,"text":"Shader 转场推理 · 中期汇报","textPreview":"Shader 转场推理 · 中期汇报","textChars":18,"textLines":1,"bbox":[48,680,640,16]}
+{"kind":"image","id":"im/5wn6hs36","slide":6,"name":"","geometry":"rect","alt":"Bowknot 原视频封面","bbox":[48,248,360,360]}
+{"kind":"image","id":"im/kve5on2l","slide":6,"name":"","geometry":"rect","alt":"Bowknot 模特输入的最佳翻译结果封面","bbox":[474,248,360,360]}
+{"kind":"notes","id":"nt/gmgbi1","slide":6,"text":""}
+{"kind":"slide","id":"sl/hvo7br","slide":7,"title":"问题二：输入图依赖","textShapes":15}
+{"kind":"textbox","id":"sh/m5szalgb","slide":7,"text":"问题二：输入图依赖","textPreview":"问题二：输入图依赖","textChars":9,"textLines":1,"bbox":[48,31,560,22]}
+{"kind":"textbox","id":"sh/98ji5gfm","slide":7,"text":"同一 Bowknot shader 在不同输入图上，会得到不同质量的翻译结果","textPreview":"同一 Bowknot shader 在不同输入图上，会得到不同质量的翻译结果","textChars":38,"textLines":1,"bbox":[48,67,1100,62]}
+{"kind":"shape","id":"sh/87ahcvyh","slide":7,"bbox":[48,139,1184,2]}
+{"kind":"textbox","id":"sh/z210z6hk","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1182,32,50,20]}
+{"kind":"textbox","id":"sh/y18z61gz","slide":7,"text":"为方便比较，三组实验均采用同一特效、相同的“检索 + 5 轮迭代”流程。","textPreview":"为方便比较，三组实验均采用同一特效、相同的“检索 + 5 轮迭代”流程。","textChars":36,"textLines":1,"bbox":[48,164,900,30]}
+{"kind":"textbox","id":"sh/l4ji1gfq","slide":7,"text":"model","textPreview":"model","textChars":5,"textLines":1,"bbox":[48,214,330,26]}
+{"kind":"shape","id":"sh/0fqhgzuh","slide":7,"bbox":[48,558,176,24]}
+{"kind":"textbox","id":"sh/lgzi94v2","slide":7,"text":"▶  视频 · 目标","textPreview":"▶  视频 · 目标","textChars":10,"textLines":1,"bbox":[56,563,160,14]}
+{"kind":"shape","id":"sh/yt8zepcr","slide":7,"bbox":[250,558,176,24]}
+{"kind":"textbox","id":"sh/zuh07udc","slide":7,"text":"▶  视频 · 最佳结果","textPreview":"▶  视频 · 最佳结果","textChars":12,"textLines":1,"bbox":[258,563,160,14]}
+{"kind":"textbox","id":"sh/cr6hcful","slide":7,"text":"color gradient","textPreview":"color gradient","textChars":14,"textLines":1,"bbox":[438,214,330,26]}
+{"kind":"shape","id":"sh/wna1ojup","slide":7,"bbox":[438,558,176,24]}
+{"kind":"textbox","id":"sh/hojihoba","slide":7,"text":"▶  视频 · 目标","textPreview":"▶  视频 · 目标","textChars":10,"textLines":1,"bbox":[446,563,160,14]}
+{"kind":"shape","id":"sh/54fi1o3e","slide":7,"bbox":[640,558,176,24]}
+{"kind":"textbox","id":"sh/436h8jmt","slide":7,"text":"▶  视频 · 最佳结果","textPreview":"▶  视频 · 最佳结果","textChars":12,"textLines":1,"bbox":[648,563,160,14]}
+{"kind":"textbox","id":"sh/32x0zelo","slide":7,"text":"black / white","textPreview":"black / white","textChars":13,"textLines":1,"bbox":[828,214,330,26]}
+{"kind":"shape","id":"sh/ved0vulc","slide":7,"bbox":[828,558,176,24]}
+{"kind":"textbox","id":"sh/ud4z294r","slide":7,"text":"▶  视频 · 目标","textPreview":"▶  视频 · 目标","textChars":10,"textLines":1,"bbox":[836,563,160,14]}
+{"kind":"shape","id":"sh/tcvit4n6","slide":7,"bbox":[1030,558,176,24]}
+{"kind":"textbox","id":"sh/8bmh0zm1","slide":7,"text":"▶  视频 · 最佳结果","textPreview":"▶  视频 · 最佳结果","textChars":12,"textLines":1,"bbox":[1038,563,160,14]}
+{"kind":"textbox","id":"sh/yhkfu5kj","slide":7,"text":"同一种 shader 的最佳生成结果不同，说明“输入图”不是中性载体，而是影响模型能否读出空间过程的关键变量。","textPreview":"同一种 shader 的最佳生成结果不同，说明“输入图”不是中性载体，而是影响模型能否读出空间过程的关键变量。","textChars":55,"textLines":1,"bbox":[48,622,1090,28]}
+{"kind":"textbox","id":"sh/zitw3q14","slide":7,"text":"Shader 转场推理 · 中期汇报","textPreview":"Shader 转场推理 · 中期汇报","textChars":18,"textLines":1,"bbox":[48,680,640,16]}
+{"kind":"image","id":"im/1cjapc7q","slide":7,"name":"","geometry":"rect","alt":"输入图","bbox":[177,248,112,112]}
+{"kind":"image","id":"im/2dsbihob","slide":7,"name":"","geometry":"rect","alt":"原视频封面","bbox":[48,382,176,176]}
+{"kind":"image","id":"im/ne1srmpw","slide":7,"name":"","geometry":"rect","alt":"最佳翻译结果封面","bbox":[250,382,176,176]}
+{"kind":"image","id":"im/y9k3ydcv","slide":7,"name":"","geometry":"rect","alt":"输入图","bbox":[567,248,112,112]}
+{"kind":"image","id":"im/lcv29svm","slide":7,"name":"","geometry":"rect","alt":"原视频封面","bbox":[438,382,176,176]}
+{"kind":"image","id":"im/kbml0nu1","slide":7,"name":"","geometry":"rect","alt":"最佳翻译结果封面","bbox":[640,382,176,176]}
+{"kind":"image","id":"im/14j6dgvy","slide":7,"name":"","geometry":"rect","alt":"输入图","bbox":[957,248,112,112]}
+{"kind":"image","id":"im/2psnmlwj","slide":7,"name":"","geometry":"rect","alt":"原视频封面","bbox":[828,382,176,176]}
+{"kind":"image","id":"im/3q1ofqd4","slide":7,"name":"","geometry":"rect","alt":"最佳翻译结果封面","bbox":[1030,382,176,176]}
+{"kind":"notes","id":"nt/hvo7br","slide":7,"text":""}
+{"kind":"slide","id":"sl/jv7a2i","slide":8,"title":"实验观察","textShapes":11}
+{"kind":"textbox","id":"sh/9kzi50bm","slide":8,"text":"实验观察","textPreview":"实验观察","textChars":4,"textLines":1,"bbox":[48,31,560,22]}
+{"kind":"textbox","id":"sh/mxozalcv","slide":8,"text":"颜色渐变输入更利于模型识别 Bowknot 的翻转与动态结构","textPreview":"颜色渐变输入更利于模型识别 Bowknot 的翻转与动态结构","textChars":30,"textLines":1,"bbox":[48,67,1100,62]}
+{"kind":"shape","id":"sh/7yx03qtg","slide":8,"bbox":[48,139,1184,2]}
+{"kind":"textbox","id":"sh/kv6h8bu5","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1182,32,50,20]}
+{"kind":"shape","id":"sh/lwfi1gba","slide":8,"bbox":[48,212,352,310]}
+{"kind":"textbox","id":"sh/ytoz61cz","slide":8,"text":"黑白色块输入","textPreview":"黑白色块输入","textChars":6,"textLines":1,"bbox":[72,240,220,28]}
+{"kind":"textbox","id":"sh/zux0z6tk","slide":8,"text":"• 对比强，但整体周期/翻转关系不易被模型识别\n\n• edit plan 容易要求结尾恢复原图\n\n• 结果更可能停留在局部画面匹配","textPreview":"• 对比强，但整体周期/翻转关系不易被模型识别 |  | • edit plan 容易要求结尾恢复原图 |  | • 结果更可能停留在局部画面匹配","textChars":65,"textLines":5,"bbox":[72,300,270,172]}
+{"kind":"shape","id":"sh/4ra1kfu9","slide":8,"bbox":[464,212,352,310]}
+{"kind":"textbox","id":"sh/5sjidkbu","slide":8,"text":"颜色渐变输入","textPreview":"颜色渐变输入","textChars":6,"textLines":1,"bbox":[488,240,220,28]}
+{"kind":"textbox","id":"sh/1o3e9kn6","slide":8,"text":"• 连续色彩变化提供了稳定的空间参照\n\n• 模型能识别翻转，翻译效果最好\n\n• 更适合暴露全局几何变化","textPreview":"• 连续色彩变化提供了稳定的空间参照 |  | • 模型能识别翻转，翻译效果最好 |  | • 更适合暴露全局几何变化","textChars":51,"textLines":5,"bbox":[488,300,270,172]}
+{"kind":"shape","id":"sh/gnudgf6l","slide":8,"bbox":[880,212,304,310]}
+{"kind":"textbox","id":"sh/fmlw7a50","slide":8,"text":"启发","textPreview":"启发","textChars":2,"textLines":1,"bbox":[904,240,180,28]}
+{"kind":"textbox","id":"sh/elcve5of","slide":8,"text":"不同特效需要不同输入图。\n\n后续可把多个最佳版本作为共同参考，再探索更稳健的 shader 翻译。","textPreview":"不同特效需要不同输入图。 |  | 后续可把多个最佳版本作为共同参考，再探索更稳健的 shader 翻译。","textChars":49,"textLines":3,"bbox":[904,300,228,150]}
+{"kind":"shape","id":"sh/tk3e50nu","slide":8,"bbox":[48,578,1136,2]}
+{"kind":"textbox","id":"sh/sjudcv69","slide":8,"text":"结论：需要构造“能完整展示 shader 效果、但自身语义不过复杂”的输入探针组，并建立选择机制。","textPreview":"结论：需要构造“能完整展示 shader 效果、但自身语义不过复杂”的输入探针组，并建立选择机制。","textChars":49,"textLines":1,"bbox":[48,610,1100,28]}
+{"kind":"textbox","id":"sh/ri1w3a5o","slide":8,"text":"Shader 转场推理 · 中期汇报","textPreview":"Shader 转场推理 · 中期汇报","textChars":18,"textLines":1,"bbox":[48,680,640,16]}
+{"kind":"notes","id":"nt/jv7a2i","slide":8,"text":""}
+{"kind":"slide","id":"sl/ujquo6","slide":9,"title":"持续探索","textShapes":14}
+{"kind":"textbox","id":"sh/a9kridsr","slide":9,"text":"持续探索","textPreview":"持续探索","textChars":4,"textLines":1,"bbox":[48,31,560,22]}
+{"kind":"textbox","id":"sh/xcvatsr2","slide":9,"text":"问题不只在“识别”，更在“如何让优化方向符合人眼”","textPreview":"问题不只在“识别”，更在“如何让优化方向符合人眼”","textChars":25,"textLines":1,"bbox":[48,67,1100,62]}
+{"kind":"shape","id":"sh/wbmtknah","slide":9,"bbox":[48,139,1184,2]}
+{"kind":"textbox","id":"sh/jedsv298","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1182,32,50,20]}
+{"kind":"shape","id":"sh/id4bmxsn","slide":9,"bbox":[48,230,360,262]}
+{"kind":"textbox","id":"sh/5gvaxsre","slide":9,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[68,254,42,22]}
+{"kind":"textbox","id":"sh/4fmtonat","slide":9,"text":"知识库扩充","textPreview":"知识库扩充","textChars":5,"textLines":1,"bbox":[68,298,290,32]}
+{"kind":"textbox","id":"sh/zi9sjyto","slide":9,"text":"目标与库中某特效越相近，翻译越好；需要补充更多原子、可组合的 shader。","textPreview":"目标与库中某特效越相近，翻译越好；需要补充更多原子、可组合的 shader。","textChars":38,"textLines":1,"bbox":[68,360,302,86]}
+{"kind":"shape","id":"sh/yh0ratsj","slide":9,"bbox":[440,230,360,262]}
+{"kind":"textbox","id":"sh/o32lkjix","slide":9,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[460,254,42,22]}
+{"kind":"textbox","id":"sh/94b2d4zi","slide":9,"text":"人眼与模型差异","textPreview":"人眼与模型差异","textChars":7,"textLines":1,"bbox":[460,298,290,32]}
+{"kind":"textbox","id":"sh/m103i90r","slide":9,"text":"模型常优先拟合颜色/亮度；人眼常更在意空间扭曲、范围与动态过程。","textPreview":"模型常优先拟合颜色/亮度；人眼常更在意空间扭曲、范围与动态过程。","textChars":32,"textLines":1,"bbox":[460,360,302,86]}
+{"kind":"shape","id":"sh/n29kbehc","slide":9,"bbox":[832,230,360,262]}
+{"kind":"textbox","id":"sh/wr2lojit","slide":9,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[852,254,42,22]}
+{"kind":"textbox","id":"sh/xsb2hoze","slide":9,"text":"输入图筛选","textPreview":"输入图筛选","textChars":5,"textLines":1,"bbox":[852,298,290,32]}
+{"kind":"textbox","id":"sh/a5k3m90n","slide":9,"text":"一张图不可能适配所有 shader；需要按特效类型准备互补的测试图。","textPreview":"一张图不可能适配所有 shader；需要按特效类型准备互补的测试图。","textChars":34,"textLines":1,"bbox":[852,360,302,86]}
+{"kind":"textbox","id":"sh/bqtkfeh8","slide":9,"text":"未来评价不应只回答“颜色像不像”，还应回答：运动方向对不对、覆盖区域对不对、关键时序是否成立。","textPreview":"未来评价不应只回答“颜色像不像”，还应回答：运动方向对不对、覆盖区域对不对、关键时序是否成立。","textChars":47,"textLines":1,"bbox":[48,574,1120,42]}
+{"kind":"textbox","id":"sh/cvy1czip","slide":9,"text":"Shader 转场推理 · 中期汇报","textPreview":"Shader 转场推理 · 中期汇报","textChars":18,"textLines":1,"bbox":[48,680,640,16]}
+{"kind":"notes","id":"nt/ujquo6","slide":9,"text":""}
+{"kind":"slide","id":"sl/lvfv3a","slide":10,"title":"尝试性探索一","textShapes":10}
+{"kind":"textbox","id":"sh/47edcb61","slide":10,"text":"尝试性探索一","textPreview":"尝试性探索一","textChars":6,"textLines":1,"bbox":[48,31,560,22]}
+{"kind":"textbox","id":"sh/3m5wj6pg","slide":10,"text":"将“空间变化”提升为优先级，避免颜色细节掩盖主要错误","textPreview":"将“空间变化”提升为优先级，避免颜色细节掩盖主要错误","textChars":26,"textLines":1,"bbox":[48,67,1100,62]}
+{"kind":"shape","id":"sh/2lwva1ov","slide":10,"bbox":[48,139,1184,2]}
+{"kind":"textbox","id":"sh/dc7e9g7i","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1182,32,50,20]}
+{"kind":"textbox","id":"sh/cbydgb6x","slide":10,"text":"原始 edit plan 会把所有观察到的特征混合进下一轮。新方案要求：只要空间特征尚不相似，下一轮优先处理空间变化。","textPreview":"原始 edit plan 会把所有观察到的特征混合进下一轮。新方案要求：只要空间特征尚不相似，下一轮优先处理空间变化。","textChars":59,"textLines":1,"bbox":[48,166,1110,48]}
+{"kind":"shape","id":"sh/rapwnqps","slide":10,"bbox":[48,250,520,260]}
+{"kind":"textbox","id":"sh/q9wvelo7","slide":10,"text":"原始模式","textPreview":"原始模式","textChars":4,"textLines":1,"bbox":[74,278,180,28]}
+{"kind":"textbox","id":"sh/tg3udw7e","slide":10,"text":"模型自主揉合几何、颜色、亮度、纹理等所有特征。\n\n风险：容易在颜色/亮度小修上原地打转，主空间结构没有真正建立。","textPreview":"模型自主揉合几何、颜色、亮度、纹理等所有特征。 |  | 风险：容易在颜色/亮度小修上原地打转，主空间结构没有真正建立。","textChars":56,"textLines":3,"bbox":[74,336,418,110]}
+{"kind":"shape","id":"sh/8fud4r6t","slide":10,"bbox":[632,250,552,260]}
+{"kind":"textbox","id":"sh/qp0ra5s3","slide":10,"text":"空间优先模式","textPreview":"空间优先模式","textChars":6,"textLines":1,"bbox":[658,278,220,28]}
+{"kind":"textbox","id":"sh/rq98ja98","slide":10,"text":"当空间特征不足时，要求下一轮先处理放大、缩小、翻转、位移、区域覆盖等，再进入颜色与纹理精修。\n\n文档中的 test10 / test12 对比显示：该方案至少能额外识别出“放大”等明显特征。","textPreview":"当空间特征不足时，要求下一轮先处理放大、缩小、翻转、位移、区域覆盖等，再进入颜色与纹理精修。 |  | 文档中的 test10 / test12 对比显示：该方案至少能额外识别出“放大”等明显特征。","textChars":95,"textLines":3,"bbox":[658,336,450,118]}
+{"kind":"shape","id":"sh/cri9cfat","slide":10,"bbox":[48,578,1136,2]}
+{"kind":"textbox","id":"sh/dsbqlkre","slide":10,"text":"当前结论：暂时保留该方案；下一步可将所有常见变化类型排序，形成分阶段的优化策略。","textPreview":"当前结论：暂时保留该方案；下一步可将所有常见变化类型排序，形成分阶段的优化策略。","textChars":40,"textLines":1,"bbox":[48,610,1100,28]}
+{"kind":"textbox","id":"sh/etkrepsz","slide":10,"text":"Shader 转场推理 · 中期汇报","textPreview":"Shader 转场推理 · 中期汇报","textChars":18,"textLines":1,"bbox":[48,680,640,16]}
+{"kind":"notes","id":"nt/lvfv3a","slide":10,"text":""}
+{"kind":"slide","id":"sl/krko53","slide":11,"title":"下一阶段方向","textShapes":15}
+{"kind":"shape","id":"sh/fm1knudo","slide":11,"bbox":[0,0,24,720]}
+{"kind":"textbox","id":"sh/gnalgzu9","slide":11,"text":"下一阶段方向","textPreview":"下一阶段方向","textChars":6,"textLines":1,"bbox":[64,76,260,24]}
+{"kind":"textbox","id":"sh/hoj2p4vu","slide":11,"text":"从“像不像”走向\n“关键动态是否真正被复现”","textPreview":"从“像不像”走向 | “关键动态是否真正被复现”","textChars":22,"textLines":2,"bbox":[64,124,780,130]}
+{"kind":"shape","id":"sh/6hsjapc7","slide":11,"bbox":[64,300,510,3]}
+{"kind":"textbox","id":"sh/7i1kjuds","slide":11,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[64,364,42,20]}
+{"kind":"textbox","id":"sh/sja1czud","slide":11,"text":"过程建模","textPreview":"过程建模","textChars":4,"textLines":1,"bbox":[122,364,180,24]}
+{"kind":"textbox","id":"sh/tkj2l4vy","slide":11,"text":"增强连续时序与周期性观察，不只依赖稀疏关键帧。","textPreview":"增强连续时序与周期性观察，不只依赖稀疏关键帧。","textChars":23,"textLines":1,"bbox":[122,400,380,44]}
+{"kind":"textbox","id":"sh/qdc3m9cb","slide":11,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[564,364,42,20]}
+{"kind":"textbox","id":"sh/relkvetw","slide":11,"text":"输入探针","textPreview":"输入探针","textChars":4,"textLines":1,"bbox":[622,364,180,24]}
+{"kind":"textbox","id":"sh/3u18jy1g","slide":11,"text":"构造并筛选面向不同特效类型的互补输入图。","textPreview":"构造并筛选面向不同特效类型的互补输入图。","textChars":20,"textLines":1,"bbox":[622,400,380,44]}
+{"kind":"textbox","id":"sh/2ts7atkv","slide":11,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[64,480,42,20]}
+{"kind":"textbox","id":"sh/pwjqloj6","slide":11,"text":"原子知识库","textPreview":"原子知识库","textChars":5,"textLines":1,"bbox":[122,480,180,24]}
+{"kind":"textbox","id":"sh/ovapc32l","slide":11,"text":"补齐高频空间 primitive，降低组合特效的检索噪声。","textPreview":"补齐高频空间 primitive，降低组合特效的检索噪声。","textChars":29,"textLines":1,"bbox":[122,516,380,44]}
+{"kind":"textbox","id":"sh/by18ny1c","slide":11,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[564,480,42,20]}
+{"kind":"textbox","id":"sh/qxs7etkr","slide":11,"text":"分层优化","textPreview":"分层优化","textChars":4,"textLines":1,"bbox":[622,480,180,24]}
+{"kind":"textbox","id":"sh/dk3qp8ji","slide":11,"text":"将几何、区域、合成、外观等维度建立明确优先级。","textPreview":"将几何、区域、合成、外观等维度建立明确优先级。","textChars":23,"textLines":1,"bbox":[622,516,380,44]}
+{"kind":"textbox","id":"sh/cjapg32x","slide":11,"text":"目标：让模型的视觉观察、编辑计划与最终 shader 动态结果形成可验证的闭环。","textPreview":"目标：让模型的视觉观察、编辑计划与最终 shader 动态结果形成可验证的闭环。","textChars":40,"textLines":1,"bbox":[64,650,940,26]}
+{"kind":"notes","id":"nt/krko53","slide":11,"text":""}

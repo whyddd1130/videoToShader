@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "sample_id": "FaceLocation__rg_split",
+  "effect_name": "FaceLocation",
+  "display_name": "FaceLocation",
+  "match_name": "KFM KSkr FaceLocation",
+  "source_dir": "doc/examples/kskr-plugin/script/FaceLocation",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/FaceLocation",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/FaceLocation__rg_split",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/FaceLocation__rg_split/FaceLocation__rg_split.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/FaceLocation__rg_split/FaceLocation__rg_split.json",
+  "input": {
+    "variant": "rg_split",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/rg_split.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "Scale",
+  "params": [
+    {
+      "index": 1,
+      "key": "faceLayer",
+      "display_name": "faceLayer",
+      "config_name": "faceLayer",
+      "match_name": "KFM KSkr FaceLocation-0001",
+      "type": "layer",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "XLoaction",
+      "display_name": "XLoaction",
+      "config_name": "XLoaction",
+      "match_name": "KFM KSkr FaceLocation-0002",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": -200.0,
+      "source_max": 200.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            -200.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            200.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "YLocation",
+      "display_name": "YLocation",
+      "config_name": "YLocation",
+      "match_name": "KFM KSkr FaceLocation-0003",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": -200.0,
+      "source_max": 200.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            -200.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            200.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "Scale",
+      "display_name": "Scale",
+      "config_name": "Scale",
+      "match_name": "KFM KSkr FaceLocation-0004",
+      "type": "float",
+      "source_default": 1.0,
+      "source_min": 0.0,
+      "source_max": 5.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            2.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            5.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "key": "Rotation",
+      "display_name": "Rotation",
+      "config_name": "Rotation",
+      "match_name": "KFM KSkr FaceLocation-0005",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": -720.0,
+      "source_max": 720.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            -720.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            720.0
+          ]
+        }
+      ]
+    }
+  ]
+}

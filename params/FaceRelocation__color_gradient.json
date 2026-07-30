@@ -1,0 +1,286 @@
+{
+  "schema_version": 1,
+  "sample_id": "FaceRelocation__color_gradient",
+  "effect_name": "FaceRelocation",
+  "display_name": "FaceRelocation",
+  "match_name": "KFM KSkr FaceRelocation",
+  "source_dir": "doc/examples/kskr-plugin/script/FaceRelocation",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/FaceRelocation",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/FaceRelocation__color_gradient",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/FaceRelocation__color_gradient/FaceRelocation__color_gradient.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/FaceRelocation__color_gradient/FaceRelocation__color_gradient.json",
+  "input": {
+    "variant": "color_gradient",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/color_gradient.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "Scale",
+  "params": [
+    {
+      "index": 1,
+      "key": "FaceType",
+      "display_name": "Face Type",
+      "config_name": "Face Type",
+      "match_name": "KFM KSkr FaceRelocation-0001",
+      "type": "comboBox",
+      "source_default": "AE|MVCreator",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "AEModelID",
+      "display_name": "AE Face Model",
+      "config_name": "AE Face Model",
+      "match_name": "KFM KSkr FaceRelocation-0002",
+      "type": "comboBox",
+      "source_default": "Model 1|Model 2|Model 3|Model 4|Model 5|Model 6|Model 7|Model 8|Model 9|Model 10|Model 11",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "AlignModelImageID",
+      "display_name": "MVCreator Image_ID",
+      "config_name": "MVCreator Image_ID",
+      "match_name": "KFM KSkr FaceRelocation-0003",
+      "type": "int",
+      "source_default": 0,
+      "source_min": 0,
+      "source_max": 99,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            99.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            99.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "Location",
+      "display_name": "Location",
+      "config_name": "Location",
+      "match_name": "KFM KSkr FaceRelocation-0004",
+      "type": "twoD",
+      "source_default": [
+        50.0,
+        38.28
+      ],
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            50.0,
+            38.28
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "key": "Scale",
+      "display_name": "Scale",
+      "config_name": "Scale",
+      "match_name": "KFM KSkr FaceRelocation-0005",
+      "type": "float",
+      "source_default": 1.0,
+      "source_min": 0.0,
+      "source_max": 2.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            2.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "key": "Rotation",
+      "display_name": "Rotation",
+      "config_name": "Rotation",
+      "match_name": "KFM KSkr FaceRelocation-0006",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": -180.0,
+      "source_max": 180.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            -180.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            180.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "key": "Progress",
+      "display_name": "Progress",
+      "config_name": "Progress",
+      "match_name": "KFM KSkr FaceRelocation-0007",
+      "type": "float",
+      "source_default": 1.0,
+      "source_min": 0.0,
+      "source_max": 1.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "key": "ScaleType",
+      "display_name": "ScaleType",
+      "config_name": "ScaleType",
+      "match_name": "KFM KSkr FaceRelocation-0008",
+      "type": "comboBox",
+      "source_default": "Relative|Absolute",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "key": "Target",
+      "display_name": "Target",
+      "config_name": "Target",
+      "match_name": "KFM KSkr FaceRelocation-0009",
+      "type": "comboBox",
+      "source_default": "None|OilPainting",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    }
+  ]
+}

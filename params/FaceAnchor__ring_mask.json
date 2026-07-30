@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "sample_id": "FaceAnchor__ring_mask",
+  "effect_name": "FaceAnchor",
+  "display_name": "FaceAnchor",
+  "match_name": "KFM KSkr FaceAnchor",
+  "source_dir": "doc/examples/kskr-plugin/script/FaceAnchor",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/FaceAnchor",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/FaceAnchor__ring_mask",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/FaceAnchor__ring_mask/FaceAnchor__ring_mask.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/FaceAnchor__ring_mask/FaceAnchor__ring_mask.json",
+  "input": {
+    "variant": "ring_mask",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/ring_mask.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "Scale",
+  "params": [
+    {
+      "index": 1,
+      "key": "ModelImageID",
+      "display_name": "ModelImageID",
+      "config_name": "ModelImageID",
+      "match_name": "KFM KSkr FaceAnchor-0001",
+      "type": "int",
+      "source_default": 0,
+      "source_min": 0,
+      "source_max": 20,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            20.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            20.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "FacePointID",
+      "display_name": "FacePointID",
+      "config_name": "FacePointID",
+      "match_name": "KFM KSkr FaceAnchor-0002",
+      "type": "int",
+      "source_default": 99,
+      "source_min": 0,
+      "source_max": 99,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            99.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            99.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "Scale",
+      "display_name": "Scale",
+      "config_name": "Scale",
+      "match_name": "KFM KSkr FaceAnchor-0003",
+      "type": "float",
+      "source_default": 1.0,
+      "source_min": 0.1,
+      "source_max": 10.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.1
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            5.05
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            10.0
+          ]
+        }
+      ]
+    }
+  ]
+}

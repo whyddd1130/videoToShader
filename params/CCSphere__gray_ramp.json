@@ -1,0 +1,330 @@
+{
+  "schema_version": 1,
+  "sample_id": "CCSphere__gray_ramp",
+  "effect_name": "CCSphere",
+  "display_name": "CCSphere",
+  "match_name": "KFM KSkr CCSphere",
+  "source_dir": "doc/examples/kskr-plugin/script/ccsphere",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/CCSphere",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/CCSphere__gray_ramp",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/CCSphere__gray_ramp/CCSphere__gray_ramp.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/CCSphere__gray_ramp/CCSphere__gray_ramp.json",
+  "input": {
+    "variant": "gray_ramp",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/gray_ramp.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "pitch",
+  "params": [
+    {
+      "index": 1,
+      "key": "pitch",
+      "display_name": "pitch",
+      "config_name": "pitch",
+      "match_name": "KFM KSkr CCSphere-0001",
+      "type": "unknown",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 1000.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            500.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1000.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "yaw",
+      "display_name": "yaw",
+      "config_name": "yaw",
+      "match_name": "KFM KSkr CCSphere-0002",
+      "type": "unknown",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 1000.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            500.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1000.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "roll",
+      "display_name": "roll",
+      "config_name": "roll",
+      "match_name": "KFM KSkr CCSphere-0003",
+      "type": "unknown",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 1000.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            500.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1000.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "radius",
+      "display_name": "radius",
+      "config_name": "radius",
+      "match_name": "KFM KSkr CCSphere-0004",
+      "type": "unknown",
+      "source_default": 200.0,
+      "source_min": 0.0,
+      "source_max": 800.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            400.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            800.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "key": "Light intensity",
+      "display_name": "lightIntensity",
+      "config_name": "lightIntensity",
+      "match_name": "KFM KSkr CCSphere-0005",
+      "type": "unknown",
+      "source_default": 100.0,
+      "source_min": 0.0,
+      "source_max": 1000.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            500.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1000.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "key": "Light Height",
+      "display_name": "lightHeight",
+      "config_name": "lightHeight",
+      "match_name": "KFM KSkr CCSphere-0006",
+      "type": "unknown",
+      "source_default": 40.0,
+      "source_min": -100.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            -100.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "key": "Light Direction",
+      "display_name": "lightDirection",
+      "config_name": "lightDirection",
+      "match_name": "KFM KSkr CCSphere-0007",
+      "type": "unknown",
+      "source_default": -85.0,
+      "source_min": -360.0,
+      "source_max": 360.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            -360.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            360.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "key": "light Color",
+      "display_name": "lightColor",
+      "config_name": "lightColor",
+      "match_name": "KFM KSkr CCSphere-0008",
+      "type": "color",
+      "source_default": "#FFFFFF",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.0,
+            1.0,
+            1.0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "key": "ambient Color",
+      "display_name": "ambientColor",
+      "config_name": "ambientColor",
+      "match_name": "KFM KSkr CCSphere-0009",
+      "type": "color",
+      "source_default": "#000000",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0,
+            0.0,
+            0.0,
+            1
+          ]
+        }
+      ]
+    }
+  ]
+}

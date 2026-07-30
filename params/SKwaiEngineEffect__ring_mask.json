@@ -1,0 +1,878 @@
+{
+  "schema_version": 1,
+  "sample_id": "SKwaiEngineEffect__ring_mask",
+  "effect_name": "SKwaiEngineEffect",
+  "display_name": "SKwaiEngineEffect",
+  "match_name": "KFM KSkr SKwaiEngineEffect",
+  "source_dir": "doc/examples/kskr-plugin/script/SKwaiEngineEffect",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/SKwaiEngineEffect",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/SKwaiEngineEffect__ring_mask",
+  "video_path": "",
+  "render_json": "",
+  "input": {
+    "variant": "ring_mask",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/ring_mask.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "U_Opacity",
+  "params": [
+    {
+      "index": 1,
+      "key": "SKwaiEnginePath",
+      "display_name": "SKwaiEnginePath",
+      "config_name": "SKwaiEnginePath",
+      "match_name": "KFM KSkr SKwaiEngineEffect-0001",
+      "type": "path",
+      "source_default": null,
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "U_Opacity",
+      "display_name": "U_Opacity",
+      "config_name": "U_Opacity",
+      "match_name": "KFM KSkr SKwaiEngineEffect-0002",
+      "type": "float",
+      "source_default": 100.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "U_Color",
+      "display_name": "U_Color",
+      "config_name": "U_Color",
+      "match_name": "KFM KSkr SKwaiEngineEffect-0003",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "U_Range",
+      "display_name": "U_Range",
+      "config_name": "U_Range",
+      "match_name": "KFM KSkr SKwaiEngineEffect-0004",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "key": "U_LuminousIntensity",
+      "display_name": "U_LuminousIntensity",
+      "config_name": "U_LuminousIntensity",
+      "match_name": "KFM KSkr SKwaiEngineEffect-0005",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "key": "U_Speed",
+      "display_name": "U_Speed",
+      "config_name": "U_Speed",
+      "match_name": "KFM KSkr SKwaiEngineEffect-0006",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "key": "U_BlurIntensity",
+      "display_name": "U_BlurIntensity",
+      "config_name": "U_BlurIntensity",
+      "match_name": "KFM KSkr SKwaiEngineEffect-0007",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "key": "U_Size",
+      "display_name": "U_Size",
+      "config_name": "U_Size",
+      "match_name": "KFM KSkr SKwaiEngineEffect-0008",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "key": "U_Quantity",
+      "display_name": "U_Quantity",
+      "config_name": "U_Quantity",
+      "match_name": "KFM KSkr SKwaiEngineEffect-0009",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "key": "U_VerticleDisplacement",
+      "display_name": "U_VerticleDisplacement",
+      "config_name": "U_VerticleDisplacement",
+      "match_name": "KFM KSkr SKwaiEngineEffect-0010",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "key": "U_CoilDensity",
+      "display_name": "U_CoilDensity",
+      "config_name": "U_CoilDensity",
+      "match_name": "KFM KSkr SKwaiEngineEffect-0011",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "key": "U_LightIntensity",
+      "display_name": "U_LightIntensity",
+      "config_name": "U_LightIntensity",
+      "match_name": "KFM KSkr SKwaiEngineEffect-0012",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "key": "Particle_Speed",
+      "display_name": "Particle_Speed",
+      "config_name": "Particle_Speed",
+      "match_name": "KFM KSkr SKwaiEngineEffect-0013",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "key": "Particle_Size",
+      "display_name": "Particle_Size",
+      "config_name": "Particle_Size",
+      "match_name": "KFM KSkr SKwaiEngineEffect-0014",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "key": "Particle_Opacity",
+      "display_name": "Particle_Opacity",
+      "config_name": "Particle_Opacity",
+      "match_name": "KFM KSkr SKwaiEngineEffect-0015",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "key": "Particle_Rotation",
+      "display_name": "Particle_Rotation",
+      "config_name": "Particle_Rotation",
+      "match_name": "KFM KSkr SKwaiEngineEffect-0016",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "key": "Particle_Force_X",
+      "display_name": "Particle_Force_X",
+      "config_name": "Particle_Force_X",
+      "match_name": "KFM KSkr SKwaiEngineEffect-0017",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": -100.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            -100.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "key": "Particle_Force_Y",
+      "display_name": "Particle_Force_Y",
+      "config_name": "Particle_Force_Y",
+      "match_name": "KFM KSkr SKwaiEngineEffect-0018",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": -100.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            -100.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "key": "Particle_Force_Z",
+      "display_name": "Particle_Force_Z",
+      "config_name": "Particle_Force_Z",
+      "match_name": "KFM KSkr SKwaiEngineEffect-0019",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": -100.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            -100.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "key": "Particle_Turbulence_X",
+      "display_name": "Particle_Turbulence_X",
+      "config_name": "Particle_Turbulence_X",
+      "match_name": "KFM KSkr SKwaiEngineEffect-0020",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "key": "Particle_Turbulence_Y",
+      "display_name": "Particle_Turbulence_Y",
+      "config_name": "Particle_Turbulence_Y",
+      "match_name": "KFM KSkr SKwaiEngineEffect-0021",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "key": "Particle_Turbulence_Z",
+      "display_name": "Particle_Turbulence_Z",
+      "config_name": "Particle_Turbulence_Z",
+      "match_name": "KFM KSkr SKwaiEngineEffect-0022",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "key": "Particle_Resistance",
+      "display_name": "Particle_Resistance",
+      "config_name": "Particle_Resistance",
+      "match_name": "KFM KSkr SKwaiEngineEffect-0023",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "key": "Particle_Color",
+      "display_name": "Particle_Color",
+      "config_name": "Particle_Color",
+      "match_name": "KFM KSkr SKwaiEngineEffect-0024",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            50.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            100.0
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "sample_id": "FluorescentScan_00_Pass0__model",
+  "source_platform": "jianying_reverse",
+  "category": "edge_sharpen",
+  "level": "L1_pure_image_shader",
+  "class_label": "sobel_edge",
+  "source": {
+    "effect_name": "FluorescentScan",
+    "spec": "/home/wangxin/research/DigitalTwin/output/FluorescentScan/replication_spec.json",
+    "pass_index": 0,
+    "pass_id": "Pass0",
+    "module": "Pass0",
+    "shader_file": "xshader/xshader/pass0.frag",
+    "inputs": [
+      "share://input.texture"
+    ]
+  },
+  "input": {
+    "variant": "model",
+    "image_path": "datasets/effect_training/jianying_single_pass/input_images/model.png"
+  },
+  "video": {
+    "fps": 25,
+    "duration_ms": 5000,
+    "width": 1080,
+    "height": 1080,
+    "total_frames": 125,
+    "path": "datasets/effect_training/jianying_single_pass/videos/FluorescentScan_00_Pass0__model/shader_lab.mp4"
+  },
+  "params": [
+    {
+      "key": "uProgress",
+      "type": "float",
+      "animated": true,
+      "strength_like": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "key": "uTime",
+      "type": "float",
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            2.5
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            5.0
+          ]
+        }
+      ]
+    }
+  ],
+  "uniform_patches": {
+    "intensity": "(0.2 + 2.5 * uProgress)",
+    "amount": "(0.2 + 3.0 * uProgress)",
+    "imageWidth": "1080",
+    "imageHeight": "1080",
+    "range": "1.0",
+    "passthrough": "0.0",
+    "width": "vec2(1.0, 1.0)"
+  },
+  "sampler_mapping": {
+    "primary_sampler": "inputImageTexture",
+    "runtime_sampler": "inputImageTexture"
+  },
+  "diagnostics": {
+    "first_frame": "output/_shader_lab/f0fce3b77667/diagnostics/frame_first.png",
+    "last_frame": "output/_shader_lab/f0fce3b77667/diagnostics/frame_last.png",
+    "first_mean_rgb": 0.513,
+    "last_mean_rgb": 38.459,
+    "first_last_diff_mean": 37.947,
+    "warnings": []
+  }
+}

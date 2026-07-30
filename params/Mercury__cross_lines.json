@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "sample_id": "Mercury__cross_lines",
+  "effect_name": "Mercury",
+  "display_name": "Mercury",
+  "match_name": "KFM KSkr Mercury",
+  "source_dir": "doc/examples/kskr-plugin/script/mercury",
+  "code_dir": "datasets/effect_training/single_shader_multi/code/Mercury",
+  "material_dir": "datasets/effect_training/single_shader_multi/materials/Mercury__cross_lines",
+  "video_path": "datasets/effect_training/single_shader_multi/videos/Mercury__cross_lines/Mercury__cross_lines.mp4",
+  "render_json": "datasets/effect_training/single_shader_multi/videos/Mercury__cross_lines/Mercury__cross_lines.json",
+  "input": {
+    "variant": "cross_lines",
+    "image_path": "datasets/effect_training/single_shader_multi/input_images/cross_lines.png"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "fps": 25,
+    "duration_ms": 5000,
+    "duration_sec": 5.0,
+    "total_frames": 125,
+    "keyframe_policy": "full_duration_min_mid_max"
+  },
+  "primary_strength_param": "dir",
+  "params": [
+    {
+      "index": 1,
+      "key": "dir",
+      "display_name": "direction",
+      "config_name": "direction",
+      "match_name": "KFM KSkr Mercury-0001",
+      "type": "unknown",
+      "source_default": 1.57,
+      "source_min": 0,
+      "source_max": 6.28,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            3.14
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            6.28
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "speed",
+      "display_name": "moveSpeed",
+      "config_name": "moveSpeed",
+      "match_name": "KFM KSkr Mercury-0002",
+      "type": "unknown",
+      "source_default": 0.15,
+      "source_min": 0,
+      "source_max": 0.5,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.25
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            0.5
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "densityMin",
+      "display_name": "densityMin",
+      "config_name": "densityMin",
+      "match_name": "KFM KSkr Mercury-0003",
+      "type": "unknown",
+      "source_default": 1.5,
+      "source_min": 1.2,
+      "source_max": 3.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.2
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            2.1
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            3.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "densityMax",
+      "display_name": "densityMax",
+      "config_name": "densityMax",
+      "match_name": "KFM KSkr Mercury-0004",
+      "type": "unknown",
+      "source_default": 2.5,
+      "source_min": 1.2,
+      "source_max": 3.0,
+      "animated": true,
+      "strength_like": false,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            1.2
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            2.1
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            3.0
+          ]
+        }
+      ]
+    }
+  ]
+}
