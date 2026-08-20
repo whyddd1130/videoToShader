@@ -1,0 +1,38 @@
+{
+  "filters": {
+    "Comic": {
+      "displayName": "Comic",
+      "version": "v1.1.1",
+      "enableKgpu": false,
+      "matchName": "KFM KSkr Comic",
+      "fileName": "comic/comic",
+      "className": "Comic",
+      "params": {
+        "comicType": {
+          "displayName": "ComicType",
+          "type": "comboBox",
+          "value": "BlackWhite | Colorful",
+          "min": 1,
+          "max": 2
+        },
+        "color1": {
+          "displayName": "color1",
+          "value": "#E93323",
+          "type": "color"
+        },
+        "color2": {
+          "displayName": "color2",
+          "value": "#FFFF54",
+          "type": "color"
+        },
+        "gridNum": {
+          "displayName": "gridNum",
+          "value": 0.12,
+          "type": "float",
+          "min": 0.06,
+          "max": 0.25
+        }
+      }
+    }
+  }
+}

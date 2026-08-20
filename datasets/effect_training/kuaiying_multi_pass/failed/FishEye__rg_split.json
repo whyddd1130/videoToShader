@@ -1,0 +1,7 @@
+{
+  "sample_id": "FishEye__rg_split",
+  "effect": "FishEye",
+  "input_variant": "rg_split",
+  "reason": "quality gate: low_effect_signal,low_temporal_change",
+  "failed_at": "2026-08-03T03:13:41Z"
+}

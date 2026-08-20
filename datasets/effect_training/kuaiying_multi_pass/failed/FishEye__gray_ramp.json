@@ -1,0 +1,7 @@
+{
+  "sample_id": "FishEye__gray_ramp",
+  "effect": "FishEye",
+  "input_variant": "gray_ramp",
+  "reason": "quality gate: low_temporal_change",
+  "failed_at": "2026-08-03T03:13:46Z"
+}

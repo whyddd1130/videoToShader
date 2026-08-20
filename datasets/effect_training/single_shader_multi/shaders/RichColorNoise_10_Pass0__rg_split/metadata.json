@@ -1,0 +1,41 @@
+{
+  "source_spec": "/home/wangxin/research/DigitalTwin/output/RichColorNoise/replication_spec.json",
+  "effect": "RichColorNoise",
+  "pass_index": 10,
+  "pass_id": "lowPixel__Pass0",
+  "module": "Pass0",
+  "shader_file": "lowPixel/xshader/pass0.frag",
+  "inputs": [
+    "share://input.texture"
+  ],
+  "samplers": [
+    "inputImageTexture"
+  ],
+  "uniforms": [
+    [
+      "int",
+      "inputWidth"
+    ],
+    [
+      "int",
+      "inputHeight"
+    ],
+    [
+      "float",
+      "blurSize"
+    ]
+  ],
+  "adaptation": {
+    "primary_sampler": "inputImageTexture",
+    "uniform_patches": {
+      "blurSize": "(1.0 + 34.0 * uProgress)",
+      "inputWidth": "1080",
+      "inputHeight": "1080"
+    }
+  },
+  "notes": [
+    "Primary sampler is normalized to inputImageTexture.",
+    "Vertex input is normalized to Shader Lab's attribute vec2 position.",
+    "Selected uniforms are replaced with constants or uProgress/uTime expressions for 5s preview/training clips."
+  ]
+}

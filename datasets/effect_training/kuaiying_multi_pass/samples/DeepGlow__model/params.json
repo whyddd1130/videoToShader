@@ -1,0 +1,95 @@
+{
+  "sample_id": "DeepGlow__model",
+  "effect": "DeepGlow",
+  "filter_name": "DeepGlow",
+  "animated_param": "Radius",
+  "duration_ms": 5000,
+  "fps": 25,
+  "parameters": [
+    {
+      "index": 1,
+      "key": "Radius",
+      "display_name": "Radius",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 120.0,
+      "animated": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            120.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "Exposure",
+      "display_name": "Exposure",
+      "type": "float",
+      "source_default": 1.0,
+      "source_min": 0.0,
+      "source_max": 5.0,
+      "animated": false,
+      "value": [
+        1.0
+      ]
+    },
+    {
+      "index": 3,
+      "key": "Threshold",
+      "display_name": "Threshold",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 2.0,
+      "animated": false,
+      "value": [
+        0.0
+      ]
+    },
+    {
+      "index": 4,
+      "key": "Threshold Smooth",
+      "display_name": "Threshold Smooth",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 1.0,
+      "animated": false,
+      "value": [
+        0.0
+      ]
+    },
+    {
+      "index": 5,
+      "key": "Blend Mode",
+      "display_name": "Blend Mode",
+      "type": "comboBox",
+      "source_default": "Screen|Add",
+      "source_min": "1",
+      "source_max": "2",
+      "animated": false,
+      "value": [
+        1
+      ]
+    }
+  ]
+}

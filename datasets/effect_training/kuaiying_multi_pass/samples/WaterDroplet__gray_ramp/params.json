@@ -1,0 +1,82 @@
+{
+  "sample_id": "WaterDroplet__gray_ramp",
+  "effect": "WaterDroplet",
+  "filter_name": "WaterDroplet",
+  "animated_param": "Progress",
+  "duration_ms": 5000,
+  "fps": 25,
+  "parameters": [
+    {
+      "index": 1,
+      "key": "Progress",
+      "display_name": "Progress",
+      "type": "float",
+      "source_default": 10.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            100.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "Radius",
+      "display_name": "Radius",
+      "type": "float",
+      "source_default": 45.0,
+      "source_min": 10.0,
+      "source_max": 100.0,
+      "animated": false,
+      "value": [
+        45.0
+      ]
+    },
+    {
+      "index": 3,
+      "key": "BackgroundBlurSize",
+      "display_name": "BackgroundBlurSize",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": false,
+      "value": [
+        50.0
+      ]
+    },
+    {
+      "index": 4,
+      "key": "ChromaticIntensity",
+      "display_name": "ChromaticIntensity",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": false,
+      "value": [
+        50.0
+      ]
+    }
+  ]
+}

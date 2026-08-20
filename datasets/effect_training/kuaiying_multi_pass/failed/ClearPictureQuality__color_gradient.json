@@ -1,0 +1,7 @@
+{
+  "sample_id": "ClearPictureQuality__color_gradient",
+  "effect": "ClearPictureQuality",
+  "input_variant": "color_gradient",
+  "reason": "quality gate: low_temporal_change",
+  "failed_at": "2026-08-03T03:12:35Z"
+}

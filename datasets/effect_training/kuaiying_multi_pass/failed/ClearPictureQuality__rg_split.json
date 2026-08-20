@@ -1,0 +1,7 @@
+{
+  "sample_id": "ClearPictureQuality__rg_split",
+  "effect": "ClearPictureQuality",
+  "input_variant": "rg_split",
+  "reason": "quality gate: low_temporal_change",
+  "failed_at": "2026-08-03T03:12:29Z"
+}

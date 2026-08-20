@@ -329,7 +329,14 @@ def read_library_sources(row_or_item: dict[str, Any], repo_root: Path, *, max_ch
         if not code_dir.is_absolute():
             code_dir = repo_root / code_dir
     else:
-        code_dir = repo_root / "code" / str(row_or_item["effect_name"])
+        code_dir = (
+            repo_root
+            / "datasets"
+            / "effect_training"
+            / "single_shader_multi"
+            / "code"
+            / str(row_or_item["effect_name"])
+        )
     chunks: list[str] = []
     filter_path = code_dir / "filter.json"
     if filter_path.exists():

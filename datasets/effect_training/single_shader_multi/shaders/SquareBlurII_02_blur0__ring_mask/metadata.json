@@ -1,0 +1,41 @@
+{
+  "source_spec": "/home/wangxin/research/DigitalTwin/output/SquareBlurII/replication_spec.json",
+  "effect": "SquareBlurII",
+  "pass_index": 2,
+  "pass_id": "blur0",
+  "module": "blur0",
+  "shader_file": "effects/LumiBokehBlur/xshader/gaussBlur0.frag",
+  "inputs": [
+    "share://input.texture"
+  ],
+  "samplers": [
+    "u_inputTex"
+  ],
+  "uniforms": [
+    [
+      "float",
+      "u_sample"
+    ],
+    [
+      "float",
+      "u_baseTexWidth"
+    ],
+    [
+      "float",
+      "u_baseTexHeight"
+    ]
+  ],
+  "adaptation": {
+    "primary_sampler": "u_inputTex",
+    "uniform_patches": {
+      "u_sample": "(2.0 + 48.0 * uProgress)",
+      "u_baseTexWidth": "1080.0",
+      "u_baseTexHeight": "1080.0"
+    }
+  },
+  "notes": [
+    "Primary sampler is normalized to inputImageTexture.",
+    "Vertex input is normalized to Shader Lab's attribute vec2 position.",
+    "Selected uniforms are replaced with constants or uProgress/uTime expressions for 5s preview/training clips."
+  ]
+}

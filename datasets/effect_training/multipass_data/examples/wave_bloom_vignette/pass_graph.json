@@ -1,0 +1,35 @@
+{
+  "id": "wave_bloom_vignette",
+  "input_image": "../../inputs/model.png",
+  "target_description": "横向柔波、亮部扩散和角落压暗",
+  "temporal": "uProgress from 0 to 1",
+  "pass_count": 3,
+  "primitives": [
+    "wave_warp",
+    "bloom",
+    "vignette"
+  ],
+  "passes": [
+    {
+      "id": "pass_1",
+      "input": "source",
+      "output": "texture_1",
+      "vertex_shader": "vertex.glsl",
+      "fragment_shader": "pass_01.frag.glsl"
+    },
+    {
+      "id": "pass_2",
+      "input": "texture_1",
+      "output": "texture_2",
+      "vertex_shader": "vertex.glsl",
+      "fragment_shader": "pass_02.frag.glsl"
+    },
+    {
+      "id": "pass_3",
+      "input": "texture_2",
+      "output": "final",
+      "vertex_shader": "vertex.glsl",
+      "fragment_shader": "pass_03.frag.glsl"
+    }
+  ]
+}

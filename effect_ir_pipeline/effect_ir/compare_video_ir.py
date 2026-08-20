@@ -194,7 +194,7 @@ def load_library_structured_rows(path: Path) -> list[dict[str, Any]]:
 def compare_video(
     video_path: Path,
     *,
-    input_image: Path | None,
+    input_image: Path,
     repo_root: Path,
     library_structured: Path,
     output: Path,
@@ -209,15 +209,13 @@ def compare_video(
     sample = {
         "sample_id": video_path.stem,
         "effect_name": "unknown",
-        "input_variant": "provided_image_and_video" if input_image else "video_only_first_frame_fallback",
+        "input_variant": "provided_image_and_video",
         "video_path": str(video_path),
+        "input_image_path": str(input_image),
     }
-    if input_image is not None:
-        sample["input_image_path"] = str(input_image)
 
     print(f"[1/5] video: {resolved_video_path}", flush=True)
-    if input_image is not None:
-        print(f"[1/5] input_image: {resolve_repo_path(repo_root, str(input_image))}", flush=True)
+    print(f"[1/5] input_image: {resolve_repo_path(repo_root, str(input_image))}", flush=True)
     frame_indices = sample_frame_indices_for_video(resolved_video_path, sample_fps=sample_fps)
     print(f"[2/5] sampled frames: {frame_indices}", flush=True)
 
@@ -260,7 +258,7 @@ def compare_video(
     )
 
     result = {
-        "input_image_path": None if input_image is None else str(input_image),
+        "input_image_path": str(input_image),
         "video_path": str(video_path),
         "resolved_video_path": str(resolved_video_path),
         "frame_indices": frame_indices,
@@ -280,7 +278,7 @@ def compare_video(
 def main() -> None:
     parser = argparse.ArgumentParser(description="Generate structured IR from one video and compare it with library IR.")
     parser.add_argument("video_path", type=Path)
-    parser.add_argument("--input-image", type=Path, help="Source/original image used before the effect. If omitted, the first video frame is used for backward compatibility.")
+    parser.add_argument("--input-image", type=Path, required=True, help="Source/original image used before the effect.")
     parser.add_argument("--repo-root", type=Path, default=Path("."))
     parser.add_argument("--library-structured", type=Path, default=Path("effect_ir_pipeline/library_structured_ir_llm.jsonl"))
     parser.add_argument("--output", type=Path)
@@ -294,7 +292,7 @@ def main() -> None:
 
     output = args.output
     if output is None:
-        output = Path("effect_ir_pipeline/reports") / f"{args.video_path.stem}_video_ir_compare.json"
+        output = Path("runs/single_pass/ir_compare") / f"{args.video_path.stem}_video_ir_compare.json"
 
     compare_video(
         args.video_path,

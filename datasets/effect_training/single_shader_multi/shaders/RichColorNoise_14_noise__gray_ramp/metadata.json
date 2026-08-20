@@ -1,0 +1,51 @@
+{
+  "source_spec": "/home/wangxin/research/DigitalTwin/output/RichColorNoise/replication_spec.json",
+  "effect": "RichColorNoise",
+  "pass_index": 14,
+  "pass_id": "AmazingFeature__noise",
+  "module": "noise",
+  "shader_file": "AmazingFeature/xshader/noise.frag",
+  "inputs": [
+    "share://input.texture"
+  ],
+  "samplers": [
+    "inputImageTexture"
+  ],
+  "uniforms": [
+    [
+      "float",
+      "iTime"
+    ],
+    [
+      "float",
+      "rIns"
+    ],
+    [
+      "float",
+      "gIns"
+    ],
+    [
+      "float",
+      "bIns"
+    ],
+    [
+      "vec4",
+      "u_ScreenParams"
+    ]
+  ],
+  "adaptation": {
+    "primary_sampler": "inputImageTexture",
+    "uniform_patches": {
+      "u_ScreenParams": "#define u_ScreenParams vec4(1080.0, 1080.0, 1.0/1080.0, 1.0/1080.0)",
+      "iTime": "uTime",
+      "rIns": "(0.3 + 2.0 * uProgress)",
+      "gIns": "(0.3 + 2.0 * uProgress)",
+      "bIns": "(0.3 + 2.0 * uProgress)"
+    }
+  },
+  "notes": [
+    "Primary sampler is normalized to inputImageTexture.",
+    "Vertex input is normalized to Shader Lab's attribute vec2 position.",
+    "Selected uniforms are replaced with constants or uProgress/uTime expressions for 5s preview/training clips."
+  ]
+}

@@ -1,0 +1,58 @@
+{
+    "filters": {
+        "ClearPictureQuality": {
+            "version": "v1.0.0",
+            "owner": "liuming10@kuaishou.com",
+            "enableKgpu": false,
+            "score": 0,
+            "displayName": "ClearPictureQuality",
+            "matchName": "KFM KSkr ClearPictureQuality",
+            "fileName": "ClearPictureQuality/ClearPictureQuality",
+            "className": "ClearPictureQuality",
+            "params": {
+                "AdjustLuminance": {
+                    "value": 25.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "AdjustLuminance"
+                },
+                "AdjustSharpen": {
+                    "value": 40.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "AdjustSharpen"
+                },
+                "AdjustBlur": {
+                    "value": 20.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "AdjustBlur"
+                },
+                "AdjustRange": {
+                    "value": 70.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "AdjustRange"
+                },
+                "AdjustSize": {
+                    "value": 50.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "AdjustSize"
+                },
+                "AdjustSoft": {
+                    "value": 33.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "AdjustSoft"
+                }
+            }
+        }
+    }
+}

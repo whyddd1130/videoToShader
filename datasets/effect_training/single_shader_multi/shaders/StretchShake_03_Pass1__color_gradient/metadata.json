@@ -1,0 +1,46 @@
+{
+  "source_spec": "/home/wangxin/research/DigitalTwin/output/StretchShake/replication_spec.json",
+  "effect": "StretchShake",
+  "pass_index": 3,
+  "pass_id": "AmazingFeature__Pass1",
+  "module": "Pass1",
+  "shader_file": "AmazingFeature/Library/ShaderData/8b9f070be49d46bfcc6d6725b9edc005/shaderGLES/7e04ef426a5bfa3dadbfef031bc8c1c2.frag",
+  "inputs": [
+    "share://input.texture"
+  ],
+  "samplers": [
+    "u_Albedo"
+  ],
+  "uniforms": [
+    [
+      "float",
+      "u_Strength"
+    ],
+    [
+      "vec4",
+      "u_ScreenParams"
+    ],
+    [
+      "float",
+      "centerX"
+    ],
+    [
+      "float",
+      "centerY"
+    ]
+  ],
+  "adaptation": {
+    "primary_sampler": "u_Albedo",
+    "uniform_patches": {
+      "u_ScreenParams": "#define u_ScreenParams vec4(1080.0, 1080.0, 1.0/1080.0, 1.0/1080.0)",
+      "u_Strength": "(20.0 + 180.0 * uProgress)",
+      "centerX": "540.0",
+      "centerY": "540.0"
+    }
+  },
+  "notes": [
+    "Primary sampler is normalized to inputImageTexture.",
+    "Vertex input is normalized to Shader Lab's attribute vec2 position.",
+    "Selected uniforms are replaced with constants or uProgress/uTime expressions for 5s preview/training clips."
+  ]
+}

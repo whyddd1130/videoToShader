@@ -1,0 +1,51 @@
+{
+  "source_spec": "/home/wangxin/research/DigitalTwin/output/DBScreenPulse/replication_spec.json",
+  "effect": "DBScreenPulse",
+  "pass_index": 0,
+  "pass_id": "L0__root_noface",
+  "module": "_root",
+  "shader_file": "quad.frag",
+  "inputs": [
+    "input"
+  ],
+  "samplers": [
+    "u_albedo"
+  ],
+  "uniforms": [
+    [
+      "float",
+      "iTime"
+    ],
+    [
+      "float",
+      "scope"
+    ],
+    [
+      "float",
+      "speed"
+    ],
+    [
+      "float",
+      "rate"
+    ],
+    [
+      "int",
+      "twistX"
+    ]
+  ],
+  "adaptation": {
+    "primary_sampler": "u_albedo",
+    "uniform_patches": {
+      "iTime": "uTime",
+      "scope": "(0.01 + 0.18 * uProgress)",
+      "speed": "(0.8 + 3.0 * uProgress)",
+      "rate": "(4.0 + 30.0 * uProgress)",
+      "twistX": "1"
+    }
+  },
+  "notes": [
+    "Primary sampler is normalized to inputImageTexture.",
+    "Vertex input is normalized to Shader Lab's attribute vec2 position.",
+    "Selected uniforms are replaced with constants or uProgress/uTime expressions for 5s preview/training clips."
+  ]
+}

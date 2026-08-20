@@ -1,0 +1,81 @@
+{
+  "source_spec": "/home/wangxin/research/DigitalTwin/output/SquareBlurII/replication_spec.json",
+  "effect": "SquareBlurII",
+  "pass_index": 10,
+  "pass_id": "EntityExposure",
+  "module": "EntityExposure",
+  "shader_file": "effects/LumiExposure/xshader/shaderLib/shaderGLES/67c37d63b6641470e23746fa4ea19d70.frag",
+  "inputs": [
+    "share://input.texture"
+  ],
+  "samplers": [
+    "u_inputTexture"
+  ],
+  "uniforms": [
+    [
+      "int",
+      "u_noUseLinearLight"
+    ],
+    [
+      "float",
+      "u_gamma"
+    ],
+    [
+      "float",
+      "u_redExposure"
+    ],
+    [
+      "float",
+      "u_redOffset"
+    ],
+    [
+      "float",
+      "u_redGrayscaleCorrection"
+    ],
+    [
+      "float",
+      "u_greenExposure"
+    ],
+    [
+      "float",
+      "u_greenOffset"
+    ],
+    [
+      "float",
+      "u_greenGrayscaleCorrection"
+    ],
+    [
+      "float",
+      "u_blueExposure"
+    ],
+    [
+      "float",
+      "u_blueOffset"
+    ],
+    [
+      "float",
+      "u_blueGrayscaleCorrection"
+    ]
+  ],
+  "adaptation": {
+    "primary_sampler": "u_inputTexture",
+    "uniform_patches": {
+      "u_redExposure": "(0.2 + 1.8 * uProgress)",
+      "u_greenExposure": "(0.2 + 1.4 * uProgress)",
+      "u_blueExposure": "(0.2 + 1.2 * uProgress)",
+      "u_redOffset": "(0.0 + 0.18 * uProgress)",
+      "u_greenOffset": "(0.0 + 0.12 * uProgress)",
+      "u_blueOffset": "(0.0 + 0.08 * uProgress)",
+      "u_gamma": "1.0",
+      "u_noUseLinearLight": "0",
+      "u_redGrayscaleCorrection": "1.0",
+      "u_greenGrayscaleCorrection": "1.0",
+      "u_blueGrayscaleCorrection": "1.0"
+    }
+  },
+  "notes": [
+    "Primary sampler is normalized to inputImageTexture.",
+    "Vertex input is normalized to Shader Lab's attribute vec2 position.",
+    "Selected uniforms are replaced with constants or uProgress/uTime expressions for 5s preview/training clips."
+  ]
+}

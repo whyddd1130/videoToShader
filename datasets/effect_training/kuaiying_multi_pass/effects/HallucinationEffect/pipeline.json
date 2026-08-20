@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "source_platform": "kuaiying_plugin_library",
+  "effect": "HallucinationEffect",
+  "source_plugin_dir": "proj/Faceless_AEPlugin/resource/script/HallucinationEffect",
+  "lua_files": [
+    "proj/Faceless_AEPlugin/resource/script/HallucinationEffect/HallucinationEffect.lua"
+  ],
+  "shader_program_count": 9,
+  "extracted_shaders": [
+    {
+      "name": "vs",
+      "kind": "vertex",
+      "path": "datasets/effect_training/kuaiying_multi_pass/effects/HallucinationEffect/shaders/vs.vertex.glsl",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/HallucinationEffect/HallucinationEffect.lua"
+    },
+    {
+      "name": "fs",
+      "kind": "fragment",
+      "path": "datasets/effect_training/kuaiying_multi_pass/effects/HallucinationEffect/shaders/fs.fragment.glsl",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/HallucinationEffect/HallucinationEffect.lua"
+    },
+    {
+      "name": "layer_fs",
+      "kind": "fragment",
+      "path": "datasets/effect_training/kuaiying_multi_pass/effects/HallucinationEffect/shaders/layer_fs.fragment.glsl",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/HallucinationEffect/HallucinationEffect.lua"
+    },
+    {
+      "name": "grayscale_fs",
+      "kind": "fragment",
+      "path": "datasets/effect_training/kuaiying_multi_pass/effects/HallucinationEffect/shaders/grayscale_fs.fragment.glsl",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/HallucinationEffect/HallucinationEffect.lua"
+    },
+    {
+      "name": "blur_fs",
+      "kind": "fragment",
+      "path": "datasets/effect_training/kuaiying_multi_pass/effects/HallucinationEffect/shaders/blur_fs.fragment.glsl",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/HallucinationEffect/HallucinationEffect.lua"
+    },
+    {
+      "name": "distort_fs",
+      "kind": "fragment",
+      "path": "datasets/effect_training/kuaiying_multi_pass/effects/HallucinationEffect/shaders/distort_fs.fragment.glsl",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/HallucinationEffect/HallucinationEffect.lua"
+    },
+    {
+      "name": "gauss_fs",
+      "kind": "fragment",
+      "path": "datasets/effect_training/kuaiying_multi_pass/effects/HallucinationEffect/shaders/gauss_fs.fragment.glsl",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/HallucinationEffect/HallucinationEffect.lua"
+    },
+    {
+      "name": "bokeh_fs",
+      "kind": "fragment",
+      "path": "datasets/effect_training/kuaiying_multi_pass/effects/HallucinationEffect/shaders/bokeh_fs.fragment.glsl",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/HallucinationEffect/HallucinationEffect.lua"
+    },
+    {
+      "name": "shadow_highlight_fs",
+      "kind": "fragment",
+      "path": "datasets/effect_training/kuaiying_multi_pass/effects/HallucinationEffect/shaders/shadow_highlight_fs.fragment.glsl",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/HallucinationEffect/HallucinationEffect.lua"
+    },
+    {
+      "name": "temperature_tone_fs",
+      "kind": "fragment",
+      "path": "datasets/effect_training/kuaiying_multi_pass/effects/HallucinationEffect/shaders/temperature_tone_fs.fragment.glsl",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/HallucinationEffect/HallucinationEffect.lua"
+    }
+  ],
+  "fbo_allocation_count": 5,
+  "fbo_allocations": [
+    {
+      "fbo": "fbo1",
+      "size_expression": "self.currentWidth, self.currentHeight",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/HallucinationEffect/HallucinationEffect.lua",
+      "line": 1524
+    },
+    {
+      "fbo": "fbo2",
+      "size_expression": "self.currentWidth, self.currentHeight",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/HallucinationEffect/HallucinationEffect.lua",
+      "line": 1556
+    },
+    {
+      "fbo": "fbo3",
+      "size_expression": "self.currentWidth, self.currentHeight",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/HallucinationEffect/HallucinationEffect.lua",
+      "line": 1579
+    },
+    {
+      "fbo": "fbo4",
+      "size_expression": "self.currentWidth * 0.25, self.currentHeight * 0.25",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/HallucinationEffect/HallucinationEffect.lua",
+      "line": 1590
+    },
+    {
+      "fbo": "fbo5",
+      "size_expression": "self.currentWidth * 0.25, self.currentHeight * 0.25",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/HallucinationEffect/HallucinationEffect.lua",
+      "line": 1604
+    }
+  ],
+  "fbo_recycle_call_count": 5,
+  "uses_time": false,
+  "parameter_types": [
+    "float"
+  ],
+  "external_layer_input": false,
+  "excluded_capabilities": [
+    "transition",
+    "face",
+    "matting",
+    "ai",
+    "depth",
+    "spectrum",
+    "temporal_history"
+  ],
+  "intermediate_output_status": "graph_described_not_rendered",
+  "final_output_status": "rendered_per_sample"
+}

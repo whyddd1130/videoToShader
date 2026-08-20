@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "source_platform": "kuaiying_plugin_library",
+  "effect": "DeepGlow",
+  "source_plugin_dir": "proj/Faceless_AEPlugin/resource/script/DeepGlow",
+  "lua_files": [
+    "proj/Faceless_AEPlugin/resource/script/DeepGlow/DeepGlow.lua"
+  ],
+  "shader_program_count": 3,
+  "extracted_shaders": [
+    {
+      "name": "vs",
+      "kind": "vertex",
+      "path": "datasets/effect_training/kuaiying_multi_pass/effects/DeepGlow/shaders/vs.vertex.glsl",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/DeepGlow/DeepGlow.lua"
+    },
+    {
+      "name": "preProcess_fs",
+      "kind": "fragment",
+      "path": "datasets/effect_training/kuaiying_multi_pass/effects/DeepGlow/shaders/preProcess_fs.fragment.glsl",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/DeepGlow/DeepGlow.lua"
+    },
+    {
+      "name": "blur_fs",
+      "kind": "fragment",
+      "path": "datasets/effect_training/kuaiying_multi_pass/effects/DeepGlow/shaders/blur_fs.fragment.glsl",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/DeepGlow/DeepGlow.lua"
+    },
+    {
+      "name": "postProcess_fs",
+      "kind": "fragment",
+      "path": "datasets/effect_training/kuaiying_multi_pass/effects/DeepGlow/shaders/postProcess_fs.fragment.glsl",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/DeepGlow/DeepGlow.lua"
+    }
+  ],
+  "fbo_allocation_count": 4,
+  "fbo_allocations": [
+    {
+      "fbo": "highlightFbo",
+      "size_expression": "self.width, self.height",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/DeepGlow/DeepGlow.lua",
+      "line": 255
+    },
+    {
+      "fbo": "blur1Fbo",
+      "size_expression": "self.width, self.height",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/DeepGlow/DeepGlow.lua",
+      "line": 272
+    },
+    {
+      "fbo": "blur2Fbo",
+      "size_expression": "self.width, self.height",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/DeepGlow/DeepGlow.lua",
+      "line": 273
+    },
+    {
+      "fbo": "blendFbo",
+      "size_expression": "self.width, self.height",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/DeepGlow/DeepGlow.lua",
+      "line": 275
+    }
+  ],
+  "fbo_recycle_call_count": 4,
+  "uses_time": false,
+  "parameter_types": [
+    "comboBox",
+    "float"
+  ],
+  "external_layer_input": false,
+  "excluded_capabilities": [
+    "transition",
+    "face",
+    "matting",
+    "ai",
+    "depth",
+    "spectrum",
+    "temporal_history"
+  ],
+  "intermediate_output_status": "graph_described_not_rendered",
+  "final_output_status": "rendered_per_sample"
+}

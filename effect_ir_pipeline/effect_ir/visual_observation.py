@@ -523,19 +523,9 @@ def build_visual_observation_prompt(
     image_size: int,
 ) -> str:
     observation = build_visual_observation_data(sample, repo_root=repo_root, frame_indices=frame_indices, image_size=image_size)
-    proxy_mode = sample.get("input_variant") == "estimated_proxy_image_and_video"
-    reference_description = (
-        "estimated proxy image" if proxy_mode else "provided input image" if sample.get("input_image_path") else "reference first frame"
-    )
-    proxy_instruction = (
-        "This proxy is not a ground-truth source image: frame-to-proxy differences can include source reconstruction error. "
-        "Prioritize frame-to-frame temporal evidence and report transferable transformation behavior rather than scene content.\n"
-        if proxy_mode
-        else ""
-    )
+    reference_description = "provided input image"
     return (
         f"Infer the visual effect by comparing video frames against the {reference_description}.\n"
-        f"{proxy_instruction}"
         "The vision endpoint is unavailable, so you must infer the effect from structured visual observations extracted "
         f"from the {reference_description} and rendered video frames. Treat these observations as evidence of blur, distortion, "
         "pixelation, color change, edge emphasis, masking, compositing, geometry change, particles, and temporal pattern.\n"

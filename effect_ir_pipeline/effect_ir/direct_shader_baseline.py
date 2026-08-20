@@ -144,15 +144,14 @@ def build_target_contact_sheet_data_url(
     temporary_upload_url: str = "",
     work_dir: Path | None = None,
 ) -> tuple[str, list[int]]:
-    """Make chronological samples in Shader Lab's bottom-origin y convention."""
+    """Make chronological samples in normal human-view orientation."""
     indices = _read_progress_frame_indices(video_path, frame_count)
     frames = sample_video_frames(video_path, indices)
     tiles: list[np.ndarray] = []
     for position, frame in enumerate(frames):
-        # OpenCV/model images are top-origin, while Shader Lab's textureCoord
-        # uses y=0 at the visual bottom.  Flip the visual evidence once here
-        # so a model's "top"/"bottom" decision maps to shader coordinates.
-        tile = cv2.resize(np.flipud(frame), (image_size, image_size), interpolation=cv2.INTER_AREA)
+        # Models reason about visible pictures, not WebGL's coordinate origin.
+        # Keep evidence upright; the renderer owns the sole Y conversion.
+        tile = cv2.resize(frame, (image_size, image_size), interpolation=cv2.INTER_AREA)
         canvas = np.full((image_size + 26, image_size, 3), 255, dtype=np.uint8)
         canvas[26:, :] = tile
         progress = 0.0 if len(frames) == 1 else position / (len(frames) - 1)
@@ -164,6 +163,70 @@ def build_target_contact_sheet_data_url(
             raise ValueError("work_dir is required when uploading the target contact sheet")
         return _upload_temporary_image(sheet, upload_url=temporary_upload_url, label="target_contact_sheet", work_dir=work_dir), indices
     return _encode_jpeg_data_url(sheet), indices
+
+
+def build_timeline_contact_sheet_data_urls(
+    video_path: Path,
+    *,
+    interval_seconds: float = 0.2,
+    image_size: int = 192,
+    frames_per_sheet: int = 8,
+    maximum_frames: int = 60,
+) -> tuple[list[str], list[dict[str, float | int]]]:
+    """Sample a video by wall-clock time and return several readable sheets.
+
+    Unlike the ordinary evenly-spaced contact sheet, this preserves actual
+    timestamps.  Splitting the evidence keeps labels and small movements
+    legible instead of squeezing an entire dense timeline into one wide image.
+    """
+    if interval_seconds <= 0 or frames_per_sheet < 1 or maximum_frames < 2:
+        raise ValueError("Timeline sampling settings must be positive")
+    capture = cv2.VideoCapture(str(video_path))
+    if not capture.isOpened():
+        raise FileNotFoundError(f"Cannot open video: {video_path}")
+    try:
+        fps = float(capture.get(cv2.CAP_PROP_FPS))
+        total = int(capture.get(cv2.CAP_PROP_FRAME_COUNT))
+    finally:
+        capture.release()
+    if fps <= 0 or total < 1:
+        raise RuntimeError(f"Video has no valid timeline: {video_path}")
+    duration = max(0.0, (total - 1) / fps)
+    requested_times = list(np.arange(0.0, duration + interval_seconds * 0.25, interval_seconds))
+    if not requested_times or requested_times[-1] < duration - interval_seconds * 0.25:
+        requested_times.append(duration)
+    else:
+        requested_times[-1] = min(requested_times[-1], duration)
+    indices_and_times: list[tuple[int, float]] = []
+    for timestamp in requested_times:
+        index = min(total - 1, int(round(timestamp * fps)))
+        actual_time = index / fps
+        if not indices_and_times or index != indices_and_times[-1][0]:
+            indices_and_times.append((index, actual_time))
+    if len(indices_and_times) > maximum_frames:
+        raise ValueError(
+            f"Dense timeline needs {len(indices_and_times)} frames, above the safety limit {maximum_frames}; "
+            "increase --timeline-max-frames or use a larger interval"
+        )
+    frames = sample_video_frames(video_path, [item[0] for item in indices_and_times])
+    entries = [
+        {"sequence": position, "frame_index": index, "time_seconds": round(timestamp, 4)}
+        for position, (index, timestamp) in enumerate(indices_and_times)
+    ]
+    urls: list[str] = []
+    for start in range(0, len(frames), frames_per_sheet):
+        tiles: list[np.ndarray] = []
+        for frame, entry in zip(frames[start:start + frames_per_sheet], entries[start:start + frames_per_sheet]):
+            tile = cv2.resize(frame, (image_size, image_size), interpolation=cv2.INTER_AREA)
+            canvas = np.full((image_size + 28, image_size, 3), 255, dtype=np.uint8)
+            canvas[28:, :] = tile
+            cv2.putText(
+                canvas, f"#{entry['sequence']:02d}  t={entry['time_seconds']:.2f}s", (7, 19),
+                cv2.FONT_HERSHEY_SIMPLEX, 0.43, (15, 15, 15), 1, cv2.LINE_AA,
+            )
+            tiles.append(canvas)
+        urls.append(_encode_jpeg_data_url(np.concatenate(tiles, axis=1)))
+    return urls, entries
 
 
 def build_direct_shader_baseline_content(
@@ -186,7 +249,7 @@ def build_direct_shader_baseline_content(
         temporary_upload_url=temporary_upload_url,
         work_dir=work_dir,
     )
-    source_for_model = np.flipud(source)
+    source_for_model = source
     source_url = (
         _upload_temporary_image(source_for_model, upload_url=temporary_upload_url, label="source_image", work_dir=work_dir)
         if temporary_upload_url
@@ -201,7 +264,8 @@ def build_direct_shader_baseline_content(
         "Do not use library references, IR, edit plans, score, review, or any additional textures. "
         "Output exactly two fenced ```glsl blocks and nothing else: first a vertex shader, then a fragment shader. "
         "The vertex shader must use `attribute vec2 position`, set `textureCoord = position * 0.5 + 0.5`, and assign gl_Position. "
-        "The fragment shader may use only `inputImageTexture`, `uProgress`, and `uTime` uniforms; it must sample inputImageTexture and assign gl_FragColor."
+        "The fragment shader may use only `inputImageTexture`, `uProgress`, and `uTime` uniforms; it must sample inputImageTexture and assign gl_FragColor. "
+        "All supplied images are upright in normal human-view orientation. Use textureCoord unchanged by default; never flip or rotate UVs unless TARGET_VIDEO_SAMPLES visibly flip or rotate relative to SOURCE_IMAGE."
     )
     if shader_complexity == "compact":
         instruction = (
@@ -224,7 +288,7 @@ def main() -> None:
     parser.add_argument("video_path", type=Path)
     parser.add_argument("--input-image", type=Path, required=True)
     parser.add_argument("--repo-root", type=Path, default=Path("."))
-    parser.add_argument("--work-dir", type=Path, default=Path("effect_ir_pipeline/baselines/direct_shader"))
+    parser.add_argument("--work-dir", type=Path, default=Path("runs/single_pass/direct_shader"))
     parser.add_argument("--model", default=os.environ.get("EFFECT_IR_LLM_MODEL", "ep-fipdyi-1784171757952297366"))
     parser.add_argument("--temperature", type=float, default=0.0)
     parser.add_argument("--image-size", type=int, default=256)
@@ -238,13 +302,15 @@ def main() -> None:
     parser.add_argument("--model-source-image-url", default="", help="Existing HTTP URL for SOURCE_IMAGE; use together with --model-target-contact-sheet-url.")
     parser.add_argument("--model-target-contact-sheet-url", default="", help="Existing HTTP URL for TARGET_VIDEO_SAMPLES; use together with --model-source-image-url.")
     parser.add_argument("--max-generation-attempts", type=int, default=3)
-    parser.add_argument("--shader-lab-url", default=os.environ.get("SHADER_LAB_URL", "http://172.22.112.93:8788"))
+    parser.add_argument("--shader-lab-url", default=os.environ.get("SHADER_LAB_URL", ""))
     parser.add_argument("--shader-lab-token", default=os.environ.get("SHADER_LAB_TOKEN", ""))
     parser.add_argument("--shader-lab-timeout", type=float, default=float(os.environ.get("SHADER_LAB_TIMEOUT", "900")))
     parser.add_argument("--shader-lab-poll-interval", type=float, default=1.6)
     args = parser.parse_args()
     if args.max_generation_attempts <= 0 or args.frame_count <= 0:
         raise ValueError("max-generation-attempts and frame-count must be positive")
+    if not args.shader_lab_url:
+        raise ValueError("Set SHADER_LAB_URL or pass --shader-lab-url before rendering")
 
     repo_root = args.repo_root.resolve()
     input_image = resolve_repo_path(repo_root, str(args.input_image))

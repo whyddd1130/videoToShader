@@ -1,0 +1,44 @@
+{
+    "filters": {
+        "RainbowDrop": {
+            "version": "v1.0.0",
+            "owner": "liuming10@kuaishou.com",
+            "enableKgpu": false,
+            "score": 0,
+            "displayName": "RainbowDrop",
+            "matchName": "KFM KSkr RainbowDrop",
+            "fileName": "RainbowDrop/RainbowDrop",
+            "className": "RainbowDrop",
+            "params": {
+                "Color": {
+                    "value": 80.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "Color"
+                },
+                "Luminance": {
+                    "value": 60.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "Luminance"
+                },
+                "Speed": {
+                    "value": 30.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "Speed"
+                },
+                "BlurSize": {
+                    "value": 15.0,
+                    "min": 0.0,
+                    "max": 50.0,
+                    "type": "float",
+                    "displayName": "BlurSize"
+                }
+            }
+        }
+    }
+}

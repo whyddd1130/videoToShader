@@ -1,0 +1,44 @@
+{
+    "filters": {
+        "WaterDroplet": {
+            "version": "v1.0.0",
+            "owner": "liuming10@kuaishou.com",
+            "enableKgpu": false,
+            "score": 0,
+            "displayName": "WaterDroplet",
+            "matchName": "KFM KSkr WaterDroplet",
+            "fileName": "WaterDroplet/WaterDroplet",
+            "className": "WaterDroplet",
+            "params": {
+                "Progress": {
+                    "value": 10.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "Progress"
+                },
+                "Radius": {
+                    "value": 45.0,
+                    "min": 10.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "Radius"
+                },
+                "BackgroundBlurSize": {
+                    "value": 50.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "BackgroundBlurSize"
+                },
+                "ChromaticIntensity": {
+                    "value": 50.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "ChromaticIntensity"
+                }
+            }
+        }
+    }
+}

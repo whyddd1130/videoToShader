@@ -1,0 +1,578 @@
+{
+  "dataset_root": "datasets/effect_training/single_shader_multi",
+  "total_rows": 774,
+  "rendered_rows": 676,
+  "failed_rows": 98,
+  "status_counts": {
+    "low_temporal_change": 57,
+    "near_black_video": 17,
+    "package_failed": 6,
+    "render_failed": 18,
+    "rendered": 676
+  },
+  "rendered_variant_counts": {
+    "color_gradient": 111,
+    "cross_lines": 115,
+    "gray_ramp": 115,
+    "model": 116,
+    "rg_split": 107,
+    "ring_mask": 112
+  },
+  "effect_count_total": 131,
+  "effect_count_with_rendered_samples": 107,
+  "input_variants": [
+    "color_gradient",
+    "cross_lines",
+    "gray_ramp",
+    "model",
+    "rg_split",
+    "ring_mask"
+  ],
+  "video_files": 676,
+  "param_files": 694,
+  "integrity": {
+    "missing_rendered_videos": [],
+    "zero_byte_rendered_videos": [],
+    "missing_rendered_params": []
+  },
+  "failed_by_effect": {
+    "C300_16_Pass00": [
+      {
+        "sample_id": "C300_16_Pass00__model",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "C300_16_Pass00__ring_mask",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "C300_16_Pass00__rg_split",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "C300_16_Pass00__cross_lines",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "C300_16_Pass00__gray_ramp",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "C300_16_Pass00__color_gradient",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      }
+    ],
+    "Chord": [
+      {
+        "sample_id": "Chord__model",
+        "status": "render_failed",
+        "error": "render_material_video exited 1"
+      },
+      {
+        "sample_id": "Chord__ring_mask",
+        "status": "render_failed",
+        "error": "render_material_video exited 1"
+      },
+      {
+        "sample_id": "Chord__rg_split",
+        "status": "render_failed",
+        "error": "render_material_video exited 1"
+      },
+      {
+        "sample_id": "Chord__cross_lines",
+        "status": "render_failed",
+        "error": "render_material_video exited 1"
+      },
+      {
+        "sample_id": "Chord__gray_ramp",
+        "status": "render_failed",
+        "error": "render_material_video exited 1"
+      },
+      {
+        "sample_id": "Chord__color_gradient",
+        "status": "render_failed",
+        "error": "render_material_video exited 1"
+      }
+    ],
+    "CurvedGlitch_09_PassWarp": [
+      {
+        "sample_id": "CurvedGlitch_09_PassWarp__rg_split",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      }
+    ],
+    "DBElectronicScreen_00__root": [
+      {
+        "sample_id": "DBElectronicScreen_00__root__model",
+        "status": "near_black_video",
+        "error": "near_black_video"
+      },
+      {
+        "sample_id": "DBElectronicScreen_00__root__ring_mask",
+        "status": "near_black_video",
+        "error": "near_black_video"
+      },
+      {
+        "sample_id": "DBElectronicScreen_00__root__rg_split",
+        "status": "near_black_video",
+        "error": "near_black_video"
+      },
+      {
+        "sample_id": "DBElectronicScreen_00__root__cross_lines",
+        "status": "near_black_video",
+        "error": "near_black_video"
+      },
+      {
+        "sample_id": "DBElectronicScreen_00__root__gray_ramp",
+        "status": "near_black_video",
+        "error": "near_black_video"
+      },
+      {
+        "sample_id": "DBElectronicScreen_00__root__color_gradient",
+        "status": "near_black_video",
+        "error": "near_black_video"
+      }
+    ],
+    "DBFineSharpenII_00__root": [
+      {
+        "sample_id": "DBFineSharpenII_00__root__color_gradient",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      }
+    ],
+    "DBFisheyeII_01__root": [
+      {
+        "sample_id": "DBFisheyeII_01__root__model",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "DBFisheyeII_01__root__ring_mask",
+        "status": "near_black_video",
+        "error": "near_black_video"
+      },
+      {
+        "sample_id": "DBFisheyeII_01__root__rg_split",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "DBFisheyeII_01__root__cross_lines",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "DBFisheyeII_01__root__gray_ramp",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "DBFisheyeII_01__root__color_gradient",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      }
+    ],
+    "DBHeartBeat_00__root": [
+      {
+        "sample_id": "DBHeartBeat_00__root__ring_mask",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "DBHeartBeat_00__root__rg_split",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "DBHeartBeat_00__root__cross_lines",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      }
+    ],
+    "DBWaterRipple_00__root": [
+      {
+        "sample_id": "DBWaterRipple_00__root__model",
+        "status": "near_black_video",
+        "error": "near_black_video"
+      },
+      {
+        "sample_id": "DBWaterRipple_00__root__ring_mask",
+        "status": "near_black_video",
+        "error": "near_black_video"
+      },
+      {
+        "sample_id": "DBWaterRipple_00__root__rg_split",
+        "status": "near_black_video",
+        "error": "near_black_video"
+      },
+      {
+        "sample_id": "DBWaterRipple_00__root__cross_lines",
+        "status": "near_black_video",
+        "error": "near_black_video"
+      },
+      {
+        "sample_id": "DBWaterRipple_00__root__gray_ramp",
+        "status": "near_black_video",
+        "error": "near_black_video"
+      },
+      {
+        "sample_id": "DBWaterRipple_00__root__color_gradient",
+        "status": "near_black_video",
+        "error": "near_black_video"
+      }
+    ],
+    "DelicateGlow_13_EntityGaussianBlurX": [
+      {
+        "sample_id": "DelicateGlow_13_EntityGaussianBlurX__model",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "DelicateGlow_13_EntityGaussianBlurX__ring_mask",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "DelicateGlow_13_EntityGaussianBlurX__rg_split",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "DelicateGlow_13_EntityGaussianBlurX__cross_lines",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "DelicateGlow_13_EntityGaussianBlurX__gray_ramp",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "DelicateGlow_13_EntityGaussianBlurX__color_gradient",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      }
+    ],
+    "FluorescentScan_00_Pass0": [
+      {
+        "sample_id": "FluorescentScan_00_Pass0__rg_split",
+        "status": "near_black_video",
+        "error": "near_black_video"
+      },
+      {
+        "sample_id": "FluorescentScan_00_Pass0__color_gradient",
+        "status": "near_black_video",
+        "error": "near_black_video"
+      }
+    ],
+    "Midi": [
+      {
+        "sample_id": "Midi__model",
+        "status": "render_failed",
+        "error": "render_material_video exited 1"
+      },
+      {
+        "sample_id": "Midi__ring_mask",
+        "status": "render_failed",
+        "error": "render_material_video exited 1"
+      },
+      {
+        "sample_id": "Midi__rg_split",
+        "status": "render_failed",
+        "error": "render_material_video exited 1"
+      },
+      {
+        "sample_id": "Midi__cross_lines",
+        "status": "render_failed",
+        "error": "render_material_video exited 1"
+      },
+      {
+        "sample_id": "Midi__gray_ramp",
+        "status": "render_failed",
+        "error": "render_material_video exited 1"
+      },
+      {
+        "sample_id": "Midi__color_gradient",
+        "status": "render_failed",
+        "error": "render_material_video exited 1"
+      }
+    ],
+    "OilPaintBlur_02_pass0": [
+      {
+        "sample_id": "OilPaintBlur_02_pass0__model",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "OilPaintBlur_02_pass0__ring_mask",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "OilPaintBlur_02_pass0__rg_split",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "OilPaintBlur_02_pass0__cross_lines",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "OilPaintBlur_02_pass0__gray_ramp",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "OilPaintBlur_02_pass0__color_gradient",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      }
+    ],
+    "OilPaintBlur_06_soft0": [
+      {
+        "sample_id": "OilPaintBlur_06_soft0__model",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "OilPaintBlur_06_soft0__ring_mask",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "OilPaintBlur_06_soft0__rg_split",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "OilPaintBlur_06_soft0__cross_lines",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "OilPaintBlur_06_soft0__gray_ramp",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "OilPaintBlur_06_soft0__color_gradient",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      }
+    ],
+    "RichColorNoise_15_glitch": [
+      {
+        "sample_id": "RichColorNoise_15_glitch__ring_mask",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "RichColorNoise_15_glitch__rg_split",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "RichColorNoise_15_glitch__color_gradient",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      }
+    ],
+    "SKwaiEngineEffect": [
+      {
+        "sample_id": "SKwaiEngineEffect__model",
+        "status": "render_failed",
+        "error": "render_material_video exited 1"
+      },
+      {
+        "sample_id": "SKwaiEngineEffect__ring_mask",
+        "status": "render_failed",
+        "error": "render_material_video exited 1"
+      },
+      {
+        "sample_id": "SKwaiEngineEffect__rg_split",
+        "status": "render_failed",
+        "error": "render_material_video exited 1"
+      },
+      {
+        "sample_id": "SKwaiEngineEffect__cross_lines",
+        "status": "render_failed",
+        "error": "render_material_video exited 1"
+      },
+      {
+        "sample_id": "SKwaiEngineEffect__gray_ramp",
+        "status": "render_failed",
+        "error": "render_material_video exited 1"
+      },
+      {
+        "sample_id": "SKwaiEngineEffect__color_gradient",
+        "status": "render_failed",
+        "error": "render_material_video exited 1"
+      }
+    ],
+    "SquareBlurII_02_blur0": [
+      {
+        "sample_id": "SquareBlurII_02_blur0__rg_split",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "SquareBlurII_02_blur0__color_gradient",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      }
+    ],
+    "StretchShake_03_Pass1": [
+      {
+        "sample_id": "StretchShake_03_Pass1__rg_split",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      }
+    ],
+    "SuperSharpen_00_blur0": [
+      {
+        "sample_id": "SuperSharpen_00_blur0__rg_split",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      }
+    ],
+    "TurbulenceImpact_03_EntityRadialBlurRotate": [
+      {
+        "sample_id": "TurbulenceImpact_03_EntityRadialBlurRotate__ring_mask",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      }
+    ],
+    "VintageQuality_01_MosaicPass": [
+      {
+        "sample_id": "VintageQuality_01_MosaicPass__rg_split",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      }
+    ],
+    "VintageQuality_15_edge_renderer": [
+      {
+        "sample_id": "VintageQuality_15_edge_renderer__ring_mask",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "VintageQuality_15_edge_renderer__rg_split",
+        "status": "near_black_video",
+        "error": "near_black_video"
+      },
+      {
+        "sample_id": "VintageQuality_15_edge_renderer__gray_ramp",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "VintageQuality_15_edge_renderer__color_gradient",
+        "status": "near_black_video",
+        "error": "near_black_video"
+      }
+    ],
+    "VintageQuality_17_EntityGaussianBlurX": [
+      {
+        "sample_id": "VintageQuality_17_EntityGaussianBlurX__model",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "VintageQuality_17_EntityGaussianBlurX__ring_mask",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "VintageQuality_17_EntityGaussianBlurX__rg_split",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "VintageQuality_17_EntityGaussianBlurX__cross_lines",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "VintageQuality_17_EntityGaussianBlurX__gray_ramp",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "VintageQuality_17_EntityGaussianBlurX__color_gradient",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      }
+    ],
+    "VintageQuality_18_EntityGaussianBlurY": [
+      {
+        "sample_id": "VintageQuality_18_EntityGaussianBlurY__model",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "VintageQuality_18_EntityGaussianBlurY__ring_mask",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "VintageQuality_18_EntityGaussianBlurY__rg_split",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "VintageQuality_18_EntityGaussianBlurY__cross_lines",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "VintageQuality_18_EntityGaussianBlurY__gray_ramp",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      },
+      {
+        "sample_id": "VintageQuality_18_EntityGaussianBlurY__color_gradient",
+        "status": "low_temporal_change",
+        "error": "low_temporal_change"
+      }
+    ],
+    "YunJing360": [
+      {
+        "sample_id": "YunJing360__model",
+        "status": "package_failed",
+        "error": "package_material exited 1"
+      },
+      {
+        "sample_id": "YunJing360__ring_mask",
+        "status": "package_failed",
+        "error": "package_material exited 1"
+      },
+      {
+        "sample_id": "YunJing360__rg_split",
+        "status": "package_failed",
+        "error": "package_material exited 1"
+      },
+      {
+        "sample_id": "YunJing360__cross_lines",
+        "status": "package_failed",
+        "error": "package_material exited 1"
+      },
+      {
+        "sample_id": "YunJing360__gray_ramp",
+        "status": "package_failed",
+        "error": "package_material exited 1"
+      },
+      {
+        "sample_id": "YunJing360__color_gradient",
+        "status": "package_failed",
+        "error": "package_material exited 1"
+      }
+    ]
+  }
+}

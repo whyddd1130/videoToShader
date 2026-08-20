@@ -1,0 +1,8 @@
+{"id":"bulge_blur_grade","input_image":"inputs/model.png","graph":"examples/bulge_blur_grade/pass_graph.json","target_description":"中心连续放大后出现方向拖影并提高对比","pass_count":3,"primitives":["bulge","directional_blur","contrast"]}
+{"id":"flip_rgb_trail","input_image":"inputs/model.png","graph":"examples/flip_rgb_trail/pass_graph.json","target_description":"从左到右翻转并产生 RGB 残影","pass_count":3,"primitives":["flip_x","rgb_shift","trail"]}
+{"id":"radial_zoom_edge_glow","input_image":"inputs/model.png","graph":"examples/radial_zoom_edge_glow/pass_graph.json","target_description":"中心向外推进缩放并产生轮廓高光","pass_count":3,"primitives":["zoom","edge_glow","grade"]}
+{"id":"mosaic_displace_tint","input_image":"inputs/model.png","graph":"examples/mosaic_displace_tint/pass_graph.json","target_description":"逐渐粗化的方块采样被纵向位移并染暖色","pass_count":3,"primitives":["pixelate","displacement","warm_grade"]}
+{"id":"wave_bloom_vignette","input_image":"inputs/model.png","graph":"examples/wave_bloom_vignette/pass_graph.json","target_description":"横向柔波、亮部扩散和角落压暗","pass_count":3,"primitives":["wave_warp","bloom","vignette"]}
+{"id":"scanline_glitch_split","input_image":"inputs/model.png","graph":"examples/scanline_glitch_split/pass_graph.json","target_description":"扫描线与分段横向错位","pass_count":3,"primitives":["scanline","band_displacement","rgb_shift"]}
+{"id":"swirl_blur_duotone","input_image":"inputs/model.png","graph":"examples/swirl_blur_duotone/pass_graph.json","target_description":"中心旋涡、柔化和双色映射","pass_count":3,"primitives":["swirl","blur","duotone"]}
+{"id":"kaleido_noise_grade","input_image":"inputs/model.png","graph":"examples/kaleido_noise_grade/pass_graph.json","target_description":"六角折叠、微粒与对比增强","pass_count":3,"primitives":["kaleidoscope","noise","contrast"]}

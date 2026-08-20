@@ -1,0 +1,69 @@
+{
+    "filters": {
+        "Cartoon": {
+            "version": "v1.0.0", 
+            "enableKgpu": false, 
+            "score": 1, 
+            "displayName": "Cartoon", 
+            "matchName": "KFM KSkr Cartoon", 
+            "fileName": "Cartoon/Cartoon", 
+            "className": "Cartoon", 
+            "params": {
+                "Render": {
+                    "value": "Fill | Edges | Fill And Edges", 
+                    "type": "comboBox", 
+                    "displayName": "Render"
+                }, 
+                "DetailRadius": {
+                    "value": 8.0, 
+                    "min": 0.0, 
+                    "max": 30.0, 
+                    "type": "float", 
+                    "displayName": "DetailRadius"
+                }, 
+                "DetailThreshold": {
+                    "value": 10.0, 
+                    "min": 1.0, 
+                    "max": 100.0, 
+                    "type": "float", 
+                    "displayName": "DetailThreshold"
+                }, 
+                "shadingSteps": {
+                    "value": 10.0, 
+                    "min": 2.0, 
+                    "max": 30.0, 
+                    "type": "float", 
+                    "displayName": "shadingSteps"
+                }, 
+                "ShadingSmoothness": {
+                    "value": 10.0, 
+                    "min": 0.0, 
+                    "max": 100.0, 
+                    "type": "float", 
+                    "displayName": "ShadingSmoothness"
+                }, 
+                "EdgeThreshold": {
+                    "value": 1.0, 
+                    "min": 0.0, 
+                    "max": 10.0, 
+                    "type": "float", 
+                    "displayName": "EdgeThreshold"
+                }, 
+                "EdgeWidth": {
+                    "value": 2.5, 
+                    "min": 0.0, 
+                    "max": 15.0, 
+                    "type": "float", 
+                    "displayName": "EdgeWidth"
+                },
+                "EdgeOpacity": {
+                    "value": 1.0, 
+                    "min": 0.0, 
+                    "max": 1.0, 
+                    "type": "float", 
+                    "displayName": "EdgeOpacity"
+                }
+            }
+        }
+    }
+}

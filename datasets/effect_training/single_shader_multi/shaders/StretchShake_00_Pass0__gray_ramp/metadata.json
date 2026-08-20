@@ -1,0 +1,61 @@
+{
+  "source_spec": "/home/wangxin/research/DigitalTwin/output/StretchShake/replication_spec.json",
+  "effect": "StretchShake",
+  "pass_index": 0,
+  "pass_id": "AmazingFeature__Pass0",
+  "module": "Pass0",
+  "shader_file": "AmazingFeature/Library/ShaderData/d050e2ce34ec8731a2fd94bd26af937f/shaderGLES/a6024e0df25b3eb05b33fd211aa3cf80.frag",
+  "inputs": [
+    "share://input.texture"
+  ],
+  "samplers": [
+    "inputImageTexture"
+  ],
+  "uniforms": [
+    [
+      "int",
+      "inputWidth"
+    ],
+    [
+      "int",
+      "inputHeight"
+    ],
+    [
+      "float",
+      "iTime"
+    ],
+    [
+      "float",
+      "lightIns"
+    ],
+    [
+      "float",
+      "moveX"
+    ],
+    [
+      "float",
+      "moveY"
+    ],
+    [
+      "vec4",
+      "u_ScreenParams"
+    ]
+  ],
+  "adaptation": {
+    "primary_sampler": "inputImageTexture",
+    "uniform_patches": {
+      "u_ScreenParams": "#define u_ScreenParams vec4(1080.0, 1080.0, 1.0/1080.0, 1.0/1080.0)",
+      "iTime": "uTime",
+      "lightIns": "(0.25 + 0.45 * uProgress)",
+      "moveX": "(-0.08 + 0.16 * uProgress)",
+      "moveY": "(0.08 - 0.16 * uProgress)",
+      "inputWidth": "1080",
+      "inputHeight": "1080"
+    }
+  },
+  "notes": [
+    "Primary sampler is normalized to inputImageTexture.",
+    "Vertex input is normalized to Shader Lab's attribute vec2 position.",
+    "Selected uniforms are replaced with constants or uProgress/uTime expressions for 5s preview/training clips."
+  ]
+}

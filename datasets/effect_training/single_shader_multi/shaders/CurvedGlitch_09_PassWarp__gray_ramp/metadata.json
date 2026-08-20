@@ -1,0 +1,46 @@
+{
+  "source_spec": "/home/wangxin/research/DigitalTwin/output/CurvedGlitch/replication_spec.json",
+  "effect": "CurvedGlitch",
+  "pass_index": 9,
+  "pass_id": "PassWarp",
+  "module": "PassWarp",
+  "shader_file": "effects/LumiWarp/xshader/shaderLib/shaderGLES/f12d38bdfdd42243373bca2849a9445f.frag",
+  "inputs": [
+    "share://input.texture"
+  ],
+  "samplers": [
+    "u_inputTex"
+  ],
+  "uniforms": [
+    [
+      "vec4",
+      "u_ScreenParams"
+    ],
+    [
+      "int",
+      "u_axisFrag"
+    ],
+    [
+      "int",
+      "u_warpStyleFrag"
+    ],
+    [
+      "float",
+      "u_bend"
+    ]
+  ],
+  "adaptation": {
+    "primary_sampler": "u_inputTex",
+    "uniform_patches": {
+      "u_ScreenParams": "#define u_ScreenParams vec4(1080.0, 1080.0, 1.0/1080.0, 1.0/1080.0)",
+      "u_bend": "(0.02 + 0.80 * uProgress)",
+      "u_axisFrag": "0",
+      "u_warpStyleFrag": "1"
+    }
+  },
+  "notes": [
+    "Primary sampler is normalized to inputImageTexture.",
+    "Vertex input is normalized to Shader Lab's attribute vec2 position.",
+    "Selected uniforms are replaced with constants or uProgress/uTime expressions for 5s preview/training clips."
+  ]
+}

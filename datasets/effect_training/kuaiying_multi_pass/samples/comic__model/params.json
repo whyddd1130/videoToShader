@@ -1,0 +1,88 @@
+{
+  "sample_id": "comic__model",
+  "effect": "comic",
+  "filter_name": "Comic",
+  "animated_param": "gridNum",
+  "duration_ms": 5000,
+  "fps": 25,
+  "parameters": [
+    {
+      "index": 1,
+      "key": "comicType",
+      "display_name": "ComicType",
+      "type": "comboBox",
+      "source_default": "BlackWhite | Colorful",
+      "source_min": 1,
+      "source_max": 2,
+      "animated": false,
+      "value": [
+        2
+      ]
+    },
+    {
+      "index": 2,
+      "key": "color1",
+      "display_name": "color1",
+      "type": "color",
+      "source_default": "#E93323",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "value": [
+        0.9137254901960784,
+        0.2,
+        0.13725490196078433,
+        1.0
+      ]
+    },
+    {
+      "index": 3,
+      "key": "color2",
+      "display_name": "color2",
+      "type": "color",
+      "source_default": "#FFFF54",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "value": [
+        1.0,
+        1.0,
+        0.32941176470588235,
+        1.0
+      ]
+    },
+    {
+      "index": 4,
+      "key": "gridNum",
+      "display_name": "gridNum",
+      "type": "float",
+      "source_default": 0.12,
+      "source_min": 0.06,
+      "source_max": 0.25,
+      "animated": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.06
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            0.25
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            0.06
+          ]
+        }
+      ]
+    }
+  ]
+}

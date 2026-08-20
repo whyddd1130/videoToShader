@@ -1,0 +1,7 @@
+{
+  "sample_id": "WaterDroplet__rg_split",
+  "effect": "WaterDroplet",
+  "input_variant": "rg_split",
+  "reason": "quality gate: low_effect_signal,low_temporal_change",
+  "failed_at": "2026-08-03T03:13:54Z"
+}

@@ -1,0 +1,91 @@
+{
+  "source_spec": "/home/wangxin/research/DigitalTwin/output/TurbulenceImpact/replication_spec.json",
+  "effect": "TurbulenceImpact",
+  "pass_index": 2,
+  "pass_id": "EntityRadialBlurZoom",
+  "module": "EntityRadialBlurZoom",
+  "shader_file": "effects/LumiRadialBlur/xshader/shaderLib/shaderGLES/078b41396c1521b926ec401d755e6e20.frag",
+  "inputs": [
+    "share://input.texture"
+  ],
+  "samplers": [
+    "u_inputTexture"
+  ],
+  "uniforms": [
+    [
+      "int",
+      "u_inverseGammaCorrection"
+    ],
+    [
+      "float",
+      "u_gamma"
+    ],
+    [
+      "float",
+      "u_intensity"
+    ],
+    [
+      "int",
+      "u_blurType"
+    ],
+    [
+      "vec2",
+      "u_center"
+    ],
+    [
+      "float",
+      "u_quality"
+    ],
+    [
+      "float",
+      "u_sampleScale"
+    ],
+    [
+      "float",
+      "u_sampleBias"
+    ],
+    [
+      "float",
+      "u_weightDecay"
+    ],
+    [
+      "float",
+      "u_normalizationSample"
+    ],
+    [
+      "float",
+      "u_dither"
+    ],
+    [
+      "int",
+      "u_borderType"
+    ],
+    [
+      "int",
+      "u_blurAlpha"
+    ]
+  ],
+  "adaptation": {
+    "primary_sampler": "u_inputTexture",
+    "uniform_patches": {
+      "u_intensity": "(0.05 + 2.8 * uProgress)",
+      "u_gamma": "1.0",
+      "u_center": "vec2(0.5, 0.5)",
+      "u_quality": "0.35",
+      "u_sampleScale": "64.0",
+      "u_sampleBias": "8.0",
+      "u_weightDecay": "0.965",
+      "u_normalizationSample": "64.0",
+      "u_dither": "0.0",
+      "u_blurType": "1",
+      "u_borderType": "0",
+      "u_blurAlpha": "1",
+      "u_inverseGammaCorrection": "0"
+    }
+  },
+  "notes": [
+    "Primary sampler is normalized to inputImageTexture.",
+    "Vertex input is normalized to Shader Lab's attribute vec2 position.",
+    "Selected uniforms are replaced with constants or uProgress/uTime expressions for 5s preview/training clips."
+  ]
+}

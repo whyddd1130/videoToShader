@@ -1,0 +1,65 @@
+{
+    "filters": {
+        "CrossBlur": {
+            "version": "v1.0.0",
+            "owner": "liuming10@kuaishou.com",
+            "enableKgpu": false,
+            "score": 0,
+            "displayName": "CrossBlur",
+            "matchName": "KFM KSkr CrossBlur",
+            "fileName": "CrossBlur/CrossBlur",
+            "className": "CrossBlur",
+            "params": {
+                "Speed": {
+                    "value": 33.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "Speed"
+                },
+                "HorizontalShift": {
+                    "value": 100.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "HorizontalShift"
+                },
+                "VerticalShift": {
+                    "value": 100.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "VerticalShift"
+                },
+                "Luminance": {
+                    "value": 100.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "Luminance"
+                },
+                "ReverseBlur": {
+                    "value": 0.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "ReverseBlur"
+                },
+                "BlurSize": {
+                    "value": 40.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "BlurSize"
+                },
+                "Progress": {
+                    "value": 0.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "Progress"
+                }
+            }
+        }
+    }
+}

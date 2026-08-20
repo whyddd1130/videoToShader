@@ -1,0 +1,61 @@
+{
+  "source_spec": "/home/wangxin/research/DigitalTwin/output/FluorescentScan/replication_spec.json",
+  "effect": "FluorescentScan",
+  "pass_index": 0,
+  "pass_id": "Pass0",
+  "module": "Pass0",
+  "shader_file": "xshader/xshader/pass0.frag",
+  "inputs": [
+    "share://input.texture"
+  ],
+  "samplers": [
+    "inputImageTexture"
+  ],
+  "uniforms": [
+    [
+      "float",
+      "amount"
+    ],
+    [
+      "float",
+      "range"
+    ],
+    [
+      "float",
+      "passthrough"
+    ],
+    [
+      "vec2",
+      "width"
+    ],
+    [
+      "int",
+      "imageHeight"
+    ],
+    [
+      "int",
+      "imageWidth"
+    ],
+    [
+      "float",
+      "intensity"
+    ]
+  ],
+  "adaptation": {
+    "primary_sampler": "inputImageTexture",
+    "uniform_patches": {
+      "intensity": "(0.2 + 2.5 * uProgress)",
+      "amount": "(0.2 + 3.0 * uProgress)",
+      "imageWidth": "1080",
+      "imageHeight": "1080",
+      "range": "1.0",
+      "passthrough": "0.0",
+      "width": "vec2(1.0, 1.0)"
+    }
+  },
+  "notes": [
+    "Primary sampler is normalized to inputImageTexture.",
+    "Vertex input is normalized to Shader Lab's attribute vec2 position.",
+    "Selected uniforms are replaced with constants or uProgress/uTime expressions for 5s preview/training clips."
+  ]
+}

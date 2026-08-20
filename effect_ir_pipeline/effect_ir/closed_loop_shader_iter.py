@@ -19,7 +19,6 @@ from .manifest import resolve_repo_path
 from .model_client import generate_text
 from .schema_ir import build_structured_ir_summary, normalize_structured_ir, parse_structured_ir_response
 from .shader_builder import build_initial_edit_plan_from_ir, build_shader_from_edit_plan, extract_feedback_edit_plan, inspect_execution_contract, merge_edit_plan_delta
-from .video_only_input import estimate_proxy_input_from_video
 from .visual_observation import build_visual_observation_data, sample_frame_indices_for_video, sample_video_frames
 
 PRIMITIVE_EDIT_VOCABULARY = {
@@ -107,7 +106,11 @@ def load_top1_shader_text(reference: dict[str, Any], *, repo_root: Path) -> str:
     an unchanged input, so prefer the pair referenced by that call.
     """
     code_dir_value = reference.get("code_dir")
-    code_dir = Path(str(code_dir_value)) if code_dir_value else repo_root / "code" / str(reference["effect_name"])
+    code_dir = (
+        Path(str(code_dir_value))
+        if code_dir_value
+        else repo_root / "datasets" / "effect_training" / "single_shader_multi" / "code" / str(reference["effect_name"])
+    )
     if not code_dir.is_absolute():
         code_dir = repo_root / code_dir
     glsl_files = sorted(code_dir.rglob("*.glsl"))
@@ -167,7 +170,7 @@ def parse_ir(text: str) -> dict[str, Any]:
 def generate_video_ir(
     video_path: Path,
     *,
-    input_image: Path | None,
+    input_image: Path,
     repo_root: Path,
     sample_id: str,
     model: str,
@@ -181,11 +184,10 @@ def generate_video_ir(
     sample = {
         "sample_id": sample_id,
         "effect_name": "unknown",
-        "input_variant": input_variant or ("provided_image_and_video" if input_image else "video_only_first_frame_fallback"),
+        "input_variant": input_variant or "provided_image_and_video",
         "video_path": str(video_path),
+        "input_image_path": str(input_image),
     }
-    if input_image is not None:
-        sample["input_image_path"] = str(input_image)
     observation_data = build_visual_observation_data(
         sample,
         repo_root=repo_root,
@@ -196,7 +198,7 @@ def generate_video_ir(
     response = generate_text(prompt, model=model, temperature=temperature)
     structured_ir = apply_observation_guardrails_to_ir(parse_ir(response), observation_data)
     return {
-        "input_image_path": None if input_image is None else str(input_image),
+        "input_image_path": str(input_image),
         "input_variant": sample["input_variant"],
         "video_path": str(video_path),
         "resolved_video_path": str(resolved),
@@ -386,7 +388,8 @@ def video_starts_black(video_path: Path) -> bool:
 def infer_library_target_effect_name(video_path: Path, *, repo_root: Path) -> str | None:
     """Infer self effect name for library-video ablation tests.
 
-    Expected library target naming: test_videos/lib/EffectName__inputVariant.mp4.
+    Expected library target naming:
+    datasets/test_videos/lib/EffectName__inputVariant.mp4.
     """
     resolved = resolve_repo_path(repo_root, str(video_path))
     try:
@@ -394,7 +397,7 @@ def infer_library_target_effect_name(video_path: Path, *, repo_root: Path) -> st
     except ValueError:
         relative = resolved
     parts = relative.parts
-    if len(parts) < 3 or parts[0] != "test_videos" or parts[1] != "lib":
+    if len(parts) < 4 or tuple(parts[:3]) != ("datasets", "test_videos", "lib"):
         return None
     stem = resolved.stem
     if "__" not in stem:
@@ -472,7 +475,7 @@ def call_code_llm_text(prompt: str, *, model: str, temperature: float, max_token
     endpoint = (
         os.environ.get("EFFECT_IR_CODE_LLM_ENDPOINT")
         or os.environ.get("EFFECT_IR_LLM_ENDPOINT")
-        or "http://wanqing.internal/api/gateway/v1/endpoints/chat/completions"
+        or "https://wanqing-api.corp.kuaishou.com/api/gateway/v1/endpoints/chat/completions"
     )
     api_key = os.environ.get("EFFECT_IR_CODE_LLM_API_KEY") or os.environ.get("WQ_API_KEY", "EMPTY")
     payload = {
@@ -503,7 +506,7 @@ def call_code_llm_text(prompt: str, *, model: str, temperature: float, max_token
 
 
 def call_llm_content(content: str | list[dict[str, Any]], *, model: str, temperature: float, max_tokens: int, timeout: float) -> str:
-    endpoint = os.environ.get("EFFECT_IR_LLM_ENDPOINT", "http://wanqing.internal/api/gateway/v1/endpoints/chat/completions")
+    endpoint = os.environ.get("EFFECT_IR_LLM_ENDPOINT", "https://wanqing-api.corp.kuaishou.com/api/gateway/v1/endpoints/chat/completions")
     api_key = os.environ.get("EFFECT_IR_LLM_API_KEY") or os.environ.get("WQ_API_KEY", "EMPTY")
     payload = {
         "model": model,
@@ -1437,15 +1440,10 @@ def _feedback_for_result(feedback: dict[str, Any] | None) -> dict[str, Any] | No
 def main() -> None:
     parser = argparse.ArgumentParser(description="Five-round video-to-shader closed loop.")
     parser.add_argument("video_path", type=Path)
-    parser.add_argument("--input-image", type=Path, help="Original image paired with the target video.")
-    parser.add_argument(
-        "--video-only",
-        action="store_true",
-        help="Blind mode: estimate a proxy input image from the target video before entering the normal closed loop.",
-    )
+    parser.add_argument("--input-image", type=Path, required=True, help="Original image paired with the target video.")
     parser.add_argument("--repo-root", type=Path, default=Path("."))
     parser.add_argument("--library-structured", type=Path, default=Path("effect_ir_pipeline/library_structured_ir_llm.jsonl"))
-    parser.add_argument("--work-dir", type=Path, default=Path("effect_ir_pipeline/reports/closed_loop_run"))
+    parser.add_argument("--work-dir", type=Path, default=Path("runs/single_pass/closed_loop"))
     parser.add_argument("--request-model", default=os.environ.get("EFFECT_IR_LLM_MODEL", "ep-fipdyi-1784171757952297366"))
     parser.add_argument("--code-model", default=os.environ.get("EFFECT_IR_CODE_LLM_MODEL", "ep-fipdyi-1784171757952297366"))
     parser.add_argument("--temperature", type=float, default=0.0)
@@ -1453,8 +1451,8 @@ def main() -> None:
     parser.add_argument("--image-size", type=int, default=256)
     parser.add_argument("--max-iters", type=int, default=5)
     parser.add_argument("--max-generation-attempts", type=int, default=5)
-    parser.add_argument("--shader-lab-url", default=os.environ.get("SHADER_LAB_URL", "http://172.22.112.93:8788"))
-    parser.add_argument("--shader-lab-token", default=os.environ.get("SHADER_LAB_TOKEN", "Zaz_tjklcxhqjfo6Sy7HsA"))
+    parser.add_argument("--shader-lab-url", default=os.environ.get("SHADER_LAB_URL", ""))
+    parser.add_argument("--shader-lab-token", default=os.environ.get("SHADER_LAB_TOKEN", ""))
     parser.add_argument("--shader-lab-timeout", type=float, default=float(os.environ.get("SHADER_LAB_TIMEOUT", "900")))
     parser.add_argument("--shader-lab-poll-interval", type=float, default=1.6)
     parser.add_argument("--exclude-effect-name", action="append", default=[])
@@ -1477,13 +1475,9 @@ def main() -> None:
 
     if args.max_iters <= 0 or args.max_generation_attempts <= 0:
         raise ValueError("max-iters and max-generation-attempts must be positive.")
+    if not args.shader_lab_url:
+        raise ValueError("Set SHADER_LAB_URL or pass --shader-lab-url before rendering.")
 
-    if args.video_only and args.input_image is not None:
-        raise ValueError("Use either --input-image or --video-only, not both.")
-    if not args.video_only and args.input_image is None:
-        raise ValueError("--input-image is required unless --video-only is used.")
-    if args.video_only and args.resume_result is not None:
-        raise ValueError("--video-only resume is not supported yet; reuse the saved estimated_input.png as --input-image instead.")
     if (args.initial_shader_source is None) != (args.initial_rendered_video is None):
         raise ValueError("--initial-shader-source and --initial-rendered-video must be provided together.")
     if args.resume_result is not None and args.initial_shader_source is not None:
@@ -1495,23 +1489,10 @@ def main() -> None:
     target_video = resolve_repo_path(repo_root, str(args.video_path))
     if not target_video.exists():
         raise FileNotFoundError(f"Target video does not exist: {target_video}")
-    video_only_proxy: dict[str, Any] | None = None
-    if args.video_only:
-        print("[0] estimate proxy input from target video", flush=True)
-        video_only_proxy = estimate_proxy_input_from_video(
-            target_video,
-            output_dir=work_dir / "video_only_input",
-        )
-        input_image = Path(str(video_only_proxy["proxy_image_path"])).resolve()
-        print(
-            f"[0] proxy frame={video_only_proxy['selected_frame_index']} confidence={video_only_proxy['proxy_confidence']}",
-            flush=True,
-        )
-    else:
-        input_image = resolve_repo_path(repo_root, str(args.input_image))
-        if not input_image.exists():
-            raise FileNotFoundError(f"Input image does not exist: {input_image}")
-    input_variant = "estimated_proxy_image_and_video" if video_only_proxy is not None else "provided_image_and_video"
+    input_image = resolve_repo_path(repo_root, str(args.input_image))
+    if not input_image.exists():
+        raise FileNotFoundError(f"Input image does not exist: {input_image}")
+    input_variant = "provided_image_and_video"
     iterations: list[dict[str, Any]] = []
     failures: list[dict[str, Any]] = []
     current_shader: str | None = None
@@ -1634,7 +1615,6 @@ def main() -> None:
                 "input_video": str(target_video),
                 "input_image": str(input_image),
                 "input_mode": input_variant,
-                "video_only_proxy": video_only_proxy,
                 "target_ir_generation": target_ir_generation,
                 "selected_reference": selected_reference,
                 "excluded_effect_names": sorted(excluded_names),
@@ -1947,7 +1927,6 @@ def main() -> None:
         "video_path": str(args.video_path),
         "input_image_path": str(input_image),
         "input_mode": input_variant,
-        "video_only_proxy": video_only_proxy,
         "shader_builder_backend": "code_model",
         "code_model": args.code_model or args.request_model,
         "selected_reference": selected_reference,

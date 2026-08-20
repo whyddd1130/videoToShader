@@ -1,0 +1,108 @@
+{
+  "sample_id": "Wave__gray_ramp",
+  "effect": "Wave",
+  "filter_name": "Wave",
+  "animated_param": "AdjustIntensity",
+  "duration_ms": 5000,
+  "fps": 25,
+  "parameters": [
+    {
+      "index": 1,
+      "key": "AdjustSpeed",
+      "display_name": "AdjustSpeed",
+      "type": "float",
+      "source_default": 90.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": false,
+      "value": [
+        90.0
+      ]
+    },
+    {
+      "index": 2,
+      "key": "AdjustSize",
+      "display_name": "AdjustSize",
+      "type": "float",
+      "source_default": 35.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": false,
+      "value": [
+        35.0
+      ]
+    },
+    {
+      "index": 3,
+      "key": "AdjustIntensity",
+      "display_name": "AdjustIntensity",
+      "type": "float",
+      "source_default": 80.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            100.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "AdjustBlur",
+      "display_name": "AdjustBlur",
+      "type": "float",
+      "source_default": 60.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": false,
+      "value": [
+        60.0
+      ]
+    },
+    {
+      "index": 5,
+      "key": "AdjustHorizontalShift",
+      "display_name": "AdjustHorizontalShift",
+      "type": "float",
+      "source_default": 80.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": false,
+      "value": [
+        80.0
+      ]
+    },
+    {
+      "index": 6,
+      "key": "AdjustVerticalShift",
+      "display_name": "AdjustVerticalShift",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": false,
+      "value": [
+        50.0
+      ]
+    }
+  ]
+}

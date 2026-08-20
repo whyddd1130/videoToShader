@@ -1,0 +1,108 @@
+{
+  "sample_id": "ClearPictureQuality__gray_ramp",
+  "effect": "ClearPictureQuality",
+  "filter_name": "ClearPictureQuality",
+  "animated_param": "AdjustSharpen",
+  "duration_ms": 5000,
+  "fps": 25,
+  "parameters": [
+    {
+      "index": 1,
+      "key": "AdjustLuminance",
+      "display_name": "AdjustLuminance",
+      "type": "float",
+      "source_default": 25.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": false,
+      "value": [
+        25.0
+      ]
+    },
+    {
+      "index": 2,
+      "key": "AdjustSharpen",
+      "display_name": "AdjustSharpen",
+      "type": "float",
+      "source_default": 40.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            100.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "AdjustBlur",
+      "display_name": "AdjustBlur",
+      "type": "float",
+      "source_default": 20.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": false,
+      "value": [
+        20.0
+      ]
+    },
+    {
+      "index": 4,
+      "key": "AdjustRange",
+      "display_name": "AdjustRange",
+      "type": "float",
+      "source_default": 70.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": false,
+      "value": [
+        70.0
+      ]
+    },
+    {
+      "index": 5,
+      "key": "AdjustSize",
+      "display_name": "AdjustSize",
+      "type": "float",
+      "source_default": 50.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": false,
+      "value": [
+        50.0
+      ]
+    },
+    {
+      "index": 6,
+      "key": "AdjustSoft",
+      "display_name": "AdjustSoft",
+      "type": "float",
+      "source_default": 33.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": false,
+      "value": [
+        33.0
+      ]
+    }
+  ]
+}

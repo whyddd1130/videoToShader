@@ -83,8 +83,16 @@ def call_llm_effect_structured_ir(prompt: str, *, model: str, temperature: float
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--manifest", type=Path, default=Path("manifest_train.jsonl"))
-    parser.add_argument("--code-root", type=Path, default=Path("code"))
+    parser.add_argument(
+        "--manifest",
+        type=Path,
+        default=Path("datasets/effect_training/single_shader_multi/manifest_train.jsonl"),
+    )
+    parser.add_argument(
+        "--code-root",
+        type=Path,
+        default=Path("datasets/effect_training/single_shader_multi/code"),
+    )
     parser.add_argument("--output", type=Path, default=Path("effect_ir_pipeline/library_structured_ir_llm.jsonl"))
     parser.add_argument("--request-model", default=os.environ.get("EFFECT_IR_LLM_MODEL", "ep-fipdyi-1784171757952297366"))
     parser.add_argument("--model-name", default=os.environ.get("EFFECT_IR_LLM_MODEL_NAME", "qwen3.7-plus"))

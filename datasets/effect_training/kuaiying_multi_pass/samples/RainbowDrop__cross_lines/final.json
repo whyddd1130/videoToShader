@@ -1,0 +1,103 @@
+{
+  "status": 200,
+  "message": "成功",
+  "data": {
+    "code": "SUCCESS",
+    "requestId": "9ebc2186-e6b4-4ade-85d9-6384b2d457c0",
+    "msg": "success",
+    "output": {
+      "output": [
+        {
+          "name": "aeoutput.mp4",
+          "dataBlobstore": {
+            "db": "upload",
+            "table": "ylab-stunt",
+            "key": "special-effect/output/9ebc2186-e6b4-4ade-85d9-6384b2d457c0/-3246270054315250353/aeoutput.mp4",
+            "customRequestHeader": {},
+            "bucketName": "upload-ylab-stunt"
+          },
+          "cache": false,
+          "fileName": "",
+          "fileType": ""
+        }
+      ],
+      "message": "",
+      "createTime": 0,
+      "updateTime": 0,
+      "etaTime": 1785726882907,
+      "machineName": "ylab-special-effects-executor_CLOUD-20260408_173845_c-cloud-1307236-3535243-3535243-2-deploy-86d567446d-46qw5",
+      "machineType": "",
+      "degradationLevel": 0,
+      "progress": 100,
+      "argumentPayload": {
+        "nodeType": "NULL",
+        "intData": 0,
+        "intListData": [],
+        "floatData": 0.0,
+        "floatListData": [],
+        "stringData": "",
+        "stringListData": [],
+        "bytesData": "",
+        "bytesListData": [],
+        "vectordListData": [],
+        "rectListData": [],
+        "nodeListData": [],
+        "mapChildren": {
+          "result": {
+            "nodeType": "STRING",
+            "intData": 0,
+            "intListData": [],
+            "floatData": 0.0,
+            "floatListData": [],
+            "stringData": "success",
+            "stringListData": [],
+            "bytesData": "",
+            "bytesListData": [],
+            "vectordListData": [],
+            "rectListData": [],
+            "nodeListData": [],
+            "mapChildren": {}
+          },
+          "ERROR_CODE": {
+            "nodeType": "INT",
+            "intData": 0,
+            "intListData": [],
+            "floatData": 0.0,
+            "floatListData": [],
+            "stringData": "",
+            "stringListData": [],
+            "bytesData": "",
+            "bytesListData": [],
+            "vectordListData": [],
+            "rectListData": [],
+            "nodeListData": [],
+            "mapChildren": {}
+          },
+          "MESSAGE": {
+            "nodeType": "STRING",
+            "intData": 0,
+            "intListData": [],
+            "floatData": 0.0,
+            "floatListData": [],
+            "stringData": "success",
+            "stringListData": [],
+            "bytesData": "",
+            "bytesListData": [],
+            "vectordListData": [],
+            "rectListData": [],
+            "nodeListData": [],
+            "mapChildren": {}
+          }
+        }
+      },
+      "queuePosition": 0
+    },
+    "callbackPayload": {},
+    "statusCode": 0,
+    "algorithmTag": "",
+    "completeTimestamp": 1785726882972
+  },
+  "host": "public-bjx-c34-kce-node2024.idchb1az1.hb1.kwaidc.com",
+  "port": 21506,
+  "timestamp": "2026-08-03 11:14:42"
+}

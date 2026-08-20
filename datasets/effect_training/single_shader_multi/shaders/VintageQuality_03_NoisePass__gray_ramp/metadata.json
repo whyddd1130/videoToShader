@@ -1,0 +1,104 @@
+{
+  "source_spec": "/home/wangxin/research/DigitalTwin/output/VintageQuality/replication_spec.json",
+  "effect": "VintageQuality",
+  "pass_index": 3,
+  "pass_id": "NoisePass",
+  "module": "NoisePass",
+  "shader_file": "effects/LumiGrain/xshader/shaderLib/shaderGLES/0d3fc0dcc16db2811be4a42932edc626.frag",
+  "inputs": [],
+  "samplers": [
+    "u_InputTexture"
+  ],
+  "uniforms": [
+    [
+      "vec3",
+      "factor1"
+    ],
+    [
+      "vec4",
+      "u_ScreenParams"
+    ],
+    [
+      "float",
+      "u_scale"
+    ],
+    [
+      "float",
+      "u_scaleR"
+    ],
+    [
+      "float",
+      "u_seed"
+    ],
+    [
+      "int",
+      "u_monochrome"
+    ],
+    [
+      "float",
+      "u_scaleG"
+    ],
+    [
+      "float",
+      "u_scaleB"
+    ],
+    [
+      "float",
+      "u_Brightness"
+    ],
+    [
+      "float",
+      "u_Contrast"
+    ],
+    [
+      "int",
+      "u_combine"
+    ],
+    [
+      "float",
+      "u_Saturation"
+    ],
+    [
+      "float",
+      "u_intensity"
+    ],
+    [
+      "float",
+      "u_intensityR"
+    ],
+    [
+      "float",
+      "u_intensityG"
+    ],
+    [
+      "float",
+      "u_intensityB"
+    ]
+  ],
+  "adaptation": {
+    "primary_sampler": "u_InputTexture",
+    "uniform_patches": {
+      "u_ScreenParams": "#define u_ScreenParams vec4(1080.0, 1080.0, 1.0/1080.0, 1.0/1080.0)",
+      "u_intensity": "(0.05 + 2.8 * uProgress)",
+      "u_seed": "(1.0 + 120.0 * uProgress)",
+      "u_scale": "(0.18 + 1.4 * uProgress)",
+      "u_scaleR": "(0.65 + 0.8 * uProgress)",
+      "u_scaleG": "(0.80 + 0.9 * uProgress)",
+      "u_scaleB": "(0.95 + 1.0 * uProgress)",
+      "u_Brightness": "(-0.10 + 0.30 * uProgress)",
+      "u_Contrast": "(0.65 + 1.60 * uProgress)",
+      "u_Saturation": "(0.45 + 1.20 * uProgress)",
+      "u_intensityR": "(0.10 + 1.20 * uProgress)",
+      "u_intensityG": "(0.10 + 1.00 * uProgress)",
+      "u_intensityB": "(0.10 + 0.90 * uProgress)",
+      "factor1": "vec3(0.299, 0.587, 0.114)",
+      "u_monochrome": "0",
+      "u_combine": "1"
+    }
+  },
+  "notes": [
+    "Primary sampler is normalized to inputImageTexture.",
+    "Vertex input is normalized to Shader Lab's attribute vec2 position.",
+    "Selected uniforms are replaced with constants or uProgress/uTime expressions for 5s preview/training clips."
+  ]
+}

@@ -1,0 +1,4 @@
+moderngl>=5.10,<6
+numpy>=1.26,<3
+opencv-python>=4.9,<5
+Pillow>=10,<12

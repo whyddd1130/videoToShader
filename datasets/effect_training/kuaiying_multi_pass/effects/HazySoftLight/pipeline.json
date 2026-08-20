@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "source_platform": "kuaiying_plugin_library",
+  "effect": "HazySoftLight",
+  "source_plugin_dir": "proj/Faceless_AEPlugin/resource/script/HazySoftLight",
+  "lua_files": [
+    "proj/Faceless_AEPlugin/resource/script/HazySoftLight/HazySoftLight.lua"
+  ],
+  "shader_program_count": 7,
+  "extracted_shaders": [
+    {
+      "name": "vs",
+      "kind": "vertex",
+      "path": "datasets/effect_training/kuaiying_multi_pass/effects/HazySoftLight/shaders/vs.vertex.glsl",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/HazySoftLight/HazySoftLight.lua"
+    },
+    {
+      "name": "fs",
+      "kind": "fragment",
+      "path": "datasets/effect_training/kuaiying_multi_pass/effects/HazySoftLight/shaders/fs.fragment.glsl",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/HazySoftLight/HazySoftLight.lua"
+    },
+    {
+      "name": "gaussX_fs",
+      "kind": "fragment",
+      "path": "datasets/effect_training/kuaiying_multi_pass/effects/HazySoftLight/shaders/gaussX_fs.fragment.glsl",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/HazySoftLight/HazySoftLight.lua"
+    },
+    {
+      "name": "gaussY_fs",
+      "kind": "fragment",
+      "path": "datasets/effect_training/kuaiying_multi_pass/effects/HazySoftLight/shaders/gaussY_fs.fragment.glsl",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/HazySoftLight/HazySoftLight.lua"
+    },
+    {
+      "name": "threshold_fs",
+      "kind": "fragment",
+      "path": "datasets/effect_training/kuaiying_multi_pass/effects/HazySoftLight/shaders/threshold_fs.fragment.glsl",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/HazySoftLight/HazySoftLight.lua"
+    },
+    {
+      "name": "blurX_fs",
+      "kind": "fragment",
+      "path": "datasets/effect_training/kuaiying_multi_pass/effects/HazySoftLight/shaders/blurX_fs.fragment.glsl",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/HazySoftLight/HazySoftLight.lua"
+    },
+    {
+      "name": "blurY_fs",
+      "kind": "fragment",
+      "path": "datasets/effect_training/kuaiying_multi_pass/effects/HazySoftLight/shaders/blurY_fs.fragment.glsl",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/HazySoftLight/HazySoftLight.lua"
+    },
+    {
+      "name": "blend_fs",
+      "kind": "fragment",
+      "path": "datasets/effect_training/kuaiying_multi_pass/effects/HazySoftLight/shaders/blend_fs.fragment.glsl",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/HazySoftLight/HazySoftLight.lua"
+    }
+  ],
+  "fbo_allocation_count": 5,
+  "fbo_allocations": [
+    {
+      "fbo": "fbo1",
+      "size_expression": "self.currentWidth / 2.0, self.currentHeight / 2.0",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/HazySoftLight/HazySoftLight.lua",
+      "line": 884
+    },
+    {
+      "fbo": "fbo2",
+      "size_expression": "self.currentWidth / 2.0, self.currentHeight / 2.0",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/HazySoftLight/HazySoftLight.lua",
+      "line": 905
+    },
+    {
+      "fbo": "fbo3",
+      "size_expression": "self.currentWidth, self.currentHeight",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/HazySoftLight/HazySoftLight.lua",
+      "line": 924
+    },
+    {
+      "fbo": "fbo6",
+      "size_expression": "self.currentWidth, self.currentHeight",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/HazySoftLight/HazySoftLight.lua",
+      "line": 966
+    },
+    {
+      "fbo": "fbo10",
+      "size_expression": "self.currentWidth, self.currentHeight",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/HazySoftLight/HazySoftLight.lua",
+      "line": 1019
+    }
+  ],
+  "fbo_recycle_call_count": 5,
+  "uses_time": false,
+  "parameter_types": [
+    "float"
+  ],
+  "external_layer_input": false,
+  "excluded_capabilities": [
+    "transition",
+    "face",
+    "matting",
+    "ai",
+    "depth",
+    "spectrum",
+    "temporal_history"
+  ],
+  "intermediate_output_status": "graph_described_not_rendered",
+  "final_output_status": "rendered_per_sample"
+}

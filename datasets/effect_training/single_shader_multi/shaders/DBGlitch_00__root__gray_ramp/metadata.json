@@ -1,0 +1,48 @@
+{
+  "source_spec": "/home/wangxin/research/DigitalTwin/output/DBGlitch/replication_spec.json",
+  "effect": "DBGlitch",
+  "pass_index": 0,
+  "pass_id": "L0__root_entity",
+  "module": "_root",
+  "shader_file": "fshader.frag",
+  "inputs": [
+    "image/noiseTexture.png",
+    "input"
+  ],
+  "samplers": [
+    "inputImageTexture",
+    "noiseTexture"
+  ],
+  "uniforms": [
+    [
+      "float",
+      "time"
+    ],
+    [
+      "float",
+      "filterIntensity"
+    ],
+    [
+      "float",
+      "rangeIntensity"
+    ],
+    [
+      "int",
+      "level"
+    ]
+  ],
+  "adaptation": {
+    "primary_sampler": "inputImageTexture",
+    "uniform_patches": {
+      "time": "uTime",
+      "filterIntensity": "(0.2 + 1.0 * uProgress)",
+      "rangeIntensity": "(0.10 + 2.40 * uProgress)",
+      "level": "2"
+    }
+  },
+  "notes": [
+    "Primary sampler is normalized to inputImageTexture.",
+    "Vertex input is normalized to Shader Lab's attribute vec2 position.",
+    "Selected uniforms are replaced with constants or uProgress/uTime expressions for 5s preview/training clips."
+  ]
+}

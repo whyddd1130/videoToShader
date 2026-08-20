@@ -1,0 +1,49 @@
+{
+  "source_spec": "/home/wangxin/research/DigitalTwin/output/VintageQuality/replication_spec.json",
+  "effect": "VintageQuality",
+  "pass_index": 15,
+  "pass_id": "edge_renderer",
+  "module": "edge_renderer",
+  "shader_file": "effects/LumiFindEdge/xshader/shaderLib/shaderGLES/fbb1c72ee56a5b00c4837b9823fa3cd9.frag",
+  "inputs": [],
+  "samplers": [
+    "inputImageTexture"
+  ],
+  "uniforms": [
+    [
+      "vec4",
+      "u_ScreenParams"
+    ],
+    [
+      "float",
+      "grayColor"
+    ],
+    [
+      "float",
+      "lowerLimit"
+    ],
+    [
+      "float",
+      "upperLimit"
+    ],
+    [
+      "float",
+      "brightness"
+    ]
+  ],
+  "adaptation": {
+    "primary_sampler": "inputImageTexture",
+    "uniform_patches": {
+      "u_ScreenParams": "#define u_ScreenParams vec4(1080.0, 1080.0, 1.0/1080.0, 1.0/1080.0)",
+      "lowerLimit": "(0.10 + 0.35 * uProgress)",
+      "upperLimit": "(0.35 + 0.55 * uProgress)",
+      "brightness": "(0.40 + 2.40 * uProgress)",
+      "grayColor": "1.0"
+    }
+  },
+  "notes": [
+    "Primary sampler is normalized to inputImageTexture.",
+    "Vertex input is normalized to Shader Lab's attribute vec2 position.",
+    "Selected uniforms are replaced with constants or uProgress/uTime expressions for 5s preview/training clips."
+  ]
+}

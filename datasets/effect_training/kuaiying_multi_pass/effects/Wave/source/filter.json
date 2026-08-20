@@ -1,0 +1,58 @@
+{
+    "filters": {
+        "Wave": {
+            "version": "v1.0.0",
+            "owner": "liuming10@kuaishou.com",
+            "enableKgpu": false,
+            "score": 0,
+            "displayName": "Wave",
+            "matchName": "KFM KSkr Wave",
+            "fileName": "Wave/Wave",
+            "className": "Wave",
+            "params": {
+                "AdjustSpeed": {
+                    "value": 90.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "AdjustSpeed"
+                },
+                "AdjustSize": {
+                    "value": 35.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "AdjustSize"
+                },
+                "AdjustIntensity": {
+                    "value": 80.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "AdjustIntensity"
+                },
+                "AdjustBlur": {
+                    "value": 60.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "AdjustBlur"
+                },
+                "AdjustHorizontalShift": {
+                    "value": 80.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "AdjustHorizontalShift"
+                },
+                "AdjustVerticalShift": {
+                    "value": 50.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "AdjustVerticalShift"
+                }
+            }
+        }
+    }
+}

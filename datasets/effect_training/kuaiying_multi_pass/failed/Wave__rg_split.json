@@ -1,0 +1,7 @@
+{
+  "sample_id": "Wave__rg_split",
+  "effect": "Wave",
+  "input_variant": "rg_split",
+  "reason": "quality gate: low_effect_signal,low_temporal_change",
+  "failed_at": "2026-08-03T03:14:12Z"
+}

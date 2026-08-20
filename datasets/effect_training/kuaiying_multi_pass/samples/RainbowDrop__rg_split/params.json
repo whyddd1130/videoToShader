@@ -1,0 +1,82 @@
+{
+  "sample_id": "RainbowDrop__rg_split",
+  "effect": "RainbowDrop",
+  "filter_name": "RainbowDrop",
+  "animated_param": "Color",
+  "duration_ms": 5000,
+  "fps": 25,
+  "parameters": [
+    {
+      "index": 1,
+      "key": "Color",
+      "display_name": "Color",
+      "type": "float",
+      "source_default": 80.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            100.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "Luminance",
+      "display_name": "Luminance",
+      "type": "float",
+      "source_default": 60.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": false,
+      "value": [
+        60.0
+      ]
+    },
+    {
+      "index": 3,
+      "key": "Speed",
+      "display_name": "Speed",
+      "type": "float",
+      "source_default": 30.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": false,
+      "value": [
+        30.0
+      ]
+    },
+    {
+      "index": 4,
+      "key": "BlurSize",
+      "display_name": "BlurSize",
+      "type": "float",
+      "source_default": 15.0,
+      "source_min": 0.0,
+      "source_max": 50.0,
+      "animated": false,
+      "value": [
+        15.0
+      ]
+    }
+  ]
+}

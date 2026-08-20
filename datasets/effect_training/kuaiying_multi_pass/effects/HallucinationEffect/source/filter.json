@@ -1,0 +1,23 @@
+{
+    "filters": {
+        "HallucinationEffect": {
+            "version": "v1.0.0",
+            "owner": "liuming10@kuaishou.com",
+            "enableKgpu": false,
+            "score": 0,
+            "displayName": "HallucinationEffect",
+            "matchName": "KFM KSkr HallucinationEffect",
+            "fileName": "HallucinationEffect/HallucinationEffect",
+            "className": "HallucinationEffect",
+            "params": {
+                "Progress": {
+                    "value": 0.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "Progress"
+                }
+            }
+        }
+    }
+}

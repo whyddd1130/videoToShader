@@ -1,0 +1,51 @@
+{
+    "filters": {
+        "DeepGlow": {
+            "version": "v1.0.0",
+            "owner": "liuzhenyang@kuaishou.com",
+            "enableKgpu": false,
+            "score": 0,
+            "displayName": "DeepGlow",
+            "matchName": "KFM KSkr DeepGlow",
+            "fileName": "DeepGlow/DeepGlow",
+            "className": "DeepGlow",
+            "params": {
+                "Radius": {
+                    "value": 0.0,
+                    "min": 0.0,
+                    "max": 120.0,
+                    "type": "float",
+                    "displayName": "Radius"
+                },
+                "Exposure": {
+                    "value": 1.0,
+                    "min": 0.0,
+                    "max": 5.0,
+                    "type": "float",
+                    "displayName": "Exposure"
+                },
+                "Threshold": {
+                    "value": 0.0,
+                    "min": 0.0,
+                    "max": 2.0,
+                    "type": "float",
+                    "displayName": "Threshold"
+                },
+                "Threshold Smooth": {
+                    "value": 0.0,
+                    "min": 0.0,
+                    "max": 1.0,
+                    "type": "float",
+                    "displayName": "Threshold Smooth"
+                },
+                "Blend Mode": {
+                    "displayName": "Blend Mode",
+                    "type": "comboBox",
+                    "value": "Screen|Add",
+                    "min": "1",
+                    "max": "2"
+                }
+            }
+        }
+    }
+}

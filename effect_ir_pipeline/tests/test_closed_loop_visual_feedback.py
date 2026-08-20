@@ -251,10 +251,10 @@ void main() {
     def test_infer_library_target_effect_name_for_ablation(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
-            lib_video = root / "test_videos" / "lib" / "Bowknot__model.mp4"
+            lib_video = root / "datasets" / "test_videos" / "lib" / "Bowknot__model.mp4"
             lib_video.parent.mkdir(parents=True)
             lib_video.touch()
-            random_video = root / "test_videos" / "random" / "test4.mp4"
+            random_video = root / "datasets" / "test_videos" / "random" / "test4.mp4"
             random_video.parent.mkdir(parents=True)
             random_video.touch()
 

@@ -1,0 +1,23 @@
+{}
+{"at":"2026-08-03T03:52:45.030Z","event":"hook_entered"}
+{"at":"2026-08-03T03:52:45.037Z","event":"batch_started","total":8}
+{"at":"2026-08-03T03:52:45.038Z","event":"render_started","id":"bulge_blur_grade"}
+{"at":"2026-08-03T03:52:50.112Z","event":"render_saved","id":"bulge_blur_grade","bytes":2950073,"mime":"video/mp4; codecs=avc1.42000a"}
+{"at":"2026-08-03T03:52:50.114Z","event":"render_started","id":"flip_rgb_trail"}
+{"at":"2026-08-03T03:52:55.264Z","event":"render_saved","id":"flip_rgb_trail","bytes":3578795,"mime":"video/mp4; codecs=avc1.42000a"}
+{"at":"2026-08-03T03:52:55.266Z","event":"render_started","id":"radial_zoom_edge_glow"}
+{"at":"2026-08-03T03:53:00.420Z","event":"render_saved","id":"radial_zoom_edge_glow","bytes":2994314,"mime":"video/mp4; codecs=avc1.42000a"}
+{"at":"2026-08-03T03:53:00.422Z","event":"render_started","id":"mosaic_displace_tint"}
+{"at":"2026-08-03T03:53:05.583Z","event":"render_saved","id":"mosaic_displace_tint","bytes":5866169,"mime":"video/mp4; codecs=avc1.42000a"}
+{"at":"2026-08-03T03:53:05.584Z","event":"render_started","id":"wave_bloom_vignette"}
+{"at":"2026-08-03T03:53:10.719Z","event":"render_saved","id":"wave_bloom_vignette","bytes":3011020,"mime":"video/mp4; codecs=avc1.42000a"}
+{"at":"2026-08-03T03:53:10.721Z","event":"render_started","id":"scanline_glitch_split"}
+{"at":"2026-08-03T03:53:15.858Z","event":"render_saved","id":"scanline_glitch_split","bytes":4921317,"mime":"video/mp4; codecs=avc1.42000a"}
+{"at":"2026-08-03T03:53:15.860Z","event":"render_started","id":"swirl_blur_duotone"}
+{"at":"2026-08-03T03:53:21.034Z","event":"render_saved","id":"swirl_blur_duotone","bytes":2889044,"mime":"video/mp4; codecs=avc1.42000a"}
+{"at":"2026-08-03T03:53:21.036Z","event":"render_started","id":"kaleido_noise_grade"}
+{"at":"2026-08-03T03:53:26.180Z","event":"render_saved","id":"kaleido_noise_grade","bytes":2088789,"mime":"video/mp4; codecs=avc1.42000a"}
+{"at":"2026-08-03T03:53:26.182Z","event":"batch_complete","total":8}
+{"at":"2026-08-03T06:22:09.518Z","event":"hook_entered"}
+{"at":"2026-08-03T06:22:09.565Z","event":"batch_started","total":8}
+{"at":"2026-08-03T06:22:09.567Z","event":"render_started","id":"bulge_blur_grade"}

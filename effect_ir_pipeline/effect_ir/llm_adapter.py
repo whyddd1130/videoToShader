@@ -63,20 +63,12 @@ def generate_library_structured_ir_prompt(effect_name: str, filter_json: str, lu
 
 def generate_video_structured_ir_prompt(sample: dict[str, object]) -> str:
     schema_json = json.dumps(STRUCTURED_IR_SCHEMA, ensure_ascii=False, indent=2)
-    video_only_proxy = sample.get("input_variant") == "estimated_proxy_image_and_video"
-    input_instruction = (
-        "The input image is an estimated proxy recovered from the video, not ground truth. "
-        "Treat frame-to-proxy differences as weak evidence; prioritize temporal changes shared across video frames. "
-        "Infer transferable effect behavior, not the scene content or an exact source-image reconstruction."
-        if video_only_proxy
-        else "The input image is the provided source image paired with the rendered video."
-    )
     return (
         f"{VIDEO_TO_STRUCTURED_IR_PROMPT}\n"
         f"sample_id: {sample.get('sample_id', '')}\n"
         f"input_image_path: {sample.get('input_image_path', '')}\n"
         f"video_path: {sample.get('video_path', '')}\n"
-        f"{input_instruction}\n"
+        "The input image is the provided source image paired with the rendered video.\n"
         "Return a JSON object with exactly these keys:\n"
         "{\n"
         '  "region_scope": string,\n'

@@ -1,0 +1,46 @@
+{
+  "source_spec": "/home/wangxin/research/DigitalTwin/output/DBFineSharpenII/replication_spec.json",
+  "effect": "DBFineSharpenII",
+  "pass_index": 0,
+  "pass_id": "L0__root_noface",
+  "module": "_root",
+  "shader_file": "quad.frag",
+  "inputs": [
+    "input"
+  ],
+  "samplers": [
+    "inputTexture"
+  ],
+  "uniforms": [
+    [
+      "vec4",
+      "u_ScreenParams"
+    ],
+    [
+      "float",
+      "width"
+    ],
+    [
+      "float",
+      "height"
+    ],
+    [
+      "float",
+      "blurRatio"
+    ]
+  ],
+  "adaptation": {
+    "primary_sampler": "inputTexture",
+    "uniform_patches": {
+      "u_ScreenParams": "#define u_ScreenParams vec4(1080.0, 1080.0, 1.0/1080.0, 1.0/1080.0)",
+      "blurRatio": "(0.05 + 2.0 * uProgress)",
+      "width": "1080.0",
+      "height": "1080.0"
+    }
+  },
+  "notes": [
+    "Primary sampler is normalized to inputImageTexture.",
+    "Vertex input is normalized to Shader Lab's attribute vec2 position.",
+    "Selected uniforms are replaced with constants or uProgress/uTime expressions for 5s preview/training clips."
+  ]
+}

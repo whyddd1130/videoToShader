@@ -1,0 +1,35 @@
+{
+  "id": "bulge_blur_grade",
+  "input_image": "../../inputs/model.png",
+  "target_description": "中心连续放大后出现方向拖影并提高对比",
+  "temporal": "uProgress from 0 to 1",
+  "pass_count": 3,
+  "primitives": [
+    "bulge",
+    "directional_blur",
+    "contrast"
+  ],
+  "passes": [
+    {
+      "id": "pass_1",
+      "input": "source",
+      "output": "texture_1",
+      "vertex_shader": "vertex.glsl",
+      "fragment_shader": "pass_01.frag.glsl"
+    },
+    {
+      "id": "pass_2",
+      "input": "texture_1",
+      "output": "texture_2",
+      "vertex_shader": "vertex.glsl",
+      "fragment_shader": "pass_02.frag.glsl"
+    },
+    {
+      "id": "pass_3",
+      "input": "texture_2",
+      "output": "final",
+      "vertex_shader": "vertex.glsl",
+      "fragment_shader": "pass_03.frag.glsl"
+    }
+  ]
+}

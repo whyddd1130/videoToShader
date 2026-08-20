@@ -1,0 +1,30 @@
+{
+    "filters": {
+        "HazySoftLight": {
+            "version": "v1.0.0",
+            "owner": "liuming10@kuaishou.com",
+            "enableKgpu": false,
+            "score": 0,
+            "displayName": "HazySoftLight",
+            "matchName": "KFM KSkr HazySoftLight",
+            "fileName": "HazySoftLight/HazySoftLight",
+            "className": "HazySoftLight",
+            "params": {
+                "LightIntensity": {
+                    "value": 35.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "LightIntensity"
+                },
+                "LightBlurIntensity": {
+                    "value": 40.0,
+                    "min": 0.0,
+                    "max": 100.0,
+                    "type": "float",
+                    "displayName": "LightBlurIntensity"
+                }
+            }
+        }
+    }
+}

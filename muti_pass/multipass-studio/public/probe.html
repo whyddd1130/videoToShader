@@ -1,0 +1,6 @@
+<!doctype html><meta charset="utf-8"><title>MultiPass probe</title>
+<script>
+fetch('http://127.0.0.1:8789/events', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({event: 'static_probe', at: new Date().toISOString()})})
+  .then(() => { document.title = 'MultiPass probe OK'; document.body.textContent = 'OK'; })
+  .catch(error => { document.title = 'MultiPass probe failed'; document.body.textContent = String(error); });
+</script>

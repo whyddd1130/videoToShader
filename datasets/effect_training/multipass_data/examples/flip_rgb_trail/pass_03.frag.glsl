@@ -1,0 +1,1 @@
+precision highp float; varying vec2 textureCoord; uniform sampler2D inputImageTexture; uniform float uProgress; uniform float uTime; void main(){vec4 c=texture2D(inputImageTexture,textureCoord);c.rgb=(c.rgb-.5)*mix(1.,1.45,uProgress)+.5;gl_FragColor=c;}

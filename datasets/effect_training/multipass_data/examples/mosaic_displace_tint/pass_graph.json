@@ -1,0 +1,35 @@
+{
+  "id": "mosaic_displace_tint",
+  "input_image": "../../inputs/model.png",
+  "target_description": "逐渐粗化的方块采样被纵向位移并染暖色",
+  "temporal": "uProgress from 0 to 1",
+  "pass_count": 3,
+  "primitives": [
+    "pixelate",
+    "displacement",
+    "warm_grade"
+  ],
+  "passes": [
+    {
+      "id": "pass_1",
+      "input": "source",
+      "output": "texture_1",
+      "vertex_shader": "vertex.glsl",
+      "fragment_shader": "pass_01.frag.glsl"
+    },
+    {
+      "id": "pass_2",
+      "input": "texture_1",
+      "output": "texture_2",
+      "vertex_shader": "vertex.glsl",
+      "fragment_shader": "pass_02.frag.glsl"
+    },
+    {
+      "id": "pass_3",
+      "input": "texture_2",
+      "output": "final",
+      "vertex_shader": "vertex.glsl",
+      "fragment_shader": "pass_03.frag.glsl"
+    }
+  ]
+}

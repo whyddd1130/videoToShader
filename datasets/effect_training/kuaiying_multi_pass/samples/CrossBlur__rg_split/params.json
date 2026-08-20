@@ -1,0 +1,121 @@
+{
+  "sample_id": "CrossBlur__rg_split",
+  "effect": "CrossBlur",
+  "filter_name": "CrossBlur",
+  "animated_param": "Progress",
+  "duration_ms": 5000,
+  "fps": 25,
+  "parameters": [
+    {
+      "index": 1,
+      "key": "Speed",
+      "display_name": "Speed",
+      "type": "float",
+      "source_default": 33.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": false,
+      "value": [
+        33.0
+      ]
+    },
+    {
+      "index": 2,
+      "key": "HorizontalShift",
+      "display_name": "HorizontalShift",
+      "type": "float",
+      "source_default": 100.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": false,
+      "value": [
+        100.0
+      ]
+    },
+    {
+      "index": 3,
+      "key": "VerticalShift",
+      "display_name": "VerticalShift",
+      "type": "float",
+      "source_default": 100.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": false,
+      "value": [
+        100.0
+      ]
+    },
+    {
+      "index": 4,
+      "key": "Luminance",
+      "display_name": "Luminance",
+      "type": "float",
+      "source_default": 100.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": false,
+      "value": [
+        100.0
+      ]
+    },
+    {
+      "index": 5,
+      "key": "ReverseBlur",
+      "display_name": "ReverseBlur",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": false,
+      "value": [
+        0.0
+      ]
+    },
+    {
+      "index": 6,
+      "key": "BlurSize",
+      "display_name": "BlurSize",
+      "type": "float",
+      "source_default": 40.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": false,
+      "value": [
+        40.0
+      ]
+    },
+    {
+      "index": 7,
+      "key": "Progress",
+      "display_name": "Progress",
+      "type": "float",
+      "source_default": 0.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            100.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    }
+  ]
+}

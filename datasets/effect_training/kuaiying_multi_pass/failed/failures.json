@@ -1,0 +1,158 @@
+[
+  {
+    "sample_id": "Cartoon__rg_split",
+    "effect": "Cartoon",
+    "input_variant": "rg_split",
+    "reason": "quality gate: low_effect_signal,low_temporal_change",
+    "failed_at": "2026-08-03T03:11:53Z"
+  },
+  {
+    "sample_id": "ClearPictureQuality__rg_split",
+    "effect": "ClearPictureQuality",
+    "input_variant": "rg_split",
+    "reason": "quality gate: low_temporal_change",
+    "failed_at": "2026-08-03T03:12:29Z"
+  },
+  {
+    "sample_id": "ClearPictureQuality__color_gradient",
+    "effect": "ClearPictureQuality",
+    "input_variant": "color_gradient",
+    "reason": "quality gate: low_temporal_change",
+    "failed_at": "2026-08-03T03:12:35Z"
+  },
+  {
+    "sample_id": "HazySoftLight__ring_mask",
+    "effect": "HazySoftLight",
+    "input_variant": "ring_mask",
+    "reason": "quality gate: low_effect_signal,low_temporal_change",
+    "failed_at": "2026-08-03T03:13:13Z"
+  },
+  {
+    "sample_id": "HazySoftLight__rg_split",
+    "effect": "HazySoftLight",
+    "input_variant": "rg_split",
+    "reason": "quality gate: low_effect_signal,low_temporal_change",
+    "failed_at": "2026-08-03T03:13:15Z"
+  },
+  {
+    "sample_id": "FishEye__ring_mask",
+    "effect": "FishEye",
+    "input_variant": "ring_mask",
+    "reason": "quality gate: low_effect_signal,low_temporal_change",
+    "failed_at": "2026-08-03T03:13:34Z"
+  },
+  {
+    "sample_id": "FishEye__rg_split",
+    "effect": "FishEye",
+    "input_variant": "rg_split",
+    "reason": "quality gate: low_effect_signal,low_temporal_change",
+    "failed_at": "2026-08-03T03:13:41Z"
+  },
+  {
+    "sample_id": "FishEye__cross_lines",
+    "effect": "FishEye",
+    "input_variant": "cross_lines",
+    "reason": "quality gate: low_temporal_change",
+    "failed_at": "2026-08-03T03:13:43Z"
+  },
+  {
+    "sample_id": "FishEye__gray_ramp",
+    "effect": "FishEye",
+    "input_variant": "gray_ramp",
+    "reason": "quality gate: low_temporal_change",
+    "failed_at": "2026-08-03T03:13:46Z"
+  },
+  {
+    "sample_id": "FishEye__color_gradient",
+    "effect": "FishEye",
+    "input_variant": "color_gradient",
+    "reason": "quality gate: low_effect_signal,low_temporal_change",
+    "failed_at": "2026-08-03T03:13:49Z"
+  },
+  {
+    "sample_id": "WaterDroplet__rg_split",
+    "effect": "WaterDroplet",
+    "input_variant": "rg_split",
+    "reason": "quality gate: low_effect_signal,low_temporal_change",
+    "failed_at": "2026-08-03T03:13:54Z"
+  },
+  {
+    "sample_id": "Wave__rg_split",
+    "effect": "Wave",
+    "input_variant": "rg_split",
+    "reason": "quality gate: low_effect_signal,low_temporal_change",
+    "failed_at": "2026-08-03T03:14:12Z"
+  },
+  {
+    "sample_id": "Cartoon__color_gradient",
+    "effect": "Cartoon",
+    "input_variant": "color_gradient",
+    "reason": "quarantined_not_in_training_manifest",
+    "max_effect_signal": 6.61,
+    "max_temporal_change": 1.594,
+    "failed_at": "2026-08-03T03:17:39Z"
+  },
+  {
+    "sample_id": "Cartoon__cross_lines",
+    "effect": "Cartoon",
+    "input_variant": "cross_lines",
+    "reason": "quarantined_not_in_training_manifest",
+    "max_effect_signal": 2.838,
+    "max_temporal_change": 2.838,
+    "failed_at": "2026-08-03T03:17:39Z"
+  },
+  {
+    "sample_id": "Cartoon__ring_mask",
+    "effect": "Cartoon",
+    "input_variant": "ring_mask",
+    "reason": "quarantined_not_in_training_manifest",
+    "max_effect_signal": 1.393,
+    "max_temporal_change": 1.102,
+    "failed_at": "2026-08-03T03:17:39Z"
+  },
+  {
+    "sample_id": "DeepGlow__rg_split",
+    "effect": "DeepGlow",
+    "input_variant": "rg_split",
+    "reason": "quarantined_not_in_training_manifest",
+    "max_effect_signal": 2.196,
+    "max_temporal_change": 1.869,
+    "failed_at": "2026-08-03T03:17:39Z"
+  },
+  {
+    "sample_id": "FishEye__model",
+    "effect": "FishEye",
+    "input_variant": "model",
+    "reason": "quarantined_not_in_training_manifest",
+    "max_effect_signal": 2.888,
+    "max_temporal_change": 1.387,
+    "failed_at": "2026-08-03T03:17:39Z"
+  },
+  {
+    "sample_id": "WaterDroplet__color_gradient",
+    "effect": "WaterDroplet",
+    "input_variant": "color_gradient",
+    "reason": "quarantined_not_in_training_manifest",
+    "max_effect_signal": 1.188,
+    "max_temporal_change": 1.013,
+    "failed_at": "2026-08-03T03:17:39Z"
+  },
+  {
+    "sample_id": "WaterDroplet__ring_mask",
+    "effect": "WaterDroplet",
+    "input_variant": "ring_mask",
+    "reason": "quarantined_not_in_training_manifest",
+    "max_effect_signal": 1.445,
+    "max_temporal_change": 1.719,
+    "failed_at": "2026-08-03T03:17:39Z"
+  },
+  {
+    "sample_id": "Wave__color_gradient",
+    "effect": "Wave",
+    "input_variant": "color_gradient",
+    "reason": "quarantined_not_in_training_manifest",
+    "max_effect_signal": 2.253,
+    "max_temporal_change": 1.974,
+    "failed_at": "2026-08-03T03:17:39Z"
+  }
+]

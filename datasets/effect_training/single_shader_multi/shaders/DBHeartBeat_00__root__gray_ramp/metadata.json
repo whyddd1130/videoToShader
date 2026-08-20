@@ -1,0 +1,41 @@
+{
+  "source_spec": "/home/wangxin/research/DigitalTwin/output/DBHeartBeat/replication_spec.json",
+  "effect": "DBHeartBeat",
+  "pass_index": 0,
+  "pass_id": "L0__root_entity",
+  "module": "_root",
+  "shader_file": "fshader.frag",
+  "inputs": [
+    "input"
+  ],
+  "samplers": [
+    "inputImageTexture"
+  ],
+  "uniforms": [
+    [
+      "float",
+      "timer"
+    ],
+    [
+      "float",
+      "fRadius"
+    ],
+    [
+      "float",
+      "blurSize"
+    ]
+  ],
+  "adaptation": {
+    "primary_sampler": "inputImageTexture",
+    "uniform_patches": {
+      "timer": "uTime",
+      "blurSize": "(1.0 + 34.0 * uProgress)",
+      "fRadius": "(1.0 + 24.0 * uProgress)"
+    }
+  },
+  "notes": [
+    "Primary sampler is normalized to inputImageTexture.",
+    "Vertex input is normalized to Shader Lab's attribute vec2 position.",
+    "Selected uniforms are replaced with constants or uProgress/uTime expressions for 5s preview/training clips."
+  ]
+}

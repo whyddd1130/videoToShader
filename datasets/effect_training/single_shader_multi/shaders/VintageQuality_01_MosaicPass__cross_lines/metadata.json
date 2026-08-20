@@ -1,0 +1,44 @@
+{
+  "source_spec": "/home/wangxin/research/DigitalTwin/output/VintageQuality/replication_spec.json",
+  "effect": "VintageQuality",
+  "pass_index": 1,
+  "pass_id": "MosaicPass",
+  "module": "MosaicPass",
+  "shader_file": "effects/LumiMosaic/xshader/shaderLib/shaderGLES/157596e316e93085a9a9a25070c82ec4.frag",
+  "inputs": [],
+  "samplers": [
+    "u_inputTexture"
+  ],
+  "uniforms": [
+    [
+      "int",
+      "u_horz"
+    ],
+    [
+      "int",
+      "u_vert"
+    ],
+    [
+      "vec4",
+      "u_ScreenParams"
+    ],
+    [
+      "int",
+      "u_sharp"
+    ]
+  ],
+  "adaptation": {
+    "primary_sampler": "u_inputTexture",
+    "uniform_patches": {
+      "u_ScreenParams": "#define u_ScreenParams vec4(1080.0, 1080.0, 1.0/1080.0, 1.0/1080.0)",
+      "u_horz": "int(8.0 + 112.0 * uProgress)",
+      "u_vert": "int(8.0 + 112.0 * uProgress)",
+      "u_sharp": "0"
+    }
+  },
+  "notes": [
+    "Primary sampler is normalized to inputImageTexture.",
+    "Vertex input is normalized to Shader Lab's attribute vec2 position.",
+    "Selected uniforms are replaced with constants or uProgress/uTime expressions for 5s preview/training clips."
+  ]
+}

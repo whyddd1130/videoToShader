@@ -1,0 +1,36 @@
+{
+  "source_spec": "/home/wangxin/research/DigitalTwin/output/SuperSharpen/replication_spec.json",
+  "effect": "SuperSharpen",
+  "pass_index": 0,
+  "pass_id": "blur0",
+  "module": "blur0",
+  "shader_file": "xshader/blur0.frag",
+  "inputs": [
+    "share://input.texture"
+  ],
+  "samplers": [
+    "inputImageTexture"
+  ],
+  "uniforms": [
+    [
+      "vec4",
+      "u_ScreenParams"
+    ],
+    [
+      "float",
+      "blurSize"
+    ]
+  ],
+  "adaptation": {
+    "primary_sampler": "inputImageTexture",
+    "uniform_patches": {
+      "u_ScreenParams": "#define u_ScreenParams vec4(1080.0, 1080.0, 1.0/1080.0, 1.0/1080.0)",
+      "blurSize": "(1.0 + 34.0 * uProgress)"
+    }
+  },
+  "notes": [
+    "Primary sampler is normalized to inputImageTexture.",
+    "Vertex input is normalized to Shader Lab's attribute vec2 position.",
+    "Selected uniforms are replaced with constants or uProgress/uTime expressions for 5s preview/training clips."
+  ]
+}

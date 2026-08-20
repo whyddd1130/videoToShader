@@ -1,0 +1,34 @@
+{
+  "source_spec": "/home/wangxin/research/DigitalTwin/output/CurvedGlitch/replication_spec.json",
+  "effect": "CurvedGlitch",
+  "pass_index": 13,
+  "pass_id": "EntityOffset",
+  "module": "EntityOffset",
+  "shader_file": "effects/LumiChromaticAberration/xshader/shaderLib/shaderGLES/28ca007346d7379f4aebbb10fc2fa522.frag",
+  "inputs": [],
+  "samplers": [
+    "u_inputTexture"
+  ],
+  "uniforms": [
+    [
+      "float",
+      "u_offsetX"
+    ],
+    [
+      "float",
+      "u_offsetY"
+    ]
+  ],
+  "adaptation": {
+    "primary_sampler": "u_inputTexture",
+    "uniform_patches": {
+      "u_offsetX": "(-0.08 + 0.16 * uProgress)",
+      "u_offsetY": "(0.08 - 0.16 * uProgress)"
+    }
+  },
+  "notes": [
+    "Primary sampler is normalized to inputImageTexture.",
+    "Vertex input is normalized to Shader Lab's attribute vec2 position.",
+    "Selected uniforms are replaced with constants or uProgress/uTime expressions for 5s preview/training clips."
+  ]
+}

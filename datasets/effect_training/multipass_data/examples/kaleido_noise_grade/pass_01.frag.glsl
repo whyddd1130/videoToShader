@@ -1,0 +1,1 @@
+precision highp float; varying vec2 textureCoord; uniform sampler2D inputImageTexture; uniform float uProgress; uniform float uTime; void main(){vec2 uv=textureCoord;vec2 q=uv-.5;float a=abs(fract(atan(q.y,q.x)/6.283185*6.)-.5)*1.0472;uv=vec2(cos(a),sin(a))*length(q)+.5;gl_FragColor=texture2D(inputImageTexture,uv);}

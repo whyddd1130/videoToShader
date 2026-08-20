@@ -47,6 +47,5 @@ class DirectShaderBaselineTest(unittest.TestCase):
                 self.assertTrue(item["image_url"]["url"].startswith("data:image/jpeg;base64,"))
                 base64.b64decode(item["image_url"]["url"].split(",", 1)[1])
 
-
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,31 @@
+{
+  "video": {
+    "width": 1080,
+    "height": 1080,
+    "r_frame_rate": "25/1",
+    "duration": "5.000000",
+    "nb_frames": "125"
+  },
+  "sampled_frames": [
+    0,
+    62,
+    124
+  ],
+  "frame_mean_rgb": [
+    53.55,
+    106.862,
+    141.608
+  ],
+  "input_frame_diff_mean": [
+    31.49,
+    31.943,
+    58.855
+  ],
+  "adjacent_sample_diff_mean": [
+    53.326,
+    35.141
+  ],
+  "max_effect_signal": 58.855,
+  "max_temporal_change": 53.326,
+  "warnings": []
+}

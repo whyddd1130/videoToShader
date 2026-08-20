@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "source_platform": "kuaiying_plugin_library",
+  "effect": "comic",
+  "source_plugin_dir": "proj/Faceless_AEPlugin/resource/script/comic",
+  "lua_files": [
+    "proj/Faceless_AEPlugin/resource/script/comic/comic.lua"
+  ],
+  "shader_program_count": 3,
+  "extracted_shaders": [
+    {
+      "name": "blur_vs",
+      "kind": "vertex",
+      "path": "datasets/effect_training/kuaiying_multi_pass/effects/comic/shaders/blur_vs.vertex.glsl",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/comic/comic.lua"
+    },
+    {
+      "name": "blur_fs",
+      "kind": "fragment",
+      "path": "datasets/effect_training/kuaiying_multi_pass/effects/comic/shaders/blur_fs.fragment.glsl",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/comic/comic.lua"
+    },
+    {
+      "name": "s_vsh",
+      "kind": "vertex",
+      "path": "datasets/effect_training/kuaiying_multi_pass/effects/comic/shaders/s_vsh.vertex.glsl",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/comic/comic.lua"
+    },
+    {
+      "name": "final_fsh",
+      "kind": "fragment",
+      "path": "datasets/effect_training/kuaiying_multi_pass/effects/comic/shaders/final_fsh.fragment.glsl",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/comic/comic.lua"
+    },
+    {
+      "name": "comic_vsh",
+      "kind": "vertex",
+      "path": "datasets/effect_training/kuaiying_multi_pass/effects/comic/shaders/comic_vsh.vertex.glsl",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/comic/comic.lua"
+    },
+    {
+      "name": "comic_fsh",
+      "kind": "fragment",
+      "path": "datasets/effect_training/kuaiying_multi_pass/effects/comic/shaders/comic_fsh.fragment.glsl",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/comic/comic.lua"
+    }
+  ],
+  "fbo_allocation_count": 2,
+  "fbo_allocations": [
+    {
+      "fbo": "blurFbo_H",
+      "size_expression": "self.width/4, self.height/4",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/comic/comic.lua",
+      "line": 512
+    },
+    {
+      "fbo": "blurFbo_V",
+      "size_expression": "self.width/4, self.height/4",
+      "source_lua": "proj/Faceless_AEPlugin/resource/script/comic/comic.lua",
+      "line": 513
+    }
+  ],
+  "fbo_recycle_call_count": 4,
+  "uses_time": false,
+  "parameter_types": [
+    "color",
+    "comboBox",
+    "float"
+  ],
+  "external_layer_input": false,
+  "excluded_capabilities": [
+    "transition",
+    "face",
+    "matting",
+    "ai",
+    "depth",
+    "spectrum",
+    "temporal_history"
+  ],
+  "intermediate_output_status": "graph_described_not_rendered",
+  "final_output_status": "rendered_per_sample"
+}

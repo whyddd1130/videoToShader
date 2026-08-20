@@ -1,0 +1,41 @@
+{
+  "source_spec": "/home/wangxin/research/DigitalTwin/output/RichColorNoise/replication_spec.json",
+  "effect": "RichColorNoise",
+  "pass_index": 15,
+  "pass_id": "AmazingFeature__glitch",
+  "module": "glitch",
+  "shader_file": "AmazingFeature/xshader/glitch.frag",
+  "inputs": [
+    "share://input.texture"
+  ],
+  "samplers": [
+    "inputImageTexture"
+  ],
+  "uniforms": [
+    [
+      "vec4",
+      "u_ScreenParams"
+    ],
+    [
+      "float",
+      "glithIns"
+    ],
+    [
+      "float",
+      "blurSize"
+    ]
+  ],
+  "adaptation": {
+    "primary_sampler": "inputImageTexture",
+    "uniform_patches": {
+      "u_ScreenParams": "#define u_ScreenParams vec4(1080.0, 1080.0, 1.0/1080.0, 1.0/1080.0)",
+      "blurSize": "(1.0 + 34.0 * uProgress)",
+      "glithIns": "(0.2 + 1.2 * uProgress)"
+    }
+  },
+  "notes": [
+    "Primary sampler is normalized to inputImageTexture.",
+    "Vertex input is normalized to Shader Lab's attribute vec2 position.",
+    "Selected uniforms are replaced with constants or uProgress/uTime expressions for 5s preview/training clips."
+  ]
+}

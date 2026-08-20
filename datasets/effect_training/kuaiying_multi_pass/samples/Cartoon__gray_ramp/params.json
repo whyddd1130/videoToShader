@@ -1,0 +1,134 @@
+{
+  "sample_id": "Cartoon__gray_ramp",
+  "effect": "Cartoon",
+  "filter_name": "Cartoon",
+  "animated_param": "EdgeOpacity",
+  "duration_ms": 5000,
+  "fps": 25,
+  "parameters": [
+    {
+      "index": 1,
+      "key": "Render",
+      "display_name": "Render",
+      "type": "comboBox",
+      "source_default": "Fill | Edges | Fill And Edges",
+      "source_min": null,
+      "source_max": null,
+      "animated": false,
+      "value": [
+        3
+      ]
+    },
+    {
+      "index": 2,
+      "key": "DetailRadius",
+      "display_name": "DetailRadius",
+      "type": "float",
+      "source_default": 8.0,
+      "source_min": 0.0,
+      "source_max": 30.0,
+      "animated": false,
+      "value": [
+        8.0
+      ]
+    },
+    {
+      "index": 3,
+      "key": "DetailThreshold",
+      "display_name": "DetailThreshold",
+      "type": "float",
+      "source_default": 10.0,
+      "source_min": 1.0,
+      "source_max": 100.0,
+      "animated": false,
+      "value": [
+        10.0
+      ]
+    },
+    {
+      "index": 4,
+      "key": "shadingSteps",
+      "display_name": "shadingSteps",
+      "type": "float",
+      "source_default": 10.0,
+      "source_min": 2.0,
+      "source_max": 30.0,
+      "animated": false,
+      "value": [
+        10.0
+      ]
+    },
+    {
+      "index": 5,
+      "key": "ShadingSmoothness",
+      "display_name": "ShadingSmoothness",
+      "type": "float",
+      "source_default": 10.0,
+      "source_min": 0.0,
+      "source_max": 100.0,
+      "animated": false,
+      "value": [
+        10.0
+      ]
+    },
+    {
+      "index": 6,
+      "key": "EdgeThreshold",
+      "display_name": "EdgeThreshold",
+      "type": "float",
+      "source_default": 1.0,
+      "source_min": 0.0,
+      "source_max": 10.0,
+      "animated": false,
+      "value": [
+        1.0
+      ]
+    },
+    {
+      "index": 7,
+      "key": "EdgeWidth",
+      "display_name": "EdgeWidth",
+      "type": "float",
+      "source_default": 2.5,
+      "source_min": 0.0,
+      "source_max": 15.0,
+      "animated": false,
+      "value": [
+        2.5
+      ]
+    },
+    {
+      "index": 8,
+      "key": "EdgeOpacity",
+      "display_name": "EdgeOpacity",
+      "type": "float",
+      "source_default": 1.0,
+      "source_min": 0.0,
+      "source_max": 1.0,
+      "animated": true,
+      "keyframes": [
+        {
+          "frame": 0,
+          "time_sec": 0.0,
+          "value": [
+            0.0
+          ]
+        },
+        {
+          "frame": 62,
+          "time_sec": 2.48,
+          "value": [
+            1.0
+          ]
+        },
+        {
+          "frame": 124,
+          "time_sec": 4.96,
+          "value": [
+            0.0
+          ]
+        }
+      ]
+    }
+  ]
+}

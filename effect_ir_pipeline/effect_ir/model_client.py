@@ -2,11 +2,45 @@ from __future__ import annotations
 
 import json
 import os
+import random
 import subprocess
 import time
+from datetime import datetime, timezone
+from email.utils import parsedate_to_datetime
+from pathlib import Path
 from typing import Any
 from urllib import error
 from urllib import request
+
+
+DEFAULT_WANQING_ENDPOINT = "https://wanqing-api.corp.kuaishou.com/api/gateway/v1/endpoints/chat/completions"
+
+
+def _load_project_dotenv() -> None:
+    """Load the repository's local model configuration without overriding shell env.
+
+    The command-line workflows are launched directly with ``python -m``.  They
+    previously did not read the project's `.env`, so a valid HTTPS endpoint and
+    API key in that file were silently ignored and the code fell back to the
+    inaccessible `wanqing.internal` address.
+    """
+    dotenv = Path(__file__).resolve().parents[2] / ".env"
+    if not dotenv.is_file():
+        return
+    for raw_line in dotenv.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        key = key.strip()
+        value = value.strip()
+        if len(value) >= 2 and value[0] == value[-1] and value[0] in {"'", '"'}:
+            value = value[1:-1]
+        if key:
+            os.environ.setdefault(key, value)
+
+
+_load_project_dotenv()
 
 
 def generate_text(prompt: str, *, model: str, temperature: float = 0.0) -> str:
@@ -42,7 +76,7 @@ def _generate_http_json(messages: list[dict[str, Any]], *, model: str, temperatu
         if base_url is not None:
             endpoint = base_url.rstrip("/") + "/chat/completions"
         else:
-            endpoint = "http://wanqing.internal/api/gateway/v1/endpoints/chat/completions"
+            endpoint = DEFAULT_WANQING_ENDPOINT
     api_key = os.environ.get("EFFECT_IR_LLM_API_KEY") or os.environ.get("WQ_API_KEY", "EMPTY")
     payload: dict[str, Any] = {
         "model": model,
@@ -73,10 +107,15 @@ def _generate_http_json(messages: list[dict[str, Any]], *, model: str, temperatu
         method="POST",
     )
     retries = max(1, int(os.environ.get("EFFECT_IR_LLM_RETRIES", "3")))
+    rate_limit_retries = max(retries, int(os.environ.get("EFFECT_IR_LLM_RATE_LIMIT_RETRIES", "6")))
     base_sleep = float(os.environ.get("EFFECT_IR_LLM_RETRY_SLEEP", "2"))
+    rate_limit_sleep = float(os.environ.get("EFFECT_IR_LLM_RATE_LIMIT_SLEEP", "30"))
+    rate_limit_sleep_cap = float(os.environ.get("EFFECT_IR_LLM_RATE_LIMIT_MAX_SLEEP", "240"))
     timeout = float(os.environ.get("EFFECT_IR_LLM_TIMEOUT", "300"))
     last_error: Exception | None = None
-    for attempt in range(1, retries + 1):
+    for attempt in range(1, rate_limit_retries + 1):
+        is_rate_limit = False
+        retry_after: float | None = None
         try:
             with request.urlopen(req, timeout=timeout) as resp:
                 if stream:
@@ -86,14 +125,45 @@ def _generate_http_json(messages: list[dict[str, Any]], *, model: str, temperatu
         except error.HTTPError as exc:
             details = exc.read().decode("utf-8", errors="replace")
             last_error = RuntimeError(f"HTTP {exc.code} from model endpoint: {details}")
+            is_rate_limit = exc.code == 429
+            retry_after = _retry_after_seconds(exc) if is_rate_limit else None
+            if not is_rate_limit and attempt >= retries:
+                break
         except error.URLError as exc:
             last_error = RuntimeError(f"URL error from model endpoint: {exc.reason}")
+            if attempt >= retries:
+                break
         except (TimeoutError, ConnectionError, OSError) as exc:
             last_error = RuntimeError(f"Timeout from model endpoint: {exc}")
-        if attempt < retries:
+            if attempt >= retries:
+                break
+        if is_rate_limit and attempt < rate_limit_retries:
+            exponential = min(rate_limit_sleep_cap, rate_limit_sleep * (2 ** (attempt - 1)))
+            delay = max(exponential, retry_after or 0.0)
+            delay += random.uniform(0.0, min(5.0, delay * 0.1))
+            print(f"Model rate-limited (429); retry {attempt + 1}/{rate_limit_retries} in {delay:.1f}s", flush=True)
+            time.sleep(delay)
+        elif attempt < retries:
             time.sleep(base_sleep * attempt)
     assert last_error is not None
     raise last_error
+
+
+def _retry_after_seconds(exc: error.HTTPError) -> float | None:
+    """Read either numeric seconds or an HTTP date from Retry-After."""
+    value = exc.headers.get("Retry-After") if exc.headers else None
+    if not value:
+        return None
+    try:
+        return max(0.0, float(value))
+    except ValueError:
+        try:
+            parsed = parsedate_to_datetime(value)
+            if parsed.tzinfo is None:
+                parsed = parsed.replace(tzinfo=timezone.utc)
+            return max(0.0, (parsed - datetime.now(timezone.utc)).total_seconds())
+        except (TypeError, ValueError, OverflowError):
+            return None
 
 
 def _extract_streaming_text(response: Any) -> str:

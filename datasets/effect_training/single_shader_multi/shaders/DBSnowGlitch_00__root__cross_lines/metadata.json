@@ -1,0 +1,77 @@
+{
+  "source_spec": "/home/wangxin/research/DigitalTwin/output/DBSnowGlitch/replication_spec.json",
+  "effect": "DBSnowGlitch",
+  "pass_index": 0,
+  "pass_id": "L0__root_pass0",
+  "module": "_root",
+  "shader_file": "pass0.frag",
+  "inputs": [
+    "input"
+  ],
+  "samplers": [
+    "inputImageTexture",
+    "texture"
+  ],
+  "uniforms": [
+    [
+      "int",
+      "baseTexWidth"
+    ],
+    [
+      "int",
+      "baseTexHeight"
+    ],
+    [
+      "float",
+      "timer"
+    ],
+    [
+      "float",
+      "interval"
+    ],
+    [
+      "float",
+      "shakeIntensity"
+    ],
+    [
+      "float",
+      "xnoiseIntensity"
+    ],
+    [
+      "float",
+      "blockIntensity"
+    ],
+    [
+      "float",
+      "rgbIntensity"
+    ],
+    [
+      "float",
+      "whiteIntensity"
+    ],
+    [
+      "float",
+      "light"
+    ]
+  ],
+  "adaptation": {
+    "primary_sampler": "inputImageTexture",
+    "uniform_patches": {
+      "timer": "uTime",
+      "shakeIntensity": "(0.02 + 0.45 * uProgress)",
+      "xnoiseIntensity": "(0.02 + 0.85 * uProgress)",
+      "blockIntensity": "(0.02 + 0.90 * uProgress)",
+      "rgbIntensity": "(0.02 + 0.70 * uProgress)",
+      "whiteIntensity": "(0.00 + 0.60 * uProgress)",
+      "light": "(0.00 + 0.70 * uProgress)",
+      "baseTexWidth": "1080.0",
+      "baseTexHeight": "1080.0",
+      "interval": "0.12"
+    }
+  },
+  "notes": [
+    "Primary sampler is normalized to inputImageTexture.",
+    "Vertex input is normalized to Shader Lab's attribute vec2 position.",
+    "Selected uniforms are replaced with constants or uProgress/uTime expressions for 5s preview/training clips."
+  ]
+}
